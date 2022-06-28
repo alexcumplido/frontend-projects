@@ -4,14 +4,12 @@
 ## Projects
 
 1. **Newbie Level**
-  - [Responsive Card component]()
-  - [Grid section]()
+  - [Responsive Card component](https://alexcumplido.github.io/frontend-mentor/card-component)
+  - [Grid section](https://alexcumplido.github.io/frontend-mentor/grid-section)
   - [Rating Interactive component](https://alexcumplido.github.io/frontend-mentor/rating-component)
-  - [FAQ Accordion]()
-  - [Form validation component]()
+  - [FAQ Accordion](https://alexcumplido.github.io/frontend-mentor/faq-accordion)
+  - [Form validation component](https://alexcumplido.github.io/frontend-mentor/form-validation)
   
- 
-
 2. **Junior level:**
-  - [Expenses bar chart]()
-  - [Dropdown navigation menu]()
+  - [Expenses bar chart](https://alexcumplido.github.io/frontend-mentor/bar-chart)
+  - [Dropdown navigation menu (Work in progress)] 
