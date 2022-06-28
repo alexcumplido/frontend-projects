@@ -1,5 +1,7 @@
 # frontend-mentor
-[Frontend mentor public profile](https://www.frontendmentor.io/profile/alexcumplido)
+[Public profile](https://www.frontendmentor.io/profile/alexcumplido)
+
+In this repository I will showcase projects from the frontend mentor plattform. The goal is become proficient with both JavaScript core features and working in the DOM. 
 
 ## Projects
 
