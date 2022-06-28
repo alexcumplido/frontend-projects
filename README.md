@@ -1,7 +1,7 @@
 # frontend-mentor
 [Public profile](https://www.frontendmentor.io/profile/alexcumplido)
 
-In this repository I develop different projects from the Frontend Mentor plattform frontend techonologies and web.
+In this repository I develop different projects from the Frontend Mentor plattform using frontend techonologies.
 
 ## Projects
 
