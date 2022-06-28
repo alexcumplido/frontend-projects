@@ -1,6 +1,6 @@
 @import "./fonts.css";
 @import "./variables.css";
 @import "./global.css";
-@import "./index.css";
-@import "./modal-thankyou.css";
+@import "./first-modal.css";
+@import "./second-modal.css";
 @import "./buttons.css";

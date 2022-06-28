@@ -1,22 +1,35 @@
-*,
-*:before,
-*:after {
-    margin: 0;
-    padding: 0;
+html {
     box-sizing: border-box;
 }
 
-body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Overpass', Arial, Helvetica, sans-serif;
-    background-color: var(--darkBlue);
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
-button {
+body {
+    max-width: var(--maxDesktopWidth);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
     font-family: 'Overpass', Arial, Helvetica, sans-serif;
-    cursor: pointer;
+    font-size: var(--fontSizeBody);
+    background-color: var(--veryDarkBlue);
+}
+
+footer {
+    font-size: 80%;
+    text-align: center;
+    color: var(--midGrey);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--white);
 }

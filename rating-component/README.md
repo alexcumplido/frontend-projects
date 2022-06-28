@@ -1,16 +1,15 @@
-## Responsive grid section
+## Interactive rating component
 ### Overview
 
-![Mobile preview](./designs/mobileView.PNG)
-![Desktop preview](./designs/desktopView.PNG)
+![Mobile preview](./design/mobile-design.jpg)
 
 ### User flow
-- View the optimal layout for the section depending on their device's screen size
+- Select and submit a number rating
+- See the "Thank you" card state after submitting a rating
 
 ### Built with
 
-- Semantic HTML5
-- CSS3 custom properties
-- Flexbox
-- CSS Grid
+- HTML5
+- CSS3
+- JavaScript
 - Mobile-first workflow

@@ -1,3 +1,8 @@
+button {
+    font-family: 'Overpass', Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
 .btn-group {
     align-self: stretch;
     display: flex;
@@ -14,8 +19,8 @@
     border: none;
     border-radius: 100%;
     font-weight: 700;
-    color: var(--lightGray);
-    background-color: var(--darkBlue);
+    color: var(--midGrey);
+    background-color: var(--midGreyAplha);
 }
 
 .btn-rating:hover {

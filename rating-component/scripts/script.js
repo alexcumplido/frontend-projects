@@ -1,30 +1,30 @@
-const modalRating = document.querySelector(".modal_rating");
-const modalThankYou = document.querySelector(".modal_thankyou");
-const btnGroup = document.querySelectorAll(".btn-rating");
-const btnSubmit = document.querySelector(".btn-submit");
+const firstModal = document.querySelector(".first_modal");
+const secondModal = document.querySelector(".second_modal");
+const rateButtons = document.querySelectorAll(".btn-rating");
+const submitButton = document.querySelector(".btn-submit");
 const rateInfo = document.querySelector(".rate-counter");
 let rate = null;
 
-for (let i = 0; i < btnGroup.length; i++) {
-    btnGroup[i].addEventListener('click', function (event) {
+for (let i = 0; i < rateButtons.length; i++) {
+    rateButtons[i].addEventListener('click', function (event) {
         rateButton(event);
     });
 }
 
 function rateButton(event) {
     if (parseInt(event.target.innerText) !== rate) {
-        for (let i = 0; i < btnGroup.length; i++) {
-            if (parseInt(btnGroup[i].innerText) === rate) {
-                btnGroup[i].classList.remove("btn-rating_active");
+        for (let i = 0; i < rateButtons.length; i++) {
+            if (parseInt(rateButtons[i].innerText) === rate) {
+                rateButtons[i].classList.remove("btn-rating_active");
             }
         }
         rate = parseInt(event.target.innerText);
         event.target.classList.add("btn-rating_active");
-        btnSubmit.removeAttribute('disabled');
+        submitButton.removeAttribute('disabled');
     }
 }
 
-btnSubmit.addEventListener('click', function (event) {
+submitButton.addEventListener('click', function () {
     validate(rate);
 });
 
@@ -32,11 +32,11 @@ function validate(rate) {
     if (typeof rate !== "number") {
         return;
     } else {
-        printModal();
+        showSecondModal();
     }
 }
-function printModal() {
-    modalRating.classList.remove("show");
-    modalThankYou.classList.add("show");
+function showSecondModal() {
+    firstModal.classList.remove("show");
+    secondModal.classList.add("show");
     rateInfo.innerText = rate;
 }
