@@ -15,3 +15,4 @@ In this repository I will showcase projects from the frontend mentor plattform. 
 2. **Junior level:**
   - [Expenses bar chart](https://alexcumplido.github.io/frontend-mentor/bar-chart)
   - [Dropdown navigation menu (Work in progress)] 
+  - [Advice Api generator (Work in progress)] 
