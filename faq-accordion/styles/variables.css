@@ -1,12 +1,13 @@
 :root {
     --maxWidthDesktop: 1440px;
-    --minWidthMobile: 375px;
+    --maxWidthMobile: 375px;
 
     --white: hsl(0, 0%, 100%);
     --softRed: hsl(14, 88%, 65%);
     --softViolet: hsl(273, 75%, 66%);
-    --softBlue: hsl(240, 73%, 65%);
+    --softBlue: rgb(101, 101, 231);
     --darkDesaturated: hsl(238, 29%, 16%);
+    --lightGrayish: hsl(240, 12%, 83%);
     --grayishBlue: hsl(240, 6%, 50%);
 
     --fontSize: 12px;

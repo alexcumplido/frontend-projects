@@ -1,16 +1,17 @@
-## Responsive grid section
+## FAQ Aaccordion component
 ### Overview
 
-![Mobile preview](./designs/mobileView.PNG)
-![Desktop preview](./designs/desktopView.PNG)
+![Mobile preview](./design/mobile-design.jpg)
 
 ### User flow
-- View the optimal layout for the section depending on their device's screen size
+- Hide/Show the answer to a question when the question is clicked
+- See hover states
+- View the optimal layout
 
 ### Built with
 
-- Semantic HTML5
-- CSS3 custom properties
-- Flexbox
-- CSS Grid
+- HTML5
+- CSS3
+- JavaScript
 - Mobile-first workflow
+

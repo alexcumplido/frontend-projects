@@ -6,13 +6,13 @@ let currentActive = null;
 
 function displayItem(i) {
     accordionTitles[i].classList.add("title-active");
-    accordionText[i].classList.add("show");
+    accordionText[i].classList.add("accordion-text-show");
     arrows[i].classList.add("arrow-rotate");
 }
 
 function hideItem(currentActive) {
     accordionTitles[currentActive].classList.remove("title-active");
-    accordionText[currentActive].classList.remove("show");
+    accordionText[currentActive].classList.remove("accordion-text-show");
     arrows[currentActive].classList.remove("arrow-rotate");
 }
 
