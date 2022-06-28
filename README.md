@@ -5,7 +5,7 @@
 
 1. **Newbie Level**
   - [Responsive Card component](https://alexcumplido.github.io/frontend-mentor/card-component)
-  - [Grid section](https://alexcumplido.github.io/frontend-mentor/grid-section)
+  - [Grid section](https://alexcumplido.github.io/frontend-mentor/grid-section) 100% responsive, try shrink it up to 180px viewport.
   - [Rating Interactive component](https://alexcumplido.github.io/frontend-mentor/rating-component)
   - [FAQ Accordion](https://alexcumplido.github.io/frontend-mentor/faq-accordion)
   - [Form validation component](https://alexcumplido.github.io/frontend-mentor/form-validation)
