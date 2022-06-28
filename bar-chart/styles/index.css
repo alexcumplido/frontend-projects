@@ -1,0 +1,134 @@
+.chart-component {
+    max-width: var(--maxWidthMobile);
+    background-color: var(--cream);
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+.balance {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    color: var(--cream);
+    background-color: var(--softRed);
+}
+
+.balance-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+
+.balance-text span:first-child {
+    font-size: 0.8rem;
+}
+
+.balance-text span:last-child {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.chart-wrapper {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--white);
+}
+
+.bar-wrapper {
+    margin: 3rem 0 1rem 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.bar {
+    position: relative;
+    width: 3rem;
+    border-radius: 0.25rem;
+    background-color: var(--softRed);
+}
+
+.bar-span {
+    display: none;
+    padding: 0.25rem 0.5rem;
+    position: absolute;
+    left: -0.85rem;
+    top: -2rem;
+    font-size: 80%;
+    text-align: center;
+    border-radius: 0.25rem;
+    color: var(--paleOrange);
+    background-color: var(--darkBrown);
+}
+
+.bar-span-active {
+    display: block;
+}
+
+.bar:hover {
+    cursor: pointer;
+    background-color: var(--lightRed);
+}
+
+.bar-current-day {
+    background-color: var(--cyan);
+}
+
+.bar-current-day:hover {
+    background-color: var(--lightCyan);
+}
+
+.day-wrapper {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--lightGray);
+}
+
+.day {
+    text-align: center;
+    width: 2rem;
+    font-size: 80%;
+}
+
+.bar-stats {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats-total,
+.stats-relative {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.stats-relative {
+    align-items: flex-end;
+    font-size: 80%;
+}
+
+.stats-relative span:first-child {
+    font-weight: 700;
+}
+
+.stats-total span:first-child {
+    font-size: 80%;
+}
+
+.stats-total span:last-child {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 550px) {
+    .day {
+        width: 3rem;
+        font-size: initial;
+    }
+}

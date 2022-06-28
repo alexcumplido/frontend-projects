@@ -1,0 +1,18 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --cream: hsl(27, 66%, 92%);
+    --paleOrange: hsl(33, 100%, 98%);
+    --lightRed: hsl(10, 71%, 79%);
+    --softRed: hsl(10, 79%, 65%);
+    --lightCyan: hsl(187, 27%, 71%);
+    --cyan: hsl(186, 34%, 60%);
+    --mediumBrown: hsl(28, 10%, 53%);
+    --darkBrown: hsl(25, 47%, 15%);
+    --lightGray: hsl(28, 16%, 84%);
+
+    --fontSize: 18px;
+    --fontFamily: 'DM Sans', sans-serif;
+
+    --maxWidthMobile: 375px;
+    --maxWidthDesktop: 1440px;
+}

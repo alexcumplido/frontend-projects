@@ -1,0 +1,38 @@
+.modal {
+    max-width: 400px;
+    display: none;
+    padding: 1.5rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    background: var(--veryDarkBlue);
+    color: var(--white);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.show {
+    display: block;
+}
+
+.logo {
+    margin-right: auto;
+    display: flex;
+    padding: 1rem;
+    border: 1px solid var(--darkBlue);
+    border-radius: 50%;
+}
+
+.modal__heading {
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.modal__description {
+    line-height: 1.5;
+    color: var(--lightGray);
+}

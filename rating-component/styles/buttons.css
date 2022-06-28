@@ -1,0 +1,52 @@
+.btn-group {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.btn-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border: none;
+    border-radius: 100%;
+    font-weight: 700;
+    color: var(--lightGray);
+    background-color: var(--darkBlue);
+}
+
+.btn-rating:hover {
+    border: none;
+    border-radius: 100%;
+    color: var(--white);
+    background-color: var(--lightGray);
+}
+
+.btn-rating_active {
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.btn-submit {
+    align-self: stretch;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.btn-submit:hover {
+    color: var(--orange);
+    background-color: var(--white);
+}
+
+.btn-submit:disabled {
+    cursor: not-allowed;
+}
