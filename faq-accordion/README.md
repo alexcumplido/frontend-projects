@@ -14,4 +14,3 @@
 - CSS3
 - JavaScript
 - Mobile-first workflow
-

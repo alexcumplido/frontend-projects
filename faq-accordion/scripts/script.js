@@ -2,7 +2,7 @@ const accordionItems = document.querySelectorAll('.accordion__item');
 const accordionTitles = document.querySelectorAll(".accordion-title");
 const accordionText = document.querySelectorAll('.accordion-text');
 const arrows = document.querySelectorAll('.arrow');
-let currentActive = null;
+let currentItem = null;
 
 function displayItem(i) {
     accordionTitles[i].classList.add("title-active");
@@ -10,24 +10,24 @@ function displayItem(i) {
     arrows[i].classList.add("arrow-rotate");
 }
 
-function hideItem(currentActive) {
-    accordionTitles[currentActive].classList.remove("title-active");
-    accordionText[currentActive].classList.remove("accordion-text-show");
-    arrows[currentActive].classList.remove("arrow-rotate");
+function hideItem(i) {
+    accordionTitles[i].classList.remove("title-active");
+    accordionText[i].classList.remove("accordion-text-show");
+    arrows[i].classList.remove("arrow-rotate");
 }
 
 for (let i = 0; i < accordionItems.length; i++) {
     accordionItems[i].addEventListener(('click'), function () {
-        if (currentActive === null) {
+        if (currentItem === null) {
             displayItem(i);
-            currentActive = i;
-        } else if (currentActive === i) {
-            hideItem(currentActive);
-            currentActive = null;
+            currentItem = i;
+        } else if (currentItem === i) {
+            hideItem(currentItem);
+            currentItem = null;
         } else {
-            hideItem(currentActive);
+            hideItem(currentItem);
             displayItem(i);
-            currentActive = i;
+            currentItem = i;
         }
     });
 }
