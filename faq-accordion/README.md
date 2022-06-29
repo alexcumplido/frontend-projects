@@ -23,8 +23,8 @@
 ![Mobile preview](./design/mobile-design.jpg)
 
 #### Links
-- Live Site URL: [Github Pages](https://alexcumplido.github.io/frontend-mentor/faq-accordion/)
-- Solution URL: [Frontend Mentor solution](https://www.frontendmentor.io/profile/alexcumplido)
+- Live Site: [Github Pages](https://alexcumplido.github.io/frontend-mentor/faq-accordion/)
+- Solution: [Frontend Mentor solution](https://www.frontendmentor.io/profile/alexcumplido)
 
 ### Development process
 
@@ -32,7 +32,6 @@
 ```
 # Just a local development server
 ```
-
 #### Built with
 - Semantic HTML5 markup
 - CSS custom properties
@@ -41,7 +40,7 @@
 
 #### What I learned
 
-I am not sure if these two functions follow real SOLID principles, but I tried to concrete as much as possible the showing and hiding of accordion items via JavaScript in those code line.
+Not sure if these two functions follow real SOLID principles, but I tried to concrete as much as possible the showing and hiding of accordion items via JavaScript in the following code. Both receive as parameters the position in the NodeList of the clicked item, wich match with the position of the other elements in their corresponding NodeList as well.
 
 ```js
 function displayItem(i) {
@@ -59,7 +58,7 @@ function hideItem(i) {
 
 #### Continued development
 
-Looking forward to replace the img tags by svg tags.
+Looking forward to replace img tags by svg elements, so can be layout and styled taking advantage of vectorial graphics.
 
 #### Useful resources
 - [Background position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position). This really helps in  figurating how to position background-images.
