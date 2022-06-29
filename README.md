@@ -1,5 +1,4 @@
 # frontend-mentor
-[Public profile](https://www.frontendmentor.io/profile/alexcumplido)
 
 In this repository I develop different projects from the Frontend Mentor plattform using frontend techonologies.
 
@@ -14,5 +13,5 @@ In this repository I develop different projects from the Frontend Mentor plattfo
   - [Form validation](https://alexcumplido.github.io/frontend-mentor/form-validation)
   - [FAQ Accordion](https://alexcumplido.github.io/frontend-mentor/faq-accordion)
   - [Rating modal](https://alexcumplido.github.io/frontend-mentor/rating-component)
-  - [Grid section](https://alexcumplido.github.io/frontend-mentor/grid-section) 100% responsive, try shrink it up to 180px viewport.
-  - [Responsive Card](https://alexcumplido.github.io/frontend-mentor/card-component)
+  - [Responsive Grid section](https://alexcumplido.github.io/frontend-mentor/grid-section) 100% responsive, try shrink it up to 180px viewport.
+  - [Multi-column Card](https://alexcumplido.github.io/frontend-mentor/card-component)
