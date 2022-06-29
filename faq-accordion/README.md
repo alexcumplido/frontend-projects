@@ -27,6 +27,11 @@
 
 ### Development process
 
+#### Run project
+```
+# Just a local development server
+```
+
 #### Built with
 - Semantic HTML5 markup
 - CSS custom properties
@@ -56,6 +61,6 @@ function hideItem(i) {
 Looking forward to replace the img tags by svg tags.
 
 #### Useful resources
-- [Background position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position). This helped me figurating how to position the backgroubd image in desktop view. 
+- [Background position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position). This really helps in  figurating how to position background-images.
 
 
