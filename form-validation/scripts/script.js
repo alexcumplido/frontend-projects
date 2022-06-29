@@ -1,8 +1,11 @@
-const regexFirstName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g;
-const regexLastName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g;
-const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-const regexPass = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+const regexFirstName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/i;
+const regexLastName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/i;
+const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
+const regexPass = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/i;
 
+let regexNameValue;
+let controlRegexNameVale;
+let regexLastNameValue;
 const form = document.querySelector('.form');
 
 const userFirstName = document.getElementById('firstName');
@@ -24,19 +27,19 @@ form.addEventListener('submit', function (event) {
 });
 
 function validateFirstName() {
-    debugger;
-    let validate = true;
+    let validate = false;
     if (userFirstName.value === "") {
-        validate = false;
         errorFirstName.textContent = 'First Name can not be empty.';
         errorFirstName.classList.add('active');
         userFirstName.classList.add('input-error');
     } else if (regexFirstName.test(userFirstName.value) === false) {
-        validate = false;
+        regexNameValue = regexFirstName.test(userFirstName.value) === false;
+        controlRegexNameVale = regexFirstName.test(userFirstName.value) === false;
         errorFirstName.textContent = 'First Name can not containt numeric or special values.';
         errorFirstName.classList.add('active');
         userFirstName.classList.add('input-error');
     } else {
+        validate = true;
         errorFirstName.textContent = '';
         errorFirstName.classList.remove('active');
         userFirstName.classList.remove('input-error');
@@ -45,18 +48,18 @@ function validateFirstName() {
 }
 
 function validateLastName() {
-    let validate = true;
+    let validate = false;
     if (userLastName.value === "") {
-        validate = false;
         errorLastName.textContent = 'Last Name can not be empty.';
         errorLastName.classList.add('active');
         userLastName.classList.add('input-error');
     } else if (regexLastName.test(userLastName.value) === false) {
-        validate = false;
+        regexLastNameValue = regexFirstName.test(userFirstName.value) === false
         errorLastName.textContent = 'Last Name can not containt numeric or special values.';
         errorLastName.classList.add('active');
         userLastName.classList.add('input-error');
     } else {
+        validate = true;
         errorLastName.textContent = '';
         errorLastName.classList.remove('active');
         userLastName.classList.remove('input-error');
@@ -65,18 +68,17 @@ function validateLastName() {
 }
 
 function validateEmail() {
-    let validate = true;
+    let validate = false;
     if (userEmail.value === "") {
-        validate = false;
         errorEmail.textContent = 'Email can not be empty.';
         errorEmail.classList.add('active');
         userEmail.classList.add('input-error');
     } else if (regexEmail.test(userEmail.value) === false) {
-        validate = false;
         errorEmail.textContent = 'Email need to be a valid email.';
         errorEmail.classList.add('active');
         userEmail.classList.add('input-error');
     } else {
+        validate = true;
         errorEmail.textContent = '';
         errorEmail.classList.remove('active');
         userEmail.classList.remove('input-error');
@@ -85,18 +87,17 @@ function validateEmail() {
 }
 
 function validatePassword() {
-    let validate = true;
+    let validate = false;
     if (userPassword.value === "") {
-        validate = false;
         errorPassword.textContent = 'Password can not be empty.';
         errorPassword.classList.add('active');
         userPassword.classList.add('input-error')
     } else if (regexPass.test(userPassword.value) === false) {
-        validate = false;
         errorPassword.textContent = 'Password neet to be at least 8 characters long, and include one letter and one number.';
         errorPassword.classList.add('active');
         userPassword.classList.add('input-error')
     } else {
+        validate = true;
         errorPassword.textContent = '';
         errorPassword.classList.remove('active');
         userPassword.classList.remove('input-error')
