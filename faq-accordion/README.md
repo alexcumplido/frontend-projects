@@ -1,4 +1,4 @@
-## FAQ Aaccordion component
+## FAQ Accordion component
 
 ### Table of contents
 - [Overview](#overview)
