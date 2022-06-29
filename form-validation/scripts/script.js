@@ -3,9 +3,6 @@ const regexLastName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/i;
 const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
 const regexPass = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/i;
 
-let regexNameValue;
-let controlRegexNameVale;
-let regexLastNameValue;
 const form = document.querySelector('.form');
 
 const userFirstName = document.getElementById('firstName');
@@ -29,13 +26,11 @@ form.addEventListener('submit', function (event) {
 function validateFirstName() {
     let validate = false;
     if (userFirstName.value === "") {
-        errorFirstName.textContent = 'First Name can not be empty.';
+        errorFirstName.textContent = 'Name can not be empty.';
         errorFirstName.classList.add('active');
         userFirstName.classList.add('input-error');
     } else if (regexFirstName.test(userFirstName.value) === false) {
-        regexNameValue = regexFirstName.test(userFirstName.value) === false;
-        controlRegexNameVale = regexFirstName.test(userFirstName.value) === false;
-        errorFirstName.textContent = 'First Name can not containt numeric or special values.';
+        errorFirstName.textContent = 'Can not containt numeric or special values.';
         errorFirstName.classList.add('active');
         userFirstName.classList.add('input-error');
     } else {
@@ -55,7 +50,7 @@ function validateLastName() {
         userLastName.classList.add('input-error');
     } else if (regexLastName.test(userLastName.value) === false) {
         regexLastNameValue = regexFirstName.test(userFirstName.value) === false
-        errorLastName.textContent = 'Last Name can not containt numeric or special values.';
+        errorLastName.textContent = 'Can not containt numeric or special values.';
         errorLastName.classList.add('active');
         userLastName.classList.add('input-error');
     } else {
@@ -74,7 +69,7 @@ function validateEmail() {
         errorEmail.classList.add('active');
         userEmail.classList.add('input-error');
     } else if (regexEmail.test(userEmail.value) === false) {
-        errorEmail.textContent = 'Email need to be a valid email.';
+        errorEmail.textContent = 'Looks like this is not an email.';
         errorEmail.classList.add('active');
         userEmail.classList.add('input-error');
     } else {
@@ -93,7 +88,7 @@ function validatePassword() {
         errorPassword.classList.add('active');
         userPassword.classList.add('input-error')
     } else if (regexPass.test(userPassword.value) === false) {
-        errorPassword.textContent = 'Password neet to be at least 8 characters long, and include one letter and one number.';
+        errorPassword.textContent = 'At least 8 characters long, must include one letter and one number.';
         errorPassword.classList.add('active');
         userPassword.classList.add('input-error')
     } else {

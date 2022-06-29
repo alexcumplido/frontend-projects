@@ -1,4 +1,4 @@
-## FAQ Accordion component
+## Form sign-up component
 
 ### Table of contents
 - [Overview](#overview)
@@ -15,15 +15,16 @@
 ### Overview
 
 #### User flow
-- Hide/Show the answer to a question when the question is clicked
-- See hover states for all interactive elements
-- View optimal layout for the app depending on their device's screen size
+- Receive an error message when the `form` is submitted if:
+  - Any `input` field is empty. The message for this error should say *"[Field Name] cannot be empty"*
+  - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Looks like this is not an email"*
+- View the optimal layout for the site depending on their device's screen size
 
 #### Screenshot
-![Mobile preview](./design/mobile-design.jpg)
+![Mobile preview](./design/mobile-design.jpg);
 
 #### Links
-- Live Site: [Github Pages](https://alexcumplido.github.io/frontend-mentor/faq-accordion/)
+- Live Site: [Github Pages]https://alexcumplido.github.io/frontend-mentor/form-validation/)
 - Solution: [Frontend Mentor solution](https://www.frontendmentor.io/profile/alexcumplido)
 
 ### Development process
@@ -36,6 +37,7 @@
 - Semantic HTML5 markup
 - CSS custom properties
 - JavaScript
+- Regular Expressions
 - Mobile-first workflow
 
 #### What I learned
@@ -43,24 +45,33 @@
 Not sure if these two functions follow real SOLID principles, but I tried to concrete as much as possible the showing and hiding of accordion items. Both receive as parameters the position in the NodeList of the clicked item, wich match with the position of the other elements in their corresponding NodeList as well.
 
 ```js
-function displayItem(i) {
-    accordionTitles[i].classList.add("title-active");
-    accordionText[i].classList.add("accordion-text-show");
-    arrows[i].classList.add("arrow-rotate");
-}
-
-function hideItem(i) {
-    accordionTitles[i].classList.remove("title-active");
-    accordionText[i].classList.remove("accordion-text-show");
-    arrows[i].classList.remove("arrow-rotate");
+function validateFirstName() {
+    let validate = false;
+    if (userFirstName.value === "") {
+        errorFirstName.textContent = 'Name can not be empty.';
+        errorFirstName.classList.add('active');
+        userFirstName.classList.add('input-error');
+    } else if (regexFirstName.test(userFirstName.value) === false) {
+        errorFirstName.textContent = 'Can not containt numeric or special values.';
+        errorFirstName.classList.add('active');
+        userFirstName.classList.add('input-error');
+    } else {
+        validate = true;
+        errorFirstName.textContent = '';
+        errorFirstName.classList.remove('active');
+        userFirstName.classList.remove('input-error');
+    }
+    return validate;
 }
 ```
 
 #### Continued development
 
-Looking forward to replace img tags by svg elements, so can be layout and styled taking advantage of vectorial graphics.
+Looking forward to implement live validation on each input. I think could be done adding eventListener 'keyup' on each input and matching input.value against regular expressions.
 
 #### Useful resources
-- [Background position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position). This really helps in  figurating how to position background-images.
+- [RegExp.prototype.test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test).
+- [RegExp global flag](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global).
+- [Regex learn](https://regexlearn.com/).
 
 
