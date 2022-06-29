@@ -11,17 +11,37 @@ html {
 }
 
 body {
+    position: relative;
+    max-width: var(--maxDesktopWidth);
     min-height: 100vh;
     font-size: var(--fontSize);
     font-family: 'Poppins', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    max-width: var(--maxWidthDesktop);
+    gap: 0.5rem;
+    background-image: url("../images/bg-intro-mobile.png");
+    background-color: var(--red);
 }
 
 button,
 input {
     font-family: inherit;
     font-size: 100%;
+}
+
+footer {
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 80%;
+    text-align: center;
+    color: var(--midGrey);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--white);
 }

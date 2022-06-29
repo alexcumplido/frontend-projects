@@ -1,7 +1,5 @@
 .form-component {
-    padding: 4rem 1rem 6rem 1rem;
-    background-image: url("../images/bg-intro-mobile.png");
-    background-color: var(--red);
+    padding: 0 1rem;
     color: var(--white);
 }
 
