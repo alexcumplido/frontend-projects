@@ -6,6 +6,7 @@
     - [Screenshot](#screenshot)
     - [Links](#links)
 - [Development process](#development-process)
+    - [Run project](#run-project)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
     - [Continued development](#continued-development)
