@@ -22,37 +22,38 @@ async function fetchResponse() {
 
 function createChart(responseFetched) {
     for (let i = 0; i < responseFetched.length; i++) {
-        let bar = document.createElement('div');
-        let barLabel = document.createElement('span');
-        let day = document.createElement('div');
-
-        barLabel.classList.add('bar-span');
-        barLabel.innerText = `${responseFetched[i].amount}$`;
-        bar.appendChild(barLabel);
-        bar.classList.add('bar');
-        bar.style.height = `${responseFetched[i].amount * 4}px`;
-
-
-        day.classList.add('day');
-        day.innerText = responseFetched[i].day;
-        if (responseFetched[i].day === currentDay) {
-            bar.classList.add('bar-current-day');
-        }
-
-        bar.addEventListener('mouseover', function () {
-            barLabel.classList.add('bar-span-active');
-        })
-
-        bar.addEventListener('mouseout', function () {
-            barLabel.classList.remove('bar-span-active');
-        })
-
-        barWrapper.appendChild(bar);
-        dayWrapper.appendChild(day);
+        createBar(responseFetched[i]);
+        createDay(responseFetched[i]);
         totalAmount += responseFetched[i].amount;
     }
     statsTotal.innerText = `${totalAmount}$`;
 }
 
-fetchResponse();
+function createBar(responseFetched) {
+    let bar = document.createElement('div');
+    let barLabel = document.createElement('span');
+    barLabel.classList.add('bar-span');
+    barLabel.innerText = `${responseFetched.amount}$`;
+    bar.appendChild(barLabel);
+    bar.classList.add('bar');
+    bar.style.height = `${responseFetched.amount * 4}px`;
+    bar.addEventListener('mouseover', function () {
+        barLabel.classList.add('bar-span-active');
+    })
+    bar.addEventListener('mouseout', function () {
+        barLabel.classList.remove('bar-span-active');
+    })
+    if (responseFetched.day === currentDay) {
+        bar.classList.add('bar-current-day');
+    }
+    barWrapper.appendChild(bar);
+}
 
+function createDay(responseFetched) {
+    let day = document.createElement('div');
+    day.classList.add('day');
+    day.innerText = responseFetched.day;
+    dayWrapper.appendChild(day);
+}
+
+fetchResponse();
