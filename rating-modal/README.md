@@ -1,18 +1,14 @@
 ## Rating modal
 
 ### Table of contents
-- [Overview](#overview)
-    - [User flow](#user-flow)
-    - [Screenshot](#screenshot)
-    - [Links](#links)
-- [Development process](#development-process)
-    - [Run project](#run-project)
-    - [Built with](#built-with)
-    - [What I learned](#what-i-learned)
-    - [Continued development](#continued-development)
-    - [Useful resources](#useful-resources)
-
-### Overview
+- [User flow](#user-flow)
+- [Screenshot](#screenshot)
+- [Links](#links)
+- [Run project](#run-project)
+- [Built with](#built-with)
+- [What I learned](#what-i-learned)
+- [Continued development](#continued-development)
+- [Useful resources](#useful-resources)
 
 #### User flow
 - Select and submit a number rating
@@ -27,8 +23,6 @@
 #### Links
 - Live Site: [Github Pages](https://alexcumplido.github.io/frontend-mentor/rating-modal/)
 - Solution: [Frontend Mentor solution](https://www.frontendmentor.io/solutions/javascript-interactive-modal-vIDpbcZYq1)
-
-### Development process
 
 #### Run project
 ```
