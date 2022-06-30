@@ -12,6 +12,6 @@ In this repository I develop different projects from the Frontend Mentor plattfo
 **Beginner Level**
   - [Form validation](https://alexcumplido.github.io/frontend-mentor/form-validation)
   - [FAQ Accordion](https://alexcumplido.github.io/frontend-mentor/faq-accordion)
-  - [Rating modal](https://alexcumplido.github.io/frontend-mentor/rating-component)
+  - [Rating modal](https://alexcumplido.github.io/frontend-mentor/rating-modal)
   - [Grid section](https://alexcumplido.github.io/frontend-mentor/grid-section)
   - [Card component](https://alexcumplido.github.io/frontend-mentor/card-component)
