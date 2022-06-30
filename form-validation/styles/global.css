@@ -11,22 +11,17 @@ html {
 }
 
 body {
-    min-height: 100vh;
     max-width: var(--maxDesktopWidth);
+    min-height: 100vh;
     font-size: var(--fontSize);
     font-family: 'Poppins', sans-serif;
-    background-image: url("../images/bg-intro-mobile.png");
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.5rem;
+    background-image: url("../images/bg-intro-mobile.png");
     background-color: var(--red);
-}
-
-main {
-    margin: 2rem 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr repeat(4, 0.5fr);
-    justify-items: center;
 }
 
 button,
@@ -36,10 +31,10 @@ input {
 }
 
 footer {
-    grid-area: 6 / 1 / 7 / 2;
-    align-self: flex-end;
-    font-size: 80%;
-    text-align: center;
+    width: 100%;
+    padding: 0 2rem;
+    font-size: 60%;
+    text-align: right;
     color: var(--midGrey);
 }
 
