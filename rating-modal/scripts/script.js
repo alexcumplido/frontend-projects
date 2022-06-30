@@ -14,10 +14,9 @@ for (let i = 0; i < rateButtons.length; i++) {
 function changeStateButton(event) {
     let newRate = parseInt(event.target.innerText);
     if (newRate !== currentRate) {
-        for (let i = 0; i < rateButtons.length; i++) {
-            if (currentRate === parseInt(rateButtons[i].innerText)) {
-                rateButtons[i].classList.remove("btn-rating_active");
-            }
+        if (currentRate) {
+            //Subtract 1 to currentRate and match the position of current btn in nodeList.
+            rateButtons[currentRate - 1].classList.remove("btn-rating_active");
         }
 
         currentRate = newRate;
