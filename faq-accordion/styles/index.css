@@ -69,12 +69,13 @@
 @media screen and (min-width: 550px) {
     .accordion {
         max-width: calc(var(--maxWidthMobile)*2);
-        padding: 4rem;
+        padding: 2rem;
         margin: 0.5rem;
         flex-direction: row;
         background-image: url("../images/bg-pattern-desktop.svg");
         background-repeat: no-repeat;
         background-position: -725px -325px;
+        height: 25rem;
     }
 
     .accordion-logo-wrapper {
@@ -95,7 +96,6 @@
         width: 125px;
         top: 10rem;
         left: -9rem;
-
     }
 
     .accordion-text-wrapper {
