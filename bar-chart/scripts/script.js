@@ -21,6 +21,7 @@ async function fetchResponse() {
 }
 
 function createChart(responseFetched) {
+    debugger;
     for (let i = 0; i < responseFetched.length; i++) {
         createBar(responseFetched[i]);
         createDay(responseFetched[i]);
@@ -36,16 +37,19 @@ function createBar(responseFetched) {
     barLabel.innerText = `${responseFetched.amount}$`;
     bar.appendChild(barLabel);
     bar.classList.add('bar');
+    if (responseFetched.day === currentDay) {
+        bar.classList.add('bar-current-day');
+    }
+    //*4 just a random number,bar do not imply any real scale when it come to bar's height.
     bar.style.height = `${responseFetched.amount * 4}px`;
+
     bar.addEventListener('mouseover', function () {
         barLabel.classList.add('bar-span-active');
     })
     bar.addEventListener('mouseout', function () {
         barLabel.classList.remove('bar-span-active');
     })
-    if (responseFetched.day === currentDay) {
-        bar.classList.add('bar-current-day');
-    }
+
     barWrapper.appendChild(bar);
 }
 
