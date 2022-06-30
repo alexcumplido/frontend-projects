@@ -26,7 +26,7 @@
 
 #### Links
 - Live Site: [Github Pages](https://alexcumplido.github.io/frontend-mentor/rating-modal/)
-- Solution: [Frontend Mentor solution](https://www.frontendmentor.io/profile/alexcumplido)
+- Solution: [Frontend Mentor solution](https://www.frontendmentor.io/solutions/javascript-interactive-modal-vIDpbcZYq1)
 
 ### Development process
 
