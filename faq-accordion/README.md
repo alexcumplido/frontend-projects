@@ -1,7 +1,6 @@
 ## FAQ Accordion component
 
 ### Table of contents
-
 - [User flow](#user-flow)
 - [Screenshot](#screenshot)
 - [Links](#links)
@@ -20,8 +19,8 @@
 ![Mobile preview](./design/mobile-design.jpg)
 
 #### Links
-- Live Site: [Github Pages](https://alexcumplido.github.io/frontend-mentor/faq-accordion/)
-- Solution: [Frontend Mentor solution](https://www.frontendmentor.io/profile/alexcumplido)
+- [Live Site](https://alexcumplido.github.io/frontend-mentor/faq-accordion/)
+- [Solution](https://www.frontendmentor.io/solutions/vanilla-js-accordion-wg9_nHPyKB)
 
 #### Run project
 ```
