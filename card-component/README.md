@@ -1,4 +1,4 @@
-## FAQ Accordion component
+## Flexbox card
 
 ### Table of contents
 - [Overview](#overview)
@@ -19,7 +19,7 @@
 - See a hover state on desktop for the Sign Up call-to-action
 
 #### Screenshot
-![Mobile preview](./design/mobile-design.jpg)
+![Mobile preview](./designs/mobileView.JPG);
 
 #### Links
 - Live Site: [Github Pages](https://alexcumplido.github.io/frontend-mentor/card-component)
@@ -31,6 +31,7 @@
 ```
 # Just a local development server
 ```
+
 #### Built with
 - Semantic HTML5 markup
 - CSS custom properties
@@ -38,7 +39,8 @@
 
 #### What I learned
 
-I applied this configuration via the shortcut flex and the property flex-basis in order to get a two-row card in destkop viewport. Giving a 100% to the first flex-item yo get all the space of the first row filled by that element, then I made equals, in terms of space-distribution, the other two flex-items, made them dsitribute themselves equally along the second row.
+Applied the following flexbox configuration via the shortcut flex and the property flex-basis in order to get a two-row card in destkop viewport. Giving a 100% to the first flex-item all the space of the first row will be filled by that element, then I made equals in terms of space-distribution, the other two flex-items, made them dsitribute themselves equally along the second row.
+
 ```css
 .card:nth-of-type(1) {
     flex-basis: 100%;
