@@ -49,6 +49,10 @@
     cursor: pointer;
 }
 
+.accordion-title:hover {
+    color: var(--softRed);
+}
+
 .title-active {
     color: var(--darkDesaturated);
     font-weight: 600;
