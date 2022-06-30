@@ -65,6 +65,8 @@ function changeStateButton(event) {
 Receive an event (the button clicked), extracting its value, compare if the value is different from the current one (if user clicked different buttons), from now JS checks if there is a current Rate and if there is locate the corresponding button in the nodelist so active sates can be removed and new active styles can be added to the new button clicked.
 
 #### Useful resources
-- [Wes Boss DOM: Module 4](https://wesbos.com/javascript/04-the-dom/introduction-to-the-dom/). Wes Bos documentation about de DOM is pretty good.
+- [Wes Boss DOM: Module 4](https://wesbos.com/javascript/04-the-dom/introduction-to-the-dom/). I used Wes Bos documentation ad a first approach to DOM again. Then I went towards the classic MDN docs.
+
+
 
 
