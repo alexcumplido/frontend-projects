@@ -5,8 +5,8 @@ In this repository I develop different projects from the Frontend Mentor plattfo
 ## Projects
 
 **Junior level:**
-  - [Advice Api generator (Work in progress)](https://alexcumplido.github.io/frontend-mentor) 
-  - [Dropdown navigation menu (Work in progress)](https://alexcumplido.github.io/frontend-mentor) 
+  - [Advice Api generator (Work in progress)]
+  - [Dropdown navigation menu (Work in progress)]
   - [Expenses bar chart](https://alexcumplido.github.io/frontend-mentor/bar-chart)
 
 **Beginner Level**
