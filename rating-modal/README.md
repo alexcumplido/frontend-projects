@@ -46,8 +46,7 @@ This projects comes really handy since it has been a few month without coding an
 It works pretty well to refresh DOM manipulation and basic iterations.
 
 #### Continued development
-
-I tried to keep functions as concrete as possible. But I believe the function named changeStateButton(event) is strill doing many things. Receive an event (the button clicked), extracting its value, compare if the value is different from the current one (if user clickled different buttons), from now JS checks if there is a currentRate and if there is locate the corresponding button in the nodelist so active sates can be removed and new active styles can be added to the new current button clicked.
+I tried to keep functions as concrete as possible. But I believe this one is still doing many things. 
 
 ```js
 function changeStateButton(event) {
@@ -63,8 +62,9 @@ function changeStateButton(event) {
     }
 }
 ```
+Receive an event (the button clicked), extracting its value, compare if the value is different from the current one (if user clicked different buttons), from now JS checks if there is a current Rate and if there is locate the corresponding button in the nodelist so active sates can be removed and new active styles can be added to the new button clicked.
 
 #### Useful resources
-- [Background position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position). This really helps in  figurating how to position background-images.
+- [Wes Boss DOM: Module 4](https://wesbos.com/javascript/04-the-dom/introduction-to-the-dom/). Wes Bos documentation about de DOM is pretty good.
 
 
