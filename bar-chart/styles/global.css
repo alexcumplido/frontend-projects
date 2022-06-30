@@ -11,9 +11,22 @@ html {
 }
 
 body {
+    position: relative;
     max-width: var(--maxWidthDesktop);
     height: 100vh;
     font-size: var(--fontSize);
     font-family: var(--fontFamily);
     background-color: var(--cream);
+}
+
+footer {
+    padding: 1rem;
+    font-size: 80%;
+    text-align: center;
+    color: var(--mediumBrown);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--darkBrown);
 }
