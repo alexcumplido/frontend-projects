@@ -1,4 +1,5 @@
 .form-component {
+    grid-area: 1 / 1 / 4 / 2;
     padding: 0 1rem;
     color: var(--white);
 }
