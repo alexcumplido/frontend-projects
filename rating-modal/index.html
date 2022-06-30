@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
+    <meta name="author" content="Alexandre" />
+    <meta name="description" content="Interactive rating component" />
+    <title>Interactive rating component</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  </head>
+  <body>
+    <div class="modal first_modal show">
+      <div class="modal-content">
+        <div class="logo">
+          <img src="./images/icon-star.svg" title="Star logo" alt="Star logo" />
+        </div>
+        <div class="modal__text">
+          <h2 class="modal__heading">
+            How did we do?
+          </h3>
+          <p class="modal__description">
+            Please let us know how we did with your support request. All feedback is appreciated 
+            to help us improve our offering!
+          </p>
+        </div>
+        <div class="btn-group">
+          <button class="btn-rating">1</button>
+          <button class="btn-rating">2</button>
+          <button class="btn-rating">3</button>
+          <button class="btn-rating">4</button>
+          <button class="btn-rating">5</button>
+        </div>
+        <button disabled class="btn-submit">submit</button>
+      </div>
+    </div>
+
+    <div class="modal second_modal">
+      <div class="modal-content">
+        <div class="logo">
+          <img src="./images/illustration-thank-you.svg" alt="">
+        </div>
+        <span class="rate-info">You selected <span class="rate-counter"></span> out of 5</span>
+        <div class="modal__text">
+          <h2 class="modal__heading">
+          Thank you!
+          </h3>
+          <p class="modal__description">
+            We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      Coded by 
+      <a href="https://www.linkedin.com/in/alexandrecb" target="_blank">Alexandre Cumplido </a>. Challenge by
+      <a href="https://www.frontendmentor.io/" target="_blank">Frontend Mentor</a>.
+    </footer>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
