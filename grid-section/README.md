@@ -14,7 +14,7 @@
 
 ### Overview
 
-#### User flows
+#### User flow
 - View the optimal layout for the component depending on their device's screen size
 
 #### Screenshot
