@@ -1,18 +1,15 @@
 ## FAQ Accordion component
 
 ### Table of contents
-- [Overview](#overview)
-    - [User flow](#user-flow)
-    - [Screenshot](#screenshot)
-    - [Links](#links)
-- [Development process](#development-process)
-    - [Run project](#run-project)
-    - [Built with](#built-with)
-    - [What I learned](#what-i-learned)
-    - [Continued development](#continued-development)
-    - [Useful resources](#useful-resources)
 
-### Overview
+- [User flow](#user-flow)
+- [Screenshot](#screenshot)
+- [Links](#links)
+- [Run project](#run-project)
+- [Built with](#built-with)
+- [What I learned](#what-i-learned)
+- [Continued development](#continued-development)
+- [Useful resources](#useful-resources)
 
 #### User flow
 - Hide/Show the answer to a question when the question is clicked
@@ -25,8 +22,6 @@
 #### Links
 - Live Site: [Github Pages](https://alexcumplido.github.io/frontend-mentor/faq-accordion/)
 - Solution: [Frontend Mentor solution](https://www.frontendmentor.io/profile/alexcumplido)
-
-### Development process
 
 #### Run project
 ```
