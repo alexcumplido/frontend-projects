@@ -18,7 +18,6 @@ function changeStateButton(event) {
             //Subtract 1 to currentRate and match the position of current btn in nodeList.
             rateButtons[currentRate - 1].classList.remove("btn-rating_active");
         }
-
         currentRate = newRate;
         event.target.classList.add("btn-rating_active");
         submitButton.removeAttribute('disabled');
@@ -36,6 +35,7 @@ function validate(currentRate) {
         showSecondModal();
     }
 }
+
 function showSecondModal() {
     firstModal.classList.remove("show");
     secondModal.classList.add("show");

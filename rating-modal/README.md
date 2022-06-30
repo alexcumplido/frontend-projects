@@ -21,7 +21,8 @@
 - View the optimal layout for the app depending on their device's screen size
 
 #### Screenshot
-![Mobile preview](./design/mobile-design.jpg)
+![First Modal preview](./design/mobile-design.jpg)
+![Second modal preview](./design/mobile-thank-you-state.jpg);
 
 #### Links
 - Live Site: [Github Pages](https://alexcumplido.github.io/frontend-mentor/rating-modal/)
@@ -41,15 +42,27 @@
 
 #### What I learned
 
-Not sure if these two functions follow real SOLID principles, but I tried to concrete as much as possible the showing and hiding of accordion items. Both receive as parameters the position in the NodeList of the clicked item, wich match with the position of the other elements in their corresponding NodeList as well.
-
-```js
-
-```
+This projects comes really handy since it has been a few month without coding any JS at all.
+It works pretty well to refresh DOM manipulation and basic iterations.
 
 #### Continued development
 
-Looking forward to replace img tags by svg elements, so can be layout and styled taking advantage of vectorial graphics.
+I tried to keep functions as concrete as possible. But I believe the function named changeStateButton(event) is strill doing many things. Receive an event (the button clicked), extracting its value, compare if the value is different from the current one (if user clickled different buttons), from now JS checks if there is a currentRate and if there is locate the corresponding button in the nodelist so active sates can be removed and new active styles can be added to the new current button clicked.
+
+```js
+function changeStateButton(event) {
+    let newRate = parseInt(event.target.innerText);
+    if (newRate !== currentRate) {
+        if (currentRate) {
+            //Subtract 1 to currentRate and match the position of current btn in nodeList.
+            rateButtons[currentRate - 1].classList.remove("btn-rating_active");
+        }
+        currentRate = newRate;
+        event.target.classList.add("btn-rating_active");
+        submitButton.removeAttribute('disabled');
+    }
+}
+```
 
 #### Useful resources
 - [Background position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position). This really helps in  figurating how to position background-images.
