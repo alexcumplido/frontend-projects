@@ -6,43 +6,45 @@
         <meta http-equiv="X-UA-Compatible" content ="ie=edge" /> 
         <meta name="author" content="Alexandre Cumplido Bou" />
         <meta name="description" content="JavaScript form validation component" />
-        <title>Form component</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
         <link rel="stylesheet" href="./styles/main.css" />
+        <title>Form component</title>
     </head>
     <body>
-        <section class="form-component">
-            <div class="text-content">
-                <p>
-                    Learn to code by watching others
-                </p>
-                <p>
-                    See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.
-                </p>
-            </div>
-            <div class="form-wrapper">
-                <div class="banner">
+        <main>
+            <section class="form-component">
+                <div class="text-content">
                     <p>
-                        <span>Try it free 7 days</span> 
-                        then $20/mo. thereafter
+                        Learn to code by watching others
+                    </p>
+                    <p>
+                        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.
                     </p>
                 </div>
-                <form class="form" novalidate>    
-                    <fieldset>
-                        <input type="text" id="firstName" name="first_name" placeholder="First Name" autocomplete/>
-                        <span class="errorFirstName"></span>
-                        <input type="text" id="lastName" name="last_name" placeholder="Last Name"  autocomplete/>
-                        <span class="errorLastName"></span> 
-                        <input type="email" id="emailAdress" name="email_adress" placeholder="Email Adress" autocomplete/>
-                        <span class="errorEmail" aria-live="polite"></span>
-                        <input type="password" id="password" name="password" placeholder="Password"  autocomplete />    
-                        <span class="errorPassword" aria-live="polite"></span> 
-                    </fieldset>
-                    <button class="btn-submit" type="submit">Claim your free trial</button>
-                    <span class="policy">By clicking the button, you are agreeing to our <span>Terms and Services</span></span>
-                </form>
-            </div>
-        </section>  
-        <script src="./scripts/script.js"></script>
+                <div class="form-wrapper">
+                    <div class="banner">
+                        <p>
+                            <span>Try it free 7 days</span> 
+                            then $20/mo. thereafter
+                        </p>
+                    </div>
+                    <form class="form" novalidate>    
+                        <fieldset>
+                            <input type="text" id="firstName" name="first_name" placeholder="First Name" autocomplete/>
+                            <span class="errorFirstName"></span>
+                            <input type="text" id="lastName" name="last_name" placeholder="Last Name"  autocomplete/>
+                            <span class="errorLastName"></span> 
+                            <input type="email" id="emailAdress" name="email_adress" placeholder="Email Adress" autocomplete/>
+                            <span class="errorEmail" aria-live="polite"></span>
+                            <input type="password" id="password" name="password" placeholder="Password"  autocomplete />    
+                            <span class="errorPassword" aria-live="polite"></span> 
+                        </fieldset>
+                        <button class="btn-submit" type="submit">Claim your free trial</button>
+                        <span class="policy">By clicking the button, you are agreeing to our <span>Terms and Services</span></span>
+                    </form>
+                </div>
+            </section> 
+        </main> 
         <script src="./scripts/script.js"></script>
     </body>
 </html>
