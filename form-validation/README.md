@@ -12,8 +12,8 @@
 
 #### User flow
 - Receive an error message when the `form` is submitted if:
-  - Any `input` field is empty. The message for this error should say *"[Field Name] cannot be empty"*
-  - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Looks like this is not an email"*
+  - Any `input` field is empty. 
+  - The email address is not formatted correctly.
 - View the optimal layout for the site depending on their device's screen size
 
 #### Screenshot
@@ -36,7 +36,7 @@
 - Mobile-first workflow
 
 #### What I learned
-Not sure if these two functions follow real SOLID principles, but I tried to concrete as much as possible the showing and hiding of accordion items. Both receive as parameters the position in the NodeList of the clicked item, wich match with the position of the other elements in their corresponding NodeList as well.
+
 
 ```js
 const regexFirstName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/i;
@@ -62,11 +62,8 @@ function validateFirstName() {
 ```
 
 #### Continued development
-Looking forward to implement live validation on each input. I think could be done adding eventListener 'keyup' on each input and matching input.value against regular expressions.
+Looking forward to implement live validation on each input. I think could be done adding an eventListener 'keyup' on each input and comparing then the input.value against a regular expressions. I think that RegEx are at first complex to understand but very powerfull once you get confortable using them, I would like to spend some time understand this tool, the resources bellow will serve as a base study material.
 
 #### Useful resources
-- [RegExp.prototype.test()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test).
-- [RegExp global flag](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global).
+- [RegExp from MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 - [Regex learn](https://regexlearn.com/).
-
-

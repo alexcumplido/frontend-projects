@@ -4,12 +4,10 @@ const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
 const regexPass = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/i;
 
 const form = document.querySelector('.form');
-
 const userFirstName = document.getElementById('firstName');
 const userLastName = document.getElementById('lastName');
 const userEmail = document.getElementById('emailAdress');
 const userPassword = document.getElementById('password');
-
 const errorFirstName = document.querySelector('.errorFirstName');
 const errorLastName = document.querySelector('.errorLastName');
 const errorEmail = document.querySelector('.errorEmail');
