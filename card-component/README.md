@@ -18,8 +18,8 @@
 ![Mobile preview](./designs/mobileView.JPG)
 
 #### Links
-- Live Site: [Github Pages](https://alexcumplido.github.io/frontend-mentor/card-component)
-- Solution: [Frontend Mentor solution](https://www.frontendmentor.io/solutions/responsive-flexbox-without-media-HJ9NGJYf9)
+- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/card-component)
+- [Frontend Mentor solution](https://www.frontendmentor.io/solutions/responsive-flexbox-without-media-HJ9NGJYf9)
 
 #### Run project
 ```

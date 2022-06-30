@@ -19,13 +19,14 @@
 ![Mobile preview](./design/mobile-design.jpg)
 
 #### Links
-- [Live Site](https://alexcumplido.github.io/frontend-mentor/faq-accordion/)
-- [Solution](https://www.frontendmentor.io/solutions/vanilla-js-accordion-wg9_nHPyKB)
+- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/faq-accordion/)
+- [Frontend Mentor solution](https://www.frontendmentor.io/solutions/vanilla-js-accordion-wg9_nHPyKB)
 
 #### Run project
 ```
 # Just a local development server
 ```
+
 #### Built with
 - Semantic HTML5 markup
 - CSS custom properties
@@ -33,7 +34,6 @@
 - Mobile-first workflow
 
 #### What I learned
-
 Not sure if these two functions follow real SOLID principles, but I tried to concrete as much as possible the showing and hiding of accordion items. Both receive as parameters the position in the NodeList of the clicked item, wich match with the position of the other elements in their corresponding NodeList as well.
 
 ```js
@@ -51,7 +51,6 @@ function hideItem(i) {
 ```
 
 #### Continued development
-
 Looking forward to replace img tags by svg elements, so can be layout and styled taking advantage of vectorial graphics.
 
 #### Useful resources

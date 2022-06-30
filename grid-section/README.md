@@ -17,8 +17,8 @@
 ![Mobile preview](./designs/desktopView.PNG)
 
 #### Links
-- Live Site: [Github Pages](https://alexcumplido.github.io/frontend-mentor/grid-section/)
-- Solution: [Frontend Mentor solution](https://www.frontendmentor.io/solutions/flexboxgrid-with-minimal-media-query-HyEJqhZmc)
+- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/grid-section/)
+- [Frontend Mentor solution](https://www.frontendmentor.io/solutions/flexboxgrid-with-minimal-media-query-HyEJqhZmc)
 
 #### Run project
 ```

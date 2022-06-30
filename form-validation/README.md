@@ -20,13 +20,14 @@
 ![Mobile preview](./design/mobile-design.jpg);
 
 #### Links
-- Live Site: [Github Pages]https://alexcumplido.github.io/frontend-mentor/form-validation/)
-- Solution: [Frontend Mentor solution](https://www.frontendmentor.io/profile/alexcumplido)
+- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/form-validation/)
+- [Frontend Mentor solution](https://www.frontendmentor.io/profile/alexcumplido)
 
 #### Run project
 ```
 # Just a local development server
 ```
+
 #### Built with
 - Semantic HTML5 markup
 - CSS custom properties
@@ -35,7 +36,6 @@
 - Mobile-first workflow
 
 #### What I learned
-
 Not sure if these two functions follow real SOLID principles, but I tried to concrete as much as possible the showing and hiding of accordion items. Both receive as parameters the position in the NodeList of the clicked item, wich match with the position of the other elements in their corresponding NodeList as well.
 
 ```js
@@ -62,7 +62,6 @@ function validateFirstName() {
 ```
 
 #### Continued development
-
 Looking forward to implement live validation on each input. I think could be done adding eventListener 'keyup' on each input and matching input.value against regular expressions.
 
 #### Useful resources

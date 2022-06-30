@@ -21,13 +21,14 @@
 ![Second modal preview](./design/mobile-thank-you-state.jpg);
 
 #### Links
-- Live Site: [Github Pages](https://alexcumplido.github.io/frontend-mentor/rating-modal/)
-- Solution: [Frontend Mentor solution](https://www.frontendmentor.io/solutions/javascript-interactive-modal-vIDpbcZYq1)
+- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/rating-modal/)
+- [Frontend Mentor solution](https://www.frontendmentor.io/solutions/javascript-interactive-modal-vIDpbcZYq1)
 
 #### Run project
 ```
 # Just a local development server
 ```
+
 #### Built with
 - Semantic HTML5 markup
 - CSS custom properties
@@ -35,7 +36,6 @@
 - Mobile-first workflow
 
 #### What I learned
-
 This projects comes really handy since it has been a few month without coding any JS at all.
 It works pretty well to refresh DOM manipulation and basic iterations.
 
