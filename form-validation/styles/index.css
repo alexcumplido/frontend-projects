@@ -3,17 +3,24 @@
     color: var(--white);
 }
 
-.text-content {
+.text-content h2 {
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
     gap: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
 }
 
-.text-content p:first-child {
-    font-size: 1.25rem;
+.text-content span {
+    display: block;
+}
+
+
+.text-content span:first-child {
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -134,11 +141,14 @@ input:focus:invalid {
     }
 
     .text-content {
-        text-align: initial;
         flex: 1;
     }
 
-    .text-content p:first-child {
+    .text-content h2 {
+        text-align: initial;
+    }
+
+    .text-content span:first-child {
         font-size: 2.5rem;
         line-height: 1.2;
     }
