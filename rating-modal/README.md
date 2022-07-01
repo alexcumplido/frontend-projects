@@ -8,7 +8,6 @@
 - [Built with](#built-with)
 - [What I learned](#what-i-learned)
 - [Continued development](#continued-development)
-- [Useful resources](#useful-resources)
 
 #### User flow
 - Select and submit a number rating
@@ -37,10 +36,10 @@
 
 #### What I learned
 This projects comes really handy since it has been a few month without coding any JS at all.
-It works pretty well to refresh DOM manipulation and basic iterations.
+It works pretty well to refresh DOM manipulation and basic iterations. I used [Wes Boss DOM: Module 4](https://wesbos.com/javascript/04-the-dom/introduction-to-the-dom/) as first approach to DOM again. Then I went towards the classic MDN docs. 
 
 #### Continued development
-I tried to keep functions as concrete as possible. But I believe this one is still doing many things. 
+I tried to keep functions as concrete as possible. But I believe this one is still doing many things and should need be refactorized.
 
 ```js
 function changeStateButton(event) {
@@ -57,10 +56,3 @@ function changeStateButton(event) {
 }
 ```
 Receive an event (the button clicked), extracting its value, compare if the value is different from the current one (if user clicked different buttons), from now JS checks if there is a current Rate and if there is locate the corresponding button in the nodelist so active sates can be removed and new active styles can be added to the new button clicked.
-
-#### Useful resources
-- [Wes Boss DOM: Module 4](https://wesbos.com/javascript/04-the-dom/introduction-to-the-dom/). I used Wes Bos documentation ad a first approach to DOM again. Then I went towards the classic MDN docs.
-
-
-
-
