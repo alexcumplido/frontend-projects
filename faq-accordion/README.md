@@ -49,8 +49,3 @@ function hideItem(i) {
 
 #### Continued development
 Looking forward to replace img tags by svg elements, so can be layout and styled taking advantage of vectorial graphics. 
-
-#### Useful resources
-- [Background position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position). This really helps in  figurating how to position background-images.
-
-
