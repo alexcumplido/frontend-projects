@@ -18,18 +18,18 @@ function changeStateButton(event) {
     }
 }
 
+function showSecondModal() {
+    firstModal.classList.remove("show");
+    secondModal.classList.add("show");
+    rateInfo.innerText = currentRate;
+}
+
 function validate(currentRate) {
     if (typeof currentRate !== "number") {
         return;
     } else {
         showSecondModal();
     }
-}
-
-function showSecondModal() {
-    firstModal.classList.remove("show");
-    secondModal.classList.add("show");
-    rateInfo.innerText = currentRate;
 }
 
 for (let i = 0; i < rateButtons.length; i++) {
