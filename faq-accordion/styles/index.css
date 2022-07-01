@@ -78,7 +78,7 @@
 }
 
 .accordion-text-show {
-    max-width: 225px;
+    max-width: 90%;
     margin-top: 1rem;
     display: block;
     transition: 0.5s;
