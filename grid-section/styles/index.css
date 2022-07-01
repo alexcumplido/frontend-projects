@@ -78,6 +78,11 @@
     object-fit: cover;
 }
 
+
+.card__avatar__info h2 {
+    font-size: 1rem;
+}
+
 .card__avatar__info p:nth-of-type(1) {
     font-weight: 600;
     margin-bottom: 0.25rem;
