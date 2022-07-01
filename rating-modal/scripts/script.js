@@ -5,12 +5,6 @@ const submitButton = document.querySelector(".btn-submit");
 const rateInfo = document.querySelector(".rate-info");
 let currentRate = null;
 
-for (let i = 0; i < rateButtons.length; i++) {
-    rateButtons[i].addEventListener('click', function (event) {
-        changeStateButton(event);
-    });
-}
-
 function changeStateButton(event) {
     let newRate = parseInt(event.target.innerText);
     if (newRate !== currentRate) {
@@ -23,10 +17,6 @@ function changeStateButton(event) {
         submitButton.removeAttribute('disabled');
     }
 }
-
-submitButton.addEventListener('click', function () {
-    validate(currentRate);
-});
 
 function validate(currentRate) {
     if (typeof currentRate !== "number") {
@@ -42,4 +32,12 @@ function showSecondModal() {
     rateInfo.innerText = currentRate;
 }
 
+for (let i = 0; i < rateButtons.length; i++) {
+    rateButtons[i].addEventListener('click', function (event) {
+        changeStateButton(event);
+    });
+}
 
+submitButton.addEventListener('click', function () {
+    validate(currentRate);
+});
