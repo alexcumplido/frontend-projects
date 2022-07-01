@@ -8,7 +8,6 @@
 - [Built with](#built-with)
 - [What I learned](#what-i-learned)
 - [Continued development](#continued-development)
-- [Useful resources](#useful-resources)
 
 #### User flow
 - Hide/Show the answer to a question when the question is clicked
@@ -40,18 +39,16 @@ Not sure if these two functions follow real SOLID principles, but I tried to con
 function displayItem(i) {
     accordionTitles[i].classList.add("title-active");
     accordionText[i].classList.add("accordion-text-show");
-    arrows[i].classList.add("arrow-rotate");
 }
 
 function hideItem(i) {
     accordionTitles[i].classList.remove("title-active");
     accordionText[i].classList.remove("accordion-text-show");
-    arrows[i].classList.remove("arrow-rotate");
 }
 ```
 
 #### Continued development
-Looking forward to replace img tags by svg elements, so can be layout and styled taking advantage of vectorial graphics.
+Looking forward to replace img tags by svg elements, so can be layout and styled taking advantage of vectorial graphics. 
 
 #### Useful resources
 - [Background position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position). This really helps in  figurating how to position background-images.
