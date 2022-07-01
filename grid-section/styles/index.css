@@ -83,12 +83,16 @@
     font-size: 1rem;
 }
 
-.card__avatar__info p:nth-of-type(1) {
+.card__avatar__info span {
+    display: block;
+}
+
+.card__avatar__info span:nth-of-type(1) {
     font-weight: 600;
     margin-bottom: 0.25rem;
 }
 
-.card__avatar__info p:nth-of-type(2) {
+.card__avatar__info span:nth-of-type(2) {
     color: var(--softPink);
     font-weight: 100;
 }
