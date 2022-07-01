@@ -30,17 +30,3 @@ body {
     font-family: 'Karla', sans-serif;
     background-color: var(--grayishBackground)
 }
-
-footer {
-    position: absolute;
-    bottom: 0;
-    padding: 0.5rem;
-    font-size: 80%;
-    text-align: center;
-    color: var(--midGrey);
-}
-
-footer a {
-    text-decoration: none;
-    color: var(--cyan);
-}
