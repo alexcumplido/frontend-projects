@@ -29,16 +29,3 @@ input {
     font-family: inherit;
     font-size: 100%;
 }
-
-footer {
-    width: 100%;
-    padding: 0 2rem;
-    font-size: 60%;
-    text-align: right;
-    color: var(--midGrey);
-}
-
-footer a {
-    text-decoration: none;
-    color: var(--white);
-}
