@@ -1,7 +1,8 @@
 .accordion {
+    max-width: var(--maxWidthMobile);
+    margin: 9rem auto 0 auto;
+    padding: 7rem 1rem 2rem 1rem;
     position: relative;
-    padding: 6rem 1rem 2rem 1rem;
-    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,24 +12,28 @@
 
 .accordion-logo-wrapper {
     position: absolute;
-    top: -6rem;
+    top: -8rem;
     text-align: center;
 }
 
 .logo-img {
     max-width: 80%;
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .box-img {
-    display: block;
     width: 100px;
+    display: block;
     position: absolute;
-    top: 3rem;
-    left: 0.5rem;
+    top: 5.5rem;
+    left: 1rem;
 }
 
 .accordion-text-wrapper>h1 {
-    font-size: 1.5rem;
+    margin: 2rem 0;
+    font-size: 1.25rem;
     text-align: center;
 }
 
@@ -38,7 +43,7 @@
 
 .accordion__item {
     max-width: 245px;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     gap: 1rem;
     border-bottom: 0.1px solid var(--lightGrayish);
     color: var(--grayishBlue);
@@ -85,10 +90,17 @@
 }
 
 @media screen and (min-width: 550px) {
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .accordion {
         max-width: calc(var(--maxWidthMobile)*2);
         padding: 2rem;
         margin: 0.5rem;
+        align-items: center;
         flex-direction: row;
         background-image: url("../images/bg-pattern-desktop.svg");
         background-repeat: no-repeat;
