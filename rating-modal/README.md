@@ -1,9 +1,9 @@
 ## Rating modal
+[Github Pages live](https://alexcumplido.github.io/frontend-mentor/rating-modal/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/javascript-interactive-modal-vIDpbcZYq1)
 
 ### Table of contents
 - [User flow](#user-flow)
 - [Screenshot](#screenshot)
-- [Links](#links)
 - [Run project](#run-project)
 - [Built with](#built-with)
 - [What I learned](#what-i-learned)
@@ -19,10 +19,6 @@
 ![First Modal preview](./design/mobile-design.jpg)
 ![Second modal preview](./design/mobile-thank-you-state.jpg);
 
-#### Links
-- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/rating-modal/)
-- [Frontend Mentor solution](https://www.frontendmentor.io/solutions/javascript-interactive-modal-vIDpbcZYq1)
-
 #### Run project
 ```
 # Just a local development server
@@ -35,24 +31,43 @@
 - Mobile-first workflow
 
 #### What I learned
-This projects comes really handy since it has been a few month without coding any JS at all.
-It works pretty well to refresh DOM manipulation and basic iterations. I used [Wes Boss DOM: Module 4](https://wesbos.com/javascript/04-the-dom/introduction-to-the-dom/) as first approach to DOM again. Then I went towards the classic MDN docs. 
+This [blog-post](https://markheath.net/post/customize-radio-button-css) based on this [Stack over flow question](https://stackoverflow.com/questions/4641752/css-how-to-style-a-selected-radio-buttons-label) was really helpful when styling the radio inputs. I took the concepts from both readings and applied a solution I believe is even more simple. The concept is making "disapper" the input and styling just the label, since the space of the label is related with each input.
+1. I used the `<label>` tg as wrapper for the `<input>`. 
+2. The text number is aligned via flex inside the label.
+3. Apply width of 0 to the input                
 
-#### Continued development
-I tried to keep functions as concrete as possible. But I believe this one is still doing many things and should need be refactorized.
+The only caveat is tat the :active CSS pseudo-class is just gonna runs while the user clicks over the label. 
 
-```js
-function changeStateButton(event) {
-    let newRate = parseInt(event.target.innerText);
-    if (newRate !== currentRate) {
-        if (currentRate) {
-            //Subtract 1 to currentRate and match the position of current btn in nodeList.
-            rateButtons[currentRate - 1].classList.remove("btn-rating_active");
-        }
-        currentRate = newRate;
-        event.target.classList.add("btn-rating_active");
-        submitButton.removeAttribute('disabled');
-    }
+```html
+<label>
+    1
+    <input type="radio"id="1" name="radio-rate" value="1" />
+</label>
+```
+```css
+label {
+    padding: 1rem 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    font-weight: 700;
+    color: var(--midGrey);
+    background-color: var(--midGreyAplha);
+}
+
+label input[type="radio"] {
+    width: 0;
+}
+
+label:hover {
+    ...
+}
+
+label:active {
+    ...
 }
 ```
-Receive an event (the button clicked), extracting its value, compare if the value is different from the current one (if user clicked different buttons), from now JS checks if there is a current Rate and if there is locate the corresponding button in the nodelist so active sates can be removed and new active styles can be added to the new button clicked.
+
+#### Continued development
+Honestly I would be adding 

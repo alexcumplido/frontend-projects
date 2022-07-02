@@ -12,11 +12,15 @@ fieldset {
     justify-content: space-between;
 }
 
+input[type="radio"] {
+    position: fixed;
+    width: 0;
+    opacity: 0;
+}
+
 label {
+    display: inline-block;
     padding: 1rem 1.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 100%;
     font-weight: 700;
     color: var(--midGrey);
@@ -25,20 +29,18 @@ label {
     cursor: pointer;
 }
 
-label input[type="radio"] {
-    width: 0;
-}
-
 label:hover {
-    border: none;
-    border-radius: 100%;
     color: var(--white);
     background-color: var(--lightGray);
 }
 
-label:active {
+input[type="radio"]:checked+label {
     color: var(--white);
     background-color: var(--orange)
+}
+
+input[type="radio"]:focus+label {
+    outline: 1px solid var(--orange);
 }
 
 .btn-submit {

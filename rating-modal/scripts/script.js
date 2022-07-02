@@ -1,5 +1,5 @@
 const form = document.querySelector("form");
-const radioGroup = document.querySelectorAll("input[type='radio']");;
+const radioGroup = document.querySelectorAll("input[type='radio']");
 const submitButton = document.querySelector(".btn-submit");
 const firstModal = document.querySelector(".first_modal");
 const secondModal = document.querySelector(".second_modal");
