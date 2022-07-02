@@ -32,11 +32,12 @@ label {
 label:hover {
     color: var(--white);
     background-color: var(--lightGray);
+    transition: all 0.12s ease-in;
 }
 
 input[type="radio"]:checked+label {
     color: var(--white);
-    background-color: var(--orange)
+    background-color: var(--orange);
 }
 
 input[type="radio"]:focus+label {
@@ -60,4 +61,5 @@ input[type="radio"]:focus+label {
 .btn-submit:hover {
     color: var(--orange);
     background-color: var(--white);
+    transition: all 0.24s ease-in;
 }
