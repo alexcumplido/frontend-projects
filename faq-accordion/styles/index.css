@@ -38,10 +38,6 @@
     text-align: center;
 }
 
-.accordion-list {
-    align-self: stretch;
-}
-
 .accordion__item {
     margin: 0 auto;
     max-width: 245px;
@@ -85,16 +81,9 @@
 .accordion-text-show {
     margin-top: 1rem;
     display: block;
-    transition: 0.5s;
 }
 
 @media screen and (min-width: 550px) {
-    main {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .accordion {
         display: flex;
         flex-direction: row;

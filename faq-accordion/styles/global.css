@@ -26,3 +26,11 @@ main {
 ul {
     list-style: none;
 }
+
+@media screen and (min-width: 550px) {
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
