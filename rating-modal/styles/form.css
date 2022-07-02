@@ -1,38 +1,44 @@
-button {
-    font-family: 'Overpass', Arial, Helvetica, sans-serif;
-    cursor: pointer;
-}
-
-.btn-group {
+.form {
     align-self: stretch;
     display: flex;
-    align-items: center;
-    flex-flow: row wrap;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.btn-rating {
+label {
+    padding: 1rem 1.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.25rem 1.5rem;
-    border: none;
     border-radius: 100%;
     font-weight: 700;
     color: var(--midGrey);
     background-color: var(--midGreyAplha);
+    font-family: 'Overpass', Arial, Helvetica, sans-serif;
+    cursor: pointer;
 }
 
-.btn-rating:hover {
+label input[type="radio"] {
+    width: 0;
+}
+
+label:hover {
     border: none;
     border-radius: 100%;
     color: var(--white);
     background-color: var(--lightGray);
 }
 
-.btn-rating_active {
+label:active {
     color: var(--white);
-    background-color: var(--orange);
+    background-color: var(--orange)
 }
 
 .btn-submit {
@@ -45,13 +51,11 @@ button {
     text-transform: uppercase;
     color: var(--white);
     background-color: var(--orange);
+    font-family: 'Overpass', Arial, Helvetica, sans-serif;
+    cursor: pointer;
 }
 
 .btn-submit:hover {
     color: var(--orange);
     background-color: var(--white);
-}
-
-.btn-submit:disabled {
-    cursor: not-allowed;
 }

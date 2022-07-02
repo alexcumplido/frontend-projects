@@ -1,27 +1,17 @@
+const form = document.querySelector("form");
+const radioGroup = document.querySelectorAll("input[type='radio']");;
+const submitButton = document.querySelector(".btn-submit");
 const firstModal = document.querySelector(".first_modal");
 const secondModal = document.querySelector(".second_modal");
-const rateButtons = document.querySelectorAll(".btn-rating");
-const submitButton = document.querySelector(".btn-submit");
 const rateInfo = document.querySelector(".rate-info");
 let currentRate = null;
 
-function changeStateButton(event) {
-    let newRate = parseInt(event.target.innerText);
-    if (newRate !== currentRate) {
-        if (currentRate) {
-            //Subtract 1 to currentRate and match the position of current btn in nodeList.
-            rateButtons[currentRate - 1].classList.remove("btn-rating_active");
+function getRateFromRadio() {
+    for (let i = 0; i < radioGroup.length; i++) {
+        if (radioGroup[i].checked == true) {
+            currentRate = parseInt(radioGroup[i].value);
         }
-        currentRate = newRate;
-        event.target.classList.add("btn-rating_active");
-        submitButton.removeAttribute('disabled');
     }
-}
-
-function showSecondModal() {
-    firstModal.classList.remove("show");
-    secondModal.classList.add("show");
-    rateInfo.innerText = currentRate;
 }
 
 function validate(currentRate) {
@@ -32,12 +22,14 @@ function validate(currentRate) {
     }
 }
 
-for (let i = 0; i < rateButtons.length; i++) {
-    rateButtons[i].addEventListener('click', function (event) {
-        changeStateButton(event);
-    });
+function showSecondModal() {
+    firstModal.classList.remove("show");
+    secondModal.classList.add("show");
+    rateInfo.innerText = currentRate;
 }
 
-submitButton.addEventListener('click', function () {
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    getRateFromRadio();
     validate(currentRate);
-});
+})
