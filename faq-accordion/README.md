@@ -1,9 +1,9 @@
 ## FAQ Accordion component
+- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/faq-accordion/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/vanilla-js-accordion-wg9_nHPyKB)
 
 ### Table of contents
 - [User flow](#user-flow)
 - [Screenshot](#screenshot)
-- [Links](#links)
 - [Run project](#run-project)
 - [Built with](#built-with)
 - [What I learned](#what-i-learned)
@@ -16,10 +16,6 @@
 
 #### Screenshot
 ![Mobile preview](./design/mobile-design.jpg)
-
-#### Links
-- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/faq-accordion/)
-- [Frontend Mentor solution](https://www.frontendmentor.io/solutions/vanilla-js-accordion-wg9_nHPyKB)
 
 #### Run project
 ```
