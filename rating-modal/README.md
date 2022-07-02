@@ -1,5 +1,5 @@
 ## Rating modal
-[Github Pages live](https://alexcumplido.github.io/frontend-mentor/rating-modal/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/javascript-interactive-modal-vIDpbcZYq1)
+[Github Pages live](https://alexcumplido.github.io/frontend-mentor/rating-modal/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/javascript-modal-styled-label-as-input-same-effect-qZiNNHmwZX)
 
 ### Table of contents
 - [User flow](#user-flow)
