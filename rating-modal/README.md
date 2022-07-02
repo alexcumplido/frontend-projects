@@ -31,43 +31,52 @@
 - Mobile-first workflow
 
 #### What I learned
-This [blog-post](https://markheath.net/post/customize-radio-button-css) based on this [Stack over flow question](https://stackoverflow.com/questions/4641752/css-how-to-style-a-selected-radio-buttons-label) was really helpful when styling the radio inputs. I took the concepts from both readings and applied a solution I believe is even more simple. The concept is making "disapper" the input and styling just the label, since the space of the label is related with each input.
-1. I used the `<label>` tg as wrapper for the `<input>`. 
-2. The text number is aligned via flex inside the label.
-3. Apply width of 0 to the input                
+This [blog-post](https://markheath.net/post/customize-radio-button-css) based on this [Stack over flow question](https://stackoverflow.com/questions/4641752/css-how-to-style-a-selected-radio-buttons-label) was really helpful when styling the label and radio inputs. The main concept works around styling the label and not the input. The key concepts are:
 
-The only caveat is tat the :active CSS pseudo-class is just gonna runs while the user clicks over the label. 
+1. Relating label and input via the `for` attribute allow the user click on the `<label>` generating same effect than clicking over the `<input>` itself.
+
+2. Making "disappear" de `<input>`. Do not use display none, that would make the `<input>` invisible to screen readers.
+
+3. Style the label as you wish.
+
+4. Active states for the label can be emulated based on the :pseudo-class selector `<checked>` plus de adjacent sibling selector `+`. Because of the HTML structure we implemented once any input goes as `<checked>` the next sibling element will be the corresponding `<label>`, which can be styled based on input state.
 
 ```html
-<label>
-    1
-    <input type="radio"id="1" name="radio-rate" value="1" />
-</label>
+<input type="radio" id="1" name="radio-rate" value="1" />
+<label for="1">1</label>
 ```
 ```css
-label {
-    padding: 1rem 1.25rem;
+fieldset {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    font-weight: 700;
+}
+
+input[type="radio"] {
+    position: fixed;
+    width: 0;
+    opacity: 0;
+}
+
+label {
+    display: inline-block;
+    padding: 1rem 1.25rem;
     color: var(--midGrey);
     background-color: var(--midGreyAplha);
 }
 
-label input[type="radio"] {
-    width: 0;
-}
-
 label:hover {
-    ...
+    color: var(--white);
+    background-color: var(--lightGray);
 }
 
-label:active {
-    ...
+input[type="radio"]:checked+label {
+    color: var(--white);
+    background-color: var(--orange)
+}
+
+input[type="radio"]:focus+label {
+    outline: 1px solid var(--orange);
 }
 ```
 
 #### Continued development
-Honestly I would be adding 
+I would like to apply better accessibility for this component, looking into [MDN Accesibility Docs](https://developer.mozilla.org/en-US/docs/Web/Accessibility) as a basis material.
