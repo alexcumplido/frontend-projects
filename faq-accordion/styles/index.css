@@ -1,6 +1,6 @@
 .accordion {
     position: relative;
-    margin-top: 4rem;
+    margin-top: 8rem;
     width: var(--maxWidthMobile);
     padding: 6rem 2rem 2rem 2rem;
     border-radius: 1rem;
