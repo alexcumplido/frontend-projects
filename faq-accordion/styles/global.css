@@ -12,18 +12,14 @@ html {
 
 body {
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
     font-family: 'Kumbh Sans', sans-serif;
     font-size: var(--fontSize);
     background: rgb(101, 101, 231);
     background: linear-gradient(0deg, rgba(101, 101, 231, 1) 0%, rgba(175, 103, 233, 1) 100%);
-}
-
-main {
-    min-width: 100vw;
-    min-height: 100vh;
-    padding: 0.5rem;
-    display: grid;
-    place-items: center;
 }
 
 ul {

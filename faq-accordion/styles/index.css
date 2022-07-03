@@ -1,8 +1,7 @@
 .accordion {
     position: relative;
     width: var(--maxWidthMobile);
-    margin: 7.5rem auto 0 auto;
-    padding: 6rem 1rem 2rem 1rem;
+    padding: 6rem 2rem 2rem 2rem;
     border-radius: 1rem;
     background-color: var(--white);
 }
@@ -11,13 +10,13 @@
     width: 278px;
     height: 260px;
     content: "";
+    position: absolute;
+    top: 0;
+    left: 55%;
     background-image: url("../images/illustration-woman-online-mobile.svg"), url("../images/bg-pattern-mobile.svg");
     background-size: 278px 190px, contain;
     background-repeat: no-repeat, no-repeat;
     background-position: center center, center 135px;
-    position: absolute;
-    top: 0;
-    left: 55%;
     transform: translate(-55%, -55%);
 }
 
@@ -29,7 +28,6 @@
 
 .accordion__item {
     margin: 0 auto;
-    max-width: 245px;
     padding: 1.5rem 0;
     border-bottom: 0.1px solid var(--lightGrayish);
     color: var(--grayishBlue);
@@ -37,8 +35,8 @@
 }
 
 .accordion-title {
-    padding-right: 1.5rem;
     position: relative;
+    padding-right: 1.5rem;
 }
 
 .accordion-title:hover {
