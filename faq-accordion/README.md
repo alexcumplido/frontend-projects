@@ -44,4 +44,4 @@ function hideItem(i) {
 ```
 
 #### Continued development
-Looking forward to replace img tags by svg elements, so can be layout and styled taking advantage of vectorial graphics. 
+The bonus for this was a unique CSS solution, even if I did not write much JavaScript for this challenge I would like to try the bonus point, building it only with CSS.
