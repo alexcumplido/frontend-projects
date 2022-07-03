@@ -1,13 +1,37 @@
 .accordion {
     position: relative;
     max-width: 300px;
-    margin: 9rem auto 0 auto;
+    margin: 8rem auto 0 auto;
     padding: 6rem 1rem 2rem 1rem;
     border-radius: 1rem;
     background-color: var(--white);
 }
 
-.logo-outer-wrapper {
+.accordion::before {
+    width: 278px;
+    height: 260px;
+    content: "";
+    background-image: url("../images/illustration-woman-online-mobile.svg"), url("../images/bg-pattern-mobile.svg");
+    background-size: 278px 190px, contain;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center, center 130px;
+    position: absolute;
+    top: 0;
+    left: 55%;
+    transform: translate(-55%, -55%);
+}
+
+/* .accordion::after {
+    width: 140px;
+    height: 190px;
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    outline: 1px solid red;
+} */
+
+/* .logo-outer-wrapper {
     position: absolute;
     top: -8rem;
 }
@@ -30,7 +54,7 @@
     width: 35%;
     left: 0.5rem;
     top: 5rem;
-}
+} */
 
 .accordion-text-wrapper>h1 {
     margin: 2rem 0;
