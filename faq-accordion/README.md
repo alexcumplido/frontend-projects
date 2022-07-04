@@ -6,7 +6,7 @@
 - [Screenshot](#screenshot)
 - [Run project](#run-project)
 - [Built with](#built-with)
-- [What I learned](#what-i-learned)
+- [Thoughts](#thoughts)
 - [Continued development](#continued-development)
 
 #### User flow
@@ -28,7 +28,7 @@
 - JavaScript
 - Mobile-first workflow
 
-#### What I learned
+#### Thoughts
 Not sure if these two functions follow real SOLID principles, but I tried to concrete as much as possible the showing and hiding of accordion items. Both receive as parameters the position in the NodeList of the clicked item, wich match with the position of the other elements in their corresponding NodeList as well.
 
 ```js

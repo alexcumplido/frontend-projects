@@ -6,7 +6,7 @@
 - [Screenshot](#screenshot)
 - [Run project](#run-project)
 - [Built with](#built-with)
-- [What I learned](#what-i-learned)
+- [Thoughts](#thoughts)
 - [Continued development](#continued-development)
 
 #### User flow
@@ -30,7 +30,7 @@
 - JavaScript
 - Mobile-first workflow
 
-#### What I learned
+#### Thoughts
 This [blog-post](https://markheath.net/post/customize-radio-button-css) based on this [Stack over flow question](https://stackoverflow.com/questions/4641752/css-how-to-style-a-selected-radio-buttons-label) was really helpful when styling the label and radio inputs. The main concept works around styling the label and not the input. The key concepts are:
 
 1. Relating label and input via the `for` attribute allow the user click on the `<label>` generating same effect than clicking over the `<input>` itself.

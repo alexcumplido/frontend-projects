@@ -37,8 +37,6 @@ and [Regex learn](https://regexlearn.com/).
 #### Continued development
 Need mandatory refactor.
 ```js
-const regexFirstName = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/i;
-
 function validateFirstName() {
     let validate = false;
     if (userFirstName.value === "") {
@@ -58,7 +56,7 @@ function validateFirstName() {
     return validate;
 }
 ```
-After the refactor the function is more concise. There is less DOM manipulation inside each conditional statement, instead I focus that manipulation in three functions called showErrorFor, removeErrorFor and showSuccessFor receiving the corresponding arguments when called.
+After the refactor the function is more concise. There is no explicit DOM manipulation inside each conditional statement, instead I focus that manipulation in three functions called showErrorFor, removeErrorFor and showSuccessFor receiving the corresponding arguments when called.
 
 ```js
 function validateFirstName() {
