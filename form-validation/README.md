@@ -1,5 +1,5 @@
 ## Form sign-up component
-[Github Pages live](https://alexcumplido.github.io/frontend-mentor/form-validation/) | [Frontend Mentor solution](https://www.frontendmentor.io/profile/alexcumplido)
+[Github Pages live](https://alexcumplido.github.io/frontend-mentor/form-validation/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/solid-javascript-form-validation-ZS7l_ai6w5)
 
 ### Table of contents
 - [User flow](#user-flow)
@@ -58,7 +58,7 @@ function validateFirstName() {
     return validate;
 }
 ```
-After the refactor the the function is more concise. There is less DOM manipulation inside each conditional statement, instead I focus that manipulation in three functions called showErrorFor, removeErrorFor and showSuccessFor receiveing the corresponding arguments when called.
+After the refactor the function is more concise. There is less DOM manipulation inside each conditional statement, instead I focus that manipulation in three functions called showErrorFor, removeErrorFor and showSuccessFor receiving the corresponding arguments when called.
 
 ```js
 function validateFirstName() {
