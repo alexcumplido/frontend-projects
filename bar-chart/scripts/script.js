@@ -20,12 +20,17 @@ async function fetchResponse() {
         });
 }
 
+function getTotal(responseFetched) {
+    for (let i = 0; i < responseFetched.length; i++) {
+        totalAmount += responseFetched[i].amount;
+    }
+}
+
 function createChart(responseFetched) {
-    debugger;
+    getTotal(responseFetched);
     for (let i = 0; i < responseFetched.length; i++) {
         createBar(responseFetched[i]);
         createDay(responseFetched[i]);
-        totalAmount += responseFetched[i].amount;
     }
     statsTotal.innerText = `${totalAmount}$`;
 }
@@ -40,8 +45,8 @@ function createBar(responseFetched) {
     if (responseFetched.day === currentDay) {
         bar.classList.add('bar-current-day');
     }
-    //*4 just a random number,bar do not imply any real scale when it come to bar's height.
-    bar.style.height = `${responseFetched.amount * 4}px`;
+
+    bar.style.height = `${(responseFetched.amount / 100) * totalAmount}px`;
 
     bar.addEventListener('mouseover', function () {
         barLabel.classList.add('bar-span-active');

@@ -1,23 +1,21 @@
 ## Rating modal
-[Github Pages live](https://alexcumplido.github.io/frontend-mentor/rating-modal/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/javascript-interactive-modal-vIDpbcZYq1)
+[Github Pages live](https://alexcumplido.github.io/frontend-mentor/bar-chart/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/javascript-interactive-modal-vIDpbcZYq1)
 
 ### Table of contents
 - [User flow](#user-flow)
 - [Screenshot](#screenshot)
 - [Run project](#run-project)
 - [Built with](#built-with)
-- [What I learned](#what-i-learned)
+- [Thoughts](#thoughts)
 - [Continued development](#continued-development)
 
 #### User flow
-- Select and submit a number rating
-- See the "Thank you" card state after submitting a rating
-- See hover states for all interactive elements on the page
-- View the optimal layout for the app depending on their device's screen size
+- View the bar chart and hover over the individual bars to see the correct amounts for each day
+- See the current day's bar highlighted in a different colour to the other bars
+- View the optimal layout for the content depending on their device's screen size
 
 #### Screenshot
-![First Modal preview](./design/mobile-design.jpg)
-![Second modal preview](./design/mobile-thank-you-state.jpg);
+![Mobile view](./design/mobile-design.jpg)
 
 #### Run project
 ```
@@ -28,17 +26,39 @@
 - Semantic HTML5 markup
 - CSS custom properties
 - JavaScript
+- Document Object Model manipulation
 - Mobile-first workflow
 
-#### What I learned
+#### Thoughts
 This projects comes really handy since it has been a few month without coding any JS at all.
 It works pretty well to refresh DOM manipulation and basic iterations.
 
 #### Continued development
-I tried to keep functions as concrete as possible. But I believe this one is still doing many things. 
+I believe this function that creates each of the chart bars is giantic, need a refactor at some point. 
 
 ```js
+function createBar(responseFetched) {
+    let bar = document.createElement('div');
+    let barLabel = document.createElement('span');
+    barLabel.classList.add('bar-span');
+    barLabel.innerText = `${responseFetched.amount}$`;
+    bar.appendChild(barLabel);
+    bar.classList.add('bar');
+    if (responseFetched.day === currentDay) {
+        bar.classList.add('bar-current-day');
+    }
 
+    bar.style.height = `${(responseFetched.amount / 100) * totalAmount}px`;
+
+    bar.addEventListener('mouseover', function () {
+        barLabel.classList.add('bar-span-active');
+    })
+    bar.addEventListener('mouseout', function () {
+        barLabel.classList.remove('bar-span-active');
+    })
+
+    barWrapper.appendChild(bar);
+}
 ```
 
 
