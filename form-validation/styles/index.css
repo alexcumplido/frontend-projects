@@ -19,7 +19,6 @@
     display: block;
 }
 
-
 .text-content span:first-child {
     font-size: 2rem;
     font-weight: 700;
@@ -59,6 +58,7 @@ fieldset {
     gap: 1rem;
 }
 
+/*Make invisble labels but still there for screen-readers*/
 .hidden {
     opacity: 0;
     width: 0;
@@ -73,6 +73,10 @@ input {
     align-self: flex-start;
     border: 1px solid var(--grayishBlue);
     border-radius: 0.25rem;
+}
+
+.input-success {
+    border: 1px solid var(--green);
 }
 
 input::placeholder {
@@ -115,10 +119,12 @@ input:focus:invalid {
     font-weight: 500;
     color: var(--white);
     background-color: var(--green);
-    box-shadow: 0px 2px 2px var(--green);
+    box-shadow: 0px 3px 3px var(--green);
 }
 
 .btn-submit:hover {
+    transition: ease-in .3s;
+    background-color: var(--lightGreen);
     cursor: pointer;
 }
 

@@ -14,28 +14,32 @@ const errorEmail = document.querySelector('.errorEmail');
 const errorPassword = document.querySelector('.errorPassword');
 // regexPass 8 characters, at least 1 letter and 1 number:
 
-form.addEventListener('submit', function (event) {
-    if (validateFirstName() === false) event.preventDefault();
-    if (validateLastName() === false) event.preventDefault();
-    if (validateEmail() === false) event.preventDefault();
-    if (validatePassword() === false) event.preventDefault();
-});
+function showErrorFor(input, error, message) {
+    input.classList.add('input-error');
+    error.classList.add('active');
+    error.textContent = `${message}`;
+}
+
+function removeErrorFor(input, error) {
+    input.classList.remove('input-error');
+    error.classList.remove('active');
+    error.textContent = '';
+}
+
+function showSuccessFor(input) {
+    input.classList.add('input-success');
+}
 
 function validateFirstName() {
     let validate = false;
     if (userFirstName.value === "") {
-        errorFirstName.textContent = 'Name can not be empty.';
-        errorFirstName.classList.add('active');
-        userFirstName.classList.add('input-error');
+        showErrorFor(userFirstName, errorFirstName, 'Name can not be empty.');
     } else if (regexFirstName.test(userFirstName.value) === false) {
-        errorFirstName.textContent = 'Can not containt numeric or special values.';
-        errorFirstName.classList.add('active');
-        userFirstName.classList.add('input-error');
+        showErrorFor(userFirstName, errorFirstName, 'Can not containt numeric or special values.');
     } else {
+        removeErrorFor(userFirstName, errorFirstName);
+        showSuccessFor(userFirstName);
         validate = true;
-        errorFirstName.textContent = '';
-        errorFirstName.classList.remove('active');
-        userFirstName.classList.remove('input-error');
     }
     return validate;
 }
@@ -43,19 +47,13 @@ function validateFirstName() {
 function validateLastName() {
     let validate = false;
     if (userLastName.value === "") {
-        errorLastName.textContent = 'Last Name can not be empty.';
-        errorLastName.classList.add('active');
-        userLastName.classList.add('input-error');
+        showErrorFor(userLastName, errorLastName, 'Last Name can not be empty.');
     } else if (regexLastName.test(userLastName.value) === false) {
-        regexLastNameValue = regexFirstName.test(userFirstName.value) === false
-        errorLastName.textContent = 'Can not containt numeric or special values.';
-        errorLastName.classList.add('active');
-        userLastName.classList.add('input-error');
+        showErrorFor(userLastName, errorLastName, 'Can not containt numeric or special values.');
     } else {
         validate = true;
-        errorLastName.textContent = '';
-        errorLastName.classList.remove('active');
-        userLastName.classList.remove('input-error');
+        removeErrorFor(userLastName, errorLastName);
+        showSuccessFor(userLastName);
     }
     return validate;
 }
@@ -63,18 +61,13 @@ function validateLastName() {
 function validateEmail() {
     let validate = false;
     if (userEmail.value === "") {
-        errorEmail.textContent = 'Email can not be empty.';
-        errorEmail.classList.add('active');
-        userEmail.classList.add('input-error');
+        showErrorFor(userEmail, errorEmail, 'Email can not be empty.');
     } else if (regexEmail.test(userEmail.value) === false) {
-        errorEmail.textContent = 'Looks like this is not an email.';
-        errorEmail.classList.add('active');
-        userEmail.classList.add('input-error');
+        showErrorFor(userEmail, errorEmail, 'Looks like this is not an email.');
     } else {
         validate = true;
-        errorEmail.textContent = '';
-        errorEmail.classList.remove('active');
-        userEmail.classList.remove('input-error');
+        removeErrorFor(userEmail, errorEmail);
+        showSuccessFor(userEmail);
     }
     return validate;
 }
@@ -82,18 +75,20 @@ function validateEmail() {
 function validatePassword() {
     let validate = false;
     if (userPassword.value === "") {
-        errorPassword.textContent = 'Password can not be empty.';
-        errorPassword.classList.add('active');
-        userPassword.classList.add('input-error')
+        showErrorFor(userPassword, errorPassword, 'Password can not be empty.');
     } else if (regexPass.test(userPassword.value) === false) {
-        errorPassword.textContent = 'At least 8 characters long, must include one letter and one number.';
-        errorPassword.classList.add('active');
-        userPassword.classList.add('input-error')
+        showErrorFor(userPassword, errorPassword, '8 characters long with one letter and one number.');
     } else {
         validate = true;
-        errorPassword.textContent = '';
-        errorPassword.classList.remove('active');
-        userPassword.classList.remove('input-error')
+        removeErrorFor(userPassword, errorPassword);
+        showSuccessFor(userPassword);
     }
     return validate;
 }
+
+form.addEventListener('submit', function (event) {
+    if (validateFirstName() === false) event.preventDefault();
+    if (validateLastName() === false) event.preventDefault();
+    if (validateEmail() === false) event.preventDefault();
+    if (validatePassword() === false) event.preventDefault();
+});

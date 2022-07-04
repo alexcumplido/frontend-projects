@@ -58,3 +58,20 @@ function validateFirstName() {
     return validate;
 }
 ```
+After the refactor the the function is more concise. There is less DOM manipulation inside each conditional statement, instead I focus that manipulation in three functions called showErrorFor, removeErrorFor and showSuccessFor receiveing the corresponding arguments when called.
+
+```js
+function validateFirstName() {
+    let validate = false;
+    if (userFirstName.value === "") {
+        showErrorFor(userFirstName, errorFirstName, 'Name can not be empty.');
+    } else if (regexFirstName.test(userFirstName.value) === false) {
+        showErrorFor(userFirstName, errorFirstName, 'Can not containt numeric or special values.');
+    } else {
+        removeErrorFor(userFirstName, errorFirstName);
+        showSuccessFor(userFirstName);
+        validate = true;
+    }
+    return validate;
+}
+```
