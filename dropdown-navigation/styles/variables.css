@@ -1,0 +1,11 @@
+:root {
+    --maxWidthMovile: 375px;
+    --maxWidthDesktop: 1440px;
+
+    --lightWhite: hsl(0, 0%, 98%);
+    --mediumGray: hsl(0, 0%, 41%);
+    --lightBlack: hsl(0, 0%, 8%);
+
+    --fontFamily: 'Epilogue', sans-serif;
+    --fontSize: 18px;
+}
