@@ -1,12 +1,12 @@
 ## Form sign-up component
+[Github Pages live](https://alexcumplido.github.io/frontend-mentor/form-validation/) | [Frontend Mentor solution](https://www.frontendmentor.io/profile/alexcumplido)
 
 ### Table of contents
 - [User flow](#user-flow)
 - [Screenshot](#screenshot)
-- [Links](#links)
 - [Run project](#run-project)
 - [Built with](#built-with)
-- [What I learned](#what-i-learned)
+- [Thoughts](#thoughts)
 - [Continued development](#continued-development)
 
 #### User flow
@@ -17,10 +17,6 @@
 
 #### Screenshot
 ![Mobile preview](./design/mobile-design.jpg);
-
-#### Links
-- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/form-validation/)
-- [Frontend Mentor solution](https://www.frontendmentor.io/profile/alexcumplido)
 
 #### Run project
 ```
@@ -34,9 +30,9 @@
 - Regular Expressions
 - Mobile-first workflow
 
-#### What I learned
-Looking forward to implement live validation on each input. I think could be done adding an eventListener 'keyup' on each input and comparing then the input.value against a regular expressions. I think that RegEx are at first complex to understand but very powerfull once you get confortable using them, I would like to spend some time understand this tool, the resources bellow will serve as a base study material. Useful resources I found about RegEx field are [RegExp from MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-and [Regex learn](https://regexlearn.com/) for a more course oriented study.
+#### Thoughts
+Looking forward to implement live validation on each input. I think could be done adding an eventListener 'keyup' on each input and comparing then the input.value against a regular expressions. I think that RegEx are at first complex to understand but very powerfull once you get confortable using them. I would like to spend some time understand this tool, the resources below will serve as a base study material. Here is what I found about topic [RegExp from MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+and [Regex learn](https://regexlearn.com/).
 
 #### Continued development
 Need mandatory refactor.
