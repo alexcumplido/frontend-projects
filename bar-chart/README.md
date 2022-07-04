@@ -30,26 +30,26 @@
 - Mobile-first workflow
 
 #### Thoughts
-This projects comes really handy since it has been a few month without coding any JS at all.
-It works pretty well to refresh DOM manipulation and basic iterations.
+This was my first project from Junior Frontend Mentor challenges. Comes really in handy since it has been a few month without coding any JavaScript at all and now I restarted to learning it and digging deep into programming again. 
 
 #### Continued development
 I believe this function that creates each of the chart bars is giantic, need a refactor at some point. 
 
 ```js
-function createBar(responseFetched) {
+function createBar(dayItem) {
     let bar = document.createElement('div');
     let barLabel = document.createElement('span');
     barLabel.classList.add('bar-span');
-    barLabel.innerText = `${responseFetched.amount}$`;
+    barLabel.innerText = `${dayItem.amount}$`;
     bar.appendChild(barLabel);
     bar.classList.add('bar');
-    if (responseFetched.day === currentDay) {
+    if (dayItem.day === currentDay) {
         bar.classList.add('bar-current-day');
     }
 
-    bar.style.height = `${(responseFetched.amount / 100) * totalAmount}px`;
+    bar.style.height = `${(dayItem.amount / 100) * totalAmount}px`;
 
+    // Emulate hover state.
     bar.addEventListener('mouseover', function () {
         barLabel.classList.add('bar-span-active');
     })

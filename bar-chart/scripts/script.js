@@ -20,34 +20,26 @@ async function fetchResponse() {
         });
 }
 
+// Get total amount so later each bar heigh can be estimated as real percentaje of that amount.
 function getTotal(responseFetched) {
     for (let i = 0; i < responseFetched.length; i++) {
         totalAmount += responseFetched[i].amount;
     }
 }
-
-function createChart(responseFetched) {
-    getTotal(responseFetched);
-    for (let i = 0; i < responseFetched.length; i++) {
-        createBar(responseFetched[i]);
-        createDay(responseFetched[i]);
-    }
-    statsTotal.innerText = `${totalAmount}$`;
-}
-
-function createBar(responseFetched) {
+function createBar(dayItem) {
     let bar = document.createElement('div');
     let barLabel = document.createElement('span');
     barLabel.classList.add('bar-span');
-    barLabel.innerText = `${responseFetched.amount}$`;
+    barLabel.innerText = `${dayItem.amount}$`;
     bar.appendChild(barLabel);
     bar.classList.add('bar');
-    if (responseFetched.day === currentDay) {
+    if (dayItem.day === currentDay) {
         bar.classList.add('bar-current-day');
     }
 
-    bar.style.height = `${(responseFetched.amount / 100) * totalAmount}px`;
+    bar.style.height = `${(dayItem.amount / 100) * totalAmount}px`;
 
+    // Emulate hover state.
     bar.addEventListener('mouseover', function () {
         barLabel.classList.add('bar-span-active');
     })
@@ -58,11 +50,20 @@ function createBar(responseFetched) {
     barWrapper.appendChild(bar);
 }
 
-function createDay(responseFetched) {
+function createDay(dayItem) {
     let day = document.createElement('div');
     day.classList.add('day');
-    day.innerText = responseFetched.day;
+    day.innerText = dayItem.day;
     dayWrapper.appendChild(day);
+}
+
+function createChart(responseFetched) {
+    getTotal(responseFetched);
+    for (let i = 0; i < responseFetched.length; i++) {
+        createBar(responseFetched[i]);
+        createDay(responseFetched[i]);
+    }
+    statsTotal.innerText = `${totalAmount}$`;
 }
 
 fetchResponse();
