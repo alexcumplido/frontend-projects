@@ -2,9 +2,7 @@
 
 const URL_DATA = "./json/data.json";
 
-
-
-async function fetchResponse(URL) {
+async function fethData(URL) {
     fetch(URL)
         .then(function (response) {
             return response.text();
@@ -15,21 +13,66 @@ async function fetchResponse(URL) {
         })
 }
 
-fetchResponse(URL_DATA);
+fethData(URL_DATA);
 
-// 0. Code a basic HTML markup for the project
-// 1. Create a database JavaScript Object Notation that contains references to the link - strings and images for each one.
-// 2. Fetch JSON object and fill an array of objects with necessary items for the dropdown menu's
-// 3. Create a basic markup for te dropdown menu in mobile version
-//     - Default display is none
-//         - Once hamburger clicked default style changes to absolute
+const btnMenuMobile = document.querySelector('.btn-open-menu');
+const navigation = document.querySelector('.navigation')
+const btnSign = document.querySelectorAll('.sign');
+const navLinks = document.querySelector('.nav-links');
+let menuOpened = false;
 
-// 4. This basic markup contains an unordered list
-// 5. When hamburger button clicked JavaScript DOM manipulation starts
-//     - Unordered list items is filled with strings from the JSON fetched
-//         - This imples iterating over the array of objects and for each object inyecting an < li >
-//             - If this object has an array of links inside then another < ul > is inyected inside
-//                 - This inyected sublist contains strings that will be set as <li>
-//             - This inyected sublist contains images that will be set as img elements
+btnMenuMobile.addEventListener('click', function (event) {
+    if (menuOpened == false) {
+        menuOpened = true;
+        event.target.classList.add('btn-close-menu')
+        navigation.classList.add('nav-mobile-active');
+        btnSign[0].classList.remove('hidden');
+        btnSign[1].classList.remove('hidden');
+        createNavLinks();
+
+    } else {
+        menuOpened = false;
+        event.target.classList.remove('btn-close-menu')
+        event.target.classList.add('btn-open-menu')
+        navigation.classList.remove('nav-mobile-active');
+        btnSign[0].classList.add('hidden');
+        btnSign[1].classList.add('hidden');
+    }
+})
+
+// 1. Problem analysis(Understand)
+// 2. Define features and user flow
+// 3. Structure variables and functions
+// 4. Pseudocode
+// 5. Implement programm
+
+// Input data
+// Access - manipulate data
+// Output data
+
+// Fill an unordered list with list items
+
+// Variable that targets a reference to Unordered List
+// Variable that targets a reference to a List Item
+
+
+// Iterate over the array of data fetched
+// In each iteration do the following:
+// Take the LI node
+// Get the value of property link and inyect as innerText into de LI NODE
+
+// Test for a boolean value of property submenu
+//If true
+// Declare a variable referenving an UL node
+// Asign a class to that variable of submenu
+// Iterate over submenu array and
+// Declare a variable referencing a LI node
+// Add to that LI a class of submenu-link
+// Inyect submenu string as inner text to that variable
+// Append LI to submenu UL created
 
 // 6. When closing button clicks all nodes from unordered list from mobile menu are removed
+
+function createNavLinks() {
+
+}

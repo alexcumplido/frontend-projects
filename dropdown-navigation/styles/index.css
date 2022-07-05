@@ -1,0 +1,40 @@
+body {
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+}
+
+.hero {
+    text-align: center;
+}
+
+.btn-open-menu {
+    padding: 1rem;
+    background-image: url("../images/icon-menu.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.btn-close-menu {
+    padding: 1rem;
+    background-image: url("../images/icon-close-menu.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.nav-mobile-active {
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    text-align: right;
+    background-color: var(--lightWhite);
+}
+
+.hidden {
+    display: none;
+}
