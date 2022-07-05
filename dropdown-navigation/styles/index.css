@@ -35,6 +35,38 @@ header {
     background-color: var(--lightWhite);
 }
 
+.navigation-desktop {
+    display: none;
+}
+
 .hidden {
     display: none;
+}
+
+li {
+    padding: 0 1rem;
+}
+
+.sub-menu::before {
+    position: absolute;
+    right: 0;
+    content: url("../images/icon-arrow-down.svg");
+}
+
+.dropdown {
+    display: none;
+}
+
+.dropdown-show {
+    display: block;
+}
+
+@media screen and (min-width: 550px) {
+    .navigation-mvl {
+        display: none;
+    }
+
+    .navigation-desktop {
+        display: block;
+    }
 }

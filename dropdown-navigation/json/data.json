@@ -38,11 +38,9 @@
         ]
     },
     {
-        "link": "Careers",
-        "submenu": []
+        "link": "Careers"
     },
     {
-        "link": "About",
-        "submenu": []
+        "link": "About"
     }
 ]
