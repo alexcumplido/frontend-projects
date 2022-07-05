@@ -1,6 +1,10 @@
-// Fetch JSON database
-
 const URL_DATA = "./json/data.json";
+const btnMenuMobile = document.querySelector('.btn-open-menu');
+const navigation = document.querySelector('.navigation')
+const btnSign = document.querySelectorAll('.sign');
+const listNavLinks = document.querySelector('.list-nav-links');
+let menuOpened = false;
+let linksFetched;
 
 async function fethData(URL) {
     fetch(URL)
@@ -9,17 +13,37 @@ async function fethData(URL) {
         })
         .then(function (response) {
             const responseProcessed = JSON.parse(response);
-            console.log(responseProcessed)
+            linksFetched = responseProcessed;
         })
 }
 
-fethData(URL_DATA);
+function createNavLinks() {
+    for (let i = 0; i < linksFetched.length; i++) {
 
-const btnMenuMobile = document.querySelector('.btn-open-menu');
-const navigation = document.querySelector('.navigation')
-const btnSign = document.querySelectorAll('.sign');
-const navLinks = document.querySelector('.nav-links');
-let menuOpened = false;
+        let link = document.createElement('li');
+        link.innerText = `${linksFetched[i].link}`
+
+        if (linksFetched[i].submenu) {
+            let y = 0;
+
+            let subMenu = document.createElement('ul')
+
+            while (y < linksFetched[i].submenu.length) {
+                let subLink = document.createElement('li');
+                subLink.innerText = `${linksFetched[i].submenu[y].sublink}`
+
+                if (linksFetched[i].submenu[y].icon) {
+                    subLink.style.background = `url(${linksFetched[i].submenu[y].icon}) no-repeat left center`
+                }
+                subMenu.append(subLink);
+                link.append(subMenu);
+                y++;
+            }
+        }
+
+        listNavLinks.append(link);
+    }
+}
 
 btnMenuMobile.addEventListener('click', function (event) {
     if (menuOpened == false) {
@@ -31,48 +55,18 @@ btnMenuMobile.addEventListener('click', function (event) {
         createNavLinks();
 
     } else {
+        while (listNavLinks.firstChild) {
+            listNavLinks.removeChild(listNavLinks.firstChild);
+        }
+        console.log();
         menuOpened = false;
         event.target.classList.remove('btn-close-menu')
         event.target.classList.add('btn-open-menu')
         navigation.classList.remove('nav-mobile-active');
         btnSign[0].classList.add('hidden');
         btnSign[1].classList.add('hidden');
+
     }
 })
 
-// 1. Problem analysis(Understand)
-// 2. Define features and user flow
-// 3. Structure variables and functions
-// 4. Pseudocode
-// 5. Implement programm
-
-// Input data
-// Access - manipulate data
-// Output data
-
-// Fill an unordered list with list items
-
-// Variable that targets a reference to Unordered List
-// Variable that targets a reference to a List Item
-
-
-// Iterate over the array of data fetched
-// In each iteration do the following:
-// Take the LI node
-// Get the value of property link and inyect as innerText into de LI NODE
-
-// Test for a boolean value of property submenu
-//If true
-// Declare a variable referenving an UL node
-// Asign a class to that variable of submenu
-// Iterate over submenu array and
-// Declare a variable referencing a LI node
-// Add to that LI a class of submenu-link
-// Inyect submenu string as inner text to that variable
-// Append LI to submenu UL created
-
-// 6. When closing button clicks all nodes from unordered list from mobile menu are removed
-
-function createNavLinks() {
-
-}
+fethData(URL_DATA);

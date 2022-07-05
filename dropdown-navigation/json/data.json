@@ -4,19 +4,19 @@
         "submenu": [
             {
                 "sublink": "Todo List",
-                "icon": "../images/icon-todo.svg"
+                "icon": "./images/icon-todo.svg"
             },
             {
                 "sublink": "Calendar",
-                "icon": "../images/icon-calendar.svg"
+                "icon": "./images/icon-calendar.svg"
             },
             {
                 "sublink": "Reminders",
-                "icon": "../images/icon-reminders.svg"
+                "icon": "./images/icon-reminders.svg"
             },
             {
                 "sublink": "Planning",
-                "icon": "../images/icon-planning.svg"
+                "icon": "./images/icon-planning.svg"
             }
         ]
     },
@@ -34,10 +34,6 @@
             {
                 "sublink": "Blog",
                 "icon": ""
-            },
-            {
-                "sublink": "Planning",
-                "icon": ""
             }
         ]
     },
@@ -47,6 +43,6 @@
     },
     {
         "link": "About",
-        "sublinks": []
+        "submenu": []
     }
 ]
