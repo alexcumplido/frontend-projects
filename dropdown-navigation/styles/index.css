@@ -61,12 +61,31 @@ li {
     display: block;
 }
 
+.dropdown-desktop {
+    display: none;
+}
+
+.dropdown-desktop-show {
+    display: block;
+}
+
 @media screen and (min-width: 550px) {
+    header {
+        justify-content: center;
+        height: 10vh;
+    }
+
     .navigation-mvl {
         display: none;
     }
 
     .navigation-desktop {
         display: block;
+        display: flex;
     }
+
+    .list-nav-links-desktop {
+        display: flex;
+    }
+
 }

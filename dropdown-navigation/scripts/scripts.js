@@ -5,11 +5,17 @@ const btnMenuMobile = document.querySelector('.btn-open-menu');
 const navigationMovile = document.querySelector('.navigation-mvl')
 const listNavLinksMobile = document.querySelector('.list-nav-links-mobile');
 const signButtons = document.querySelector('.sign-wrapper');
+const navigationDesktop = document.querySelector('.navigation-desktop');
+const listNavLinksDesktop = document.querySelector('.list-nav-links-desktop');
+
 let dropdown;
 let subMenu;
+let dropDownDesktop;
+let subMenuDesktop;
 let menuOpened = false;
 
-let currentItem = null;
+let currentItemMobile = null;
+let currentItemDesktop = null
 
 async function fethData(URL) {
     fetch(URL)
@@ -19,7 +25,7 @@ async function fethData(URL) {
         .then(function (response) {
             const responseProcessed = JSON.parse(response);
             dataFetched = responseProcessed;
-            // createNavLinksDesktop()
+            createNavLinksDesktop()
         })
 }
 
@@ -43,6 +49,9 @@ function createNavLinksMobile() {
             let y = 0;
             while (y < dataFetched[i].submenu.length) {
                 let subLI = document.createElement('li');
+                if (dataFetched[i].submenu[y].icon) {
+                    subLI.style.background = `url(${dataFetched[i].submenu[y].icon}) no-repeat left center`
+                }
                 subLI.appendChild(
                     createAnchor(dataFetched[i].submenu[y].sublink)
                 );
@@ -57,12 +66,50 @@ function createNavLinksMobile() {
     subMenu = document.querySelectorAll('.sub-menu');
 }
 
-function displayItem(i) {
-    dropdown[i].classList.add("dropdown-show");
-}
+function createNavLinksDesktop() {
+    for (let i = 0; i < dataFetched.length; i++) {
+        let li = document.createElement('li');
+        li.appendChild(
+            createAnchor(dataFetched[i].link)
+        );
 
-function hideItem(i) {
-    dropdown[i].classList.remove("dropdown-show");
+        if (dataFetched[i].submenu) {
+            li.classList.add('sub-menu-desktop');
+            let list = document.createElement('ul')
+            list.classList.add('dropdown-desktop');
+            let y = 0;
+            while (y < dataFetched[i].submenu.length) {
+                let subLI = document.createElement('li');
+                if (dataFetched[i].submenu[y].icon) {
+                    subLI.style.background = `url(${dataFetched[i].submenu[y].icon}) no-repeat left center`
+                }
+                subLI.appendChild(
+                    createAnchor(dataFetched[i].submenu[y].sublink)
+                );
+                list.append(subLI);
+                y++;
+            }
+            li.append(list);
+        }
+        listNavLinksDesktop.append(li);
+    }
+    dropDownDesktop = document.querySelectorAll('.dropdown-desktop');
+    subMenuDesktop = document.querySelectorAll('.sub-menu-desktop');
+    for (let i = 0; i < subMenuDesktop.length; i++) {
+        subMenuDesktop[i].addEventListener(('click'), function () {
+            if (currentItemDesktop === null) {
+                dropDownDesktop[i].classList.add("dropdown-desktop-show");
+                currentItemDesktop = i;
+            } else if (currentItemDesktop === i) {
+                dropDownDesktop[currentItemDesktop].classList.remove("dropdown-desktop-show")
+                currentItemDesktop = null;
+            } else {
+                dropDownDesktop[currentItemDesktop].classList.remove("dropdown-desktop-show");
+                dropDownDesktop[i].classList.add("dropdown-desktop-show");
+                currentItemDesktop = i;
+            }
+        });
+    }
 }
 
 btnMenuMobile.addEventListener('click', function (event) {
@@ -75,16 +122,16 @@ btnMenuMobile.addEventListener('click', function (event) {
 
         for (let i = 0; i < subMenu.length; i++) {
             subMenu[i].addEventListener(('click'), function () {
-                if (currentItem === null) {
-                    displayItem(i);
-                    currentItem = i;
-                } else if (currentItem === i) {
-                    hideItem(currentItem);
-                    currentItem = null;
+                if (currentItemMobile === null) {
+                    dropdown[i].classList.add("dropdown-show");
+                    currentItemMobile = i;
+                } else if (currentItemMobile === i) {
+                    dropdown[currentItemMobile].classList.remove("dropdown-show")
+                    currentItemMobile = null;
                 } else {
-                    hideItem(currentItem);
-                    displayItem(i);
-                    currentItem = i;
+                    dropdown[currentItemMobile].classList.remove("dropdown-show");
+                    dropdown[i].classList.add("dropdown-show");
+                    currentItemMobile = i;
                 }
             });
         }
@@ -98,44 +145,5 @@ btnMenuMobile.addEventListener('click', function (event) {
         menuOpened = false;
     }
 })
+
 fethData(URL_DATA);
-
-// if (dataFetched[i].submenu[y].icon) {
-//     subListItem.style.background = `url(${dataFetched[i].submenu[y].icon}) no-repeat left center`
-// }
-
-// const navigationDesktop = document.querySelector('.navigation-desktop');
-// const listNavLinksDesktop = document.querySelector('.list-nav-links-desktop');
-
-// function createNavLinksDesktop() {
-//     for (let i = 0; i < dataFetched.length; i++) {
-
-//         let link = document.createElement('li');
-//         let anchor = document.createElement('a');
-//         anchor.setAttribute('href', `#`);
-//         anchor.innerText = `${dataFetched[i].link}`;
-//         link.appendChild(anchor);
-
-//         if (dataFetched[i].submenu) {
-//             let y = 0;
-
-//             let subMenu = document.createElement('ul')
-
-//             while (y < dataFetched[i].submenu.length) {
-//                 let subLink = document.createElement('li');
-//                 let subAnchor = document.createElement('a')
-//                 subAnchor.setAttribute('href', `#`);
-//                 subAnchor.innerText = `${dataFetched[i].submenu[y].sublink}`;
-
-//                 if (dataFetched[i].submenu[y].icon) {
-//                     subLink.style.background = `url(${dataFetched[i].submenu[y].icon}) no-repeat left center`
-//                 }
-//                 subLink.appendChild(subAnchor);
-//                 subMenu.append(subLink);
-//                 link.append(subMenu);
-//                 y++;
-//             }
-//         }
-//         listNavLinksDesktop.append(link);
-//     }
-// }
