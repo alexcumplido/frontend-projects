@@ -1,12 +1,14 @@
 const URL_DATA = "./json/data.json";
+let linksFetched;
+
 const btnMenuMobile = document.querySelector('.btn-open-menu');
 const navigationMovile = document.querySelector('.navigation-mvl')
 const listNavLinksMobile = document.querySelector('.list-nav-links-mobile');
-const btnSign = document.querySelectorAll('.sign');
+const signButtons = document.querySelector('.sign-wrapper');
 let dropdown;
 let subMenu;
 let menuOpened = false;
-let linksFetched;
+
 let currentItem = null;
 
 async function fethData(URL) {
@@ -30,35 +32,27 @@ function createAnchor(data) {
 
 function createNavLinksMobile() {
     for (let i = 0; i < dataFetched.length; i++) {
-
         let li = document.createElement('li');
-
         li.appendChild(
             createAnchor(dataFetched[i].link)
         );
-
         if (dataFetched[i].submenu) {
-
             li.classList.add('sub-menu');
-            let subList = document.createElement('ul')
-            subList.classList.add('dropdown');
-
+            let list = document.createElement('ul')
+            list.classList.add('dropdown');
             let y = 0;
             while (y < dataFetched[i].submenu.length) {
-
                 let subLI = document.createElement('li');
                 subLI.appendChild(
                     createAnchor(dataFetched[i].submenu[y].sublink)
                 );
-
-                subList.append(subLI);
+                list.append(subLI);
                 y++;
             }
-            li.append(subList);
+            li.append(list);
         }
         listNavLinksMobile.append(li);
     }
-
     dropdown = document.querySelectorAll('.dropdown');
     subMenu = document.querySelectorAll('.sub-menu');
 }
@@ -74,10 +68,9 @@ function hideItem(i) {
 btnMenuMobile.addEventListener('click', function (event) {
     if (menuOpened == false) {
         menuOpened = true;
-        event.target.classList.add('btn-close-menu')
+        event.target.classList.replace('btn-open-menu', 'btn-close-menu')
         navigationMovile.classList.add('nav-mobile-active');
-        btnSign[0].classList.remove('hidden');
-        btnSign[1].classList.remove('hidden');
+        signButtons.classList.remove('hidden');
         createNavLinksMobile();
 
         for (let i = 0; i < subMenu.length; i++) {
@@ -95,21 +88,16 @@ btnMenuMobile.addEventListener('click', function (event) {
                 }
             });
         }
-
     } else {
         while (listNavLinksMobile.firstChild) {
             listNavLinksMobile.removeChild(listNavLinksMobile.firstChild);
         }
-        console.log();
-        menuOpened = false;
-        event.target.classList.remove('btn-close-menu')
-        event.target.classList.add('btn-open-menu')
+        signButtons.classList.add('hidden');
         navigationMovile.classList.remove('nav-mobile-active');
-        btnSign[0].classList.add('hidden');
-        btnSign[1].classList.add('hidden');
+        event.target.classList.replace('btn-close-menu', 'btn-open-menu')
+        menuOpened = false;
     }
 })
-
 fethData(URL_DATA);
 
 // if (dataFetched[i].submenu[y].icon) {
