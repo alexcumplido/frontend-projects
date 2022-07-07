@@ -39,7 +39,7 @@ function createBar(dayItem) {
 
     bar.style.height = `${(dayItem.amount / 100) * totalAmount}px`;
 
-    // Emulate hover state.
+    // Display label.
     bar.addEventListener('mouseover', function () {
         barLabel.classList.add('bar-span-active');
     })
