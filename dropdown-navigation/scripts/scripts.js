@@ -25,7 +25,7 @@ async function fethData(URL) {
         .then(function (response) {
             const responseProcessed = JSON.parse(response);
             dataFetched = responseProcessed;
-            createNavLinksDesktop()
+            createNavLinksDesktop();
         })
 }
 
