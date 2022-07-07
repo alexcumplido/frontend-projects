@@ -1,16 +1,12 @@
 const accordionItems = document.querySelectorAll('.accordion__item');
-const accordionTitles = document.querySelectorAll(".accordion-title");
-const accordionText = document.querySelectorAll('.accordion-text');
 let currentItem = null;
 
 function displayItem(i) {
-    accordionTitles[i].classList.add("accordion-title-active");
-    accordionText[i].classList.add("accordion-text-show");
+    accordionItems[i].classList.add('accordion_item--active');
 }
 
 function hideItem(i) {
-    accordionTitles[i].classList.remove("accordion-title-active");
-    accordionText[i].classList.remove("accordion-text-show");
+    accordionItems[i].classList.remove('accordion_item--active');
 }
 
 for (let i = 0; i < accordionItems.length; i++) {
