@@ -63,12 +63,15 @@
 }
 
 .accordion-text {
-    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
 }
 
 .accordion-text-show {
     margin-top: 1rem;
-    display: block;
+    height: auto;
+
 }
 
 @media screen and (min-width: 950px) {
