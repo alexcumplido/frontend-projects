@@ -13,25 +13,45 @@
     <body>
         <header>
             <div class="logo-wrapper">
-                <img src="./images/logo.svg"  alt="Snap company logo">
             </div>
-            <nav class="navigation-mvl" role="navigation">
-                <button class="open-menu"></button>
+            
+            <nav class="navigation" role="navigation">
+                <button class="btn-menu btn__menu--closed">Menu</button>
                 <ul>
-                    <li><a href="">Features</a>
+                    <li class="dropdown">
+                        <a class="dropdown-link" href="#">Features</a>
                         <ul>
-                            <li><a href="#">Todo List</a></li>
-                            <li><a href="#">Calendar</a></li>
-                            <li><a href="#">Reminders</a></li>
-                            <li><a href="#">Planing</a></li>
+                            <li>
+                                <img src="./images/icon-todo.svg"/>
+                                <a href="#">Todo List</a>
+                            </li>
+                            <li>
+                                <img src="./images/icon-calendar.svg"/>
+                                <a href="#">Calendar</a>
+                            </li>
+                            <li>
+                                <img src="./images/icon-reminders.svg"/>
+                                <a href="#">Reminders</a>
+                            </li>
+                            <li>
+                                <img src="./images/icon-planning.svg"/>
+                                <a href="#">Planing</a>
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="#">Company</a>
+                    <li class="dropdown">
+                        <a href="#">Company</a>
                         <ul>
                             <li><a href="#">History</a></li>
                             <li><a href="#">Out Team</a></li>
                             <li><a href="#">Blog</a></li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="#">Careers</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
                     </li>
                 </ul>
                 <div class="sign-wrapper">

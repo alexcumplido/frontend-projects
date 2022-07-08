@@ -1,1 +1,56 @@
-@media screen and (min-width: 550px) {}
+.btn-menu {
+    display: block;
+    position: absolute;
+}
+
+.btn__menu--closed {
+    outline: 10px solid red;
+}
+
+.btn__menu--open {
+    outline: 10px solid green;
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation--open {
+    display: block;
+    outline: 1px solid black;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+}
+
+.dropdown {
+    margin: 1rem 0;
+}
+
+.dropdown ul {
+    display: none;
+    height: 0;
+    opacity: 0;
+    transition: 0.210;
+}
+
+.dropdown--active ul {
+    display: block;
+    height: auto;
+    opacity: 1;
+    padding-left: 1rem;
+}
+
+@media screen and (min-width: 550px) {
+    .btn-menu {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+        position: initial;
+    }
+}
