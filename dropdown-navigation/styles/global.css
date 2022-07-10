@@ -12,8 +12,14 @@ html {
 
 body {
     height: 100vh;
+    font-family: var(--fontFamily);
 }
 
 ul {
     list-style: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
 }

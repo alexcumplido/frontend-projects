@@ -1,14 +1,29 @@
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+}
+
 .btn-menu {
-    display: block;
-    position: absolute;
+    z-index: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    background-color: transparent;
 }
 
 .btn__menu--closed {
-    outline: 10px solid red;
+    background-image: url("../images/icon-menu.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .btn__menu--open {
-    outline: 10px solid green;
+    background-image: url("../images/icon-close-menu.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .navigation {
@@ -16,6 +31,7 @@
 }
 
 .navigation--open {
+    padding-top: 4rem;
     display: block;
     outline: 1px solid black;
     position: absolute;
@@ -24,10 +40,6 @@
     right: 0;
     width: 50vw;
     height: 100vh;
-}
-
-.dropdown {
-    margin: 1rem 0;
 }
 
 .dropdown ul {
@@ -44,13 +56,95 @@
     padding-left: 1rem;
 }
 
+.navigation-desktop {
+    display: none;
+}
+
+.hero-img {
+    height: 20rem;
+    background: url("../images/image-hero-mobile.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero-cta {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.hero-cta p {
+    line-height: 1.5;
+    color: var(--mediumGray);
+}
+
+.hero-cta button {
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    border-radius: 0.75rem;
+    color: var(--lightWhite);
+    background-color: var(--lightBlack);
+}
+
+.hero-cta button:hover {
+    s border: 1px solid var(--lightBlack);
+    color: var(--lightBlack);
+    background-color: var(--lightWhite);
+}
+
+.client-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.client-wrapper img {
+    width: 5rem;
+}
+
 @media screen and (min-width: 550px) {
     .btn-menu {
         display: none;
     }
 
     .navigation {
+        display: none;
+    }
+
+    .navigation-desktop {
+        display: flex;
+    }
+
+    .navigation-desktop>ul {
+        display: flex;
+        gap: 4rem;
+    }
+
+    .dropdown li {
         display: block;
-        position: initial;
+    }
+
+    .navigation-desktop .sign-wrapper {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero-img {
+        height: 20rem;
+        background: url("../images/image-hero-desktop.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
     }
 }
