@@ -1,7 +1,7 @@
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 1rem;
 }
 
@@ -178,9 +178,22 @@ a {
     width: 5rem;
 }
 
+
+
 @media screen and (min-width: 550px) {
     .btn-menu {
         display: none;
+    }
+
+    .navigation-wrapper {
+        display: none;
+    }
+
+    header {
+        align-items: center;
+        padding-top: 2rem;
+        justify-content: flex-start;
+        gap: 1rem;
     }
 
     .navigation {
@@ -188,30 +201,89 @@ a {
     }
 
     .navigation-desktop {
+        width: 100%;
         display: flex;
+        justify-content: space-between;
     }
 
-    .navigation-desktop>ul {
+    .navigation-desktop .sign {
+        padding: 0.75rem 1rem;
+        font-weight: 500;
+        border: none;
+        border-radius: 0.75rem;
+        color: var(--mediumGray);
+        background-color: transparent;
+    }
+
+    .navigation-desktop .sign:hover {
+        color: var(--lightBlack);
+    }
+
+    .navigation-desktop .sign:last-child {
+        border: 1px solid var(--mediumGray);
+    }
+
+    .navigation-desktop-list {
         display: flex;
         gap: 4rem;
+    }
+
+    .navigation-desktop-list>li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .dropdown li {
         display: block;
     }
 
-    .navigation-desktop .sign-wrapper {
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
     .hero-img {
+        order: 1;
         height: 20rem;
         background: url("../images/image-hero-desktop.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+    }
+
+    .hero {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    .hero-img {
+        flex-basis: 50%;
+    }
+
+    .hero-cta {
+        order: 0;
+        flex-basis: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .hero-cta h1 {
+        text-align: left;
+        font-size: 3rem;
+    }
+
+    .hero-cta h1 span {
+        display: block;
+        margin-right: auto;
+    }
+
+    .hero-cta p {
+        text-align: left;
+    }
+
+    .client-wrapper {
+        order: 2;
+        flex-basis: 50%;
     }
 }

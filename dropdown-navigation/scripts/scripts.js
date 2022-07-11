@@ -11,6 +11,7 @@ buttonMenu.addEventListener('click', function () {
         navigationWrapper.classList.add('navigation-wrapper--open');
         navigation.classList.add('navigation--open')
     } else {
+        debugger;
         navigation.classList.remove('navigation--open');
         navigationWrapper.classList.remove('navigation-wrapper--open');
         buttonMenu.classList.replace('btn__menu--open', 'btn__menu--closed'); s
