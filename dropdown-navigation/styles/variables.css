@@ -2,7 +2,10 @@
     --maxWidthMovile: 375px;
     --maxWidthDesktop: 1440px;
 
+
+    --white: hsl(0, 0%, 100%);
     --lightWhite: hsl(0, 0%, 98%);
+    --lightGray: hsl(0, 0%, 76%);
     --mediumGray: hsl(0, 0%, 41%);
     --lightBlack: hsl(0, 0%, 8%);
     --lightBlackTrans: hsla(0, 0%, 8%, 0.774);

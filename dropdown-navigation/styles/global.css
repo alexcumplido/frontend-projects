@@ -20,11 +20,17 @@ ul {
 }
 
 a {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
     text-decoration: none;
-    margin-left: 0.5rem;
     font-weight: 500;
     text-decoration: none;
     color: var(--mediumGray);
+}
+
+a:hover {
+    color: var(--lightBlack);
 }
 
 button {

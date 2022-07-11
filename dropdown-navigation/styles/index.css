@@ -55,12 +55,12 @@ header {
 }
 
 .dropdown-link::after {
-    padding-left: 1rem;
+    padding-left: 0.5rem;
     content: url("../images/icon-arrow-down.svg");
 }
 
 .dropdown--active .dropdown-link::after {
-    padding-left: 1rem;
+    padding-left: 0.5rem;
     content: url("../images/icon-arrow-up.svg");
 }
 
@@ -89,7 +89,7 @@ header {
     flex-basis: 1rem;
 }
 
-.navigation-desktop {
+.nav-desktop {
     display: none;
 }
 
@@ -126,6 +126,7 @@ header {
 }
 
 .hero-cta {
+    margin-top: 1rem;
     padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
@@ -159,8 +160,8 @@ header {
 }
 
 .client-wrapper {
-    margin-top: 2.5rem;
-    padding: 0 0.5rem;
+    margin-top: 1rem;
+    align-self: stretch;
     display: flex;
     justify-content: space-between;
 }
@@ -169,49 +170,53 @@ header {
     max-width: 4rem;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 735px) {
+    header {
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
 
     .btn-menu,
     .nav-overlay {
         display: none;
     }
 
-    header {
-        align-items: center;
-        padding-top: 2rem;
-        justify-content: flex-start;
-        gap: 1rem;
-    }
-
-    .navigation {
-        display: none;
-    }
-
-    .navigation-desktop {
+    .nav-desktop {
+        display: block;
         width: 100%;
         display: flex;
+        align-items: center;
         justify-content: space-between;
+        gap: 4rem;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .nav-desktop .dropdown {
+        display: block;
+        position: relative;
+    }
+
+    .nav-desktop .dropdown-list {
+        position: absolute;
+        background-color: var(--white);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: var(--lightGray) 0px 7px 29px 0px;
+        min-width: 6rem;
+    }
+
+    .nav-desktop .dropdown-list:nth-of-type(1) {
+        position: absolute;
+        top: 2rem;
     }
 
     .sign-wrapper {
         flex-direction: row;
         align-items: center;
-    }
-
-    .navigation-desktop-list {
-        display: flex;
-        gap: 4rem;
-    }
-
-    .navigation-desktop-list>li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .dropdown li {
-        display: block;
     }
 
     .hero-img {
