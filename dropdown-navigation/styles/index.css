@@ -249,8 +249,10 @@ a {
     }
 
     .hero {
+        max-width: 1200px;
+        margin: 0 auto;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         flex-wrap: wrap;
         align-items: stretch;
     }
@@ -284,6 +286,6 @@ a {
 
     .client-wrapper {
         order: 2;
-        flex-basis: 50%;
+        margin-right: auto;
     }
 }
