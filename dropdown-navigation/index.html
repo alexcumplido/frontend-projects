@@ -7,7 +7,7 @@
         <meta name="author" content="Alexandre Cumplido Bou" />
         <meta name="description" content="Dropdown navigation menu" />
         <title>Dropdown navigation</title>
-         <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
         <link rel="stylesheet" href="./styles/main.css" />
     </head>
     <body>
@@ -21,20 +21,20 @@
                     <ul class="nav-list">
                         <li class="dropdown">
                             <a class="dropdown-link" href="#">Features</a>
-                            <ul>
-                                <li>
+                            <ul class="dropdown-list">
+                                <li class="dropdown-item">
                                     <img src="./images/icon-todo.svg"/>
                                     <a href="#">Todo List</a>
                                 </li>
-                                <li>
+                                <li class="dropdown-item">
                                     <img src="./images/icon-calendar.svg"/>
                                     <a href="#">Calendar</a>
                                 </li>
-                                <li>
+                                <li class="dropdown-item">
                                     <img src="./images/icon-reminders.svg"/>
                                     <a href="#">Reminders</a>
                                 </li>
-                                <li>
+                                <li class="dropdown-item">
                                     <img src="./images/icon-planning.svg"/>
                                     <a href="#">Planing</a>
                                 </li>
@@ -42,10 +42,10 @@
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-link" href="#">Company</a>
-                            <ul>
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">Out Team</a></li>
-                                <li><a href="#">Blog</a></li>
+                            <ul class="dropdown-list">
+                                <li class="dropdown-item"><a href="#">History</a></li>
+                                <li class="dropdown-item"><a href="#">Out Team</a></li>
+                                <li class="dropdown-item"><a href="#">Blog</a></li>
                             </ul>
                         </li>
                         <li>
@@ -105,22 +105,24 @@
                 </div>
             </nav>
         </header>
-        <section class="hero">
-            <div class="hero-img">
-
-            </div>
-            <div class="hero-cta">
-                <h1><span>Make</span> remote work</h1>
-                <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-                <button>Learn more</button>
-            </div>
-            <div class="client-wrapper">
-                <img src="./images/client-databiz.svg" alt="Client logo" />
-                <img src="./images/client-audiophile.svg" alt="Client logo" />
-                <img src="./images/client-meet.svg" alt="Client logo" />
-                <img src="./images/client-maker.svg" alt="Client logo" />
-            </div>
-        </section>
+        <main>
+            <section class="hero">
+                <div class="hero-img">
+                </div>
+                <div class="hero-cta">
+                    <h1><span>Make</span> remote work</h1>
+                    <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+                    <button class="hero-btn">Learn more</button>
+            </section>
+            <section class="client-wrapper">
+                <div class="client">
+                    <img src="./images/client-databiz.svg" alt="Client logo" />
+                    <img src="./images/client-audiophile.svg" alt="Client logo" />
+                    <img src="./images/client-meet.svg" alt="Client logo" />
+                    <img src="./images/client-maker.svg" alt="Client logo" />
+                </div>
+            </section>
+        </main>
         <script src="./scripts/scripts.js"></script>
     </body>
 </html>
