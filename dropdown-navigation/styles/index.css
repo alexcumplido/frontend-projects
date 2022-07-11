@@ -1,9 +1,7 @@
 header {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 1rem;
 }
 
@@ -30,16 +28,33 @@ header {
     display: none;
 }
 
-.navigation--open {
-    padding-top: 4rem;
-    display: block;
-    outline: 1px solid black;
-    position: absolute;
-    background-color: white;
-    top: 0;
-    right: 0;
-    width: 50vw;
+.navigation ul li {
+    margin: 1rem 0;
+}
+
+.navigation-wrapper {
+    display: none;
+}
+
+.navigation-wrapper--open {
+    width: 100vw;
     height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    background-color: var(--lightBlackTrans);
+}
+
+.navigation--open {
+    flex-basis: 60%;
+    padding: 4rem 0.5rem 0 0.5rem;
+    display: block;
+    background-color: var(--lightWhite);
 }
 
 .dropdown ul {
@@ -53,11 +68,63 @@ header {
     display: block;
     height: auto;
     opacity: 1;
+    padding: 0.5rem 0 0.5rem 1rem;
+}
+
+a {
+    margin-left: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--mediumGray);
+}
+
+
+.dropdown-link::after {
     padding-left: 1rem;
+    content: url("../images/icon-arrow-down.svg");
+}
+
+.dropdown--active .dropdown-link::after {
+    padding-left: 1rem;
+    content: url("../images/icon-arrow-up.svg");
+}
+
+.dropdown li {
+    display: flex;
+    margin: 0.50rem 0;
+    gap: 0.50rem;
+}
+
+.dropdown li img {
+    flex-basis: 1rem;
 }
 
 .navigation-desktop {
     display: none;
+}
+
+.navigation .sign-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+}
+
+.navigation .sign {
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.75rem;
+    color: var(--mediumGray);
+    background-color: transparent;
+}
+
+.navigation .sign:hover {
+    color: var(--lightBlack);
+}
+
+.navigation .sign:last-child {
+    border: 1px solid var(--mediumGray);
 }
 
 .hero-img {
@@ -96,7 +163,7 @@ header {
 }
 
 .hero-cta button:hover {
-    s border: 1px solid var(--lightBlack);
+    transition: all 0.20s ease-in;
     color: var(--lightBlack);
     background-color: var(--lightWhite);
 }
