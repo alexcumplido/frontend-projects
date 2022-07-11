@@ -1,8 +1,12 @@
 header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     padding: 1rem;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .btn-menu {
@@ -10,35 +14,23 @@ header {
     padding: 0.75rem 1rem;
     border: none;
     background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.btn__menu--closed {
+.btn-menu--open {
     background-image: url("../images/icon-menu.svg");
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
-.btn__menu--open {
+.btn-menu--close {
     background-image: url("../images/icon-close-menu.svg");
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
-.navigation {
+.nav-overlay {
     display: none;
 }
 
-.navigation ul li {
-    margin: 1rem 0;
-}
-
-.navigation-wrapper {
-    display: none;
-}
-
-.navigation-wrapper--open {
-    width: 100vw;
-    height: 100vh;
+.nav-overlay--open {
     position: absolute;
     top: 0;
     left: 0;
@@ -50,11 +42,23 @@ header {
     background-color: var(--lightBlackTrans);
 }
 
-.navigation--open {
+.nav-mvl {
     flex-basis: 60%;
     padding: 4rem 0.5rem 0 0.5rem;
-    display: block;
     background-color: var(--lightWhite);
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+a {
+    margin-left: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--mediumGray);
 }
 
 .dropdown ul {
@@ -70,14 +74,6 @@ header {
     opacity: 1;
     padding: 0.5rem 0 0.5rem 1rem;
 }
-
-a {
-    margin-left: 0.5rem;
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--mediumGray);
-}
-
 
 .dropdown-link::after {
     padding-left: 1rem;
@@ -103,14 +99,14 @@ a {
     display: none;
 }
 
-.navigation .sign-wrapper {
+.nav-mvl .sign-wrapper {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 0.5rem;
 }
 
-.navigation .sign {
+.nav-mvl .sign {
     padding: 0.75rem 1rem;
     font-weight: 500;
     border: none;
@@ -119,11 +115,11 @@ a {
     background-color: transparent;
 }
 
-.navigation .sign:hover {
+.nav-mvl .sign:hover {
     color: var(--lightBlack);
 }
 
-.navigation .sign:last-child {
+.nav-mvl .sign:last-child {
     border: 1px solid var(--mediumGray);
 }
 
@@ -177,7 +173,6 @@ a {
 .client-wrapper img {
     width: 5rem;
 }
-
 
 
 @media screen and (min-width: 550px) {

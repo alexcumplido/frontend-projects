@@ -1,20 +1,16 @@
 const buttonMenu = document.querySelector('.btn-menu');
 const dropdown = document.querySelectorAll('.dropdown');
 const navList = document.querySelector('.nav-list');
-const navigation = document.querySelector('.navigation')
-const navigationWrapper = document.querySelector('.navigation-wrapper');
+const navigationWrapper = document.querySelector('.nav-overlay');
 let currentItem = null;
 
 buttonMenu.addEventListener('click', function () {
-    if (buttonMenu.classList.contains('btn__menu--closed')) {
-        buttonMenu.classList.replace('btn__menu--closed', 'btn__menu--open');
-        navigationWrapper.classList.add('navigation-wrapper--open');
-        navigation.classList.add('navigation--open')
+    if (buttonMenu.classList.contains('btn-menu--open')) {
+        buttonMenu.classList.replace('btn-menu--open', 'btn-menu--close');
+        navigationWrapper.classList.add('nav-overlay--open');
     } else {
-        debugger;
-        navigation.classList.remove('navigation--open');
-        navigationWrapper.classList.remove('navigation-wrapper--open');
-        buttonMenu.classList.replace('btn__menu--open', 'btn__menu--closed'); s
+        navigationWrapper.classList.remove('nav-overlay--open');
+        buttonMenu.classList.replace('btn-menu--close', 'btn-menu--open');
     }
 });
 

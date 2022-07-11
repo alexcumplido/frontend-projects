@@ -19,6 +19,10 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 button {
     font-family: inherit;
     cursor: pointer;
