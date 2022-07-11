@@ -11,6 +11,7 @@ html {
 }
 
 body {
+    max-width: var(--maxWidthDesktop);
     height: 100vh;
     font-family: var(--fontFamily);
 }

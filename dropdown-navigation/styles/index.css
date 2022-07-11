@@ -44,7 +44,7 @@ header {
 
 .nav-mvl {
     flex-basis: 60%;
-    padding: 4rem 0.5rem 0 0.5rem;
+    padding: 4rem 1rem 0 1rem;
     background-color: var(--lightWhite);
 }
 
@@ -172,6 +172,8 @@ header {
 
 @media screen and (min-width: 735px) {
     header {
+        margin: 0 auto;
+        max-width: 1200px;
         gap: 2rem;
         margin-bottom: 4rem;
     }
@@ -187,7 +189,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 4rem;
+        gap: 5rem;
     }
 
     .nav-list {
@@ -221,7 +223,6 @@ header {
 
     .hero-img {
         order: 1;
-        height: 20rem;
         background: url("../images/image-hero-desktop.png");
         background-repeat: no-repeat;
         background-position: center;
@@ -229,25 +230,25 @@ header {
     }
 
     .hero {
-        max-width: 1200px;
         margin: 0 auto;
+        max-width: 900px;
+        padding: 0 1rem;
+        display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
         align-items: stretch;
     }
 
     .hero-img {
-        flex-basis: 50%;
+        flex-basis: 30%;
     }
 
     .hero-cta {
-        order: 0;
-        flex-basis: 40%;
-        display: flex;
-        flex-direction: column;
+        padding: 2rem 0 0 0;
+        margin: 0;
+        flex-basis: 70%;
         justify-content: center;
         align-items: flex-start;
+        gap: 1.5rem;
     }
 
     .hero-cta h1 {
@@ -261,11 +262,16 @@ header {
     }
 
     .hero-cta p {
+        padding-right: 6rem;
         text-align: left;
     }
 
     .client-wrapper {
-        order: 2;
-        margin-right: auto;
+        justify-content: flex-start;
+        gap: 4rem;
+    }
+
+    .client-wrapper img {
+        max-width: 3rem;
     }
 }
