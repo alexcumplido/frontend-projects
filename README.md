@@ -5,6 +5,7 @@ In this repository I develop different projects from the Frontend Mentor plattfo
 ## Projects
 
 **Junior level:**
+  - [Advice generator app](https://alexcumplido.github.io/frontend-mentor/adviceAPI-generator)
   - [Dropdown navigation menu](https://alexcumplido.github.io/frontend-mentor/dropdown-navigation)
   - [Expenses bar chart](https://alexcumplido.github.io/frontend-mentor/bar-chart)
 
