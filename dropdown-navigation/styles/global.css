@@ -21,6 +21,7 @@ ul {
 }
 
 a {
+    pointer-events: none;
     display: flex;
     align-items: center;
     font-size: 0.8rem;
