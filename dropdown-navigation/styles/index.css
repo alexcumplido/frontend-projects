@@ -1,7 +1,7 @@
 header {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem;
 }
 
 .logo-wrapper {
@@ -120,11 +120,7 @@ header {
 }
 
 .hero-img {
-    height: 20rem;
-    background: url("../images/image-hero-mobile.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    max-width: 100%;
 }
 
 .hero-cta {
@@ -177,7 +173,7 @@ header {
         margin: 0 auto;
         max-width: 1200px;
         gap: 2rem;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
     }
 
     .btn-menu,
@@ -223,14 +219,6 @@ header {
         align-items: center;
     }
 
-    .hero-img {
-        order: 1;
-        background: url("../images/image-hero-desktop.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-    }
-
     .hero {
         margin: 0 auto;
         max-width: 950px;
@@ -240,8 +228,9 @@ header {
         align-items: stretch;
     }
 
-    .hero-img {
-        flex-basis: 30%;
+    .hero-img-wrapper {
+        flex-basis: 50%;
+        order: 1;
     }
 
     .hero-cta {

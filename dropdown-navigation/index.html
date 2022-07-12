@@ -113,7 +113,18 @@
         </header>
         <main>
             <section class="hero">
-                <div class="hero-img">
+                <div class="hero-img-wrapper">
+                    <picture>
+                        <source 
+                            media="(max-width: 734px)"
+                            srcset="images/image-hero-mobile.png"
+                        />
+                          <source 
+                            media="(min-width: 735px)"
+                            srcset="images/image-hero-desktop.png"
+                        />
+                        <img src="images/image-hero-mobile.png" alt="Banner image" class="hero-img" />
+                    </picture>
                 </div>
                 <div class="hero-cta">
                     <h1><span>Make</span> remote work</h1>
