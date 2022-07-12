@@ -16,7 +16,8 @@ In this repository I develop different projects from the Frontend Mentor plattfo
   - [Grid section](https://alexcumplido.github.io/frontend-mentor/grid-section)
   - [Card component](https://alexcumplido.github.io/frontend-mentor/card-component)
 
-**Waiting List Junior**
+<!--
+**Projects to do**
 - [Time tracking](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw)
 - [Github search API](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6)
 - [Tip calculator](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
@@ -24,4 +25,4 @@ In this repository I develop different projects from the Frontend Mentor plattfo
 - [Product landing page](https://www.frontendmentor.io/challenges/officelite-coming-soon-site-M4DIPNz8g)
 - [Social media dashboard](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H)
 - [Price card toggle](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC)
-
+->
