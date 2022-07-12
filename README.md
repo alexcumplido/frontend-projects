@@ -5,7 +5,7 @@ In this repository I develop different projects from the Frontend Mentor plattfo
 ## Projects
 
 **Junior level:**
-  - [Dropdown navigation menu (Work in progress)]
+  - [Dropdown navigation menu](https://alexcumplido.github.io/frontend-mentor/dropdown-navigation)
   - [Expenses bar chart](https://alexcumplido.github.io/frontend-mentor/bar-chart)
 
 **Beginner Level**
