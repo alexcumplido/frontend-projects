@@ -1,3 +1,63 @@
-footer {
-    font-size: 0.5rem;
+.advice-wrapper {
+    position: relative;
+    min-width: 10rem;
+    padding: 2rem 1rem 3rem 1rem;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: var(--darkGrayishBlue);
+}
+
+.advice-identificator {
+    font-size: 0.6rem;
+    letter-spacing: 0.20rem;
+    color: var(--neonGreen);
+}
+
+.advice-text {
+    line-height: 1.6;
+    font-weight: 900;
+    color: var(--lightCyan);
+}
+
+.divider {
+    background: url("../images/pattern-divider-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1rem;
+}
+
+.button-wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advice-btn {
+    padding: 2rem;
+    border-radius: 5rem;
+    background: url("../images/icon-dice.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--neonGreen);
+    border: none;
+}
+
+.advice-btn:hover {
+    background-color: var(--neonGreenHover);
+}
+
+@media screen and (min-width: 750px) {
+    .divider {
+        background: url("../images/pattern-divider-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }

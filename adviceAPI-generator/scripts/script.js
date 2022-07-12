@@ -10,7 +10,7 @@ async function fetchAdvice() {
         })
         .then(function parseData(data) {
             const dataParsed = JSON.parse(data);
-            return dataParsed;
+            inyectAdvice(dataParsed)
         })
         .catch(function (error) {
             console.log(error);
@@ -19,11 +19,10 @@ async function fetchAdvice() {
 
 function inyectAdvice(data) {
     let { advice, id } = data.slip;
-    adviceId.innerText = id;
-    adviceText.innerText = advice;
+    adviceId.innerText = `ADVICE #${Number(id)}`;
+    adviceText.innerText = `"${String(advice)}"`;
 }
 
 btnAdvice.addEventListener('click', function () {
-    const advice = fetchAdvice();
-    inyectAdvice(advice);
+    fetchAdvice();
 })
