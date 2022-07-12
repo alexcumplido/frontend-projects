@@ -31,7 +31,6 @@ for (let i = 0; i < dropdown.length; i++) {
             hideItem(currentItem);
             currentItem = null;
         } else {
-            hideItem(currentItem);
             displayItem(i);
             currentItem = i;
         }

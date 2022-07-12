@@ -67,8 +67,6 @@ header {
 .dropdown-list {
     height: 0;
     opacity: 0;
-    overflow: hidden;
-    transition: 0.5s;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -124,12 +122,16 @@ header {
 }
 
 .hero-cta {
-    margin-top: 1rem;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
+    margin-top: 2rem;
+}
+
+.hero-cta-info {
+    margin-bottom: 2rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
     text-align: center;
 }
 
@@ -157,14 +159,12 @@ header {
     background-color: var(--lightWhite);
 }
 
-.client-wrapper {
-    margin-top: 1rem;
-    align-self: stretch;
+.hero-cta-client {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-.client-wrapper img {
+.hero-cta-client img {
     max-width: 4rem;
 }
 
@@ -207,6 +207,7 @@ header {
         border-radius: 0.5rem;
         box-shadow: var(--lightGray) 0px 7px 29px 0px;
         min-width: 6rem;
+        transition: 0.25s;
     }
 
     .nav-desktop .dropdown-list:nth-of-type(1) {
@@ -234,13 +235,21 @@ header {
     }
 
     .hero-cta {
-        padding: 2rem 0 0 0;
+        padding: 0;
         margin: 0;
         flex-basis: 70%;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        gap: 1.5rem;
+    }
+
+    .hero-cta-info {
+        padding-top: 8rem;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2rem;
     }
 
     .hero-cta h1 {
@@ -258,13 +267,13 @@ header {
         text-align: left;
     }
 
-    .client-wrapper {
+    .hero-cta-client {
         margin-top: 0;
         justify-content: flex-start;
         gap: 2rem;
     }
 
-    .client-wrapper img {
-        max-width: 3rem;
+    .hero-cta-client img {
+        max-width: 5rem;
     }
 }
