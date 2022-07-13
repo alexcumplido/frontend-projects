@@ -5,7 +5,8 @@ In this repository I develop different projects from the Frontend Mentor plattfo
 ## Projects
 
 **Junior level:**
-  - [Advice generator app (Work In progress)](https://alexcumplido.github.io/frontend-mentor/adviceAPI-generator)
+  - [Time Tracking Dashboard (Work in progress)](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw) 
+  - [Advice generator app](https://alexcumplido.github.io/frontend-mentor/adviceAPI-generator)
   - [Dropdown navigation menu](https://alexcumplido.github.io/frontend-mentor/dropdown-navigation)
   - [Expenses bar chart](https://alexcumplido.github.io/frontend-mentor/bar-chart)
 
@@ -18,7 +19,6 @@ In this repository I develop different projects from the Frontend Mentor plattfo
 
 <!--
 **Projects to do**
-- [Time tracking](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw)
 - [Github search API](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6)
 - [Tip calculator](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
 - [Interactive price component](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8)

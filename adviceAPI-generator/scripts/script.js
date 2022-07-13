@@ -20,4 +20,5 @@ btnAdvice.addEventListener('click', function () {
     fetchAdvice();
 })
 
+//First advice printed
 fetchAdvice();
