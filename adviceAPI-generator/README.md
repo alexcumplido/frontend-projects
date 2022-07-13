@@ -3,7 +3,7 @@
 
 ### Table of contents
 - [User flow](#user-flow)
-- [Screenshot](#screenshot)
+- [Demo](#screenshot)
 - [Run project](#run-project)
 - [Built with](#built-with)
 
@@ -12,8 +12,8 @@
 - See hover states for all interactive elements on the page
 - View the optimal layout for the app depending on their device's screen size
 
-#### Screenshot
-![Mobile preview](./design/)
+#### Demo
+![Mobile preview](./design/adviceGenerator.gif)
 
 #### Run project
 ```
