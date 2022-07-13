@@ -19,3 +19,5 @@ function printAdvice(data) {
 btnAdvice.addEventListener('click', function () {
     fetchAdvice();
 })
+
+fetchAdvice();
