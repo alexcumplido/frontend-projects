@@ -1,8 +1,7 @@
-.advice-wrapper {
+.advice {
     position: relative;
-    min-width: 10rem;
-    padding: 2rem 1rem 3rem 1rem;
-    margin: 0 1rem;
+    max-width: 400px;
+    padding: 2rem 2rem 4rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -11,15 +10,18 @@
     background-color: var(--darkGrayishBlue);
 }
 
-.advice-identificator {
-    font-size: 0.6rem;
+.advice-id {
+    font-size: 0.7rem;
+    font-weight: 500;
     letter-spacing: 0.20rem;
+    text-transform: uppercase;
     color: var(--neonGreen);
 }
 
 .advice-text {
+    font-size: 1.2rem;
     line-height: 1.6;
-    font-weight: 900;
+    font-weight: 700;
     color: var(--lightCyan);
 }
 
@@ -30,28 +32,24 @@
     padding: 1rem;
 }
 
-.button-wrapper {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: -2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .advice-btn {
-    padding: 2rem;
+    position: absolute;
+    left: 40%;
+    bottom: -1.5rem;
+    padding: 1.75rem;
     border-radius: 5rem;
     background: url("../images/icon-dice.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--neonGreen);
     border: none;
+
 }
 
 .advice-btn:hover {
-    background-color: var(--neonGreenHover);
+    box-shadow: -1px 1px 24px 6px var(--neonGreenHover);
+    transition: all ease-in-out 0.2s;
+    animation: diceSpin 1s linear infinite;
 }
 
 @media screen and (min-width: 750px) {
@@ -59,5 +57,15 @@
         background: url("../images/pattern-divider-desktop.svg");
         background-repeat: no-repeat;
         background-position: center;
+    }
+}
+
+@keyframes diceSpin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(350deg);
     }
 }
