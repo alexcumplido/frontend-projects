@@ -22,10 +22,22 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 button {
     font-family: inherit;
     cursor: pointer;
+}
+
+.attribution {
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.attribution a {
+    color: var(--grayishBlue);
+    text-decoration: none;
 }
