@@ -65,16 +65,13 @@ header {
 }
 
 .dropdown-list {
-    height: 0;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    display: none;
 }
 
 .dropdown--active .dropdown-list {
-    height: auto;
-    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     padding: 1rem 0 1rem 1rem;
 }
 
@@ -210,7 +207,13 @@ header {
         transition: 0.25s;
     }
 
-    .nav-desktop .dropdown-list:nth-of-type(1) {
+    .nav-desktop .dropdown:nth-of-type(1) .dropdown-list {
+        position: absolute;
+        top: 2rem;
+        left: -3rem;
+    }
+
+    .nav-desktop .dropdown:nth-of-type(2) .dropdown-list {
         position: absolute;
         top: 2rem;
     }

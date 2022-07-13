@@ -22,7 +22,6 @@ ul {
 }
 
 a {
-    pointer-events: none;
     display: flex;
     align-items: center;
     font-size: 0.8rem;
@@ -30,7 +29,6 @@ a {
     font-weight: 500;
     text-decoration: none;
     color: var(--mediumGray);
-
 }
 
 a:hover {

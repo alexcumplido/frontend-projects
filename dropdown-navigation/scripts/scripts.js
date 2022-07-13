@@ -1,6 +1,5 @@
 const buttonMenu = document.querySelector('.btn-menu');
 const dropdown = document.querySelectorAll('.dropdown');
-const navList = document.querySelector('.nav-list');
 const navigationWrapper = document.querySelector('.nav-overlay');
 let currentItem = null;
 
@@ -14,25 +13,8 @@ buttonMenu.addEventListener('click', function () {
     }
 });
 
-function displayItem(i) {
-    dropdown[i].classList.add('dropdown--active');
-}
-
-function hideItem(i) {
-    dropdown[i].classList.remove('dropdown--active');
-}
-
 for (let i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener('click', function (event) {
-        if (currentItem === null) {
-            displayItem(i);
-            currentItem = i;
-        } else if (currentItem === i) {
-            hideItem(currentItem);
-            currentItem = null;
-        } else {
-            displayItem(i);
-            currentItem = i;
-        }
+    dropdown[i].addEventListener('click', function () {
+        dropdown[i].classList.toggle('dropdown--active');
     })
 }
