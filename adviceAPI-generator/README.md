@@ -1,5 +1,5 @@
 ## FAQ Accordion component
-- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/dropdown-navigation/#) | [Frontend Mentor solution]()
+- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/adviceAPI-generator) | [Frontend Mentor solution]()
 
 ### Table of contents
 - [User flow](#user-flow)
@@ -15,7 +15,7 @@
 - Generate a new piece of advice by clicking the dice icon
 
 #### Screenshot
-![Mobile preview](./designs/mobile-design.jpg)
+![Mobile preview](./design/)
 
 #### Run project
 ```

@@ -30,11 +30,11 @@ button {
 }
 
 .attribution {
+    width: 100%;
     font-size: 0.8rem;
     position: absolute;
     bottom: 0.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+    text-align: center;
 }
 
 .attribution a {
