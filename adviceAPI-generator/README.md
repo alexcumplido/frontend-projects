@@ -3,7 +3,7 @@
 
 ### Table of contents
 - [User flow](#user-flow)
-- [Demo](#screenshot)
+- [Demo](#demo)
 - [Run project](#run-project)
 - [Built with](#built-with)
 
@@ -13,7 +13,7 @@
 - View the optimal layout for the app depending on their device's screen size
 
 #### Demo
-![Mobile preview](./design/adviceGenerator.gif)
+![Demo preview](./design/adviceGenerator.gif)
 
 #### Run project
 ```
