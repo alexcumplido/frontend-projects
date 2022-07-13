@@ -1,7 +1,4 @@
 :root {
-    --maxWidthMobile: 375px;
-    --maxWidthDesktop: 1440px;
-
     --lightCyan: hsl(193, 38%, 86%);
     --neonGreen: hsl(150, 100%, 66%);
     --neonGreenHover: hsla(150, 100%, 66%, 1);

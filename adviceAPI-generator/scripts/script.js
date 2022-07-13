@@ -6,11 +6,11 @@ const ADVICE_URL = `https://api.adviceslip.com/advice`;
 async function fetchAdvice() {
     fetch(ADVICE_URL)
         .then((response) => response.json())
-        .then((dataParsed) => inyectAdvice(dataParsed))
+        .then((dataParsed) => printAdvice(dataParsed))
         .catch((error) => alert(`Network ${error}`));
 }
 
-function inyectAdvice(data) {
+function printAdvice(data) {
     let { advice, id } = data.slip;
     adviceId.innerText = `advice #${Number(id)}`;
     adviceText.innerText = `"${String(advice)}"`;

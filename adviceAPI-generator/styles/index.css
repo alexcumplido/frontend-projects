@@ -1,6 +1,5 @@
 .advice {
     position: relative;
-    max-width: 400px;
     padding: 2rem 2rem 4rem 2rem;
     display: flex;
     flex-direction: column;
@@ -34,7 +33,8 @@
 
 .advice-btn {
     position: absolute;
-    left: 40%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -1.5rem;
     padding: 1.75rem;
     border-radius: 5rem;
@@ -43,29 +43,21 @@
     background-position: center;
     background-color: var(--neonGreen);
     border: none;
-
 }
 
 .advice-btn:hover {
     box-shadow: -1px 1px 24px 6px var(--neonGreenHover);
     transition: all ease-in-out 0.2s;
-    animation: diceSpin 1s linear infinite;
 }
 
 @media screen and (min-width: 750px) {
+    .advice {
+        max-width: 80%;
+    }
+
     .divider {
         background: url("../images/pattern-divider-desktop.svg");
         background-repeat: no-repeat;
         background-position: center;
-    }
-}
-
-@keyframes diceSpin {
-    0% {
-        transform: rotateZ(0deg);
-    }
-
-    100% {
-        transform: rotateZ(350deg);
     }
 }
