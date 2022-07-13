@@ -5,16 +5,9 @@ const ADVICE_URL = `https://api.adviceslip.com/advice`;
 
 async function fetchAdvice() {
     fetch(ADVICE_URL)
-        .then(function responseText(response) {
-            return response.text();
-        })
-        .then(function parseData(data) {
-            const dataParsed = JSON.parse(data);
-            inyectAdvice(dataParsed)
-        })
-        .catch(function (error) {
-            console.log(error);
-        })
+        .then((response) => response.json())
+        .then((dataParsed) => inyectAdvice(dataParsed))
+        .catch((error) => alert(`Network ${error}`));
 }
 
 function inyectAdvice(data) {
