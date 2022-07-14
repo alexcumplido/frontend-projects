@@ -59,7 +59,7 @@ header {
     content: url("../images/icon-arrow-down.svg");
 }
 
-.dropdown--active .dropdown-link::after {
+.dropdown--active.dropdown-link::after {
     padding-left: 0.5rem;
     content: url("../images/icon-arrow-up.svg");
 }
@@ -68,11 +68,11 @@ header {
     display: none;
 }
 
-.dropdown--active .dropdown-list {
+.dropdown--active+.dropdown-list {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 1rem 0 1rem 1rem;
+    padding: 1rem;
 }
 
 .dropdown-item {
@@ -202,12 +202,12 @@ header {
         gap: 1.5rem;
     }
 
-    .nav-mvl .dropdown {
+    .dropdown {
         display: block;
         position: relative;
     }
 
-    .nav-mvl .dropdown-list {
+    .dropdown-list {
         position: absolute;
         background-color: var(--white);
         padding: 1rem;
@@ -217,13 +217,13 @@ header {
         transition: 0.25s;
     }
 
-    .nav-mvl .dropdown:nth-of-type(1) .dropdown-list {
+    .dropdown:nth-of-type(1) .dropdown-list {
         position: absolute;
         top: 2rem;
         left: -3rem;
     }
 
-    .nav-mvl .dropdown:nth-of-type(2) .dropdown-list {
+    .dropdown:nth-of-type(2) .dropdown-list {
         position: absolute;
         top: 2rem;
     }
@@ -246,6 +246,10 @@ header {
     .hero-img-wrapper {
         flex-basis: 50%;
         order: 1;
+    }
+
+    .hero-img {
+        height: 100%;
     }
 
     .hero-cta {

@@ -1,7 +1,6 @@
 const buttonMenu = document.querySelector('.btn-menu');
-const dropdown = document.querySelectorAll('.dropdown');
+const dropdownLink = document.querySelectorAll('.dropdown-link');
 const navigationWrapper = document.querySelector('.nav-overlay');
-let currentItem = null;
 
 buttonMenu.addEventListener('click', function () {
     if (buttonMenu.classList.contains('btn-menu--open')) {
@@ -13,8 +12,8 @@ buttonMenu.addEventListener('click', function () {
     }
 });
 
-for (let i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener('click', function () {
-        dropdown[i].classList.toggle('dropdown--active');
+for (let i = 0; i < dropdownLink.length; i++) {
+    dropdownLink[i].addEventListener('click', function () {
+        dropdownLink[i].classList.toggle('dropdown--active');
     })
 }
