@@ -13,6 +13,7 @@ html {
 body {
     max-width: var(--maxWidthDesktop);
     height: 100vh;
+    margin: 0 auto;
     font-family: var(--fontFamily);
     font-size: var(--fontSize);
 }

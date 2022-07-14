@@ -166,6 +166,7 @@ header {
 }
 
 @media screen and (min-width: 735px) {
+
     header {
         margin: 0 auto;
         max-width: 1200px;
@@ -173,18 +174,27 @@ header {
         margin-bottom: 2rem;
     }
 
-    .btn-menu,
-    .nav-overlay {
+    .btn-menu {
         display: none;
     }
 
-    .nav-desktop {
+    .nav-overlay {
         display: block;
         width: 100%;
+    }
+
+    .nav-overlay--open {
+        position: initial;
+        background-color: transparent;
+    }
+
+    .nav-mvl {
+        flex-basis: initial;
+        padding: 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 5rem;
+        background-color: initial;
     }
 
     .nav-list {
@@ -192,12 +202,12 @@ header {
         gap: 1.5rem;
     }
 
-    .nav-desktop .dropdown {
+    .nav-mvl .dropdown {
         display: block;
         position: relative;
     }
 
-    .nav-desktop .dropdown-list {
+    .nav-mvl .dropdown-list {
         position: absolute;
         background-color: var(--white);
         padding: 1rem;
@@ -207,18 +217,19 @@ header {
         transition: 0.25s;
     }
 
-    .nav-desktop .dropdown:nth-of-type(1) .dropdown-list {
+    .nav-mvl .dropdown:nth-of-type(1) .dropdown-list {
         position: absolute;
         top: 2rem;
         left: -3rem;
     }
 
-    .nav-desktop .dropdown:nth-of-type(2) .dropdown-list {
+    .nav-mvl .dropdown:nth-of-type(2) .dropdown-list {
         position: absolute;
         top: 2rem;
     }
 
     .sign-wrapper {
+        margin-top: initial;
         flex-direction: row;
         align-items: center;
     }
