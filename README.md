@@ -18,11 +18,11 @@ In this repository I develop different projects from the Frontend Mentor plattfo
   - [Card component](https://alexcumplido.github.io/frontend-mentor/card-component)
 
 <!--
-**Projects to do**
+To do
 - [Github search API](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6)
 - [Tip calculator](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
+- [Crowdfunding product page](https://www.frontendmentor.io/challenges/crowdfunding-product-page-7uvcZe7ZR)
 - [Interactive price component](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8)
-- [Product landing page](https://www.frontendmentor.io/challenges/officelite-coming-soon-site-M4DIPNz8g)
-- [Social media dashboard](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H)
+- [Officelite coming soon site](https://www.frontendmentor.io/challenges/officelite-coming-soon-site-M4DIPNz8g)
 - [Price card toggle](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC)
 ->
