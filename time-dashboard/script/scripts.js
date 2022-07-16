@@ -1,9 +1,18 @@
-// PEDAC
-// 1. Understand the problem
-// 2. Create an example(features, user - flow)
+// 1. Understand the problem 
+//     Define inputs and ouputs
+//     What are the explicit-implicit requirements ?
+
+// 2. Create an example (features, user-flow)
+//     Clarify simple examples and edge cases
+
 // 3. Determine data structure
+
 // 4. Write an algorithm
+//     Pseudocode
+
 // 5. Code
+//     Follow algorithm and test as you go
+
 
 [
     {
