@@ -1,6 +1,7 @@
 :root {
     --widthMobile: 375px;
     --widthDesktop: 1440px;
+    --white: hsl(0, 0%, 100%);
     --softOrange: hsl(43, 84%, 65%);
     --lightRead: hsl(15, 100%, 70%);
     --violet: hsl(264, 64%, 52%);

@@ -1,5 +1,66 @@
-.card * {
+.card-profile,
+.card-content {
+    border-radius: 1rem;
+    background-color: var(--darkBlue);
+}
+
+.card-bio {
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    background-color: var(--blue);
+}
+
+.card-bio {
+    flex: 1;
+}
+
+.card-bio img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+}
+
+.card-bio-name {
+    color: var(--paleBlue);
+}
+
+.card-bio-name span {
+    font-size: 0.9rem;
+    font-weight: 300;
     display: block;
-    padding: 1rem;
-    outline: 1px solid grey;
+}
+
+.card-bio-name span:last-child {
+    font-size: 1.3rem;
+    margin-top: 0.2rem;
+    color: var(--white);
+}
+
+.card-timeframes {
+    display: flex;
+    background: transparent;
+}
+
+.button-timeframe {
+    flex: 1;
+    padding: 1.5rem 0;
+    background: transparent;
+    color: var(--paleBlue);
+}
+
+.button-timeframe:hover {
+    color: var(--white);
+}
+
+.card-content {
+    height: 80%;
+    padding-top: 4rem;
+}
+
+.work {
+    background-color: var(--lightRead);
 }
