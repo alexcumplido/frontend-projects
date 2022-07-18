@@ -1,15 +1,15 @@
 .card-profile {
     border-radius: 1rem;
-    background-color: var(--darkBlue);
     color: var(--paleBlue);
+    background-color: var(--darkBlue);
 }
 
 .card-bio {
     padding: 2rem;
-    border-radius: 1rem;
     display: flex;
     align-items: center;
     gap: 1.2rem;
+    border-radius: 1rem;
     background-color: var(--blue);
 }
 
@@ -24,12 +24,15 @@
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     font-weight: 300;
 }
 
+.card-bio-name span:first-child {
+    font-size: 0.8rem;
+}
+
 .card-bio-name span:last-child {
-    font-size: 1.3rem;
     color: var(--white);
 }
 
@@ -87,7 +90,7 @@
 }
 
 .card-content {
-    padding: 1rem;
+    padding: 1.5rem 1.3rem;
     border-radius: 1rem;
     color: var(--white);
     background-color: var(--darkBlue);
@@ -124,14 +127,14 @@
 @media screen and (min-width: 750px) {
     .card-profile {
         grid-row: span 2;
+        align-self: stretch;
     }
 
     .card-bio {
-        padding: 2rem 1.7rem 4.4rem 1.7rem;
+        padding-bottom: 5rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 2.3rem;
     }
 
     .card-bio-name span:last-child {
@@ -141,7 +144,6 @@
 
     .card-timeframes {
         flex-direction: column;
-
     }
 
     .button-timeframe {

@@ -8,8 +8,8 @@
 
 body {
     max-width: var(--widthDesktop);
-    height: 100vh;
-    padding: 0.5rem;
+    min-height: 100vh;
+    padding: 4.5rem 1.3rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@ body {
 
 main {
     display: grid;
-    grid-row-gap: 1.4rem;
+    grid-gap: 1.3rem;
 }
 
 button {
@@ -32,13 +32,13 @@ button {
 
 @media screen and (min-width: 750px) {
     body {
+        padding: 1rem;
         justify-content: center;
     }
 
     main {
-        grid-template-columns: repeat(4, minmax(200px, auto));
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr 1fr;
-        grid-gap: 1.7rem;
         align-items: flex-end;
     }
 }
