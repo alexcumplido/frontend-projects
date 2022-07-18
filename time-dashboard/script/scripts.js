@@ -29,18 +29,13 @@ function printDashboardData(time) {
         let previousData = document.querySelector(`.${itemTitle} .card-previous-data`);
 
         cardTitle.innerText = dataFetched[i].title;
-        currentCada.innerText = String(currentValue);
-        previousData.innerText = `Last ${getTimeframeWord(time)} - ${String(previousValue)}`;
+        currentCada.innerText = `${String(currentValue)}hrs`;
+        previousData.innerText = `Last ${getPastWordTime(time)} - ${String(previousValue)}hrs`;
     }
 }
 
-function getTimeframeWord(time) {
-    if (time === 'daily') {
-        return 'Day';
-    } else if (time === 'monthly') {
-        return 'Month';
-    }
-    return 'Week';
+function getPastWordTime(time) {
+    return (time === 'daily') ? 'Day' : (time === 'monthly') ? 'Month' : 'Week';
 }
 
 for (let i = 0; i < timeframes.length; i++) {
