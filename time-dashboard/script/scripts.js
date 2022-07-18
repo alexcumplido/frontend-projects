@@ -3,7 +3,6 @@ let dataFetched;
 const timeframes = document.getElementsByClassName("button-timeframe");
 const cards = document.getElementsByClassName("card");
 
-
 async function fetchData() {
     fetch(URL_DATA)
         .then(function (response) {
@@ -31,8 +30,17 @@ function printDashboardData(time) {
 
         cardTitle.innerText = dataFetched[i].title;
         currentCada.innerText = String(currentValue);
-        previousData.innerText = String(previousValue);
+        previousData.innerText = `Last ${getTimeframeWord(time)} - ${String(previousValue)}`;
     }
+}
+
+function getTimeframeWord(time) {
+    if (time === 'daily') {
+        return 'Day';
+    } else if (time === 'monthly') {
+        return 'Month';
+    }
+    return 'Week';
 }
 
 for (let i = 0; i < timeframes.length; i++) {
