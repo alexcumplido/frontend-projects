@@ -11,6 +11,9 @@ body {
     height: 100vh;
     padding: 0.5rem;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: var(--fontSize);
     font-family: var(--fontFamily);
     background-color: var(--veryDarkBlue);
@@ -25,4 +28,17 @@ button {
     font-size: inherit;
     font-family: inherit;
     border: none;
+}
+
+@media screen and (min-width: 750px) {
+    body {
+        justify-content: center;
+    }
+
+    main {
+        grid-template-columns: repeat(4, minmax(200px, auto));
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1.7rem;
+        align-items: flex-end;
+    }
 }

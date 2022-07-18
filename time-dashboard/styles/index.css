@@ -1,7 +1,7 @@
-.card-profile,
-.card-content {
+.card-profile {
     border-radius: 1rem;
     background-color: var(--darkBlue);
+    color: var(--paleBlue);
 }
 
 .card-bio {
@@ -13,10 +13,6 @@
     background-color: var(--blue);
 }
 
-.card-bio {
-    flex: 1;
-}
-
 .card-bio img {
     width: 64px;
     height: 64px;
@@ -25,18 +21,15 @@
 }
 
 .card-bio-name {
-    color: var(--paleBlue);
-}
-
-.card-bio-name span {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
     font-size: 0.9rem;
     font-weight: 300;
-    display: block;
 }
 
 .card-bio-name span:last-child {
     font-size: 1.3rem;
-    margin-top: 0.2rem;
     color: var(--white);
 }
 
@@ -56,11 +49,121 @@
     color: var(--white);
 }
 
-.card-content {
-    height: 80%;
-    padding-top: 4rem;
+.card {
+    padding-top: 2.5rem;
+    border-radius: 1rem;
+    background-repeat: no-repeat;
+    background-position: 95% top;
 }
 
 .work {
-    background-color: var(--lightRead);
+    background-color: #FF8B64;
+    background-image: url("../images/icon-work.svg");
+}
+
+.play {
+    background-color: #55C2E6;
+    background-image: url("../images/icon-play.svg");
+}
+
+.study {
+    background-color: #FF5E7D;
+    background-image: url("../images/icon-study.svg");
+}
+
+.exercise {
+    background-color: #4BCF82;
+    background-image: url("../images/icon-exercise.svg");
+}
+
+.social {
+    background-color: #7335D2;
+    background-image: url("../images/icon-social.svg");
+}
+
+.self-care {
+    background-color: #F1C75B;
+    background-image: url("../images/icon-self-care.svg");
+}
+
+.card-content {
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--white);
+    background-color: var(--darkBlue);
+}
+
+.card-content:hover {
+    cursor: pointer;
+    background-color: var(--standardDarkBlue);
+}
+
+.card-header,
+.card-data {
+    margin: 0.4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-link {
+    display: flex;
+    align-items: center;
+}
+
+.card-current-data {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.card-previous-data {
+    color: var(--paleBlue);
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 750px) {
+    .card-profile {
+        grid-row: span 2;
+    }
+
+    .card-bio {
+        padding: 2rem 1.7rem 4.4rem 1.7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.3rem;
+    }
+
+    .card-bio-name span:last-child {
+        display: block;
+        font-size: 2.2rem;
+    }
+
+    .card-timeframes {
+        flex-direction: column;
+
+    }
+
+    .button-timeframe {
+        padding: 1.5rem 1.7rem;
+        text-align: left;
+    }
+
+    .card-title {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .card-data {
+        margin-top: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .card-current-data {
+        font-size: 3.1rem;
+    }
+
 }
