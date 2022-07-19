@@ -3,16 +3,16 @@
 In this repository I develop different projects from the Frontend Mentor plattform using frontend techonologies.
 
 ## Projects
-  - [Github search API  (Work in progress)](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6)
+  - [GitHub user search app  (Work in progress)](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6)
   - [Time Tracking Dashboard](https://alexcumplido.github.io/frontend-mentor/time-dashboard/) 
   - [Advice generator app](https://alexcumplido.github.io/frontend-mentor/adviceAPI-generator)
-  - [Dropdown navigation menu](https://alexcumplido.github.io/frontend-mentor/dropdown-navigation)
-  - [Expenses bar chart](https://alexcumplido.github.io/frontend-mentor/bar-chart)
-  - [Form validation](https://alexcumplido.github.io/frontend-mentor/form-validation)
-  - [FAQ Accordion](https://alexcumplido.github.io/frontend-mentor/faq-accordion)
-  - [Rating modal](https://alexcumplido.github.io/frontend-mentor/rating-modal)
-  - [Grid section](https://alexcumplido.github.io/frontend-mentor/grid-section)
-  - [Card component](https://alexcumplido.github.io/frontend-mentor/card-component)
+  - [Intro section with dropdown navigation](https://alexcumplido.github.io/frontend-mentor/dropdown-navigation)
+  - [Expenses chart component](https://alexcumplido.github.io/frontend-mentor/bar-chart)
+  - [Intro component with sign-up form](https://alexcumplido.github.io/frontend-mentor/form-validation)
+  - [FAQ accordion card](https://alexcumplido.github.io/frontend-mentor/faq-accordion)
+  - [Interactive rating component](https://alexcumplido.github.io/frontend-mentor/rating-modal)
+  - [Social proof section](https://alexcumplido.github.io/frontend-mentor/grid-section)
+  - [Single price grid component](https://alexcumplido.github.io/frontend-mentor/card-component)
 
 <!--
 To do
