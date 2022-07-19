@@ -6,9 +6,6 @@
     box-sizing: border-box;
 }
 
-h2 {
-    font-weight: 100;
-}
 
 body {
     max-width: var(--widthDesktop);
@@ -28,10 +25,8 @@ main {
     grid-gap: 1.3rem;
 }
 
-button {
-    font-size: inherit;
-    font-family: inherit;
-    border: none;
+h2 {
+    font-weight: 100;
 }
 
 .card-profile {
@@ -40,7 +35,7 @@ button {
     background-color: var(--darkBlue);
 }
 
-.card-bio {
+.profile-content {
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -49,25 +44,22 @@ button {
     background-color: var(--blue);
 }
 
-.card-bio img {
+.profile-avatar {
     max-width: 4rem;
     border-radius: 50%;
     border: 2px solid var(--white);
 }
 
-.card-bio-name {
+.profile-text {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     font-weight: 300;
 }
 
-.card-bio-name h2 span:first-child {
-    font-size: 0.8rem;
-}
-
-.card-bio-name h2 span:last-child {
+.profile-name {
+    font-size: 1.3rem;
     color: var(--white);
 }
 
@@ -79,6 +71,9 @@ button {
 .button-timeframe {
     flex: 1;
     padding: 1.5rem 0;
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
     background: transparent;
     color: var(--paleBlue);
 }
@@ -88,6 +83,7 @@ button {
 }
 
 .card {
+    min-width: 14rem;
     padding-top: 2.5rem;
     border-radius: 1rem;
     background-repeat: no-repeat;
@@ -155,8 +151,8 @@ button {
 }
 
 .card-previous-data {
-    color: var(--paleBlue);
     font-size: 0.8rem;
+    color: var(--paleBlue);
 }
 
 @media screen and (min-width: 750px) {
@@ -174,27 +170,38 @@ button {
     .card-profile {
         grid-row: span 2;
         align-self: stretch;
-    }
-
-    .card-bio {
-        padding-bottom: 5rem;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        justify-content: space-between;
     }
 
-    .card-bio-name h2 span:last-child {
+    .profile-content {
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding: 1.5rem;
+    }
+
+    .profile-name {
+        margin-top: 0.25rem;
+        font-size: 2rem;
+    }
+
+    .profile-name span {
         display: block;
-        font-size: 2.2rem;
+        margin-top: 0.25rem;
     }
 
     .card-timeframes {
+        padding: 0.5rem 0;
         flex-direction: column;
     }
 
     .button-timeframe {
-        padding: 1.5rem 1.7rem;
+        padding: 1rem;
         text-align: left;
+        font-weight: 300;
     }
 
     .card-title {
