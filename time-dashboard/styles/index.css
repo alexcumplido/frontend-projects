@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+h2 {
+    font-weight: 100;
+}
+
 body {
     max-width: var(--widthDesktop);
     min-height: 100vh;
@@ -59,11 +63,11 @@ button {
     font-weight: 300;
 }
 
-.card-bio-name span:first-child {
+.card-bio-name h2 span:first-child {
     font-size: 0.8rem;
 }
 
-.card-bio-name span:last-child {
+.card-bio-name h2 span:last-child {
     color: var(--white);
 }
 
@@ -179,7 +183,7 @@ button {
         align-items: flex-start;
     }
 
-    .card-bio-name span:last-child {
+    .card-bio-name h2 span:last-child {
         display: block;
         font-size: 2.2rem;
     }
