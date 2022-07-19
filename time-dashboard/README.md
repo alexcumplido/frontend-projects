@@ -1,5 +1,5 @@
 ## Time Dashboard
-[Github Pages live](https://alexcumplido.github.io/frontend-mentor/time-dashboard/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/javascript-modal-styled-label-as-input-same-effect-qZiNNHmwZX)
+[Github Pages live](https://alexcumplido.github.io/frontend-mentor/time-dashboard/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/vanilla-javascript-with-a-json-klWWcU-XNn)
 
 ### Table of contents
 - [User flow](#user-flow)
