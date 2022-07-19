@@ -29,17 +29,26 @@
 - Mobile-first workflow
 
 #### Thoughts
-Not sure if these two functions follow real SOLID principles, but I tried to concrete as much as possible the showing and hiding of accordion items. Both receive as parameters the position in the NodeList of the clicked item, wich match with the position of the other elements in their corresponding NodeList as well.
+Not sure if there is there are to many statements inside that .addEventListener(), but I tried to concrete as much as possible the showing and hiding of accordion items. BI should refactor it in the near term.
 
 ```js
-function displayItem(i) {
-    accordionTitles[i].classList.add("title-active");
-    accordionText[i].classList.add("accordion-text-show");
-}
+const accordionItems = document.querySelectorAll('.accordion__item');
+let currentItem = null;
 
-function hideItem(i) {
-    accordionTitles[i].classList.remove("title-active");
-    accordionText[i].classList.remove("accordion-text-show");
+for (let i = 0; i < accordionItems.length; i++) {
+    accordionItems[i].addEventListener(('click'), function () {
+        if (currentItem === null) {
+            accordionItems[i].classList.add('accordion__item--active');
+            currentItem = i;
+        } else if (currentItem === i) {
+            accordionItems[i].classList.remove('accordion__item--active');
+            currentItem = null;
+        } else {
+            accordionItems[currentItem].classList.remove('accordion__item--active');
+            accordionItems[i].classList.add('accordion__item--active');
+            currentItem = i;
+        }
+    });
 }
 ```
 
