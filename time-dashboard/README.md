@@ -7,7 +7,6 @@
 - [Run project](#run-project)
 - [Built with](#built-with)
 - [Thoughts](#thoughts)
-- [Continued development](#continued-development)
 
 #### User flow
 - Switch between viewing Daily, Weekly, and Monthly stats
