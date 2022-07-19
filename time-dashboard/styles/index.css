@@ -83,7 +83,6 @@ h2 {
 }
 
 .card {
-    min-width: 14rem;
     padding-top: 2.5rem;
     border-radius: 1rem;
     background-repeat: no-repeat;
@@ -155,7 +154,7 @@ h2 {
     color: var(--paleBlue);
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 800px) {
     body {
         padding: 1rem;
         justify-content: center;
@@ -202,6 +201,10 @@ h2 {
         padding: 1rem;
         text-align: left;
         font-weight: 300;
+    }
+
+    .card {
+        min-width: 12rem;
     }
 
     .card-title {
