@@ -4,7 +4,7 @@ In this repository I develop different projects from the Frontend Mentor plattfo
 
 ## Projects
   - [Github search API  (Work in progress)](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6)
-  - [Time Tracking Dashboard](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw) 
+  - [Time Tracking Dashboard](https://alexcumplido.github.io/frontend-mentor/time-dashboard/) 
   - [Advice generator app](https://alexcumplido.github.io/frontend-mentor/adviceAPI-generator)
   - [Dropdown navigation menu](https://alexcumplido.github.io/frontend-mentor/dropdown-navigation)
   - [Expenses bar chart](https://alexcumplido.github.io/frontend-mentor/bar-chart)
