@@ -1,3 +1,35 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: var(--widthDesktop);
+    min-height: 100vh;
+    padding: 4.5rem 1.3rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--fontSize);
+    font-family: var(--fontFamily);
+    background-color: var(--veryDarkBlue);
+}
+
+main {
+    display: grid;
+    grid-gap: 1.3rem;
+}
+
+button {
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
+}
+
 .card-profile {
     border-radius: 1rem;
     color: var(--paleBlue);
@@ -14,8 +46,7 @@
 }
 
 .card-bio img {
-    width: 64px;
-    height: 64px;
+    max-width: 4rem;
     border-radius: 50%;
     border: 2px solid var(--white);
 }
@@ -60,32 +91,32 @@
 }
 
 .work {
-    background-color: #FF8B64;
+    background-color: var(--softOrange);
     background-image: url("../images/icon-work.svg");
 }
 
 .play {
-    background-color: #55C2E6;
+    background-color: var(--softBlue);
     background-image: url("../images/icon-play.svg");
 }
 
 .study {
-    background-color: #FF5E7D;
+    background-color: var(--softRed);
     background-image: url("../images/icon-study.svg");
 }
 
 .exercise {
-    background-color: #4BCF82;
+    background-color: var(--limeGreen);
     background-image: url("../images/icon-exercise.svg");
 }
 
 .social {
-    background-color: #7335D2;
+    background-color: var(--violet);
     background-image: url("../images/icon-social.svg");
 }
 
 .self-care {
-    background-color: #F1C75B;
+    background-color: var(--softYellow);
     background-image: url("../images/icon-self-care.svg");
 }
 
@@ -102,7 +133,7 @@
 }
 
 .card-header,
-.card-data {
+.card-footer {
     margin: 0.4rem 0;
     display: flex;
     justify-content: space-between;
@@ -125,6 +156,17 @@
 }
 
 @media screen and (min-width: 750px) {
+    body {
+        padding: 1rem;
+        justify-content: center;
+    }
+
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        align-items: flex-end;
+    }
+
     .card-profile {
         grid-row: span 2;
         align-self: stretch;
@@ -156,7 +198,7 @@
         font-weight: 400;
     }
 
-    .card-data {
+    .card-footer {
         margin-top: 1.3rem;
         display: flex;
         flex-direction: column;
@@ -167,5 +209,4 @@
     .card-current-data {
         font-size: 3.1rem;
     }
-
 }

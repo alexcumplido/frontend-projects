@@ -1,16 +1,15 @@
 :root {
-    --widthMobile: 375px;
     --widthDesktop: 1440px;
     --white: hsl(0, 0%, 100%);
-    --softOrange: hsl(43, 84%, 65%);
-    --lightRead: hsl(15, 100%, 70%);
+    --softYellow: hsl(43, 84%, 65%);
+    --softOrange: hsl(15, 100%, 70%);
+    --softRed: hsl(348, 100%, 68%);
     --violet: hsl(264, 64%, 52%);
     --limeGreen: hsl(145, 58%, 55%);
     --softBlue: hsl(195, 74%, 62%);
-    --blue: hsl(246, 80%, 60%);
     --paleBlue: hsl(236, 100%, 87%);
-    --desaturatedBlue: hsl(235, 45%, 61%);
     --standardDarkBlue: hsl(235, 41%, 34%);
+    --blue: hsl(246, 80%, 60%);
     --darkBlue: hsl(235, 46%, 20%);
     --veryDarkBlue: hsl(226, 43%, 10%);
     --fontSize: 18px;
