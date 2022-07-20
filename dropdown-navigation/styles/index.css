@@ -89,12 +89,13 @@ header {
     flex-basis: 60%;
     padding: 4rem 1rem 0 1rem;
     background-color: var(--lightWhite);
+
 }
 
 .nav-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .dropdown-link::after {
@@ -201,11 +202,11 @@ header {
 
 .hero-cta-client {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .hero-cta-client img {
-    max-width: 4rem;
+    max-width: 3.5rem;
 }
 
 @media screen and (min-width: 735px) {
