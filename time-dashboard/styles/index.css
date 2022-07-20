@@ -79,6 +79,7 @@ h2 {
 }
 
 .button-timeframe:hover {
+    cursor: pointer;
     color: var(--white);
 }
 
