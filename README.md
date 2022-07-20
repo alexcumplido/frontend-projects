@@ -3,7 +3,7 @@
 In this repository I develop different projects from the Frontend Mentor plattform using frontend techonologies.
 
 ## Projects
-  - [GitHub user search app  (Work in progress)](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6)
+  - [GitHub user search app  (Work in progress)](https://alexcumplido.github.io/frontend-mentor/github-search-api/)
   - [Time Tracking Dashboard](https://alexcumplido.github.io/frontend-mentor/time-dashboard/) 
   - [Advice generator app](https://alexcumplido.github.io/frontend-mentor/adviceAPI-generator)
   - [Intro section with dropdown navigation](https://alexcumplido.github.io/frontend-mentor/dropdown-navigation)
