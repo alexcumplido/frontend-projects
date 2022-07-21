@@ -1,3 +1,5 @@
+/*Variables*/
+
 :root {
     --clr-primary-100: hsl(0, 0%, 100%);
     --clr-primary-200: hsl(227, 100%, 98%);
@@ -46,9 +48,7 @@
 }
 
 
-/*
-https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
-*/
+/*Root media queries*/
 
 @media screen and (min-width:573px) {
     :root {
@@ -60,6 +60,9 @@ https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 
 @media screen and (min-width:730px) {}
 
+
+/*General Styles*/
+
 body {
     max-width: var(--max-width-desktop);
     margin: 0 auto;
@@ -67,5 +70,11 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: var(--ff-primary);
-    font-size: var(--ff---fs-body);
+    font-size: var(--fs-body);
 }
+
+
+
+/*
+https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
+*/
