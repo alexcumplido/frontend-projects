@@ -17,20 +17,47 @@
         <title>GitHub user search app</title>
     </head>
     <body>
+        <header>
+            <h1>devfinder</h1>
+            <div class="theme-switcher">
+                <button>Ligh</button>
+                <img src="./images/icon-sun.svg" alt="theme-sun">
+            </div>
+        </header>
         <main>
-              devfinder
-
-                Light
-                Dark
-
-                Search GitHub username...
-                Search
-
-                Joined
-
-                Repos
-                Followers
-                Following
+            <form class="search" action="">
+                <img src="./images/icon-search.svg" alt="">
+                <input type="text">
+                <button type="submit">Search</button>
+            </form>
+            <div class="profile-panel">
+                <div class="profile-user">
+                    <img class="profile-avatar" src="./images/favicon-32x32.png" alt="User avatar">
+                    <ul class="profile-basic-info">
+                        <li class="name">Name</li>
+                        <li class="login">Login</li>
+                        <li class="created_at">created_at</li>
+                    </ul>
+                </div>
+                <div class="profile-bio">
+                    <p class="bio">Bio</p>
+                </div>
+                <div class="profile-stats">
+                    <ul class="profile-stats-list">
+                        <li><span>public_repos</span><span class="public_repos"></span></li>
+                        <li><span>following</span><span class="following"></span></li>
+                        <li><span>followers</span><span class="followers"></span></li>
+                    </ul>
+                </div>
+                <div class="profile-links">
+                    <ul class="profile-links-list">
+                        <li><img src="./images/icon-location.svg" alt="Location icon"><a class="location" href="#">location</a></li>
+                        <li><img src="./images/icon-website.svg" alt="Website icon"><a class="blog" href="#">blog</a></li>
+                        <li><img src="./images/icon-twitter.svg" alt="Twitter icon"><a class="twitter" href="#">twitter</a></li>
+                        <li><img src="./images/icon-company.svg" alt="Company icon"><a class="company" href="#">company</a></li>
+                    </ul>
+                </div>
+            </div>
         </main>
         <script src="./scripts/script.js"></script>
     </body>

@@ -73,6 +73,10 @@ body {
     font-size: var(--fs-body);
 }
 
+ul {
+    list-style: none;
+}
+
 
 
 /*
