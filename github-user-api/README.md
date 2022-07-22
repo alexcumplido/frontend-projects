@@ -29,6 +29,7 @@
 - JavaScript
 - 3rd-party API
 - Mobile-first workflow
+- Design System
 
 #### Thoughts
 
