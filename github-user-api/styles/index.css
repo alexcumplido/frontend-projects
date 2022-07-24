@@ -96,6 +96,17 @@ ul {
     display: block;
 }
 
+.form__submit {
+    transition: all 0.2s;
+}
+
+.round {
+    outline: 1px solid blue;
+    transform: rotate(1turn) scale(2);
+
+    border-radius: 5px;
+}
+
 /*
 https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 */
