@@ -59,6 +59,11 @@
     padding: 0.5rem 1rem;
 }
 
+main {
+    color: var(--clr-primary-200);
+    background-color: var(--clr-primaryDardMode-800);
+}
+
 
 /*Root media queries*/
 @media screen and (min-width:573px) {

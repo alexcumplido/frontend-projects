@@ -19,6 +19,7 @@ To do
 - [Four card feature section](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK)
 - [Skilled e-learning landing Page](https://www.frontendmentor.io/challenges/skilled-elearning-landing-page-S1ObDrZ8q)
 
+- [Single-page design portfolio](https://www.frontendmentor.io/challenges/singlepage-design-portfolio-2MMhyhfKVo)
 - [Pricing component toggle](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC)
 - [Tip calculator](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
 

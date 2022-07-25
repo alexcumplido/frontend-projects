@@ -1,4 +1,4 @@
-let URL_API = `https://api.github.com/users/:username`;
+let URL_GITHUB = `https://api.github.com/users/:username`;
 const formSearch = document.querySelector('.form__input__search');
 const formSubmit = document.querySelector('.form__submit');
 const formError = document.querySelector('.form__error');
@@ -18,17 +18,18 @@ const companyField = document.querySelector('.company');
 
 formSubmit.addEventListener('click', function (event) {
     event.preventDefault();
-    if (formSearch.value) fetchData(URL_API);
+    if (formSearch.value) fetchData(URL_GITHUB);
 })
 
+function getInputSearch() {
+    let search = formSearch.value.trim() || 'octocat';
+    return search;
+}
+
 function fetchData(URL_API) {
-    let githubUser = formSearch.value.trim() || 'octocat';
-    URL_API = URL_API.replace(':username', githubUser);
-    fetch(URL_API)
-        .then(function (promise) {
-            return promise.text();
-        }).then(function (responseToParse) {
-            return JSON.parse(responseToParse);
+    fetch(URL_API.replace(':username', getInputSearch()))
+        .then(function (response) {
+            return response.json();
         }).then(function (responseParsed) {
             validateUser(responseParsed);
         }).catch(function (error) {
@@ -46,40 +47,36 @@ function validateUser(dataFetched) {
     }
 }
 function showProfileData(dataFetched) {
-    let linksNull = `Not Available`;
-    let bioNull = `This profile has no bio`;
 
     let {
         login, avatar_url, html_url, name, company, blog, location, bio, twitter_username, public_repos, followers, following, created_at
     } = dataFetched;
 
-    profileAvatar.setAttribute('src', avatar_url);
-    userField.setAttribute('href', html_url);
-    nameField.textContent = name || login;
-    userField.textContent = `@${login}`;
-
     let joinDate = new Date(created_at);
     let day = joinDate.getDay();
     let month = joinDate.toLocaleString('default', { month: 'short' });
     let year = joinDate.getFullYear();
+
+    profileAvatar.setAttribute('src', avatar_url);
+    nameField.textContent = name || login;
+    userField.textContent = `@${login}`;
+    userField.setAttribute('href', html_url);
     createdField.textContent = `Joined ${day} ${month} ${year}`
 
-    bioField.textContent = bio || bioNull;
+    bioField.textContent = bio || `This profile has no bio`;
 
     reposField.textContent = public_repos;
     followingField.textContent = following;
     followersField.textContent = followers;
 
-    locationField.textContent = location || linksNull;
+    locationField.textContent = location || `Not Available`;
+    blogField.textContent = blog || `Not Available`;
+    twitterField.textContent = (twitter_username) ? `@${twitter_username}` : `Not Available`;
+    companyField.textContent = company || `Not Available`;
 
-    blogField.textContent = blog || linksNull;
     if (blog) blogField.setAttribute('href', `${blog}`);
-
-    twitterField.textContent = (twitter_username) ? `@${twitter_username}` : linksNull;
     if (twitter_username) twitterField.setAttribute('href', `https://twitter.com/${twitter_username}`);
-
-    companyField.textContent = company || linksNull;
     if (company) companyField.setAttribute('href', `https://github.com/${company}`);
 }
 
-fetchData(URL_API);
+fetchData(URL_GITHUB);
