@@ -15,7 +15,7 @@ const locationField = document.querySelector('.location');
 const blogField = document.querySelector('.blog');
 const twitterField = document.querySelector('.twitter');
 const companyField = document.querySelector('.company');
-const main = document.querySelector('.main');
+const bodyTheme = document.querySelector('.body-theme');
 const themeToggle = document.querySelector('.theme__toggle');
 
 function getInputSearch() {
@@ -37,9 +37,9 @@ function fetchData(URL_API) {
 function validateUser(dataFetched) {
     if (dataFetched.message === "Not Found") {
         formError.innerText = dataFetched.message;
-        formError.classList.add('.form__error-show');
+        formError.classList.replace('form__error-hide', 'form__error-show');
     } else {
-        formError.classList.remove('.form__error-show');
+        formError.classList.replace('form__error-show', 'form__error-hide');
         showProfileData(dataFetched);
     }
 }
@@ -82,14 +82,13 @@ formSubmit.addEventListener('click', function (event) {
 })
 
 themeToggle.addEventListener('click', function () {
-    debugger;
     if (themeToggle.classList.contains('dark-theme')) {
         themeToggle.classList.replace('dark-theme', 'light-theme');
-        main.classList.replace('dark-theme', 'light-theme');
+        bodyTheme.classList.replace('dark-theme', 'light-theme');
         themeToggle.innerText = 'dark';
     } else {
         themeToggle.classList.replace('light-theme', 'dark-theme');
-        main.classList.replace('light-theme', 'dark-theme');
+        bodyTheme.classList.replace('light-theme', 'dark-theme');
         themeToggle.innerText = 'light';
     }
 })
