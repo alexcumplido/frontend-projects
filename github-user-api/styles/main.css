@@ -142,18 +142,6 @@ h6 {
     background-color: var(--clr-accentDarkMode-100);
 }
 
-/*Root media queries*/
-@media screen and (min-width:573px) {
-    :root {
-        --fs-100: var(--fs-200);
-        --fs-200: var(--fs-300);
-        --fs-400: var(--fs-600);
-    }
-}
-
-@media screen and (min-width:730px) {}
-
-
 /*General Styles*/
 
 body {
@@ -161,9 +149,7 @@ body {
     margin-inline: auto;
     padding: 1.5rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     background-color: var(--clr-primaryDarkMode-900);
@@ -194,12 +180,6 @@ header {
     font-size: var(--fs-400);
 }
 
-.theme__switcher {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
 .theme__toggle {
     position: relative;
     padding: 0.5rem 2rem;
@@ -220,7 +200,9 @@ header {
     content: url('../images/icon-moon.svg');
 }
 
-main {
+.component {
+    margin: 0 auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -235,10 +217,10 @@ main {
     justify-content: space-between;
     border-radius: 1rem;
     background-color: var(--clr-primaryDardMode-800);
-
 }
 
 .form__input__search {
+    flex-basis: 60%;
     position: relative;
     display: block;
     padding: 0.5rem 0;
@@ -273,6 +255,7 @@ main {
 }
 
 .form__submit {
+    margin-left: auto;
     padding: 0.75rem;
     border: none;
     border-radius: 0.5rem;
@@ -337,12 +320,12 @@ main {
 }
 
 .profile-stats li {
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.25rem;
     font-size: var(--fs-100);
-
 }
 
 .profile-stats li span:last-child {
@@ -350,13 +333,48 @@ main {
 }
 
 .profile-links {
+    flex-basis: 40%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
 .profile-links li {
+    flex-basis: 45%;
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.profile-links li svg {
+    min-width: 1.5rem;
+}
+
+@media screen and (min-width:540px) {
+    /* :root {
+        --fs-100: var(--fs-200);
+        --fs-200: var(--fs-300);
+        --fs-400: var(--fs-600);
+    } */
+
+    .profile-links {
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+
+    .profile-stats {
+        justify-content: flex-start;
+        gap: 6rem;
+    }
+
+    .form__input__search {
+        flex-basis: 60%;
+    }
+
+}
+
+@media screen and (min-width:740px) {
+    .component {
+        width: 40rem;
+    }
 }
