@@ -1,51 +1,36 @@
 /*Variables*/
 :root {
-    --clr-primary-100: hsl(0, 0%, 100%);
-    --clr-primary-200: hsl(227, 100%, 98%);
-
-    --clr-neutral-400: hsl(217, 20%, 51%);
-    --clr-neutral-500: hsl(217, 35%, 45%);
-
-    --clr-accent-600: hsl(212, 100%, 50%);
-    --clr-accent-800: hsl(217, 21%, 21%);
-
+    /*Dark theme*/
     --clr-primaryDardMode-800: hsl(222, 41%, 20%);
     --clr-primaryDarkMode-900: hsl(220, 40%, 13%);
-
     --clr-accentDarkMode-100: hsl(0, 0%, 100%);
     --clr-accentDarkMode-600: hsl(212, 100%, 50%);
 
     --max-width-desktop: 1100px;
 
+    /*Light theme*/
+    --clr-primary-100: hsl(0, 0%, 100%);
+    --clr-primary-200: hsl(227, 100%, 98%);
+    --clr-neutral-400: hsl(217, 20%, 51%);
+    --clr-neutral-500: hsl(217, 35%, 45%);
+    --clr-accent-600: hsl(212, 100%, 50%);
+    --clr-accent-800: hsl(217, 21%, 21%);
+
+    /*Typography*/
     --ff-primary: 'Space Mono', monospace;
     --ff-body: var(--ff-primary);
-    --ff-heading: var(--ff-primary);
-    --fs-body: var(--fs-300);
-
-    --fs-100: 0.6875rem;
-    --fs-200: 0.812rem;
-    --fs-300: 0.937rem;
-    --fs-400: 1rem;
-    --fs-500: 1.125rem;
-    --fs-600: 1.375rem;
-    --fs-700: 1.625rem;
-
+    --fs-body: var(--fs-200);
+    --fs-100: 0.937rem;
+    --fs-200: 1rem;
+    --fs-300: 1.125rem;
+    --fs-400: 1.375rem;
     --lh: 25px;
-
     --fw-regular: 400;
     --fw-bold: 700;
 }
 
 
 /*Utility classes*/
-.fw-regular {
-    font-weight: var(--fw-regular);
-}
-
-.fw-bold {
-    font-weight: var(--fw-bold);
-}
-
 .container {
     --max-width: 1110px;
     --padding: 1rem;
@@ -56,14 +41,23 @@
 .button {
     border: none;
     border-radius: 100vmax;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
 }
 
-main {
+.dark-theme {
     color: var(--clr-primary-200);
     background-color: var(--clr-primaryDardMode-800);
 }
 
+.light-theme {
+    color: var(--clr-primary-200);
+    background-color: var(--clr-primaryDardMode-800);
+}
+
+.light-theme {
+    color: var(--clr-accent-600);
+    background-color: var(--clr-accentDarkMode-100);
+}
 
 /*Root media queries*/
 @media screen and (min-width:573px) {
@@ -82,36 +76,52 @@ main {
 body {
     max-width: var(--max-width-desktop);
     margin-inline: auto;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
+    background-color: var(--clr-primaryDarkMode-900);
 }
 
 ul {
     list-style: none;
 }
 
-.form__error {
+.form__error-hide {
     display: none;
 }
 
-.show {
+.form__error-show {
     display: block;
 }
 
-.form__submit {
-    transition: all 0.2s;
+
+/* Mobile styles*/
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--clr-accentDarkMode-100);
 }
 
-.round {
-    outline: 1px solid blue;
-    transform: rotate(1turn) scale(2);
-
-    border-radius: 5px;
+.header__title {
+    font-size: var(--fs-400);
 }
 
-/*
-https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
-*/
+.theme__switcher {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme__toggle {
+    padding: 0.5rem;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--clr-accentDarkMode-100);
+    border: none;
+}

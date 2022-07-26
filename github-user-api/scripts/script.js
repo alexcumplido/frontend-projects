@@ -1,7 +1,7 @@
 let URL_GITHUB = `https://api.github.com/users/:username`;
 const formSearch = document.querySelector('.form__input__search');
 const formSubmit = document.querySelector('.form__submit');
-const formError = document.querySelector('.form__error');
+const formError = document.querySelector('.form__error-hide');
 const profileAvatar = document.querySelector('.profile-avatar');
 const nameField = document.querySelector('.name');
 const userField = document.querySelector('.user');
@@ -15,11 +15,8 @@ const locationField = document.querySelector('.location');
 const blogField = document.querySelector('.blog');
 const twitterField = document.querySelector('.twitter');
 const companyField = document.querySelector('.company');
-
-formSubmit.addEventListener('click', function (event) {
-    event.preventDefault();
-    if (formSearch.value) fetchData(URL_GITHUB);
-})
+const main = document.querySelector('.main');
+const themeToggle = document.querySelector('.theme__toggle');
 
 function getInputSearch() {
     let search = formSearch.value.trim() || 'octocat';
@@ -40,9 +37,9 @@ function fetchData(URL_API) {
 function validateUser(dataFetched) {
     if (dataFetched.message === "Not Found") {
         formError.innerText = dataFetched.message;
-        formError.classList.add('show');
+        formError.classList.add('.form__error-show');
     } else {
-        formError.classList.remove('show');
+        formError.classList.remove('.form__error-show');
         showProfileData(dataFetched);
     }
 }
@@ -78,5 +75,23 @@ function showProfileData(dataFetched) {
     if (twitter_username) twitterField.setAttribute('href', `https://twitter.com/${twitter_username}`);
     if (company) companyField.setAttribute('href', `https://github.com/${company}`);
 }
+
+formSubmit.addEventListener('click', function (event) {
+    event.preventDefault();
+    if (formSearch.value) fetchData(URL_GITHUB);
+})
+
+themeToggle.addEventListener('click', function () {
+    debugger;
+    if (themeToggle.classList.contains('dark-theme')) {
+        themeToggle.classList.replace('dark-theme', 'light-theme');
+        main.classList.replace('dark-theme', 'light-theme');
+        themeToggle.innerText = 'dark';
+    } else {
+        themeToggle.classList.replace('light-theme', 'dark-theme');
+        main.classList.replace('light-theme', 'dark-theme');
+        themeToggle.innerText = 'light';
+    }
+})
 
 fetchData(URL_GITHUB);
