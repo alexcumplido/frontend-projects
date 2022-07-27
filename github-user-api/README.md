@@ -16,7 +16,7 @@
 - See hover states for all interactive elements on the page
 
 #### Screenshot
-![Desktop preview](./images/Desktop.jpg)
+![Demo preview](./images/devFinder.gif)
 
 #### Run project
 ```
