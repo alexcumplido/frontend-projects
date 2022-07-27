@@ -71,22 +71,20 @@ h6 {
 
 /*Variables*/
 :root {
-    /*Dark theme*/
+    --clr-primary-100: hsl(0, 0%, 100%);
+    --clr-primary-200: hsl(227, 100%, 98%);
+
+    --clr-neutral-400: hsl(217, 20%, 51%);
+    --clr-neutral-500: hsl(217, 35%, 45%);
+    --clr-accent-800: hsl(217, 21%, 21%);
+
     --clr-primaryDarkMode-800: hsl(222, 41%, 20%);
     --clr-primaryDarkMode-900: hsl(220, 40%, 13%);
-    --clr-accentDarkMode-100: hsl(0, 0%, 100%);
     --clr-accentDarkMode-300: hsl(212, 92%, 62%);
     --clr-accentDarkMode-600: hsl(212, 100%, 50%);
 
-    /*Light theme*/
-    --clr-primary-100: hsl(0, 0%, 100%);
-    --clr-primary-200: hsl(227, 100%, 98%);
-    --clr-neutral-400: hsl(217, 20%, 51%);
-    --clr-neutral-500: hsl(217, 35%, 45%);
-    --clr-accent-600: hsl(212, 100%, 50%);
-    --clr-accent-800: hsl(217, 21%, 21%);
-
     --clr-accent-400: hsl(0, 90%, 66%);
+
     --max-width-desktop: 1100px;
 
     /*Typography*/
@@ -95,8 +93,7 @@ h6 {
     --fs-body: var(--fs-200);
     --fs-100: 0.875rem;
     --fs-200: 1rem;
-    --fs-300: 1.125rem;
-    --fs-400: 1.375rem;
+    --fs-300: 1.375rem;
     --lh: 25px;
     --fw-regular: 400;
     --fw-bold: 700;
@@ -109,7 +106,8 @@ body {
     padding: 1rem;
     font-size: var(--fs-body);
     font-family: var(--ff-primary);
-    background-color: var(--clr-primaryDarkMode-900);
+    color: var(--clr-primary-200);
+    background-color: var(--clr-primaryDarkMode-900)
 }
 
 ul {
@@ -138,7 +136,7 @@ a {
 }
 
 .header__title {
-    font-size: var(--fs-400);
+    font-size: var(--fs-300);
 }
 
 .theme__toggle {
@@ -147,7 +145,7 @@ a {
     text-transform: uppercase;
     border: none;
     background: transparent;
-    color: var(--clr-accentDarkMode-100);
+    color: var(--clr-primary-100);
 }
 
 .theme__toggle::after {
@@ -265,14 +263,14 @@ a {
     font-weight: var(--fw-bold);
 }
 
-.profile__links {
+.profile__social {
     flex-basis: 40%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.profile__links li {
+.profile__link {
     flex-basis: 45%;
     display: flex;
     align-items: center;
@@ -284,11 +282,6 @@ a {
 }
 
 /* Themes */
-.dark-theme {
-    color: var(--clr-primary-200);
-    background-color: var(--clr-primaryDarkMode-900);
-}
-
 .light-theme {
     color: var(--clr-neutral-400);
     background-color: var(--clr-primary-200);
@@ -301,9 +294,9 @@ a {
 }
 
 .light-theme .form,
-.light-theme .profile {
+.light-theme .profile,
+.light-theme .link-not-avaible {
     background-color: var(--clr-primary-100);
-
 }
 
 .light-theme .form__input,
@@ -328,10 +321,6 @@ a {
     color: var(--clr-neutral-500);
 }
 
-.light-theme .link-not-avaible {
-    color: var(--clr-neutral-400);
-}
-
 @media screen and (min-width:540px) {
     .form__input {
         flex-basis: 60%;
@@ -342,7 +331,7 @@ a {
         gap: 6rem;
     }
 
-    .profile__links {
+    .profile__social {
         flex-flow: row wrap;
         justify-content: flex-start;
     }

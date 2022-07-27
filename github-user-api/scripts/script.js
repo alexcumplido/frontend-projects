@@ -8,24 +8,23 @@ const formSubmit = document.querySelector('.form__submit');
 const formError = document.querySelector('.form__error-hide');
 
 const profileAvatar = document.querySelector('.profile__user__avatar');
-const nameField = document.querySelector('.user-name');
-const userNameField = document.querySelector('.user-username');
-const createdField = document.querySelector('.user-date');
+const profileName = document.querySelector('.user-name');
+const profileUserName = document.querySelector('.user-username');
+const profileDate = document.querySelector('.user-date');
 
-const bioField = document.querySelector('.bio');
+const profileBio = document.querySelector('.bio');
 
-const reposField = document.querySelector('.repos');
-const followersField = document.querySelector('.followers');
-const followingField = document.querySelector('.following');
+const profileRepos = document.querySelector('.repos');
+const profileFollowers = document.querySelector('.followers');
+const profileFollowing = document.querySelector('.following');
 
-const locationField = document.querySelector('.location');
-const blogField = document.querySelector('.blog');
-const twitterField = document.querySelector('.twitter');
-const companyField = document.querySelector('.company');
+const profileLocation = document.querySelector('.location');
+const profileBlog = document.querySelector('.blog');
+const profileTwitter = document.querySelector('.twitter');
+const profileCompany = document.querySelector('.company');
 
 function getInputSearch() {
-    let search = formSearch.value.trim() || 'octocat';
-    return search;
+    return formSearch.value.trim() || 'octocat';
 }
 
 function fetchData(URL_API) {
@@ -49,7 +48,6 @@ function validateUser(dataFetched) {
     }
 }
 function showProfileData(dataFetched) {
-
     let {
         login, avatar_url, html_url, name, company, blog, location, bio, twitter_username, public_repos, followers, following, created_at
     } = dataFetched;
@@ -60,36 +58,35 @@ function showProfileData(dataFetched) {
     let year = joinDate.getFullYear();
 
     profileAvatar.setAttribute('src', avatar_url);
-    nameField.textContent = name || login;
-    userNameField.textContent = `@${login}`;
-    userNameField.setAttribute('href', html_url);
-    createdField.textContent = `Joined ${day} ${month} ${year}`
+    profileName.textContent = name || login;
+    profileUserName.textContent = `@${login}`;
+    profileUserName.setAttribute('href', html_url);
+    profileDate.textContent = `Joined ${day} ${month} ${year}`
 
-    bioField.textContent = bio || `This profile has no bio`;
+    profileBio.textContent = bio || `This profile has no bio`;
 
-    reposField.textContent = public_repos;
-    followingField.textContent = following;
-    followersField.textContent = followers;
+    profileRepos.textContent = public_repos;
+    profileFollowing.textContent = following;
+    profileFollowers.textContent = followers;
 
-    locationField.textContent = location || `Not Available`;
-    blogField.textContent = blog || `Not Available`;
+    profileLocation.textContent = location || `Not Available`;
+    profileBlog.textContent = blog || `Not Available`;
+    profileTwitter.textContent = (twitter_username) ? `@${twitter_username}` : `Not Available`;
+    profileCompany.textContent = company || `Not Available`;
 
-    twitterField.textContent = (twitter_username) ? `@${twitter_username}` : `Not Available`;
-    companyField.textContent = company || `Not Available`;
+    if (blog) profileBlog.setAttribute('href', blog);
+    if (twitter_username) profileTwitter.setAttribute('href', `https://twitter.com/${twitter_username}`);
+    if (company) profileCompany.setAttribute('href', `https://github.com/${company}`);
 
-    if (blog) { } blogField.setAttribute('href', `${blog}`);
-    if (twitter_username) twitterField.setAttribute('href', `https://twitter.com/${twitter_username}`);
-    if (company) companyField.setAttribute('href', `https://github.com/${company}`);
+    profileLocation.classList.remove('link-not-avaible');
+    profileBlog.classList.remove('link-not-avaible');
+    profileTwitter.classList.remove('link-not-avaible');
+    profileCompany.classList.remove('link-not-avaible');
 
-    locationField.classList.remove('link-not-avaible');
-    blogField.classList.remove('link-not-avaible');
-    twitterField.classList.remove('link-not-avaible');
-    companyField.classList.remove('link-not-avaible');
-
-    if (!location) locationField.classList.add('link-not-avaible');
-    if (!blog) blogField.classList.add('link-not-avaible');
-    if (!twitter_username) twitterField.classList.add('link-not-avaible');
-    if (!company) companyField.classList.add('link-not-avaible');
+    if (!location) profileLocation.classList.add('link-not-avaible');
+    if (!blog) profileBlog.classList.add('link-not-avaible');
+    if (!twitter_username) profileTwitter.classList.add('link-not-avaible');
+    if (!company) profileCompany.classList.add('link-not-avaible');
 }
 
 formSubmit.addEventListener('click', function (event) {
@@ -98,14 +95,14 @@ formSubmit.addEventListener('click', function (event) {
 })
 
 themeToggle.addEventListener('click', function () {
-    if (themeToggle.classList.contains('dark-theme')) {
-        themeToggle.classList.replace('dark-theme', 'light-theme');
-        body.classList.replace('dark-theme', 'light-theme');
-        themeToggle.innerText = 'dark';
-    } else {
-        themeToggle.classList.replace('light-theme', 'dark-theme');
-        body.classList.replace('light-theme', 'dark-theme');
+    if (themeToggle.classList.contains('light-theme')) {
+        themeToggle.classList.remove('light-theme');
+        body.classList.remove('light-theme');
         themeToggle.innerText = 'light';
+    } else {
+        themeToggle.classList.add('light-theme');
+        body.classList.add('light-theme');
+        themeToggle.innerText = 'dark';
     }
 })
 
