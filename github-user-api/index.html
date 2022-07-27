@@ -16,34 +16,34 @@
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
         <title>GitHub user search app</title>
     </head>
-    <body class="body-theme dark-theme">
+    <body class="body dark-theme">
         <section class="component">
-            <header>
+            <header class="header">
                 <h1 class="header__title">devfinder</h1>
                 <button class="theme__toggle dark-theme">Ligh</button>
             </header>
             <form class="form" action="">
                 <img src="./images/icon-search.svg" alt="Search Icon"/>
-                <input class="form__input__search" type="text" placeholder="Search GitHub username…">
+                <input class="form__input" type="text" placeholder=" Github username">
                 <button class="form__submit" type="submit">Search</button>
                 <span class="form__error-hide">No results</span>
             </form>
-            <div class="profile-panel" aria-label="assertive">
-                <div class="profile-user">
-                    <img class="profile-avatar" src="" alt="Profile avatar">
+            <div class="profile" aria-label="assertive">
+                <div class="profile__user">
+                    <img class="profile__user__avatar" src="" alt="Profile avatar">
                     <ul class="profile-basic-info">
-                        <li class="name"></li>
-                        <li class="login"><a class="user" href="#" aria-label="Github profile link"></a></li>
-                        <li class="created_at"></li>
+                        <li class="user-name"></li>
+                        <li><a class="user-username" href="#" aria-label="Github profile link"></a></li>
+                        <li class="user-date"></li>
                     </ul>
                 </div>
                 <p class="bio">Bio.</p>
-                <ul class="profile-stats">
-                    <li><span>Repos</span><span class="public_repos"></span></li>
-                    <li><span>Followers</span><span class="followers"></span></li>
-                    <li><span>Following</span><span class="following"></span></li>
+                <ul class="profile__stats">
+                    <li><div>Repos</div><div class="repos"></div></li>
+                    <li><div>Followers</div><div class="followers"></div></li>
+                    <li><div>Following</div><div class="following"></div></li>
                 </ul>
-                <ul class="profile-links">
+                <ul class="profile__links">
                     <li>
                         <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12.797 3.425C11.584 1.33 9.427.05 7.03.002a7.483 7.483 0 00-.308 0C4.325.05 2.17 1.33.955 3.425a6.963 6.963 0 00-.09 6.88l4.959 9.077.007.012c.218.38.609.606 1.045.606.437 0 .828-.226 1.046-.606l.007-.012 4.96-9.077a6.963 6.963 0 00-.092-6.88zm-5.92 5.638c-1.552 0-2.813-1.262-2.813-2.813s1.261-2.812 2.812-2.812S9.69 4.699 9.69 6.25 8.427 9.063 6.876 9.063z" fill="#4b6a9b"/></svg>
                         <a class="location" href="#" aria-label="Location link"></a>

@@ -1,24 +1,17 @@
-/* Josh Comeau reset https: //www.joshwcomeau.com/css/custom-css-reset/ */
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
+/*  1. Use a more-intuitive box-sizing model */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/*
-  2. Remove default margin
-*/
+/* 2. Remove default margin */
 * {
     padding: 0;
     margin: 0;
 }
 
-/*
-  3. Allow percentage-based heights in the application
-*/
+/* 3. Allow percentage-based heights in the application */
 html,
 body {
     height: 100%;
@@ -35,9 +28,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/*
-  6. Improve media defaults
-*/
+/* 6. Improve media defaults */
 img,
 picture,
 video,
@@ -47,9 +38,7 @@ svg {
     max-width: 100%;
 }
 
-/*
-  7. Remove built-in form typography styles
-*/
+/* 7. Remove built-in form typography styles */
 input,
 button,
 textarea,
@@ -57,9 +46,11 @@ select {
     font: inherit;
 }
 
-/*
-  8. Avoid text overflows
-*/
+input::placeholder {
+    font-family: inherit;
+}
+
+/* 8. Avoid text overflows */
 p,
 h1,
 h2,
@@ -70,24 +61,22 @@ h6 {
     overflow-wrap: break-word;
 }
 
-/*
-  9. Create a root stacking context
-*/
+/* 9. Create a root stacking context */
 #root,
 #__next {
     isolation: isolate;
 }
 
+/* Josh Comeau reset https: //www.joshwcomeau.com/css/custom-css-reset/ */
+
 /*Variables*/
 :root {
     /*Dark theme*/
-    --clr-primaryDardMode-800: hsl(222, 41%, 20%);
+    --clr-primaryDarkMode-800: hsl(222, 41%, 20%);
     --clr-primaryDarkMode-900: hsl(220, 40%, 13%);
     --clr-accentDarkMode-100: hsl(0, 0%, 100%);
     --clr-accentDarkMode-300: hsl(212, 92%, 62%);
     --clr-accentDarkMode-600: hsl(212, 100%, 50%);
-
-    --max-width-desktop: 1100px;
 
     /*Light theme*/
     --clr-primary-100: hsl(0, 0%, 100%);
@@ -98,6 +87,7 @@ h6 {
     --clr-accent-800: hsl(217, 21%, 21%);
 
     --clr-accent-400: hsl(0, 90%, 66%);
+    --max-width-desktop: 1100px;
 
     /*Typography*/
     --ff-primary: 'Space Mono', monospace;
@@ -112,46 +102,13 @@ h6 {
     --fw-bold: 700;
 }
 
-
-/*Utility classes*/
-.container {
-    --max-width: 1110px;
-    --padding: 1rem;
-    width: min(var(--max-width), 100% - (var(--padding)*2));
-    margin-inline: auto;
-}
-
-.button {
-    border: none;
-    border-radius: 100vmax;
-    padding: 0.5rem;
-}
-
-.dark-theme {
-    color: var(--clr-primary-200);
-    background-color: var(--clr-primaryDarkMode-900);
-}
-
-.light-theme {
-    color: var(--clr-primary-200);
-    background-color: var(--clr-primaryDardMode-800);
-}
-
-.light-theme {
-    color: var(--clr-accent-600);
-    background-color: var(--clr-accentDarkMode-100);
-}
-
 /*General Styles*/
-
 body {
     max-width: var(--max-width-desktop);
     margin-inline: auto;
-    padding: 1.5rem;
-    display: flex;
-
-    font-family: var(--ff-primary);
+    padding: 1rem;
     font-size: var(--fs-body);
+    font-family: var(--ff-primary);
     background-color: var(--clr-primaryDarkMode-900);
 }
 
@@ -166,14 +123,18 @@ a {
     color: var(--clr-primary-200);
 }
 
-
 /* Mobile styles*/
-header {
-    width: 100%;
+.component {
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--clr-accentDarkMode-100);
 }
 
 .header__title {
@@ -184,9 +145,9 @@ header {
     position: relative;
     padding: 0.5rem 2rem;
     text-transform: uppercase;
+    border: none;
     background: transparent;
     color: var(--clr-accentDarkMode-100);
-    border: none;
 }
 
 .theme__toggle::after {
@@ -200,58 +161,33 @@ header {
     content: url('../images/icon-moon.svg');
 }
 
-.component {
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
 .form {
     padding: 0.5rem 0.75rem;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 0.25rem;
-    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: var(--fs-100);
     border-radius: 1rem;
-    background-color: var(--clr-primaryDardMode-800);
+    background-color: var(--clr-primaryDarkMode-800);
 }
 
-.form__input__search {
-    flex-basis: 60%;
+.form__input {
     position: relative;
-    display: block;
     padding: 0.5rem 0;
-    color: var(--clr-primary-100);
-    font-size: var(--fs-100);
-    background: transparent;
     border: none;
     border-radius: 1rem;
+    color: var(--clr-primary-100);
+    background: transparent;
 }
 
-.form__input__search::after {
-    position: absolute;
-    left: 0;
-    top: 1rem;
-    content: url("../images/icon-search.svg");
-}
-
-.form__input__search::placeholder {
-    color: inherit;
-    font-family: inherit;
-    font-size: 13px;
+.form__input::placeholder {
+    color: var(--clr-primary-100);
 }
 
 .form__error-hide {
     display: none;
-}
-
-.form__error-show {
-    flex-basis: 100%;
-    text-align: center;
-    color: var(--clr-accent-400);
 }
 
 .form__submit {
@@ -267,110 +203,149 @@ header {
     background-color: var(--clr-accentDarkMode-300);
 }
 
-.profile-panel {
+.form__error-show {
+    flex-basis: 100%;
+    text-align: left;
+    color: var(--clr-accent-400);
+}
+
+.profile {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
     border-radius: 1rem;
-    background-color: var(--clr-primaryDardMode-800);
+    font-size: var(--fs-100);
+    background-color: var(--clr-primaryDarkMode-800);
 }
 
-.profile-user {
+.profile__user {
     display: flex;
     justify-content: flex-start;
     gap: 1.25rem;
 }
 
-.profile-avatar {
+.profile__user__avatar {
     max-width: 70px;
     border-radius: 50%;
 }
 
-.profile-basic-info {
-    font-size: var(--fs-100);
-}
-
-.name {
+.user-name {
     font-size: var(--fs-200);
     font-weight: var(--fw-bold);
 }
 
-.login {
-    margin-bottom: 0.25rem;
+.user-username {
+    color: var(--clr-accentDarkMode-600);
 }
 
-.user {
-    color: var(--clr-accentDarkMode-600);
+.user-date {
+    margin-top: 0.25rem;
 }
 
 .bio {
     font-size: var(--fs-100);
 }
 
-.profile-stats {
+.profile__stats {
     align-self: stretch;
     flex-basis: 100%;
     padding: 1.5rem 1rem;
     display: flex;
     justify-content: space-between;
-    background-color: var(--clr-primaryDarkMode-900);
+    text-align: center;
     border-radius: 1rem;
+    background-color: var(--clr-primaryDarkMode-900);
 }
 
-.profile-stats li {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: var(--fs-100);
-}
-
-.profile-stats li span:last-child {
+.repos,
+.followers,
+.following {
     font-weight: var(--fw-bold);
 }
 
-.profile-links {
+.profile__links {
     flex-basis: 40%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.profile-links li {
+.profile__links li {
     flex-basis: 45%;
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.profile-links li svg {
-    min-width: 1.5rem;
+.link-not-avaible {
+    color: var(--clr-neutral-400);
+}
+
+/* Themes */
+.dark-theme {
+    color: var(--clr-primary-200);
+    background-color: var(--clr-primaryDarkMode-900);
+}
+
+.light-theme {
+    color: var(--clr-neutral-400);
+    background-color: var(--clr-primary-200);
+}
+
+.light-theme .header,
+.light-theme .theme__toggle {
+    font-weight: var(--fw-bold);
+    color: var(--clr-accent-800);
+}
+
+.light-theme .form,
+.light-theme .profile {
+    background-color: var(--clr-primary-100);
+
+}
+
+.light-theme .form__input,
+.light-theme .form__input::placeholder {
+    color: var(--clr-neutral-400);
+}
+
+.light-theme .profile__stats {
+    background-color: var(--clr-primary-200);
+}
+
+.light-theme .repos,
+.light-theme .followers,
+.light-theme .following {
+    color: var(--clr-accent-800);
+}
+
+.light-theme .location,
+.light-theme .blog,
+.light-theme .twitter,
+.light-theme .company {
+    color: var(--clr-neutral-500);
+}
+
+.light-theme .link-not-avaible {
+    color: var(--clr-neutral-400);
 }
 
 @media screen and (min-width:540px) {
-    /* :root {
-        --fs-100: var(--fs-200);
-        --fs-200: var(--fs-300);
-        --fs-400: var(--fs-600);
-    } */
-
-    .profile-links {
-        flex-flow: row wrap;
-        justify-content: flex-start;
+    .form__input {
+        flex-basis: 60%;
     }
 
-    .profile-stats {
+    .profile__stats {
         justify-content: flex-start;
         gap: 6rem;
     }
 
-    .form__input__search {
-        flex-basis: 60%;
+    .profile__links {
+        flex-flow: row wrap;
+        justify-content: flex-start;
     }
-
 }
 
 @media screen and (min-width:740px) {
