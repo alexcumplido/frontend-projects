@@ -103,6 +103,8 @@ h6 {
 body {
     max-width: var(--max-width-desktop);
     margin-inline: auto;
+    display: flex;
+    align-items: center;
     padding: 1rem;
     font-size: var(--fs-body);
     font-family: var(--ff-primary);
