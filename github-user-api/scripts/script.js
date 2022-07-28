@@ -6,22 +6,11 @@ const themeToggle = document.querySelector('.theme__toggle');
 const formSearch = document.querySelector('.form__input');
 const formSubmit = document.querySelector('.form__submit');
 const formError = document.querySelector('.form__error-hide');
-
 const profileAvatar = document.querySelector('.profile__user__avatar');
-const profileName = document.querySelector('.user-name');
-const profileUserName = document.querySelector('.user-username');
-const profileDate = document.querySelector('.user-date');
-
+const basicInfo = document.querySelector('.profile__user-info')
 const profileBio = document.querySelector('.bio');
-
-const profileRepos = document.querySelector('.repos');
-const profileFollowers = document.querySelector('.followers');
-const profileFollowing = document.querySelector('.following');
-
-const profileLocation = document.querySelector('.location');
-const profileBlog = document.querySelector('.blog');
-const profileTwitter = document.querySelector('.twitter');
-const profileCompany = document.querySelector('.company');
+const statsItems = document.querySelectorAll('.profile__stats-item');
+const socialLinks = document.querySelectorAll('.profile__link');
 
 function getInputSearch() {
     return formSearch.value.trim() || 'octocat';
@@ -58,35 +47,35 @@ function showProfileData(dataFetched) {
     let year = joinDate.getFullYear();
 
     profileAvatar.setAttribute('src', avatar_url);
-    profileName.textContent = name || login;
-    profileUserName.textContent = `@${login}`;
-    profileUserName.setAttribute('href', html_url);
-    profileDate.textContent = `Joined ${day} ${month} ${year}`
+
+    basicInfo.children[0].textContent = name || login;
+    basicInfo.children[1].firstChild.textContent = `@${login}`;
+    basicInfo.children[1].firstChild.setAttribute('href', html_url);
+    basicInfo.children[2].textContent = `Joined ${day} ${month} ${year}`;
 
     profileBio.textContent = bio || `This profile has no bio`;
 
-    profileRepos.textContent = public_repos;
-    profileFollowing.textContent = following;
-    profileFollowers.textContent = followers;
+    statsItems[0].children[1].innerText = public_repos;
+    statsItems[1].children[1].innerText = following;
+    statsItems[2].children[1].innerText = followers;
 
-    profileLocation.textContent = location || `Not Available`;
-    profileBlog.textContent = blog || `Not Available`;
-    profileTwitter.textContent = (twitter_username) ? `@${twitter_username}` : `Not Available`;
-    profileCompany.textContent = company || `Not Available`;
+    socialLinks[0].children[1].textContent = location || `Not Available`;
+    socialLinks[1].children[1].textContent = blog || `Not Available`;
+    socialLinks[2].children[1].textContent = (twitter_username) ? `@${twitter_username}` : `Not Available`;
+    socialLinks[3].children[1].textContent = company || `Not Available`;
 
-    if (blog) profileBlog.setAttribute('href', blog);
-    if (twitter_username) profileTwitter.setAttribute('href', `https://twitter.com/${twitter_username}`);
-    if (company) profileCompany.setAttribute('href', `https://github.com/${company}`);
+    if (blog) socialLinks[1].children[1].setAttribute('href', blog);
+    if (twitter_username) socialLinks[2].children[1].setAttribute('href', `https://twitter.com/${twitter_username}`);
+    if (company) socialLinks[3].children[1].setAttribute('href', `https://github.com/${company}`);
 
-    profileLocation.classList.remove('link-not-avaible');
-    profileBlog.classList.remove('link-not-avaible');
-    profileTwitter.classList.remove('link-not-avaible');
-    profileCompany.classList.remove('link-not-avaible');
+    for (let i = 0; i < socialLinks.length; i++) {
+        socialLinks[i].children[1].classList.remove('link-not-avaible')
+    }
 
-    if (!location) profileLocation.classList.add('link-not-avaible');
-    if (!blog) profileBlog.classList.add('link-not-avaible');
-    if (!twitter_username) profileTwitter.classList.add('link-not-avaible');
-    if (!company) profileCompany.classList.add('link-not-avaible');
+    if (!location) socialLinks[0].children[1].classList.add('link-not-avaible');
+    if (!blog) socialLinks[1].children[1].classList.add('link-not-avaible');
+    if (!twitter_username) socialLinks[2].children[1].classList.add('link-not-avaible');
+    if (!company) socialLinks[3].children[1].classList.add('link-not-avaible');
 }
 
 formSubmit.addEventListener('click', function (event) {
