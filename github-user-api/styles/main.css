@@ -340,6 +340,7 @@ a {
     }
 
     .profile {
+        padding: 1rem 0;
         display: grid;
         justify-content: center;
         grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
@@ -349,7 +350,7 @@ a {
     .profile__user {
         grid-column: 1 / 3;
         grid-row: span 1;
-        gap: 1.8rem;
+        gap: 3.3rem;
     }
 
     .bio {
