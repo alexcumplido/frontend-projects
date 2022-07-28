@@ -342,6 +342,7 @@ a {
     .profile {
         padding: 1rem 0;
         display: grid;
+        gap: 1.25rem;
         justify-content: center;
         grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
         grid-template-columns: 0.5fr 1fr;
