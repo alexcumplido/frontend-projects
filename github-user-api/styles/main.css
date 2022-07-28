@@ -259,9 +259,7 @@ a {
     background-color: var(--clr-primaryDarkMode-900);
 }
 
-.repos,
-.followers,
-.following {
+.profile__stats-item div:last-child {
     font-weight: var(--fw-bold);
 }
 
@@ -310,18 +308,15 @@ a {
     background-color: var(--clr-primary-200);
 }
 
-.light-theme .repos,
-.light-theme .followers,
-.light-theme .following {
+
+.light-theme .profile__stats-item div:last-child {
     color: var(--clr-accent-800);
 }
 
-.light-theme .location,
-.light-theme .blog,
-.light-theme .twitter,
-.light-theme .company {
+.light-theme .profile__link a {
     color: var(--clr-neutral-500);
 }
+
 
 @media screen and (min-width:540px) {
     .form__input {
@@ -342,5 +337,34 @@ a {
 @media screen and (min-width:740px) {
     .component {
         width: 40rem;
+    }
+
+    .profile {
+        display: grid;
+        justify-content: center;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-columns: 0.5fr 1fr;
+    }
+
+    .profile__user {
+        grid-column: 1 / 3;
+        grid-row: span 1;
+        gap: 1.8rem;
+    }
+
+    .bio {
+        grid-column: 2 / 3;
+        grid-row: span 1;
+    }
+
+    .profile__stats {
+        grid-column: 2 / 3;
+        grid-row: span 1;
+        ;
+    }
+
+    .profile__social {
+        grid-column: 2 / 3;
+        grid-row: span 1;
     }
 }
