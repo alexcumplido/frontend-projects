@@ -326,6 +326,7 @@ a {
     .profile__stats {
         justify-content: flex-start;
         gap: 6rem;
+        text-align: left;
     }
 
     .profile__social {
@@ -340,10 +341,11 @@ a {
     }
 
     .profile {
-        padding: 1rem 0;
+        padding: 0.5rem 0;
         display: grid;
         gap: 1.25rem;
         justify-content: center;
+        align-content: center;
         grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
         grid-template-columns: 0.5fr 1fr;
     }
@@ -366,6 +368,7 @@ a {
 
     .user-name {
         margin-top: 0.5rem;
+        font-size: var(--fs-300);
     }
 
     .user-date {
@@ -382,6 +385,10 @@ a {
     .profile__stats {
         grid-column: 2 / 3;
         grid-row: span 1;
+    }
+
+    .profile__stats-item div:last-child {
+        font-size: var(--fs-300);
     }
 
     .profile__social {
