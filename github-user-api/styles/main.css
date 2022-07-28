@@ -317,6 +317,42 @@ a {
     color: var(--clr-neutral-500);
 }
 
+@media (prefers-color-scheme: light) {
+    .light-theme {
+        color: var(--clr-neutral-400);
+        background-color: var(--clr-primary-200);
+    }
+
+    .light-theme .header,
+    .light-theme .theme__toggle {
+        font-weight: var(--fw-bold);
+        color: var(--clr-accent-800);
+    }
+
+    .light-theme .form,
+    .light-theme .profile,
+    .light-theme .link-not-avaible {
+        background-color: var(--clr-primary-100);
+    }
+
+    .light-theme .form__input,
+    .light-theme .form__input::placeholder {
+        color: var(--clr-neutral-400);
+    }
+
+    .light-theme .profile__stats {
+        background-color: var(--clr-primary-200);
+    }
+
+
+    .light-theme .profile__stats-item div:last-child {
+        color: var(--clr-accent-800);
+    }
+
+    .light-theme .profile__link a {
+        color: var(--clr-neutral-500);
+    }
+}
 
 @media screen and (min-width:540px) {
     .form__input {
