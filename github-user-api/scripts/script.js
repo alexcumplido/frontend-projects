@@ -55,8 +55,8 @@ function showProfileData(dataFetched) {
     userBio.textContent = bio || `This profile has no bio`;
 
     userStats[0].children[1].innerText = public_repos;
-    userStats[1].children[1].innerText = following;
-    userStats[2].children[1].innerText = followers;
+    userStats[1].children[1].innerText = followers;
+    userStats[2].children[1].innerText = following;
 
     userSocial[0].children[1].textContent = location || `Not Available`;
     userSocial[1].children[1].textContent = blog || `Not Available`;
