@@ -96,3 +96,23 @@ themeToggle.addEventListener('click', function () {
 })
 
 fetchData(URL_GITHUB);
+
+
+/*
+
+    var main = document.querySelector('main');
+
+    var currentlyLightTheme = window.matchMedia("(prefers-color-scheme:light)")
+
+    function toggle() { 
+
+        if (currentlyLightTheme) {
+            main.className = "overrideLight";
+            currentlyLightTheme = false;
+        } else {
+            main.className = "overrideDark";
+            currentlyLightTheme = true;
+        }
+    }
+
+*/
