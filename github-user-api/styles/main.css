@@ -103,11 +103,12 @@ h6 {
 body {
     max-width: var(--max-width-desktop);
     margin-inline: auto;
-    display: flex;
-    align-items: center;
+    display: grid;
+    place-items: center;
     padding: 1rem;
     font-size: var(--fs-body);
     font-family: var(--ff-primary);
+    line-height: var(--lh);
     color: var(--clr-primary-200);
     background-color: var(--clr-primaryDarkMode-900)
 }
@@ -117,15 +118,15 @@ ul {
 }
 
 a {
-    cursor: pointer;
-    text-decoration: none;
     font-size: var(--fs-100);
+    text-decoration: none;
     color: var(--clr-primary-200);
+    cursor: pointer;
 }
 
 /* Mobile styles*/
 .component {
-    margin-inline: auto;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -144,8 +145,8 @@ a {
 .theme__toggle {
     position: relative;
     padding: 0.5rem 2rem;
-    text-transform: uppercase;
     border: none;
+    text-transform: uppercase;
     background: transparent;
     color: var(--clr-primary-100);
 }
@@ -157,16 +158,11 @@ a {
     content: url('../images/icon-sun.svg');
 }
 
-.light-theme .theme__toggle::after {
-    content: url('../images/icon-moon.svg');
-}
-
 .form {
     padding: 0.5rem 0.75rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-wrap: wrap;
     gap: 0.5rem;
     font-size: var(--fs-100);
     border-radius: 1rem;
@@ -210,7 +206,7 @@ a {
 }
 
 .profile {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -223,6 +219,7 @@ a {
 .profile__user {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     gap: 1.25rem;
 }
 
@@ -231,29 +228,21 @@ a {
     border-radius: 50%;
 }
 
-.user-name {
+.profile__name {
     font-size: var(--fs-200);
     font-weight: var(--fw-bold);
 }
 
-.user-username {
+.profile__username {
     color: var(--clr-accentDarkMode-600);
-}
-
-.user-date {
-    margin-top: 0.25rem;
-}
-
-.bio {
-    font-size: var(--fs-100);
 }
 
 .profile__stats {
     align-self: stretch;
-    flex-basis: 100%;
     padding: 1.5rem 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2rem;
     text-align: center;
     border-radius: 1rem;
     background-color: var(--clr-primaryDarkMode-900);
@@ -264,20 +253,22 @@ a {
 }
 
 .profile__social {
-    flex-basis: 40%;
+    align-self: stretch;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
 .profile__link {
-    flex-basis: 45%;
     display: flex;
     align-items: center;
-    gap: 1rem;
 }
 
-.link-not-avaible {
+.profile__link svg {
+    min-width: 2rem;
+}
+
+.profile__link-notfound {
     color: var(--clr-neutral-400);
 }
 
@@ -291,6 +282,10 @@ a {
 .light-theme .theme__toggle {
     font-weight: var(--fw-bold);
     color: var(--clr-accent-800);
+}
+
+.light-theme .theme__toggle::after {
+    content: url('../images/icon-moon.svg');
 }
 
 .light-theme .form,
@@ -317,46 +312,13 @@ a {
     color: var(--clr-neutral-500);
 }
 
-@media (prefers-color-scheme: light) {
-    .light-theme {
-        color: var(--clr-neutral-400);
-        background-color: var(--clr-primary-200);
-    }
-
-    .light-theme .header,
-    .light-theme .theme__toggle {
-        font-weight: var(--fw-bold);
-        color: var(--clr-accent-800);
-    }
-
-    .light-theme .form,
-    .light-theme .profile,
-    .light-theme .link-not-avaible {
-        background-color: var(--clr-primary-100);
-    }
-
-    .light-theme .form__input,
-    .light-theme .form__input::placeholder {
-        color: var(--clr-neutral-400);
-    }
-
-    .light-theme .profile__stats {
-        background-color: var(--clr-primary-200);
-    }
-
-
-    .light-theme .profile__stats-item div:last-child {
-        color: var(--clr-accent-800);
-    }
-
-    .light-theme .profile__link a {
-        color: var(--clr-neutral-500);
-    }
-}
-
 @media screen and (min-width:540px) {
     .form__input {
         flex-basis: 60%;
+    }
+
+    .profile__user__avatar {
+        max-width: 117px;
     }
 
     .profile__stats {
@@ -369,31 +331,33 @@ a {
         flex-flow: row wrap;
         justify-content: flex-start;
     }
+
+    .profile__link {
+        flex-basis: 45%;
+    }
 }
 
 @media screen and (min-width:740px) {
     .component {
-        width: 38rem;
+        width: 40rem;
     }
 
     .profile {
         padding: 1rem 0;
         display: grid;
-        gap: 1.25rem;
+        column-gap: 2rem;
         justify-content: center;
         align-content: center;
-        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: auto auto auto auto;
         grid-template-columns: 0.5fr 1fr;
     }
 
     .profile__user {
         grid-column: 1 / 3;
         grid-row: span 1;
-        gap: 1.5rem;
-    }
-
-    .profile__user__avatar {
-        max-width: 80px;
+        gap: 1rem;
+        justify-content: flex-end;
+        align-items: initial;
     }
 
     .profile__user-info {
@@ -402,33 +366,23 @@ a {
         flex-flow: column wrap;
     }
 
-    .user-name {
+    .profile__name {
+        margin-top: 2rem;
         font-size: var(--fs-300);
     }
 
-    .user-date {
-        margin: 0;
-        padding-top: 0.5rem;
+    .profile__date {
+        margin-top: 2rem;
         flex-basis: 100%;
-        align-self: flex-end;
     }
 
-    .bio {
+    .bio,
+    .profile__stats,
+    .profile__social {
         grid-column: 2 / 3;
-        grid-row: span 1;
-    }
-
-    .profile__stats {
-        grid-column: 2 / 3;
-        grid-row: span 1;
     }
 
     .profile__stats-item div:last-child {
-        font-size: var(--fs-300);
-    }
-
-    .profile__social {
-        grid-column: 2 / 3;
-        grid-row: span 1;
+        font-size: var(--fs-200);
     }
 }

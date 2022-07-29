@@ -72,10 +72,10 @@ function showProfileData(dataFetched) {
         userSocial[i].children[1].classList.remove('link-not-avaible')
     }
 
-    if (!location) userSocial[0].children[1].classList.add('link-not-avaible');
-    if (!blog) userSocial[1].children[1].classList.add('link-not-avaible');
-    if (!twitter_username) userSocial[2].children[1].classList.add('link-not-avaible');
-    if (!company) userSocial[3].children[1].classList.add('link-not-avaible');
+    if (!location) userSocial[0].children[1].classList.add('profile__link-notfound');
+    if (!blog) userSocial[1].children[1].classList.add('profile__link-notfound');
+    if (!twitter_username) userSocial[2].children[1].classList.add('profile__link-notfound');
+    if (!company) userSocial[3].children[1].classList.add('profile__link-notfound');
 }
 
 formSubmit.addEventListener('click', function (event) {
@@ -96,23 +96,3 @@ themeToggle.addEventListener('click', function () {
 })
 
 fetchData(URL_GITHUB);
-
-
-/*
-
-    var main = document.querySelector('main');
-
-    var currentlyLightTheme = window.matchMedia("(prefers-color-scheme:light)")
-
-    function toggle() { 
-
-        if (currentlyLightTheme) {
-            main.className = "overrideLight";
-            currentlyLightTheme = false;
-        } else {
-            main.className = "overrideDark";
-            currentlyLightTheme = true;
-        }
-    }
-
-*/
