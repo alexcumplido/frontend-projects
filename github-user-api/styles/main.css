@@ -230,6 +230,7 @@ a {
 
 .profile__user__avatar {
     grid-area: 1 / 1 / 5 / 2;
+    align-self: center;
     max-width: 70px;
     max-height: 70px;
     border-radius: 50%;
@@ -243,6 +244,10 @@ a {
 
 .profile__username {
     grid-area: 2 / 2 / 3 / 7;
+    color: var(--clr-accentDarkMode-600);
+}
+
+.profile__username a {
     color: var(--clr-accentDarkMode-600);
 }
 
@@ -404,7 +409,7 @@ a {
         font-size: var(--fs-300);
     }
 
-    .profile__username-item {
+    .profile__username {
         grid-area: 2 / 2 / 3 / 4;
     }
 
