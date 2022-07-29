@@ -7,7 +7,7 @@ const formSearch = document.querySelector('.form__input');
 const formSubmit = document.querySelector('.form__submit');
 const formError = document.querySelector('.form__error-hide');
 const userAvatar = document.querySelector('.profile__user__avatar');
-const userBasic = document.querySelector('.profile__user-info')
+const userBasic = document.querySelector('.profile__user')
 const userBio = document.querySelector('.bio');
 const userStats = document.querySelectorAll('.profile__stats-item');
 const userSocial = document.querySelectorAll('.profile__link');
@@ -33,7 +33,6 @@ function validateUser(dataFetched) {
         formError.innerText = dataFetched.message;
         formError.classList.replace('form__error-hide', 'form__error-show');
     } else {
-        debugger;
         formError.classList.replace('form__error-show', 'form__error-hide');
         showProfileData(dataFetched);
     }
@@ -48,10 +47,10 @@ function showProfileData(dataFetched) {
 
     userAvatar.setAttribute('src', avatar_url);
 
-    userBasic.children[0].textContent = name || login;
-    userBasic.children[1].firstChild.textContent = `@${login}`;
-    userBasic.children[1].firstChild.setAttribute('href', html_url);
-    userBasic.children[2].textContent = `Joined ${joinDate}`;
+    userBasic.children[1].textContent = name || login;
+    userBasic.children[2].firstChild.textContent = `@${login}`;
+    userBasic.children[2].firstChild.setAttribute('href', html_url);
+    userBasic.children[3].textContent = `Joined ${joinDate}`;
 
     userBio.textContent = bio || `This profile has no bio`;
 
