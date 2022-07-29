@@ -159,6 +159,7 @@ a {
 }
 
 .form {
+    position: relative;
     padding: 0.5rem 0.75rem;
     display: flex;
     align-items: center;
@@ -170,7 +171,6 @@ a {
 }
 
 .form__input {
-    position: relative;
     padding: 0.5rem 0;
     border: none;
     border-radius: 1rem;
@@ -200,9 +200,11 @@ a {
 }
 
 .form__error-show {
-    flex-basis: 100%;
-    text-align: left;
+    display: block;
+    position: absolute;
+    right: 6rem;
     color: var(--clr-accent-400);
+    font-weight: var(--fw-bold);
 }
 
 .profile {
@@ -225,6 +227,7 @@ a {
 
 .profile__user__avatar {
     max-width: 70px;
+    max-height: 70px;
     border-radius: 50%;
 }
 
@@ -266,10 +269,18 @@ a {
 
 .profile__link svg {
     min-width: 2rem;
+    filter: brightness(5);
 }
+
+
+
 
 .profile__link-notfound {
     color: var(--clr-neutral-400);
+}
+
+.profile__svg-notfound {
+    opacity: 0.5;
 }
 
 /* Themes */
@@ -312,6 +323,10 @@ a {
     color: var(--clr-neutral-500);
 }
 
+.light-theme .profile__link svg {
+    filter: brightness(1);
+}
+
 @media screen and (min-width:540px) {
     .form__input {
         flex-basis: 60%;
@@ -319,6 +334,7 @@ a {
 
     .profile__user__avatar {
         max-width: 117px;
+        max-height: 117px;
     }
 
     .profile__stats {
@@ -374,6 +390,7 @@ a {
     .profile__date {
         margin-top: 2rem;
         flex-basis: 100%;
+        align-self: flex-end;
     }
 
     .bio,

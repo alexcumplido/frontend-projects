@@ -23,6 +23,7 @@ function fetchData(URL_API) {
         }).then(function (responseParsed) {
             validateUser(responseParsed);
         }).catch(function (error) {
+            alert('Error loading data');
             console.log(error);
         })
 }
@@ -32,6 +33,7 @@ function validateUser(dataFetched) {
         formError.innerText = dataFetched.message;
         formError.classList.replace('form__error-hide', 'form__error-show');
     } else {
+        debugger;
         formError.classList.replace('form__error-show', 'form__error-hide');
         showProfileData(dataFetched);
     }
@@ -41,17 +43,15 @@ function showProfileData(dataFetched) {
         login, avatar_url, html_url, name, company, blog, location, bio, twitter_username, public_repos, followers, following, created_at
     } = dataFetched;
 
-    let joinDate = new Date(created_at);
-    let day = joinDate.getDay();
-    let month = joinDate.toLocaleString('default', { month: 'short' });
-    let year = joinDate.getFullYear();
+    let creationDate = new Date(created_at);
+    let joinDate = creationDate.toLocaleString('en-GB', { year: 'numeric', month: 'short', day: 'numeric' });
 
     userAvatar.setAttribute('src', avatar_url);
 
     userBasic.children[0].textContent = name || login;
     userBasic.children[1].firstChild.textContent = `@${login}`;
     userBasic.children[1].firstChild.setAttribute('href', html_url);
-    userBasic.children[2].textContent = `Joined ${day} ${month} ${year}`;
+    userBasic.children[2].textContent = `Joined ${joinDate}`;
 
     userBio.textContent = bio || `This profile has no bio`;
 
@@ -64,18 +64,36 @@ function showProfileData(dataFetched) {
     userSocial[2].children[1].textContent = (twitter_username) ? `@${twitter_username}` : `Not Available`;
     userSocial[3].children[1].textContent = company || `Not Available`;
 
-    if (blog) userSocial[1].children[1].setAttribute('href', blog);
-    if (twitter_username) userSocial[2].children[1].setAttribute('href', `https://twitter.com/${twitter_username}`);
-    if (company) userSocial[3].children[1].setAttribute('href', `https://github.com/${company}`);
-
     for (let i = 0; i < userSocial.length; i++) {
-        userSocial[i].children[1].classList.remove('link-not-avaible')
+        userSocial[i].children[0].classList.remove('profile__svg-notfound');
+        userSocial[i].children[1].classList.remove('link-not-avaible');
     }
 
-    if (!location) userSocial[0].children[1].classList.add('profile__link-notfound');
-    if (!blog) userSocial[1].children[1].classList.add('profile__link-notfound');
-    if (!twitter_username) userSocial[2].children[1].classList.add('profile__link-notfound');
-    if (!company) userSocial[3].children[1].classList.add('profile__link-notfound');
+    if (blog) {
+        userSocial[1].children[1].setAttribute('href', blog);
+    } else {
+        userSocial[1].children[0].classList.add('profile__svg-notfound');
+        userSocial[1].children[1].classList.add('profile__link-notfound');
+    }
+
+    if (twitter_username) {
+        userSocial[2].children[1].setAttribute('href', `https://twitter.com/${twitter_username}`);
+    } else {
+        userSocial[2].children[0].classList.add('profile__svg-notfound');
+        userSocial[2].children[1].classList.add('profile__link-notfound');
+    }
+
+    if (company) {
+        userSocial[3].children[1].setAttribute('href', `https://github.com/${company}`);
+    } else {
+        userSocial[3].children[0].classList.add('profile__svg-notfound');
+        userSocial[3].children[1].classList.add('profile__link-notfound');
+    }
+
+    if (!location) {
+        userSocial[0].children[0].classList.add('profile__svg-notfound');
+        userSocial[0].children[1].classList.add('profile__link-notfound');
+    }
 }
 
 formSubmit.addEventListener('click', function (event) {
