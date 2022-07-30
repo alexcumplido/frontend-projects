@@ -328,7 +328,7 @@ a {
 
 .light-theme .form,
 .light-theme .profile,
-.light-theme .link-not-avaible {
+.light-theme .profile__link-notfound {
     background-color: var(--clr-primary-100);
 }
 

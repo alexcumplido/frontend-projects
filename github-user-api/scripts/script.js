@@ -76,36 +76,39 @@ function showProfileData(dataFetched) {
     userTwitter.textContent = (twitter_username) ? `@${twitter_username}` : `Not Available`;
     userCompany.textContent = company || `Not Available`;
 
+
+    debugger;
     for (let i = 0; i < userSocial.length; i++) {
         userSocial[i].firstElementChild.classList.remove('profile__svg-notfound');
-        userSocial[i].lastElementChild.classList.remove('link-not-avaible');
+        userSocial[i].lastElementChild.classList.remove('profile__link-notfound');
     }
 
     if (!location) {
-        userSocial[0].firstElementChild.classList.add('profile__svg-notfound');
-        userSocial[0].lastElementChild.classList.add('profile__link-notfound');
+        linkNotAvaible(userSocial[0]);
     }
 
     if (blog) {
         userSocial[1].lastElementChild.setAttribute('href', blog);
     } else {
-        userSocial[1].firstElementChild.classList.add('profile__svg-notfound');
-        userSocial[1].lastElementChild.classList.add('profile__link-notfound');
+        linkNotAvaible(userSocial[1]);
     }
 
     if (twitter_username) {
         userSocial[2].lastElementChild.setAttribute('href', `https://twitter.com/${twitter_username}`);
     } else {
-        userSocial[2].firstElementChild.classList.add('profile__svg-notfound');
-        userSocial[2].lastElementChild.classList.add('profile__link-notfound');
+        linkNotAvaible(userSocial[2]);
     }
 
     if (company) {
         userSocial[3].lastElementChild.setAttribute('href', `https://github.com/${company}`);
     } else {
-        userSocial[3].firstElementChild.classList.add('profile__svg-notfound');
-        userSocial[3].lastElementChild.classList.add('profile__link-notfound');
+        linkNotAvaible(userSocial[3]);
     }
+}
+
+function linkNotAvaible(element) {
+    element.firstElementChild.classList.add('profile__svg-notfound');
+    element.lastElementChild.classList.add('profile__link-notfound');
 }
 
 formSubmit.addEventListener('click', function (event) {
