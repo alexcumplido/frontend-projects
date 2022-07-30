@@ -1,15 +1,22 @@
 let URL_GITHUB = `https://api.github.com/users/:username`;
 
-const body = document.querySelector('.body');
+const body = document.querySelector('body');
 const themeToggle = document.querySelector('.theme__toggle');
 
-const formSearch = document.querySelector('.form__input');
-const formSubmit = document.querySelector('.form__submit');
+const formSearch = document.getElementById('search');
+const formSubmit = document.getElementById('submit');
+
 const formError = document.querySelector('.form__error-hide');
-const userAvatar = document.querySelector('.profile__user__avatar');
-const userBasic = document.querySelector('.profile__user')
-const userBio = document.querySelector('.bio');
-const userStats = document.querySelectorAll('.profile__stats-item');
+
+const userAvatar = document.getElementById('avatar');
+const userName = document.getElementById('name');
+const userUsername = document.getElementById('username');
+const userDate = document.getElementById('date');
+const userBio = document.getElementById('bio');
+const userRepos = document.getElementById('public_repos');
+const userFollowers = document.getElementById('followers');
+const userFollowing = document.getElementById('following');
+
 const userSocial = document.querySelectorAll('.profile__link');
 
 function getInputSearch() {
@@ -42,21 +49,23 @@ function showProfileData(dataFetched) {
         login, avatar_url, html_url, name, company, blog, location, bio, twitter_username, public_repos, followers, following, created_at
     } = dataFetched;
 
+    console.dir(dataFetched);
+
     let creationDate = new Date(created_at);
     let joinDate = creationDate.toLocaleString('en-GB', { year: 'numeric', month: 'short', day: 'numeric' });
 
     userAvatar.setAttribute('src', avatar_url);
 
-    userBasic.children[1].textContent = name || login;
-    userBasic.children[2].firstChild.textContent = `@${login}`;
-    userBasic.children[2].firstChild.setAttribute('href', html_url);
-    userBasic.children[3].textContent = `Joined ${joinDate}`;
+    userName.textContent = name || login;
+    userUsername.textContent = `@${login}`;
+    userUsername.setAttribute('href', html_url);
+    userDate.textContent = `Joined ${joinDate}`;
 
     userBio.textContent = bio || `This profile has no bio`;
 
-    userStats[0].children[1].innerText = public_repos;
-    userStats[1].children[1].innerText = followers;
-    userStats[2].children[1].innerText = following;
+    userRepos.textContent = public_repos;
+    userFollowers.textContent = followers;
+    userFollowing.textContent = following;
 
     userSocial[0].children[1].textContent = location || `Not Available`;
     userSocial[1].children[1].textContent = blog || `Not Available`;
@@ -64,35 +73,37 @@ function showProfileData(dataFetched) {
     userSocial[3].children[1].textContent = company || `Not Available`;
 
     for (let i = 0; i < userSocial.length; i++) {
-        userSocial[i].children[0].classList.remove('profile__svg-notfound');
-        userSocial[i].children[1].classList.remove('link-not-avaible');
-    }
-
-    if (blog) {
-        userSocial[1].children[1].setAttribute('href', blog);
-    } else {
-        userSocial[1].children[0].classList.add('profile__svg-notfound');
-        userSocial[1].children[1].classList.add('profile__link-notfound');
-    }
-
-    if (twitter_username) {
-        userSocial[2].children[1].setAttribute('href', `https://twitter.com/${twitter_username}`);
-    } else {
-        userSocial[2].children[0].classList.add('profile__svg-notfound');
-        userSocial[2].children[1].classList.add('profile__link-notfound');
-    }
-
-    if (company) {
-        userSocial[3].children[1].setAttribute('href', `https://github.com/${company}`);
-    } else {
-        userSocial[3].children[0].classList.add('profile__svg-notfound');
-        userSocial[3].children[1].classList.add('profile__link-notfound');
+        userSocial[i].firstElementChild.classList.remove('profile__svg-notfound');
+        userSocial[i].lastElementChild.classList.remove('link-not-avaible');
     }
 
     if (!location) {
-        userSocial[0].children[0].classList.add('profile__svg-notfound');
-        userSocial[0].children[1].classList.add('profile__link-notfound');
+        userSocial[0].firstElementChild.classList.add('profile__svg-notfound');
+        userSocial[0].lastElementChild.classList.add('profile__link-notfound');
     }
+
+    if (blog) {
+        userSocial[1].lastElementChild.setAttribute('href', blog);
+    } else {
+        userSocial[1].firstElementChild.classList.add('profile__svg-notfound');
+        userSocial[1].lastElementChild.classList.add('profile__link-notfound');
+    }
+
+    if (twitter_username) {
+        userSocial[2].lastElementChild.setAttribute('href', `https://twitter.com/${twitter_username}`);
+    } else {
+        userSocial[2].firstElementChild.classList.add('profile__svg-notfound');
+        userSocial[2].lastElementChild.classList.add('profile__link-notfound');
+    }
+
+    if (company) {
+        userSocial[3].lastElementChild.setAttribute('href', `https://github.com/${company}`);
+    } else {
+        userSocial[3].firstElementChild.classList.add('profile__svg-notfound');
+        userSocial[3].lastElementChild.classList.add('profile__link-notfound');
+    }
+
+
 }
 
 formSubmit.addEventListener('click', function (event) {

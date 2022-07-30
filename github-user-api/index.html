@@ -5,18 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <meta name="robots" content="index, follow" />
-        <meta name="language" content="english" /> 
         <meta name="author" content="Alexandre Cumplido Bou" />
         <meta name="description" content="GitHub user search app that fecthes data from the GitHub users API" />
         <meta name="keywords" content="GitHub, API, mobile-first, responsive, JavaScript, HTML, CSS" />
         <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
         <link rel="stylesheet" href="./styles/main.css"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
         <title>GitHub user search app</title>
     </head>
-    <body class="body dark-theme">
+    <body class="dark-theme">
         <section class="component">
             <header class="header">
                 <h1 class="header__title">devfinder</h1>
@@ -24,22 +20,22 @@
             </header>
             <form class="form">
                 <img src="./images/icon-search.svg" alt="Search Icon"/>
-                <input class="form__input" type="text" placeholder=" Github username...">
-                <button class="form__submit" type="submit">Search</button>
+                <input id="search" class="form__input" type="text" placeholder=" Github username...">
+                <button id="submit" class="form__submit" type="submit">Search</button>
                 <span class="form__error-hide">No results</span>
             </form>
             <div class="profile" aria-label="assertive">
                 <div class="profile__user">
-                    <img class="profile__user__avatar" src="" alt="Profile avatar">
-                    <span class="profile__name"></span>
-                    <span class="profile__username"><a href="#" aria-label="Github profile link"></a></span>
-                    <span class="profile__date"></span> 
-                    <p class="bio">Bio.</p>
+                    <img id="avatar" class="profile__user__avatar" src="" alt="Profile avatar">
+                    <span id="name" class="profile__name"></span>
+                    <span id="username" class="profile__username"><a href="#" aria-label="Github profile link"></a></span>
+                    <span id="date" class="profile__date"></span> 
+                    <p id="bio" class="bio">Bio.</p>
                 </div>
                 <ul class="profile__stats">
-                    <li class="profile__stats-item"><div>Repos</div><div></div></li>
-                    <li class="profile__stats-item"><div>Followers</div><div></div></li>
-                    <li class="profile__stats-item"><div>Following</div><div></div></li>
+                    <li class="profile__stats-item"><div>Repos</div><div id="public_repos"></div></li>
+                    <li class="profile__stats-item"><div>Followers</div><div id="followers"></div></li>
+                    <li class="profile__stats-item"><div>Following</div><div id="following"></div></li>
                 </ul>
                 <ul class="profile__social">
                     <li class="profile__link">
