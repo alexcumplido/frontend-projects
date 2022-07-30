@@ -16,6 +16,10 @@ const userBio = document.getElementById('bio');
 const userRepos = document.getElementById('public_repos');
 const userFollowers = document.getElementById('followers');
 const userFollowing = document.getElementById('following');
+const userLocation = document.getElementById('location');
+const userBlog = document.getElementById('blog');
+const userTwitter = document.getElementById('twitter');
+const userCompany = document.getElementById('company');
 
 const userSocial = document.querySelectorAll('.profile__link');
 
@@ -67,10 +71,10 @@ function showProfileData(dataFetched) {
     userFollowers.textContent = followers;
     userFollowing.textContent = following;
 
-    userSocial[0].children[1].textContent = location || `Not Available`;
-    userSocial[1].children[1].textContent = blog || `Not Available`;
-    userSocial[2].children[1].textContent = (twitter_username) ? `@${twitter_username}` : `Not Available`;
-    userSocial[3].children[1].textContent = company || `Not Available`;
+    userLocation.textContent = location || `Not Available`;
+    userBlog.textContent = blog || `Not Available`;
+    userTwitter.textContent = (twitter_username) ? `@${twitter_username}` : `Not Available`;
+    userCompany.textContent = company || `Not Available`;
 
     for (let i = 0; i < userSocial.length; i++) {
         userSocial[i].firstElementChild.classList.remove('profile__svg-notfound');
@@ -102,8 +106,6 @@ function showProfileData(dataFetched) {
         userSocial[3].firstElementChild.classList.add('profile__svg-notfound');
         userSocial[3].lastElementChild.classList.add('profile__link-notfound');
     }
-
-
 }
 
 formSubmit.addEventListener('click', function (event) {
