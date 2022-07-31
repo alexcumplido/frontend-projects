@@ -53,8 +53,6 @@ function showProfileData(dataFetched) {
         login, avatar_url, html_url, name, company, blog, location, bio, twitter_username, public_repos, followers, following, created_at
     } = dataFetched;
 
-    console.dir(dataFetched);
-
     let creationDate = new Date(created_at);
     let joinDate = creationDate.toLocaleString('en-GB', { year: 'numeric', month: 'short', day: 'numeric' });
 
@@ -76,8 +74,6 @@ function showProfileData(dataFetched) {
     userTwitter.textContent = (twitter_username) ? `@${twitter_username}` : `Not Available`;
     userCompany.textContent = company || `Not Available`;
 
-
-    debugger;
     for (let i = 0; i < userSocial.length; i++) {
         userSocial[i].firstElementChild.classList.remove('profile__svg-notfound');
         userSocial[i].lastElementChild.classList.remove('profile__link-notfound');
