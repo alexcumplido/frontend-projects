@@ -1,18 +1,17 @@
 # frontend-mentor
 
-In this repository I develop different projects from the Frontend Mentor plattform using frontend techonologies.
+Repository where I develop different projects for the Frontend Mentor plattform using frontend techonologies.
 
 <!-- 
-Junior level
 - [Skilled e-learning landing Page](https://www.frontendmentor.io/challenges/skilled-elearning-landing-page-S1ObDrZ8q)
 - [Tip calculator](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
-- [Interactive price component](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8)
 - [Single-page design portfolio](https://www.frontendmentor.io/challenges/singlepage-design-portfolio-2MMhyhfKVo)
 - [Crowdfunding product page](https://www.frontendmentor.io/challenges/crowdfunding-product-page-7uvcZe7ZR)
 - [Officelite coming soon site](https://www.frontendmentor.io/challenges/officelite-coming-soon-site-M4DIPNz8g)
 -->
 
 ## Projects
+  - [Interactive price component](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8)
   - [GitHub user search app](https://alexcumplido.github.io/frontend-mentor/github-user-api/)
   - [Time Tracking Dashboard](https://alexcumplido.github.io/frontend-mentor/time-dashboard/) 
   - [Advice generator app](https://alexcumplido.github.io/frontend-mentor/adviceAPI-generator)
