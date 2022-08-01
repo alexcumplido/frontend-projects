@@ -79,32 +79,30 @@ function showProfileData(dataFetched) {
         userSocial[i].lastElementChild.classList.remove('profile__link-notfound');
     }
 
-    if (!location) {
-        linkNotAvaible(userSocial[0]);
-    }
+    if (!location) linkNotAvaible(userLocation);
 
     if (blog) {
-        userSocial[1].lastElementChild.setAttribute('href', blog);
+        userBlog.setAttribute('href', blog);
     } else {
-        linkNotAvaible(userSocial[1]);
+        linkNotAvaible(userBlog);
     }
 
     if (twitter_username) {
-        userSocial[2].lastElementChild.setAttribute('href', `https://twitter.com/${twitter_username}`);
+        userTwitter.setAttribute('href', `https://twitter.com/${twitter_username}`);
     } else {
-        linkNotAvaible(userSocial[2]);
+        linkNotAvaible(userTwitter);
     }
 
     if (company) {
-        userSocial[3].lastElementChild.setAttribute('href', `https://github.com/${company}`);
+        userCompany.setAttribute('href', `https://github.com/${company}`);
     } else {
-        linkNotAvaible(userSocial[3]);
+        linkNotAvaible(userCompany);
     }
 }
 
 function linkNotAvaible(element) {
-    element.firstElementChild.classList.add('profile__svg-notfound');
-    element.lastElementChild.classList.add('profile__link-notfound');
+    element.previousElementSibling.classList.add('profile__svg-notfound');
+    element.classList.add('profile__link-notfound');
 }
 
 formSubmit.addEventListener('click', function (event) {
