@@ -5,30 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <meta name="robots" content="index, follow" />
-        <meta name="language" content="english" /> 
         <meta name="author" content="Alexandre Cumplido Bou" />
-        <meta name="description" content="Baseline project" />
-        <meta nem="keywords" content="Baseline project" />
+        <meta name="description" content="Interactive Pricing Component" />
+        <meta nem="keywords" content="htm" />
         <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
         <link rel="stylesheet" href="./styles/main.css"/>
         <title>Interactive price component</title>
     </head>
     <body>
         <main>
-              Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
+            <div class="title-wrapper">
+                    <h1>Simple, traffic-based pricing</h1>
+                    <p>Sign-up for our 30-day trial. No credit card required. <p>
+            </div>
+            <section class="card">
+                <div class="card__range">
+                    <span class="card__views">Pageviews</span>  
+                    <input class="card__input" type="range" value="50000" id="views" name="views" min="10000" max="1000000" step="10000">
+                    <span class="card__cost">$ /month</span>
+                    <div class="card__toggle">
+                        <span>Monthly Billing </span>
+                        <button>Toggle</button>
+                        <span>Yearly Billing 25% discount</span>
+                    </div>
+                </div>
+                <div class="card__submit">
+                    <ul>
+                        <li>Unlimited websites</li>
+                        <li>100% data ownership</li>
+                        <li>Email reports</li>
+                    </ul>
+                </div>
+                <button>Start my trial</button>
+            </section>
         </main>
         <script src="./scripts/script.js"></script>
     </body>

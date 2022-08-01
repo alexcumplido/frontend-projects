@@ -10,6 +10,7 @@
 - [Continued development](#continued-development)
 
 #### User flow
+
 - View the optimal layout  depending on device's screen size
 - See hover states for all interactive elements 
 - Use the slider and toggle to see prices for different page view numbers. Different page view ranges and the corresponding monthly price totals:
