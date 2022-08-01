@@ -1,0 +1,87 @@
+/*
+### Primary
+- Soft Cyan (Full Slider Bar): hsl(174, 77%, 80%)
+- Strong Cyan (Slider Backround): hsl(174, 86%, 45%)
+- Light Grayish Red (Discount Background): hsl(14, 92%, 95%)
+- Light Red (Discount Text): hsl(15, 100%, 70%)
+- Pale Blue (CTA Text): hsl(226, 100%, 87%)
+
+### Neutral
+- White (Pricing Component Background): hsl (0, 0%, 100%)
+- Very Pale Blue (Main Background): hsl(230, 100%, 99%)
+- Light Grayish Blue (Empty Slider Bar): hsl(224, 65%, 95%)
+- Light Grayish Blue (Toggle Background): hsl(223, 50%, 87%)
+- Grayish Blue (Text): hsl(225, 20%, 60%)
+- Dark Desaturated Blue (Text & CTA Background): hsl(227, 35%, 25%)
+*/
+:root {
+    --clr-primary-100: ;
+    --clr-primary-200: ;
+    --clr-primary-300: ;
+    --clr-primary-400: ;
+    --clr-primary-500: ;
+
+    --clr-neutral-100: ;
+    --clr-neutral-200: ;
+    --clr-neutral-300: ;
+    --clr-neutral-400: ;
+    --clr-neutral-500: ;
+    --clr-neutral-600: ;
+
+    --max-width-desktop: 1110px;
+
+    --ff-primary: ;
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-primary);
+    --fs-body: var(--fs-300);
+
+    --fs-100: ;
+    --fs-200: ;
+    --fs-300: 1rem;
+    --fs-400: ;
+    --fs-500: ;
+
+    --lh: ;
+
+    --fw-regular: 600;
+    --fw-bold: 800;
+}
+
+/*
+https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
+*/
+
+@media screen and (min-width:550px) {
+    :root {
+        --fs-100: var(--fs-200);
+        --fs-200: var(--fs-300);
+        --fs-300: var(--fs-400);
+        --fs-400: var(--fs-500);
+    }
+}
+
+/* Utility classes*/
+.visually-hidden {
+    position: absolute;
+    left: 0;
+    top: -500px;
+    width: 1;
+    height: 1;
+    overflow: hidden;
+}
+
+.button {
+    border: none;
+    border-radius: 100vmax;
+    padding: 0.5rem 1rem;
+}
+
+body {
+    max-width: var(--max-width-desktop);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+}
