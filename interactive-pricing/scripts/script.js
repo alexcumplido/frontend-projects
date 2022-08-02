@@ -2,11 +2,13 @@ const pageViews = document.querySelector('.card__views');
 const pageInputRange = document.querySelector('.card__input');
 const pageCost = document.querySelector('.card__cost');
 const costToggle = document.querySelector('.button__toggle');
+const cardDiscount = document.querySelector('.card__discount');
 let finalPrice = 16;
 let flushPrice;
 
 window.addEventListener('DOMContentLoaded', function (event) {
     pageInputRange.value = 100000;
+    cardDiscount.textContent = "-25%";
     printViewsAndCost(pageInputRange.value)
 })
 
@@ -20,20 +22,32 @@ pageInputRange.addEventListener('change', function (event) {
     printViewsAndCost(views)
 });
 
+
+
 function printViewsAndCost(views) {
     pageViews.textContent = `${views} pageviews`;
-    pageCost.textContent = `$${finalPrice.toFixed(2)}/month`;
+    pageCost.textContent = `$${finalPrice.toFixed(2)}`;
+    const span = document.createElement('span');
+    span.textContent = '/month';
+    pageCost.appendChild(span);
+
 }
 
 costToggle.addEventListener('click', function (event) {
     if (event.target.classList.contains('button__toggle--monthly')) {
-        event.target.classList.replace('button__toggle--monthly', 'button__toggle--yearly');
         flushPrice = finalPrice;
         finalPrice = finalPrice - (finalPrice * 0.25);
-        pageCost.textContent = `$${finalPrice.toFixed(2)}/month`;
+        cardDiscount.textContent = "-25%";
+        printViewsAndCost(pageInputRange.value);
+        event.target.classList.replace(
+            'button__toggle--monthly', 'button__toggle--yearly'
+        );
     } else {
-        event.target.classList.replace('button__toggle--yearly', 'button__toggle--monthly');
         finalPrice = flushPrice;
-        pageCost.textContent = `$${finalPrice.toFixed(2)}/month`;;
+        printViewsAndCost(pageInputRange.value)
+        cardDiscount.textContent = "25%";
+        event.target.classList.replace(
+            'button__toggle--yearly', 'button__toggle--monthly'
+        );
     }
 });

@@ -7,7 +7,7 @@
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Alexandre Cumplido Bou" />
         <meta name="description" content="Interactive Pricing Component" />
-        <meta nem="keywords" content="htm" />
+        <meta nem="keywords" content="HTML, CSS, JavaScript" />
         <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
         <link rel="stylesheet" href="./styles/main.css"/>
         <script defer src="./scripts/script.js"></script>
@@ -16,8 +16,8 @@
     <body>
         <main>
             <div class="title-wrapper">
-                    <h1>Simple, traffic-based pricing</h1>
-                    <p>Sign-up for our 30-day trial. No credit card required. <p>
+                <h1>Simple, traffic-based pricing</h1>
+                <p>Sign-up for our 30-day trial. No credit card required. <p>
             </div>
             <section class="card">
                 <div class="card__range">
@@ -27,7 +27,7 @@
                     <div class="card__toggle">
                         <span>Monthly Billing</span>
                         <button type="button" class="button__toggle button__toggle--monthly"></button>
-                        <span>Yearly Billing <span>25% discount</span></span>
+                        <span>Yearly Billing <span class="card__discount"></span></span>
                     </div>
                 </div>
                 <div class="card__submit">
@@ -36,8 +36,9 @@
                         <li>100% data ownership</li>
                         <li>Email reports</li>
                     </ul>
+                    <button class="button__submit" type="button">Start my trial</button>
                 </div>
-                <button type="button">Start my trial</button>
+                
             </section>
         </main>
         

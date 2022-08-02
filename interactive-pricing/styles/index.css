@@ -1,31 +1,22 @@
 :root {
-    /*(Full Slider Bar)*/
     --clr-primary-100: hsl(174, 77%, 80%);
-    /*(Slider Backround)*/
     --clr-primary-200: hsl(174, 86%, 45%);
-    /*(Discount Background)*/
     --clr-primary-300: hsl(14, 92%, 95%);
-    /*(Discount Text)*/
+    --clr-primary-400-soft: hsla(15, 100%, 70%, 0.437);
     --clr-primary-400: hsl(15, 100%, 70%);
-    /*(Text & CTA Background)*/
     --clr-primary-500: hsl(226, 100%, 87%);
 
-    /*(Pricing Component Background)*/
     --clr-neutral-100: hsl(0, 0%, 100%);
-    /*(Main Background)*/
     --clr-neutral-200: hsl(230, 100%, 99%);
-    /*(Pricing Component Background)*/
     --clr-neutral-300: hsl(224, 65%, 95%);
-    /*(Pricing Component Background)*/
     --clr-neutral-400: hsl(223, 50%, 87%);
-    /*(Pricing Component Background)*/
+    --clr-neutral-500-soft: hsl(0, 0%, 59%);
     --clr-neutral-500: hsl(225, 20%, 60%);
-    /*(Pricing Component Background)*/
     --clr-neutral-600: hsl(227, 35%, 25%);
 
     --max-width-desktop: 1110px;
 
-    --ff-primary: ;
+    --ff-primary: 'Manrope', sans-serif;
     --ff-body: var(--ff-primary);
     --ff-heading: var(--ff-primary);
     --fs-body: var(--fs-100);
@@ -35,8 +26,6 @@
     --fs-300: 0.87rem;
     --fs-400: 1.25rem;
     --fs-500: 2rem;
-
-    --lh: ;
 
     --fw-regular: 600;
     --fw-bold: 800;
@@ -56,86 +45,221 @@ https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
     }
 }
 
-/* Utility classes*/
-.visually-hidden {
-    position: absolute;
-    left: 0;
-    top: -500px;
-    width: 1;
-    height: 1;
-    overflow: hidden;
-}
-
-
-
 body {
     max-width: var(--max-width-desktop);
+
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    place-items: center;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
 }
 
-datalist {
-    display: block;
+main {
+    background-color: var(--clr-neutral-100);
+    background-image: url("../images/bg-pattern.svg");
+    background-repeat: no-repeat;
+    padding: 1rem;
+    padding-bottom: 5rem;
 }
 
+
+.title-wrapper {
+    padding: 3rem 0rem;
+    text-align: center;
+    background-image: url("../images/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-bottom: 2rem;
+}
+
+.title-wrapper h1 {
+    margin-bottom: 0.25rem;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-600);
+}
+
+.title-wrapper p {
+    font-size: var(--fs-200);
+    color: var(--clr-neutral-500);
+}
+
+.card {
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-neutral-100);
+    box-shadow: 0 4px 4px 0 var(--clr-neutral-500-soft);
+}
+
+.card__range {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--clr-neutral-400);
+    padding-bottom: 2rem;
+}
+
+.card__views {
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    color: var(--clr-neutral-500);
+}
+
+.card__input {
+    width: 100%;
+    align-self: stretch;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    margin-top: -16px;
+    border-radius: 50%;
+    background-color: var(--clr-primary-200);
+    background-image: url("../images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 8px 4px 1px var(--clr-primary-100);
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background-color: var(--clr-neutral-400);
+    height: 10px;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.card__cost {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-600);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card__cost span {
+    font-size: var(--fs-300);
+    color: var(--clr-neutral-500);
+}
+
+.card__toggle {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: var(--clr-neutral-500);
+}
 
 .button__toggle {
     border: none;
     border-radius: 100vmax;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     background: transparent;
     position: relative;
+    cursor: pointer;
 }
 
 .button__toggle--monthly {
     background-color: var(--clr-neutral-400);
+    transition: .5s;
 }
 
 .button__toggle--monthly::after {
     content: "";
     position: absolute;
     left: 0.20rem;
-    top: 0.15rem;
-    width: 12px;
-    height: 12px;
+    top: 0.20rem;
+    width: 17px;
+    height: 17px;
     border-radius: 50%;
     background-color: var(--clr-neutral-100);
 }
 
 .button__toggle--yearly {
     background-color: var(--clr-primary-200);
+    transition: .5s;
 }
 
 .button__toggle--yearly::after {
     content: "";
     position: absolute;
     right: 0.20rem;
-    top: 0.15rem;
-    width: 12px;
-    height: 12px;
+    top: 0.20rem;
+    width: 17px;
+    height: 17px;
     border-radius: 50%;
     background-color: var(--clr-neutral-100);
 }
 
-/*
-PEDAC
-    Problem (input, output, requirement)
-        Create a toggle button that when clicked change styles
-        Initial state gray with white ball in the left
-    Example
-    Data structure
-    Algorithm
-        Create class monthly
-        Style button
-        Add white ball shape via pseudo element
+.card__discount {
+    margin-left: 0.25rem;
+    padding: 0.25rem 1rem;
+    font-weight: var(--fw-bold);
+    border-radius: 100vmax;
+    color: var(--clr-primary-400);
+    background-color: var(--clr-primary-300);
+}
 
-        Create class yearly
-        Style button
-        Add white ball shape via pseudo element
-    Code
+.card__submit {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
 
-*/
+.card__submit ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.62rem;
+    text-align: center;
+}
+
+.card__submit ul li {
+    color: var(--clr-neutral-500);
+    position: relative;
+}
+
+.card__submit ul li::before {
+    content: "";
+    padding: 0.5rem 2rem 0.5rem 0;
+    background-image: url("../images/icon-check.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.button__submit {
+    width: 10.6rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+    border: none;
+    font-weight: var(--fw-regular);
+    border-radius: 100vmax;
+    color: var(--clr-primary-500);
+    background-color: var(--clr-neutral-600);
+    cursor: pointer;
+}
+
+.button__submit:hover {
+    color: var(--clr-neutral-600);
+    background-color: var(--clr-primary-500);
+}
