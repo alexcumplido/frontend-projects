@@ -10,6 +10,7 @@
         <meta nem="keywords" content="htm" />
         <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
         <link rel="stylesheet" href="./styles/main.css"/>
+        <script defer src="./scripts/script.js"></script>
         <title>Interactive price component</title>
     </head>
     <body>
@@ -20,13 +21,13 @@
             </div>
             <section class="card">
                 <div class="card__range">
-                    <span class="card__views">Pageviews</span>  
-                    <input class="card__input" type="range" value="50000" id="views" name="views" min="10000" max="1000000" step="10000">
-                    <span class="card__cost">$ /month</span>
+                    <span class="card__views"></span>  
+                    <input class="card__input" type="range" id="views" name="views" min="10000" max="1000000" step="10000">
+                    <span class="card__cost"></span>
                     <div class="card__toggle">
-                        <span>Monthly Billing </span>
-                        <button>Toggle</button>
-                        <span>Yearly Billing 25% discount</span>
+                        <span>Monthly Billing</span>
+                        <button type="button" class="button__toggle button__toggle--monthly"></button>
+                        <span>Yearly Billing <span>25% discount</span></span>
                     </div>
                 </div>
                 <div class="card__submit">
@@ -36,9 +37,9 @@
                         <li>Email reports</li>
                     </ul>
                 </div>
-                <button>Start my trial</button>
+                <button type="button">Start my trial</button>
             </section>
         </main>
-        <script src="./scripts/script.js"></script>
+        
     </body>
 </html>

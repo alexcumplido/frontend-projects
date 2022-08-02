@@ -1,45 +1,40 @@
-/*
-### Primary
-- Soft Cyan (Full Slider Bar): hsl(174, 77%, 80%)
-- Strong Cyan (Slider Backround): hsl(174, 86%, 45%)
-- Light Grayish Red (Discount Background): hsl(14, 92%, 95%)
-- Light Red (Discount Text): hsl(15, 100%, 70%)
-- Pale Blue (CTA Text): hsl(226, 100%, 87%)
-
-### Neutral
-- White (Pricing Component Background): hsl (0, 0%, 100%)
-- Very Pale Blue (Main Background): hsl(230, 100%, 99%)
-- Light Grayish Blue (Empty Slider Bar): hsl(224, 65%, 95%)
-- Light Grayish Blue (Toggle Background): hsl(223, 50%, 87%)
-- Grayish Blue (Text): hsl(225, 20%, 60%)
-- Dark Desaturated Blue (Text & CTA Background): hsl(227, 35%, 25%)
-*/
 :root {
-    --clr-primary-100: ;
-    --clr-primary-200: ;
-    --clr-primary-300: ;
-    --clr-primary-400: ;
-    --clr-primary-500: ;
+    /*(Full Slider Bar)*/
+    --clr-primary-100: hsl(174, 77%, 80%);
+    /*(Slider Backround)*/
+    --clr-primary-200: hsl(174, 86%, 45%);
+    /*(Discount Background)*/
+    --clr-primary-300: hsl(14, 92%, 95%);
+    /*(Discount Text)*/
+    --clr-primary-400: hsl(15, 100%, 70%);
+    /*(Text & CTA Background)*/
+    --clr-primary-500: hsl(226, 100%, 87%);
 
-    --clr-neutral-100: ;
-    --clr-neutral-200: ;
-    --clr-neutral-300: ;
-    --clr-neutral-400: ;
-    --clr-neutral-500: ;
-    --clr-neutral-600: ;
+    /*(Pricing Component Background)*/
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    /*(Main Background)*/
+    --clr-neutral-200: hsl(230, 100%, 99%);
+    /*(Pricing Component Background)*/
+    --clr-neutral-300: hsl(224, 65%, 95%);
+    /*(Pricing Component Background)*/
+    --clr-neutral-400: hsl(223, 50%, 87%);
+    /*(Pricing Component Background)*/
+    --clr-neutral-500: hsl(225, 20%, 60%);
+    /*(Pricing Component Background)*/
+    --clr-neutral-600: hsl(227, 35%, 25%);
 
     --max-width-desktop: 1110px;
 
     --ff-primary: ;
     --ff-body: var(--ff-primary);
     --ff-heading: var(--ff-primary);
-    --fs-body: var(--fs-300);
+    --fs-body: var(--fs-100);
 
-    --fs-100: ;
-    --fs-200: ;
-    --fs-300: 1rem;
-    --fs-400: ;
-    --fs-500: ;
+    --fs-100: 0.75rem;
+    --fs-200: 0.82rem;
+    --fs-300: 0.87rem;
+    --fs-400: 1.25rem;
+    --fs-500: 2rem;
 
     --lh: ;
 
@@ -53,10 +48,11 @@ https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 
 @media screen and (min-width:550px) {
     :root {
-        --fs-100: var(--fs-200);
-        --fs-200: var(--fs-300);
-        --fs-300: var(--fs-400);
-        --fs-400: var(--fs-500);
+        --fs-100: var(--fs-100);
+        --fs-200: 0.93rem;
+        --fs-300: 1rem;
+        --fs-400: 1.75rem;
+        --fs-500: 2.5rem;
     }
 }
 
@@ -70,11 +66,7 @@ https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
     overflow: hidden;
 }
 
-.button {
-    border: none;
-    border-radius: 100vmax;
-    padding: 0.5rem 1rem;
-}
+
 
 body {
     max-width: var(--max-width-desktop);
@@ -85,3 +77,65 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
 }
+
+datalist {
+    display: block;
+}
+
+
+.button__toggle {
+    border: none;
+    border-radius: 100vmax;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    position: relative;
+}
+
+.button__toggle--monthly {
+    background-color: var(--clr-neutral-400);
+}
+
+.button__toggle--monthly::after {
+    content: "";
+    position: absolute;
+    left: 0.20rem;
+    top: 0.15rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--clr-neutral-100);
+}
+
+.button__toggle--yearly {
+    background-color: var(--clr-primary-200);
+}
+
+.button__toggle--yearly::after {
+    content: "";
+    position: absolute;
+    right: 0.20rem;
+    top: 0.15rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--clr-neutral-100);
+}
+
+/*
+PEDAC
+    Problem (input, output, requirement)
+        Create a toggle button that when clicked change styles
+        Initial state gray with white ball in the left
+    Example
+    Data structure
+    Algorithm
+        Create class monthly
+        Style button
+        Add white ball shape via pseudo element
+
+        Create class yearly
+        Style button
+        Add white ball shape via pseudo element
+    Code
+
+*/

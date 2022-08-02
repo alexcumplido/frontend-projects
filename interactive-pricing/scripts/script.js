@@ -1,56 +1,39 @@
-/*
-PEDAC
-1. Problem
-    Create a component with an input range and a toggle to see prices for different page views. If the visitor switches the toggle to yearly billing, a 25% discount should be applied to all prices.
-        - 10K pageviews / $8 per month
-        - 50K pageviews / $12 per month
-        - 100K pageviews / $16 per month
-        - 500k pageviews / $24 per month
-        - 1M pageviews / $36 per month
-    
-    Inputs: 
-        The value number type from the input range (change event)
-        The click event from the toggle button 
-    
-    Output
-        A number type value for the span.card__views text
-        A number type value for the span.card__cost
+const pageViews = document.querySelector('.card__views');
+const pageInputRange = document.querySelector('.card__input');
+const pageCost = document.querySelector('.card__cost');
+const costToggle = document.querySelector('.button__toggle');
+let finalPrice = 16;
+let flushPrice;
 
-    Requirements
-        The user can slide up the input range and get different pageviews and monthly cost
-        The user can slide down the input range and get different pageviews and monthly cost
-        The user can switch the toggle and get a 25% discount over the monthly cost
-
-2. Examples (user - flow features, edge cases)
-    User slides up the input slide to 100K pageviews/month 
-        and the span.card__views shows the text 100K PAGEVIEWS 
-        and the span.card__cost shows 16$ / month
-
-    If user switches the goggle then span.card__cost shows 16$*0.25 (Do discount percentage)
-
-    If user switches again the toggle then span.card__cost shows 16$ (Without discount)
-
-3. Data Structure
-    a variable to target the span.card__views
-    a variable to target the span.card__input
-    a variable tot arget the span.card__cost
-    a variable to target the button.card__toggle
-    
-    a function that listen for the change in input range and prints the value of the input in span.card__views
-    a function that listen for the click in button.card__toggle
-4. Algorightm
-    (pseudocode)
-
-5. Code
-    (test)
-
-*/
-
-// What is the smallest unit of work / problem unit that I can work on ?
-//     How can I get it done and fast ?
-//         If stuck: how can I zoom out ?
-
-const views = document.querySelector('#views');
-views.addEventListener('change', function (event) {
-    console.log(event.target.value);
+window.addEventListener('DOMContentLoaded', function (event) {
+    pageInputRange.value = 100000;
+    printViewsAndCost(pageInputRange.value)
 })
+
+pageInputRange.addEventListener('change', function (event) {
+    let views = event.target.value;
+    if (views >= 10000 && views < 50000) finalPrice = 8;
+    if (views >= 50000 && views <= 100000) finalPrice = 12;
+    if (views >= 100000 && views < 500000) finalPrice = 16;
+    if (views >= 500000 && views < 1000000) finalPrice = 24;
+    if (views >= 1000000) finalPrice = 36;
+    printViewsAndCost(views)
+});
+
+function printViewsAndCost(views) {
+    pageViews.textContent = `${views} pageviews`;
+    pageCost.textContent = `$${finalPrice.toFixed(2)}/month`;
+}
+
+costToggle.addEventListener('click', function (event) {
+    if (event.target.classList.contains('button__toggle--monthly')) {
+        event.target.classList.replace('button__toggle--monthly', 'button__toggle--yearly');
+        flushPrice = finalPrice;
+        finalPrice = finalPrice - (finalPrice * 0.25);
+        pageCost.textContent = `$${finalPrice.toFixed(2)}/month`;
+    } else {
+        event.target.classList.replace('button__toggle--yearly', 'button__toggle--monthly');
+        finalPrice = flushPrice;
+        pageCost.textContent = `$${finalPrice.toFixed(2)}/month`;;
+    }
+});
