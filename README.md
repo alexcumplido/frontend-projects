@@ -3,15 +3,15 @@
 Repository where I develop different projects for the Frontend Mentor plattform using frontend techonologies.
 
 <!-- 
-- [Skilled e-learning landing Page](https://www.frontendmentor.io/challenges/skilled-elearning-landing-page-S1ObDrZ8q)
-- [Tip calculator](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
-- [Single-page design portfolio](https://www.frontendmentor.io/challenges/singlepage-design-portfolio-2MMhyhfKVo)
-- [Crowdfunding product page](https://www.frontendmentor.io/challenges/crowdfunding-product-page-7uvcZe7ZR)
-- [Officelite coming soon site](https://www.frontendmentor.io/challenges/officelite-coming-soon-site-M4DIPNz8g)
+  - [Skilled e-learning landing Page](https://www.frontendmentor.io/challenges/skilled-elearning-landing-page-S1ObDrZ8q)
+  - [Tip calculator](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
+  - [Single-page design portfolio](https://www.frontendmentor.io/challenges/singlepage-design-portfolio-2MMhyhfKVo)
+  - [Crowdfunding product page](https://www.frontendmentor.io/challenges/crowdfunding-product-page-7uvcZe7ZR)
+  - [Officelite coming soon site](https://www.frontendmentor.io/challenges/officelite-coming-soon-site-M4DIPNz8g)
 -->
 
 ## Projects
-  - [Interactive price component (Work in progress)](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8)
+  - [Interactive price component (Work in progress)](https://alexcumplido.github.io/frontend-mentor/interactive-pricing/)
   - [GitHub user search app](https://alexcumplido.github.io/frontend-mentor/github-user-api/)
   - [Time Tracking Dashboard](https://alexcumplido.github.io/frontend-mentor/time-dashboard/) 
   - [Advice generator app](https://alexcumplido.github.io/frontend-mentor/adviceAPI-generator)
