@@ -37,7 +37,10 @@
 - Mobile-first workflow
 
 #### Thoughts
+-[BrennaObrien](https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html)
+- [Nikita Hlopov](https://nikitahl.com/style-range-input-css)
 ```js
 ```
 
 #### Continued development
+

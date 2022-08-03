@@ -65,7 +65,8 @@ main {
     color: var(--clr-neutral-600);
 }
 
-.title-wrapper p {
+
+.title-wrapper span p {
     font-size: var(--fs-200);
     color: var(--clr-neutral-500);
 }
@@ -275,6 +276,10 @@ input[type=range]::-webkit-slider-thumb:active {
     .title-wrapper,
     .card {
         max-width: 35rem;
+    }
+
+    .title-wrapper span p {
+        display: inline;
     }
 
     .card {
