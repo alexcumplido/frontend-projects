@@ -178,7 +178,7 @@ input[type=range]::-webkit-slider-thumb:active {
     content: "";
     position: absolute;
     left: 0.20rem;
-    top: 0.20rem;
+    top: 0.24rem;
     width: 17px;
     height: 17px;
     border-radius: 50%;
@@ -194,7 +194,7 @@ input[type=range]::-webkit-slider-thumb:active {
     content: "";
     position: absolute;
     right: 0.20rem;
-    top: 0.20rem;
+    top: 0.24rem;
     width: 17px;
     height: 17px;
     border-radius: 50%;
@@ -253,8 +253,7 @@ input[type=range]::-webkit-slider-thumb:active {
 }
 
 .button__submit:hover {
-    color: var(--clr-neutral-600);
-    background-color: var(--clr-primary-500);
+    color: var(--clr-neutral-100);
 }
 
 @media screen and (min-width:550px) {
