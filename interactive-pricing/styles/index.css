@@ -42,16 +42,15 @@ body {
 }
 
 main {
+    padding: 1rem 1rem 5rem 1rem;
     background-color: var(--clr-neutral-100);
     background-image: url("../images/bg-pattern.svg");
     background-repeat: no-repeat;
-    padding: 1rem;
-    padding-bottom: 5rem;
 }
 
 .title-wrapper {
-    margin: 1rem 0 2rem 0;
     padding: 3rem 0rem;
+    margin: 1rem 0 2rem 0;
     text-align: center;
     background-image: url("../images/pattern-circles.svg");
     background-repeat: no-repeat;
@@ -73,28 +72,28 @@ main {
 
 .card {
     padding: 2.5rem 1.5rem;
-    border-radius: 1rem;
     display: flex;
     flex-direction: column;
+    border-radius: 1rem;
     background-color: var(--clr-neutral-100);
     box-shadow: 0 4px 4px 0 var(--clr-neutral-500-soft);
 }
 
 .card__range {
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     gap: 1.5rem;
     border-bottom: 1px solid var(--clr-neutral-300);
-    padding-bottom: 2rem;
 }
 
 .card__views {
     font-weight: var(--fw-bold);
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--clr-neutral-500);
-    letter-spacing: 2px;
 }
 
 .card__input {
@@ -139,12 +138,12 @@ input[type=range]::-webkit-slider-thumb:active {
 }
 
 .card__cost {
-    font-size: var(--fs-500);
-    font-weight: var(--fw-bold);
-    color: var(--clr-neutral-600);
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: var(--fs-500);
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-600);
 }
 
 .card__cost span {
@@ -162,11 +161,11 @@ input[type=range]::-webkit-slider-thumb:active {
 }
 
 .button__toggle {
+    position: relative;
+    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 100vmax;
-    padding: 0.75rem 1.5rem;
     background: transparent;
-    position: relative;
     cursor: pointer;
 }
 
@@ -203,10 +202,10 @@ input[type=range]::-webkit-slider-thumb:active {
 }
 
 .card__discount {
-    margin-left: 0.25rem;
     padding: 0.25rem 1rem;
-    font-weight: var(--fw-bold);
+    margin-left: 0.25rem;
     border-radius: 100vmax;
+    font-weight: var(--fw-bold);
     color: var(--clr-primary-400);
     background-color: var(--clr-primary-300);
 }
@@ -229,8 +228,8 @@ input[type=range]::-webkit-slider-thumb:active {
 }
 
 .card__submit ul li {
-    color: var(--clr-neutral-500);
     position: relative;
+    color: var(--clr-neutral-500);
 }
 
 .card__submit ul li::before {
@@ -243,8 +242,8 @@ input[type=range]::-webkit-slider-thumb:active {
 
 .button__submit {
     width: 10.6rem;
-    margin: 0 auto;
     padding: 1rem 0;
+    margin: 0 auto;
     border: none;
     font-weight: var(--fw-regular);
     border-radius: 100vmax;
@@ -299,8 +298,8 @@ input[type=range]::-webkit-slider-thumb:active {
     }
 
     .card__input {
-        margin: 1.5rem 0 2.5rem 0;
         order: 1;
+        margin: 1.5rem 0 2.5rem 0;
     }
 
     .card__toggle {
