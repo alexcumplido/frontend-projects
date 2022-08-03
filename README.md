@@ -11,7 +11,7 @@ Repository where I develop different projects for the Frontend Mentor plattform 
 -->
 
 ## Projects
-  - [Interactive price component](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8)
+  - [Interactive price component (Work in progress)](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8)
   - [GitHub user search app](https://alexcumplido.github.io/frontend-mentor/github-user-api/)
   - [Time Tracking Dashboard](https://alexcumplido.github.io/frontend-mentor/time-dashboard/) 
   - [Advice generator app](https://alexcumplido.github.io/frontend-mentor/adviceAPI-generator)

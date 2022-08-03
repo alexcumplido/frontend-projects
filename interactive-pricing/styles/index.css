@@ -1,6 +1,7 @@
 :root {
     --clr-primary-100: hsl(174, 77%, 80%);
     --clr-primary-200: hsl(174, 86%, 45%);
+    --clr-primary-200--dark: hsl(174, 65%, 41%);
     --clr-primary-300: hsl(14, 92%, 95%);
     --clr-primary-400-soft: hsla(15, 100%, 70%, 0.437);
     --clr-primary-400: hsl(15, 100%, 70%);
@@ -35,15 +36,6 @@
 https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 */
 
-@media screen and (min-width:550px) {
-    :root {
-        --fs-100: var(--fs-100);
-        --fs-200: 0.93rem;
-        --fs-300: 1rem;
-        --fs-400: 1.75rem;
-        --fs-500: 2.5rem;
-    }
-}
 
 body {
     max-width: var(--max-width-desktop);
@@ -117,13 +109,25 @@ main {
 
 input[type=range] {
     -webkit-appearance: none;
+    background: var(--clr-neutral-400);
+    background-image: linear-gradient(var(--clr-primary-200), var(--clr-primary-200));
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+input[type=range]:active {
+    background-image: linear-gradient(var(--clr-primary-200--dark), var(--clr-primary-200--dark));
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    background: transparent;
+    height: 0.70rem;
 }
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-}
-
-input[type=range]::-webkit-slider-thumb {
     width: 2.5rem;
     height: 2.5rem;
     cursor: pointer;
@@ -137,11 +141,8 @@ input[type=range]::-webkit-slider-thumb {
     cursor: pointer;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
-    background-color: var(--clr-neutral-400);
-    height: 10px;
-    border-radius: 1rem;
-    cursor: pointer;
+input[type=range]::-webkit-slider-thumb:active {
+    background-color: var(--clr-primary-200--dark);
 }
 
 .card__cost {
@@ -262,4 +263,14 @@ input[type=range]::-webkit-slider-runnable-track {
 .button__submit:hover {
     color: var(--clr-neutral-600);
     background-color: var(--clr-primary-500);
+}
+
+@media screen and (min-width:550px) {
+    :root {
+        --fs-100: var(--fs-100);
+        --fs-200: 0.93rem;
+        --fs-300: 1rem;
+        --fs-400: 1.75rem;
+        --fs-500: 2.5rem;
+    }
 }
