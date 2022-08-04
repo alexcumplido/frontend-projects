@@ -23,7 +23,7 @@
 ***If the visitor switches the toggle to yearly billing, a 25% discount should be applied to all prices.
 
 #### Screenshot
-![Project demo]()
+![Project demo](./images/interactivePrice.gif)
 
 #### Run project
 ```
