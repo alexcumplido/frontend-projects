@@ -1,5 +1,5 @@
 ## Interactive Price Component
-- [Github Pages live]() | [Frontend Mentor solution]()
+- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/interactive-pricing/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/custom-input-range-with-plain-javascript-cIV6GtJfXw)
 
 ### Table of contents
 - [User flow](#user-flow)
@@ -13,14 +13,8 @@
 
 - View the optimal layout  depending on device's screen size
 - See hover states for all interactive elements 
-- Use the slider and toggle to see prices for different page view numbers. Different page view ranges and the corresponding monthly price totals:
-    - 10K pageviews / $8 per month
-    - 50K pageviews / $12 per month
-    - 100K pageviews / $16 per month
-    - 500k pageviews / $24 per month
-    - 1M pageviews / $36 per month
-
-***If the visitor switches the toggle to yearly billing, a 25% discount should be applied to all prices.
+- Use the slider and toggle to see prices for different page view numbers.
+- If the visitor switches the toggle to yearly billing, a 25% discount should be applied to all prices.
 
 #### Screenshot
 ![Project demo](./images/interactivePrice.gif)
@@ -39,6 +33,7 @@
 #### Thoughts
 -[BrennaObrien](https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html)
 - [Nikita Hlopov](https://nikitahl.com/style-range-input-css)
+- [MDN aia-pressed](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
 ```js
 ```
 
