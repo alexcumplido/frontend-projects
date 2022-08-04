@@ -38,7 +38,8 @@ pageInputRange.addEventListener('change', function (event) {
 });
 
 costToggle.addEventListener('click', function (event) {
-    if (event.target.classList.contains('button__toggle--monthly')) {
+    if (event.target.ariaPressed === 'false') {
+        event.target.ariaPressed = true;
         flushPrice = finalPrice;
         finalPrice = finalPrice - (finalPrice * 0.25);
         cardDiscount.textContent = "-25%";
@@ -46,7 +47,8 @@ costToggle.addEventListener('click', function (event) {
         event.target.classList.replace(
             'button__toggle--monthly', 'button__toggle--yearly'
         );
-    } else {
+    } else if (event.target.ariaPressed === 'true') {
+        event.target.ariaPressed = false;
         finalPrice = flushPrice;
         printViewsAndCost(pageInputRange.value)
         cardDiscount.textContent = "25%";
