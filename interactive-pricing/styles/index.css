@@ -223,6 +223,12 @@ input[type=range]::-webkit-slider-thumb:active {
     background-color: var(--clr-neutral-100);
 }
 
+.card__toggle span:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
 
 .card__discount {
     padding: 0.25rem 0.75rem;
