@@ -31,6 +31,15 @@
     --fw-bold: 800;
 }
 
+.visually-hidden {
+    position: absolute;
+    left: 0;
+    top: -500px;
+    width: 1;
+    height: 1;
+    overflow: hidden;
+}
+
 body {
     max-width: var(--max-width-desktop);
     min-height: 100vh;

@@ -6,8 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Alexandre Cumplido Bou" />
-        <meta name="description" content="Interactive Pricing Component" />
-        <meta nem="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="description" content="Interactive price component with Input Range fully customized via plain JavaScript." />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
         <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
         <link rel="stylesheet" href="./styles/main.css"/>
         <script defer src="./scripts/script.js"></script>
@@ -21,7 +21,8 @@
             </div>
             <section class="card">
                 <div class="card__range">
-                    <span class="card__views"></span>  
+                    <h2 class="card__views"></h2> 
+                    <label class="visually-hidden" for="views"></label> 
                     <input class="card__input" type="range" id="views" name="views" min="10000" max="1000000" step="10000">
                     <span class="card__cost"></span>
                     <div class="card__toggle">
