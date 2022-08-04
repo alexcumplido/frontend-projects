@@ -73,8 +73,11 @@ main {
     color: var(--clr-neutral-600);
 }
 
+.title-wrapper span {
+    display: block;
+}
 
-.title-wrapper span p {
+.title-wrapper p {
     font-size: var(--fs-200);
     color: var(--clr-neutral-500);
 }
@@ -170,7 +173,6 @@ input[type=range]::-webkit-slider-thumb:active {
 }
 
 .button__toggle {
-
     position: relative;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -286,7 +288,7 @@ input[type=range]::-webkit-slider-thumb:active {
         max-width: 35rem;
     }
 
-    .title-wrapper span p {
+    .title-wrapper span {
         display: inline;
     }
 

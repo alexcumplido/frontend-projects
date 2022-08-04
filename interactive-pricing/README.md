@@ -31,9 +31,9 @@
 - Mobile-first workflow
 
 #### Thoughts
--[BrennaObrien](https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html)
-- [Nikita Hlopov](https://nikitahl.com/style-range-input-css)
-- [MDN aia-pressed](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
+[BrennaObrien](https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html)
+[Nikita Hlopov](https://nikitahl.com/style-range-input-css)
+[MDN aia-pressed](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
 ```js
 ```
 
