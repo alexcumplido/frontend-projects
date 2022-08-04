@@ -142,11 +142,15 @@ input[type=range]::-webkit-slider-thumb {
     background-repeat: no-repeat;
     background-position: center center;
     box-shadow: 0 12px 6px 2px var(--clr-primary-100);
-    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    cursor: grab;
 }
 
 input[type=range]::-webkit-slider-thumb:active {
     background-color: var(--clr-primary-200--dark);
+    cursor: grabbing;
 }
 
 .card__cost {
