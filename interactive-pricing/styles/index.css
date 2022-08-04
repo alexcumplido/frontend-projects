@@ -223,8 +223,9 @@ input[type=range]::-webkit-slider-thumb:active {
     background-color: var(--clr-neutral-100);
 }
 
+
 .card__discount {
-    padding: 0.25rem 1rem;
+    padding: 0.25rem 0.75rem;
     margin-left: 0.25rem;
     border-radius: 100vmax;
     font-weight: var(--fw-bold);
