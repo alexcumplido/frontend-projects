@@ -122,8 +122,13 @@ input[type=range] {
     cursor: pointer;
 }
 
+input[type=range]:hover {
+    cursor: grab;
+}
+
 input[type=range]:active {
     background-image: linear-gradient(var(--clr-primary-200--dark), var(--clr-primary-200--dark));
+    cursor: grabbing;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -162,7 +167,7 @@ input[type=range]::-webkit-slider-thumb:active {
     color: var(--clr-neutral-600);
 }
 
-.card__cost span {
+.card__period {
     font-size: var(--fs-300);
     color: var(--clr-neutral-500);
 }
@@ -176,7 +181,7 @@ input[type=range]::-webkit-slider-thumb:active {
     color: var(--clr-neutral-500);
 }
 
-.button__toggle {
+.btn__toggle {
     position: relative;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -185,12 +190,12 @@ input[type=range]::-webkit-slider-thumb:active {
     cursor: pointer;
 }
 
-.button__toggle--monthly {
+.btn__toggle--month {
     background-color: var(--clr-neutral-400);
     transition: .5s;
 }
 
-.button__toggle--monthly::after {
+.btn__toggle--month::after {
     content: "";
     position: absolute;
     left: 0.20rem;
@@ -201,12 +206,12 @@ input[type=range]::-webkit-slider-thumb:active {
     background-color: var(--clr-neutral-100);
 }
 
-.button__toggle--yearly {
+.btn__toggle--year {
     background-color: var(--clr-primary-200);
     transition: .5s;
 }
 
-.button__toggle--yearly::after {
+.btn__toggle--year::after {
     content: "";
     position: absolute;
     right: 0.20rem;
