@@ -47,7 +47,7 @@ The function calculates a dynamic background based on a percentage of what value
 A list of things learned doing this project:
 - Applied [Josh Comeau](https://www.joshwcomeau.com/css/custom-css-reset/) reset stylesheet
 - Add [`aria-pressed`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) and improve accessibility for toggle buttons.
-- Using [`cursor:grab`](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)`cursor:grab` and [`cursor:grabbing`](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor) to increase UX.
+- Using [`cursor:grab`](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor) and [`cursor:grabbing`](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor) to increase UX.
 - Overriding User Agent Stylesheets.
 
 #### Continued development
