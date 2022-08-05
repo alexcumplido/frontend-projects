@@ -45,7 +45,8 @@ function handleUpdatePlan(event) {
 
 window.addEventListener('DOMContentLoaded', function () {
     cardDiscount.textContent = "25%";
-    pageCost.textContent = `${16.00}`;
+    finalPrice = 16;
+    pageCost.textContent = `${finalPrice}`;
     handleUpdateViews(inputRange.value);
 });
 
