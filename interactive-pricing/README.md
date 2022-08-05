@@ -33,7 +33,7 @@ git clone https://github.com/alexcumplido/frontend-mentor.git
 - Mobile-first workflow
 
 #### Thoughts
-In this project I had to balance between focusing on UI or UX. At first I considered using the input attribute `max`,`min` and `steps` to create a better UX helping the user the visualize each step of their range, but then I realize that I was not able to style the progression of the slider `::-webkit-slider-runnable-track`, since it just jumped from one range to another without the movement effect. Also this task is a little bit tricky because cross-browsing compatibility, Safari and Firefox browser offer native css selectors to acess all the elements of an `input[type=range]` but Chrome does not offer the the possibility to style directly the progression of the slider. So reasearching I found [BrennaObrien](https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html) and [Nikita Hlopov](https://nikitahl.com/style-range-input-css) used interesting techniques to style the progression of the slider and applied to my code.
+In this project I had to balance between focusing on UI or UX. At first I considered using the input attribute max, mix and steps to create a better UX helping the user the visualize each step of their range, but then I realize that I was not able to style the progression of the slider `::-webkit-slider-runnable-track`, since it just jumped from one range to another without the movement effect. Also this task is a little bit tricky because cross-browsing compatibility, Safari and Firefox browser offer native css selectors to acess all the elements of an `input[type=range]` but Chrome does not offer the the possibility to style directly the progression of the slider. So reasearching I found [BrennaObrien](https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html) and [Nikita Hlopov](https://nikitahl.com/style-range-input-css) used interesting techniques to style the progression of the slider and applied to my code.
 
 ```js
 const inputRange = document.querySelector('.card__input');
@@ -42,7 +42,7 @@ function handleUpdateSlider() {
         `${(inputRange.value - inputRange.min) * 100 / (inputRange.max - inputRange.min)}% 100%`
 }
 ```
-The function calculates a dynamic background based on a percentage of what value is deciding the user to select from the input. In this case `inputRange` targets the input accessing its current `value` and `max` and `min` atttributes.
+The function calculates a dynamic background based on a percentage of what value is deciding the user to select from the input. In this case `inputRange` targets the input accessing its current value and max and min atttributes.
 
 A list of things learned doing this project:
 - Applied [Josh Comeau](https://www.joshwcomeau.com/css/custom-css-reset/) reset stylesheet
