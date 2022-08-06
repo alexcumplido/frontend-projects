@@ -44,12 +44,12 @@
     color: var(--softRed);
 }
 
-.accordion__item--active .accordion-title {
+.accordion__item[aria-expanded="true"] .accordion-title {
     font-weight: 600;
     color: var(--darkDesaturated);
 }
 
-.accordion__item--active .accordion-title::after {
+.accordion__item[aria-expanded="true"] .accordion-title::after {
     position: absolute;
     right: 0;
     content: url("../images/icon-arrow-down.svg");
@@ -68,7 +68,7 @@
     transition: 0.5s;
 }
 
-.accordion__item--active .accordion-text {
+.accordion__item[aria-expanded="true"] .accordion-text {
     margin-top: 1rem;
     height: auto;
 }
@@ -82,10 +82,10 @@
         justify-content: flex-end;
         margin: initial;
         padding: 2rem;
-        height: 30rem;
-        background-image: url("../images/bg-pattern-desktop.svg"), url("../images/illustration-woman-online-desktop.svg");
+        height: min-content;
+        background-image: url("../images/illustration-woman-online-desktop.svg"), url("../images/bg-pattern-desktop.svg");
         background-repeat: no-repeat, no-repeat;
-        background-position: -35rem -20rem, -75px center;
+        background-position: -4.75rem 4rem, -35rem -20rem;
     }
 
     .accordion::before {
