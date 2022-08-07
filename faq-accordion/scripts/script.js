@@ -8,4 +8,4 @@ accordionItems.forEach(function (element, index, list) {
             element.setAttribute('aria-expanded', 'false');
         }
     });
-})
+});
