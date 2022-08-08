@@ -23,14 +23,14 @@
                 <div class="card__range">
                     <h2 class="card__views"></h2> 
                     <label class="visually-hidden" for="views"></label> 
-                    <input class="card__input" type="range" id="views" name="views" value="100000" min="10000" max="1000000" step="10000">
+                    <input type="range" id="views" class="card__input" name="views" value="100000" min="10000" max="1000000" step="10000">
                     <div class="card__cost">
                         <span class="card__price"></span>
                         <span class="card__period">/ month</span>
                     </div>
                     <div class="card__toggle">
                         <span>Monthly Billing</span>
-                        <button type="button" aria-pressed="false" class="btn__toggle btn__toggle--month"><span class="visually-hidden">Toggle button</span></button>
+                        <button type="button" id="btn__toggle" class="btn__toggle btn__toggle--month" aria-pressed="false"><span class="visually-hidden">Toggle button</span></button>
                         <span>Yearly Billing <span class="card__discount"></span></span>
                     </div>
                 </div>
