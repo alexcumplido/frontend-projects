@@ -9,6 +9,10 @@ function handleSlider() {
         `${(inputRange.value - inputRange.min) * 100 / (inputRange.max - inputRange.min)}% 100%`
 }
 
+function printPrice(price) {
+    pageCost.textContent = `$${price.toFixed(2)}`;
+}
+
 function handleViews(views) {
     switch (true) {
         case (views >= 10000 && views < 100000):
@@ -34,36 +38,35 @@ function handlePrice(views) {
     if (buttonToggle.ariaPressed === 'true') {
         finalPrice = finalPrice - (finalPrice * 0.25);
     }
-    pageCost.textContent = `$${finalPrice.toFixed(2)}`;
+    printPrice(finalPrice);
 }
 
-function handleToggle(event) {
-    if (event.target.ariaPressed === 'false') {
-        event.target.ariaPressed = true;
+function handleToggle() {
+    if (buttonToggle.ariaPressed === 'false') {
+        buttonToggle.ariaPressed = true;
         handlePrice(inputRange.value)
         cardDiscount.textContent = "-25%";
-        event.target.classList.replace('btn__toggle--month', 'btn__toggle--year');
-    } else if (event.target.ariaPressed === 'true') {
-        event.target.ariaPressed = false;
+        buttonToggle.classList.replace('btn__toggle--month', 'btn__toggle--year');
+    } else if (buttonToggle.ariaPressed === 'true') {
+        buttonToggle.ariaPressed = false;
         handlePrice(inputRange.value)
         cardDiscount.textContent = "25%";
-        event.target.classList.replace('btn__toggle--year', 'btn__toggle--month');
+        buttonToggle.classList.replace('btn__toggle--year', 'btn__toggle--month');
     }
-    pageCost.textContent = `$${finalPrice.toFixed(2)}`;
+    printPrice(finalPrice);
 }
 
 inputRange.addEventListener('input', function (event) {
     handleViews(event.target.value);
-    handlePrice(inputRange.value);
+    handlePrice(event.target.value);
 });
 
-buttonToggle.addEventListener('click', function (event) {
-    handleToggle(event);
+buttonToggle.addEventListener('click', function () {
+    handleToggle();
 });
 
 window.addEventListener('DOMContentLoaded', function () {
     cardDiscount.textContent = "25%";
-    finalPrice = 16;
-    pageCost.textContent = `${finalPrice.toFixed(2)}`;
+    handlePrice(inputRange.value);
     handleViews(inputRange.value);
 });
