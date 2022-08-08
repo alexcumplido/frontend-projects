@@ -52,7 +52,7 @@
 
 @media screen and (min-width: 750px) {
     .advice {
-        max-width: 80%;
+        width: 40rem;
     }
 
     .divider {

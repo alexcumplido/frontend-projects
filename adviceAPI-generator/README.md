@@ -1,4 +1,4 @@
-## FAQ Accordion component
+## Advice generator app
 - [Github Pages live](https://alexcumplido.github.io/frontend-mentor/adviceAPI-generator) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/vanilla-js-and-css-advice-generator-dMaq1tvQ07)
 
 ### Table of contents

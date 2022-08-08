@@ -16,9 +16,5 @@ function printAdvice(data) {
     adviceText.innerText = `"${String(advice)}"`;
 }
 
-btnAdvice.addEventListener('click', function () {
-    fetchAdvice();
-})
-
-//First advice printed
-fetchAdvice();
+btnAdvice.addEventListener('click', fetchAdvice);
+document.addEventListener('DOMContentLoaded', fetchAdvice);
