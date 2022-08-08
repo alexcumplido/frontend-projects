@@ -14,16 +14,12 @@ function printPrice(price) {
 }
 
 function handleViews(views) {
-    switch (true) {
-        case (views >= 10000 && views < 100000):
-            views = `${views.substring(0, 2)}K`;
-            break;
-        case (views >= 100000 && views < 1000000):
-            views = `${views.substring(0, 3)}K`
-            break;
-        case (views >= 1000000):
-            views = `${views.substring(0, 1)}M`
-            break;
+    if (views >= 10000 && views < 100000) {
+        views = `${views.substring(0, 2)}K`;
+    } else if (views >= 100000 && views < 1000000) {
+        views = `${views.substring(0, 3)}K`
+    } else if (views >= 1000000) {
+        views = `${views.substring(0, 1)}M`
     }
     pageViews.textContent = `${views} pageviews`;
     handleSlider();
