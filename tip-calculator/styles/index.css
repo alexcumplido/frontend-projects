@@ -1,0 +1,62 @@
+:root {
+    --clr-primary-100: hsl(172, 67%, 45%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(189, 41%, 97%);
+    --clr-neutral-300: hsl(185, 41%, 84%);
+    --clr-neutral-400: hsl(184, 14%, 56%);
+    --clr-neutral-500: hsl(186, 14%, 43%);
+    --clr-neutral-600: hsl(183, 100%, 15%);
+
+    --max-width-desktop: 1110px;
+
+    --ff-primary: 'Space Mono', monospace;
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-primary);
+    --fs-body: var(--fs-200);
+
+    --fs-100: 0.812rem;
+    --fs-200: 1rem;
+    --fs-300: 1.500rem;
+    --fs-400: 2rem;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+/* Utility classes*/
+.visually-hidden {
+    position: absolute;
+    left: 0;
+    top: -500px;
+    width: 1;
+    height: 1;
+    overflow: hidden;
+}
+
+.button {
+    border: none;
+    border-radius: 100vmax;
+    padding: 0.5rem 1rem;
+}
+
+.button:hover,
+.button:focus-visible {
+    background-color: ;
+}
+
+body {
+    max-width: var(--max-width-desktop);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+}
+
+@media screen and (min-width:550px) {
+    :root {
+        --fs-400: 3rem;
+    }
+}
