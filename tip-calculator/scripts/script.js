@@ -1,89 +1,27 @@
-// PEDAC
-// 1. Problem
-//     (inputs - outputs, explicit - implicit requirements)
+const inputBill = document.getElementById('input-bill');
+const radioTipButtons = document.querySelectorAll('.radio-tip');
+const inputCustomTip = document.getElementById('input-custom-tip');
+const inputNumPeople = document.getElementById('input-num-people');
+const btnReset = document.getElementById('reset-calculations');
+const printerBill = document.getElementById('printer-bill');
+const printerTip = document.getElementById('printer-tip');
 
-// 2. Examples
-//     (user - flow features, edge cases)
+let currentPriceBill = 0
+let currentTipPercentage = 0;
 
-// 3. Data Structure
+inputBill.addEventListener('input', function (event) {
+    currentPriceBill = parseFloat(event.target.value);
+    updatePrice();
+});
 
-// 4. Algorightm
-//     (pseudocode)
+radioTipButtons.forEach(function (element, index, list) {
+    element.addEventListener('click', function (event) {
+        currentTipPercentage = parseInt(event.target.value);
+        updatePrice();
+    });
+})
 
-// 5. Code
-//     (test)
-
-
-// What is the smallest unit of work / problem unit that I can work on ?
-//     How can I get it done and fast ?
-//         If stuck: how can I zoom out ?
-
-{
-    /*
-
-    var main = document.querySelector('main');
-
-    var currentlyLightTheme = window.matchMedia("(prefers-color-scheme:light)")
-
-    function toggle() { 
-
-        if (currentlyLightTheme) {
-            main.className = "overrideLight";
-            currentlyLightTheme = false;
-        } else {
-            main.className = "overrideDark";
-            currentlyLightTheme = true;
-        }
-    }
-
-*/
+function updatePrice() {
+    currentPriceBill = currentPriceBill + ((currentPriceBill * currentTipPercentage) / 100);
+    printerBill.textContent = currentPriceBill;
 }
-
-/*
-
-var main = document.querySelector('main');
-
-var currentlyLightTheme = window.matchMedia("(prefers-color-scheme:light)")
-
-function toggle() {
-
-    if (currentlyLightTheme) {
-        main.className = "overrideLight";
-        currentlyLightTheme = false;
-    } else {
-        main.className = "overrideDark";
-        currentlyLightTheme = true;
-    }
-}
-
-*/
-
-
-/*
-.override-light {
-    bakcground-color: white;
-    color: black;
-}
-
-.override-dark {
-    background-color: black;
-    color: white;
-}
-
-*/
-
-
-// const body = document.querySelector('body');
-// var currentlyLightTheme = window.matchMedia(
-//     "(prefers-color-scheme: light)"
-// );
-
-// function toggleTheme() {
-//     if (currentlyLightTheme) {
-//         body.classList.add('override-light');
-//         currentlyLightTheme = false;
-//     } else {
-//         body.classList.add('override-dardk');
-//         currentlyLightTheme = true;
-//     }
-// }
