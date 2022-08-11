@@ -3,9 +3,11 @@ As a `type of user`, I want `some goal` so that `some reason`
 
 PEDAC 
 1. Problem  (inputs, output, requirements)
-    As a User I want to input a total bill cost, select a tip percentage and input a number of people
-    As a User I want to split a bill between people and calculate a tip percentage over the total bill.
-    As a User I want to know how much each person needs to pay from the total bill cost plus the percentage tip
+    As a user I want to calculate given a bill and input how much each person need to pay.
+    As a User I want to input a bill cost, select a tip percentage and input a number of people
+    As a User I want to divide the bill between people 
+    As a User I want to divide the total tip between people
+    As a User I want to know how much each person needs to pay from the total bill plus the tip
     As a User I want to see how much each person needs to pay from the total tip percentage 
     As a User I want to reset the whole calculator to the initial state
 
@@ -16,7 +18,8 @@ PEDAC
         Am event click on a reset button
 
     Requirement
-        Divide the bill cost between a specific number of poeple
+        Divide the bill plus the tip  between a number of people
+        Divide the tip betweeen a number of people
         If a percentage tip applied, add that to the bill cost and re-calculate how much each one needs to pay
         Print the outputs in a panel so the it show how much each person needs to pay from the total bill cost and the tip 
 
