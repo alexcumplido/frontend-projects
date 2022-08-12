@@ -16,27 +16,29 @@
         <main>
             <form id="form">
                 <div class="form__control">
-                    <label  for="input-bill">Bill</label>
-                    <input class="input__bill" type="number" min="0" id="input-bill">
+                    <label class="form__label" for="input-bill">Bill</label>
+                    <input class="form__input-number input__bill" type="number" min="0" id="input-bill">
                 </div>
                 <fieldset>
-                    <legend>Select % tip</legend>
-                    <input type="radio" id="5" class="radio-tip" name="radio-tip" value="5" />
-                    <label for="5">5%</label>
-                    <input type="radio" id="10" class="radio-tip" name="radio-tip" value="10" />
-                    <label for="10">10%</label>
-                    <input type="radio" id="15" class="radio-tip" name="radio-tip" value="15" />
-                    <label for="15">15%</label>
-                    <input type="radio" id="25" class="radio-tip" name="radio-tip" value="25" />
-                    <label for="25">25%</label>
-                    <input type="radio" id="50" class="radio-tip" name="radio-tip" value="50" />
-                    <label for="50">50%</label>
-                    <input type="number" min="0" id="input-custom-tip">
-                    <label for="50">Custom tip</label>
+                    <legend class="form__label">Select % tip</legend>
+                    <div class="fieldset__controls">
+                        <input class="form-radio" type="radio" id="5"  name="radio-tip" value="5" />
+                        <label class="radio-label" for="5">5%</label>
+                        <input class="form-radio" type="radio" id="10" name="radio-tip" value="10" />
+                        <label class="radio-label" for="10">10%</label>
+                        <input class="form-radio" type="radio" id="15" name="radio-tip" value="15" />
+                        <label class="radio-label" for="15">15%</label>
+                        <input class="form-radio" type="radio" id="25" name="radio-tip" value="25" />
+                        <label class="radio-label" for="25">25%</label>
+                        <input class="form-radio" type="radio" id="50" name="radio-tip" value="50" />
+                        <label class="radio-label" for="50">50%</label>
+                        <input class="form__input-number form__input-custom" type="number" min="0" id="input-custom-tip" placeholder="Custom">
+                        <label class="visually-hidden" for="50">Custom tip</label>
+                    </div>
                 </fieldset>
                 <div class="form__control">
-                    <input class="input__people" type="number" min="0" id="input-num-people">
-                    <label>Number of people</label>
+                    <label class="form__label">Number of people</label>
+                    <input class="form__input-number input__people" type="number" min="0" id="input-num-people">
                 </div>
             </form> 
             <div class="panel">

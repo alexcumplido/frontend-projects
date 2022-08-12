@@ -1,5 +1,5 @@
 const inputBill = document.getElementById('input-bill');
-const radioTipButtons = document.querySelectorAll('.radio-tip');
+const radioTipButtons = document.querySelectorAll('.form-radio');
 const inputCustomTip = document.getElementById('input-custom-tip');
 const inputNumPeople = document.getElementById('input-num-people');
 const btnReset = document.getElementById('reset-calculations');
