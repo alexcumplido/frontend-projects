@@ -6,14 +6,14 @@ Repository where I develop different projects using HTML5, CSS3 and JavaScript. 
   - [Clock App](https://www.frontendmentor.io/challenges/clock-app-LMFaxFwrM)
   - [Coffeeroasters subscription site](https://www.frontendmentor.io/challenges/coffeeroasters-subscription-site-5Fc26HVY6  )
   - [Planets fact site](https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f)
-  - [Interactive card details Form] (https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw)
   - [Skilled e-learning landing Page](https://www.frontendmentor.io/challenges/skilled-elearning-landing-page-S1ObDrZ8q)
   - [Single-page design portfolio](https://www.frontendmentor.io/challenges/singlepage-design-portfolio-2MMhyhfKVo)
   - [Crowdfunding product page](https://www.frontendmentor.io/challenges/crowdfunding-product-page-7uvcZe7ZR)
 -->
 
 ## Projects
-  - [Tip calculator (Work in progress)](https://alexcumplido.github.io/tip-calculator/)
+  - [Interactive card details Form (Work in progress)](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw)
+  - [Tip calculator](https://alexcumplido.github.io/frontend-mentor/tip-calculator/)
   - [Interactive price component](https://alexcumplido.github.io/frontend-mentor/interactive-pricing/)
   - [GitHub user search app](https://alexcumplido.github.io/frontend-mentor/github-user-api/)
   - [Time Tracking Dashboard](https://alexcumplido.github.io/frontend-mentor/time-dashboard/) 
