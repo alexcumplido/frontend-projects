@@ -30,7 +30,7 @@ function printErrorPeople() {
 
 function printCalcualtion(billEachPerson, tipEachPerson) {
     printerBill.textContent = `$${billEachPerson}`;
-    printerTip.textContent = `$${tipEachPerson} `;
+    printerTip.textContent = `$${tipEachPerson}`;
 }
 
 function checkRadioTip() {
@@ -46,8 +46,8 @@ function reset() {
     tipPercentage = 0;
     inputCustomTip.value = "";
     inputNumPeople.value = "";
-    printerBill.textContent = "";
-    printerTip.textContent = "";
+    printerBill.textContent = `$${0}`;
+    printerTip.textContent = `$${0}`;
 }
 
 inputBill.addEventListener('input', updatePrice);

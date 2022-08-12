@@ -17,7 +17,7 @@
             <form id="form">
                 <div class="form__control">
                     <label class="form__label" for="input-bill">Bill</label>
-                    <input class="form__input-number input__bill" type="number" min="0" id="input-bill">
+                    <input class="form__input-number input__bill" type="number" min="0" id="input-bill" placeholder="0">
                 </div>
                 <fieldset>
                     <legend class="form__label">Select % tip</legend>
@@ -38,20 +38,27 @@
                 </fieldset>
                 <div class="form__control">
                     <label class="form__label">Number of people</label>
-                    <input class="form__input-number input__people" type="number" min="0" id="input-num-people">
+                    <input class="form__input-number input__people" type="number" min="0" id="input-num-people" placeholder="0">
                 </div>
             </form> 
+
             <div class="panel">
-                <div>
-                    <span>Total amount / person</span>
-                    <span id="printer-bill" class="show__info"></span>
+                <div class="panel-row">
+                    <div>
+                        <p>Tip Amount <p>
+                        <p>/ person</p>  
+                    </div>
+                    <span id="printer-tip" class="panel-output"></span>
                 </div>
-                <div>
-                    <span>Total tip / person</span>
-                    <span id="printer-tip" class="show__info"></span>
+                <div class="panel-row">
+                    <div>
+                        <p>Total<p>
+                        <p>/ person</p>  
+                    </div>
+                    <span id="printer-bill" class="panel-output"></span>
                 </div>
+                <button id="reset-calculations">reset</button>
             </div>
-        <button id="reset-calculations">reset</button>
         </main>
         <script src="./scripts/script.js"></script>
     </body>

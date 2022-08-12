@@ -22,7 +22,7 @@
     --fs-400: 2rem;
 
     --fw-regular: 400;
-    --fw-bold: 700;
+    --fw-bold: 600;
 }
 
 /* Utility classes*/
@@ -41,10 +41,10 @@
     padding: 0.5rem 1rem;
 }
 
-/* .button:hover,
+.button:hover,
 .button:focus-visible {
     background-color: ;
-} */
+}
 
 
 body {
@@ -61,6 +61,9 @@ body {
 
 main {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     margin-top: 9rem;
     padding: 2rem;
     border-radius: 1.5rem;
@@ -98,8 +101,14 @@ form {
     font-weight: var(--fw-bold);
     border: none;
     border-radius: 0.3rem;
+    text-align: right;
     color: var(--clr-neutral-600);
     background-color: var(--clr-neutral-200);
+    cursor: pointer;
+}
+
+.form__input-number:hover {
+    outline: 1px solid var(--clr-primary-100);
 }
 
 .form__input-number::-webkit-outer-spin-button,
@@ -113,7 +122,7 @@ form {
 }
 
 .form__label {
-    font-size: var(--fs-100);
+    font-size: var(--fs-200);
     font-weight: var(--fw-bold);
     padding: 0;
 }
@@ -143,7 +152,7 @@ legend {
 }
 
 .radio-label {
-    flex-basis: 45%;
+    flex-basis: 46%;
 }
 
 .form__input-custom {
@@ -188,10 +197,6 @@ legend {
     background-color: var(--clr-primary-100);
 }
 
-.form-radio:focus+.radio-label {
-    outline: 1px solid var(--clr-primary-100);
-}
-
 .input__people {
     position: relative;
     background-image: url("../images/icon-person.svg");
@@ -199,8 +204,106 @@ legend {
     background-repeat: no-repeat;
 }
 
-@media screen and (min-width:550px) {
+.panel {
+    align-self: stretch;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    font-weight: var(--fw-bold);
+    background-color: var(--clr-neutral-600);
+}
+
+.panel-row {
+    font-size: var(--fs-200);
+    font-weight: var(--fw-bold);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.panel-row:first-of-type {
+    margin-bottom: 1.25rem;
+}
+
+.panel-row p:first-of-type {
+    font-size: var(--fs-200);
+    color: var(--clr-neutral-100);
+}
+
+.panel-row p:last-of-type {
+    font-size: var(--fs-100);
+    color: var(--clr-neutral-400);
+}
+
+.panel-output {
+    font-size: var(--fs-400);
+    color: var(--clr-primary-100);
+}
+
+.panel button {
+    margin-top: 2rem;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.3rem;
+    color: var(--clr-neutral-600);
+    background-color: var(--clr-primary-100);
+}
+
+.panel button:hover {
+    background-color: var(--clr-neutral-350);
+}
+
+@media screen and (min-width:750px) {
     :root {
         --fs-400: 3rem;
+    }
+
+    main {
+        max-width: 57rem;
+        padding: 2.5rem;
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    form {
+        flex: 1;
+        justify-content: space-between;
+    }
+
+    .form__control {
+        gap: 1rem;
+    }
+
+    .form__input-number {
+        font-size: var(--fs-300);
+    }
+
+    .fieldset__controls {
+        justify-content: space-between;
+    }
+
+    .radio-label {
+        flex-basis: 30%;
+    }
+
+    .form__input-custom {
+        text-align: center;
+        flex-basis: 30%;
+    }
+
+    .panel {
+        padding: 2.5rem;
+        flex: 1;
+    }
+
+    .panel-row:first-of-type {
+        margin-bottom: 2.5rem;
+    }
+
+    .panel button {
+        margin-top: 7.5rem;
     }
 }
