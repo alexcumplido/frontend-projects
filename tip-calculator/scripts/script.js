@@ -5,18 +5,19 @@ const inputNumPeople = document.getElementById('input-num-people');
 const btnReset = document.getElementById('reset-calculations');
 const printerBill = document.getElementById('printer-bill');
 const printerTip = document.getElementById('printer-tip');
+const form = document.getElementById('form');
 let buttonCurrentTip;
 let tipPercentage = 0;
 
 function updatePrice() {
     if (Number(inputNumPeople.value) > 0) {
-        let price = parseFloat(inputBill.value);
-        let tip = (price * tipPercentage) / 100;
-        let people = Number(inputNumPeople.value)
-        let priceBill = price + tip;
-        let billEachPerson = (priceBill / people).toFixed(2);
-        let tipEachPerson = (tip / people).toFixed(2);
-        printCalcualtion(billEachPerson, tipEachPerson);
+        let totalBill = parseFloat(inputBill.value);
+        let totalTip = (totalBill * tipPercentage) / 100;
+        let totalPeople = Number(inputNumPeople.value)
+        let totalCost = totalBill + totalTip;
+        let totalCostPerson = (totalCost / totalPeople).toFixed(2);
+        let totalTipPerson = (totalTip / totalPeople).toFixed(2);
+        printCalcualtion(totalCostPerson, totalTipPerson);
     } else {
         printCalcualtion(0, 0);
         printErrorPeople();
@@ -32,12 +33,16 @@ function printCalcualtion(billEachPerson, tipEachPerson) {
     printerTip.textContent = `$${tipEachPerson} `;
 }
 
-function reset() {
-    inputBill.value = "";
+function checkRadioTip() {
     if (buttonCurrentTip) {
         buttonCurrentTip.checked = false;
         buttonCurrentTip = undefined;
     }
+}
+
+function reset() {
+    inputBill.value = "";
+    checkRadioTip();
     tipPercentage = 0;
     inputCustomTip.value = "";
     inputNumPeople.value = "";
@@ -57,15 +62,13 @@ radioTipButtons.forEach(function (element, index, list) {
 });
 
 inputCustomTip.addEventListener('input', function (event) {
-    if (buttonCurrentTip) {
-        buttonCurrentTip.checked = false;
-        buttonCurrentTip = undefined;
-    }
+    checkRadioTip();
     tipPercentage = parseInt(event.target.value);
     updatePrice();
 });
 
 inputNumPeople.addEventListener('input', updatePrice);
+
 btnReset.addEventListener('click', reset);
 
 window.addEventListener('DOMContentLoaded', function () {

@@ -45,6 +45,7 @@
     background-color: ;
 }
 
+
 body {
     max-width: var(--max-width-desktop);
     min-height: 100vh;
@@ -54,7 +55,88 @@ body {
     align-items: center;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
+    background-color: var(--clr-neutral-300);
 }
+
+main {
+    position: relative;
+    margin-top: 9rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    color: var(--clr-neutral-500);
+    background-color: var(--clr-neutral-100);
+}
+
+main::before {
+    position: absolute;
+    width: 5.5rem;
+    height: 5.5rem;
+    top: -6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    background: url("../images/logo.svg");
+    background-repeat: no-repeat;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+label,
+legend {
+    font-size: var(--fs-100);
+    font-weight: var(--fw-bold);
+    padding: 0;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+.form__control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.33rem;
+}
+
+input[type=number] {
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-300);
+    border: none;
+    border-radius: 0.3rem;
+    color: var(--clr-neutral-600);
+    background-color: var(--clr-neutral-200);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.input__bill {
+    position: relative;
+    background-image: url("../images/icon-dollar.svg");
+    background-position: 1rem center;
+    background-repeat: no-repeat;
+}
+
+.input__people {
+    position: relative;
+    background-image: url("../images/icon-person.svg");
+    background-position: 1rem center;
+    background-repeat: no-repeat;
+}
+
 
 @media screen and (min-width:550px) {
     :root {

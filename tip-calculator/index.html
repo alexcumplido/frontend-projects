@@ -14,10 +14,13 @@
     </head>
     <body>
         <main>
-            <form>
-            <fieldset>
-                <input type="number" min="0" id="input-bill">
-                <div>
+            <form id="form">
+                <div class="form__control">
+                    <label  for="input-bill">Bill</label>
+                    <input class="input__bill" type="number" min="0" id="input-bill">
+                </div>
+                <fieldset>
+                    <legend>Select % tip</legend>
                     <input type="radio" id="5" class="radio-tip" name="radio-tip" value="5" />
                     <label for="5">5%</label>
                     <input type="radio" id="10" class="radio-tip" name="radio-tip" value="10" />
@@ -30,10 +33,12 @@
                     <label for="50">50%</label>
                     <input type="number" min="0" id="input-custom-tip">
                     <label for="50">Custom tip</label>
+                </fieldset>
+                <div class="form__control">
+                    <input class="input__people" type="number" min="0" id="input-num-people">
+                    <label>Number of people</label>
                 </div>
-                <input type="number" min="0" id="input-num-people">
-                <label>Number of people</label>
-            </fieldset>
+            </form> 
             <div class="panel">
                 <div>
                     <span>Total amount / person</span>
@@ -44,7 +49,6 @@
                     <span id="printer-tip" class="show__info"></span>
                 </div>
             </div>
-        </form>
         <button id="reset-calculations">reset</button>
         </main>
         <script src="./scripts/script.js"></script>
