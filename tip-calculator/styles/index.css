@@ -310,11 +310,7 @@ legend {
 }
 
 .btn-reset[disabled=true] {
-    outline: 1px solid red;
-}
-
-.btn-reset[disabled=false] {
-    outline: 1px solid blue;
+    background-color: var(--clr-neutral-550);
 }
 
 @media screen and (min-width:750px) {

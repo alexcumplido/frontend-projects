@@ -21,8 +21,18 @@ function updatePrice() {
         let totalCostPerson = (totalCost / totalPeople).toFixed(2);
         let totalTipPerson = (totalTip / totalPeople).toFixed(2);
         printCalcualtion(totalCostPerson, totalTipPerson);
+        handleDisabledReset();
     } else {
+        handleDisabledReset();
         printCalcualtion(0, 0);
+    }
+}
+
+function handleDisabledReset() {
+    if (Number(inputNumPeople.value) > 0) {
+        btnReset.removeAttribute('disabled');
+    } else {
+        btnReset.setAttribute('disabled', 'true');
     }
 }
 
@@ -60,6 +70,7 @@ function reset() {
     inputNumPeople.value = "";
     printerBill.textContent = `$${0}`;
     printerTip.textContent = `$${0}`;
+    handleDisabledReset();
 }
 
 inputBill.addEventListener('input', updatePrice);
