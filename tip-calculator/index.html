@@ -15,14 +15,14 @@
     <body>
         <main>
             <form name="bill-data">
-                <div class="form__control">
+                <div class="control-wrapper">
                     <label class="form__label" for="input-bill">Bill</label>
-                    <input class="form__input-number input__bill" type="number" min="0" id="input-bill" placeholder="0">
+                    <input class="form__input-number" id="input-bill" type="number" min="0"placeholder="0" />
                 </div>
                 <fieldset>
                     <legend class="form__label">Select % tip</legend>
                     <div class="fieldset__controls">
-                        <input class="form-radio" type="radio" id="5"  name="radio-tip" value="5" />
+                        <input class="form-radio" type="radio" id="5" name="radio-tip" value="5" />
                         <label class="radio-label" for="5">5%</label>
                         <input class="form-radio" type="radio" id="10" name="radio-tip" value="10" />
                         <label class="radio-label" for="10">10%</label>
@@ -32,32 +32,31 @@
                         <label class="radio-label" for="25">25%</label>
                         <input class="form-radio" type="radio" id="50" name="radio-tip" value="50" />
                         <label class="radio-label" for="50">50%</label>
-                        <input class="form__input-number form__input-custom" type="number" min="0" id="input-custom-tip" placeholder="Custom">
-                        <label class="visually-hidden" for="50">Custom tip</label>
+                        <input class="form__input-number" id="input-tip" type="number" min="0" placeholder="Custom" />
+                        <label class="visually-hidden" for="input-tip">Custom tip</label>
                     </div>
                 </fieldset>
-                <div class="form__control">
+                <div class="control-wrapper">
                     <label class="form__label">Number of people</label>
-                    <input class="form__input-number input__people" type="number" min="0" id="input-num-people" placeholder="0">
+                    <input class="form__input-number" id="input-people" type="number" min="0" placeholder="0">
                 </div>
             </form> 
-
             <div class="panel">
                 <div class="panel-row">
                     <div>
                         <p>Tip Amount <p>
                         <p>/ person</p>  
                     </div>
-                    <span id="printer-tip" class="panel-output"></span>
+                    <span class="panel-output" id="printer-tip" ></span>
                 </div>
                 <div class="panel-row">
                     <div>
                         <p>Total<p>
                         <p>/ person</p>  
                     </div>
-                    <span id="printer-bill" class="panel-output"></span>
+                    <span class="panel-output" id="printer-bill"></span>
                 </div>
-                <button id="reset-calculations">reset</button>
+                <button class="btn-reset" id="reset-calculations">reset</button>
             </div>
         </main>
         <script src="./scripts/script.js"></script>
