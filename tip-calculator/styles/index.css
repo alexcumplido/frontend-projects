@@ -294,6 +294,14 @@ legend {
     background-color: var(--clr-neutral-350);
 }
 
+.btn-reset[disabled=true] {
+    outline: 1px solid red;
+}
+
+.btn-reset[disabled=false] {
+    outline: 1px solid blue;
+}
+
 @media screen and (min-width:750px) {
     .btn-reset {
         margin-top: 7.5rem;
