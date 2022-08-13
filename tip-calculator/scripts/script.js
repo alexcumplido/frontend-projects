@@ -4,6 +4,7 @@ const inputBill = document.getElementById('input-bill');
 const radioTipButtons = document.querySelectorAll('.form-radio');
 const inputCustomTip = document.getElementById('input-tip');
 const inputNumPeople = document.getElementById('input-people');
+const errorNumPeople = document.getElementById('error-people');
 const btnReset = document.getElementById('reset-calculations');
 const printerBill = document.getElementById('printer-bill');
 const printerTip = document.getElementById('printer-tip');
@@ -22,12 +23,17 @@ function updatePrice() {
         printCalcualtion(totalCostPerson, totalTipPerson);
     } else {
         printCalcualtion(0, 0);
-        printErrorPeople();
     }
 }
 
-function printErrorPeople() {
-    if (Number(inputNumPeople.value == false)) console.log('Not enough people')
+function handleErrorPeople() {
+    if (Number(inputNumPeople.value == false)) {
+        errorNumPeople.classList.replace('visually-hidden', 'error-people');
+        inputNumPeople.classList.add('input-people--error');
+    } else {
+        errorNumPeople.classList.replace('error-people', 'visually-hidden');
+        inputNumPeople.classList.remove('input-people--error');
+    }
 }
 
 function printCalcualtion(billEachPerson, tipEachPerson) {
@@ -73,7 +79,10 @@ inputCustomTip.addEventListener('input', function (event) {
     updatePrice();
 });
 
-inputNumPeople.addEventListener('input', updatePrice);
+inputNumPeople.addEventListener('input', function () {
+    handleErrorPeople()
+    updatePrice();
+});
 
 btnReset.addEventListener('click', reset);
 

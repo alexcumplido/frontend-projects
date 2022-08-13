@@ -17,10 +17,10 @@
             <form name="bill-data">
                 <div class="control-wrapper">
                     <label class="form__label" for="input-bill">Bill</label>
-                    <input class="form__input-number" id="input-bill" type="number" min="0"placeholder="0" />
+                    <input class="form__input-number input-bill" id="input-bill" type="number" min="0"placeholder="0" />
                 </div>
                 <fieldset>
-                    <legend class="form__label">Select % tip</legend>
+                    <legend class="form__label">Select Tip %</legend>
                     <div class="fieldset__controls">
                         <input class="form-radio" type="radio" id="5" name="radio-tip" value="5" />
                         <label class="radio-label" for="5">5%</label>
@@ -38,7 +38,8 @@
                 </fieldset>
                 <div class="control-wrapper">
                     <label class="form__label">Number of people</label>
-                    <input class="form__input-number" id="input-people" type="number" min="0" placeholder="0">
+                    <p class="error-people visually-hidden" id="error-people">Can't be zero</p>
+                    <input class="form__input-number input-people" id="input-people" type="number" min="0" placeholder="0">
                 </div>
             </form> 
             <div class="panel">
