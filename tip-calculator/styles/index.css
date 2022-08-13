@@ -7,6 +7,7 @@
     --clr-neutral-350: hsl(173, 61%, 77%);
     --clr-neutral-400: hsl(184, 14%, 56%);
     --clr-neutral-500: hsl(186, 14%, 43%);
+    --clr-neutral-550: hsl(183, 78%, 24%);
     --clr-neutral-600: hsl(183, 100%, 15%);
 
     --max-width-desktop: 1110px;
@@ -25,6 +26,12 @@
     --fw-bold: 600;
 }
 
+@media screen and (min-width:750px) {
+    :root {
+        --fs-400: 3rem;
+    }
+}
+
 /* Utility classes*/
 .visually-hidden {
     position: absolute;
@@ -34,18 +41,6 @@
     height: 1;
     overflow: hidden;
 }
-
-.button {
-    border: none;
-    border-radius: 100vmax;
-    padding: 0.5rem 1rem;
-}
-
-.button:hover,
-.button:focus-visible {
-    background-color: ;
-}
-
 
 body {
     max-width: var(--max-width-desktop);
@@ -61,11 +56,11 @@ body {
 
 main {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
     margin-top: 9rem;
     padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     border-radius: 1.5rem;
     color: var(--clr-neutral-500);
     background-color: var(--clr-neutral-100);
@@ -83,20 +78,43 @@ main::before {
     background-repeat: no-repeat;
 }
 
+@media screen and (min-width:750px) {
+    main {
+        margin-top: 8rem;
+        max-width: 57rem;
+        padding: 2rem;
+        gap: 3rem;
+    }
+}
+
 form {
+    flex-basis: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.form__control {
+@media screen and (min-width:750px) {
+    form {
+        flex: 1;
+        justify-content: space-between;
+    }
+}
+
+.control-wrapper {
     display: flex;
     flex-direction: column;
     gap: 0.33rem;
 }
 
+@media screen and (min-width:750px) {
+    .control-wraper {
+        gap: 1rem;
+    }
+}
+
 .form__input-number {
-    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    padding: 0.35rem 1rem 0.35rem 2.5rem;
     /* font-size: var(--fs-300); */
     font-weight: var(--fw-bold);
     border: none;
@@ -105,10 +123,17 @@ form {
     color: var(--clr-neutral-600);
     background-color: var(--clr-neutral-200);
     cursor: pointer;
+    -moz-appearance: textfield;
 }
 
 .form__input-number:hover {
-    outline: 1px solid var(--clr-primary-100);
+    outline: 2px solid var(--clr-primary-100);
+}
+
+@media screen and (min-width:750px) {
+    .form__input-number {
+        font-size: var(--fs-300);
+    }
 }
 
 .form__input-number::-webkit-outer-spin-button,
@@ -117,17 +142,13 @@ form {
     margin: 0;
 }
 
-.form__input-number {
-    -moz-appearance: textfield;
-}
-
 .form__label {
-    font-size: var(--fs-200);
+    flex-basis: 100%;
     font-weight: var(--fw-bold);
     padding: 0;
 }
 
-.input__bill {
+.form__input-number:first-of-type {
     position: relative;
     background-image: url("../images/icon-dollar.svg");
     background-position: 1rem center;
@@ -144,28 +165,36 @@ legend {
 }
 
 .fieldset__controls {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1rem;
 }
 
-.radio-label {
-    flex-basis: 46%;
+@media screen and (min-width:750px) {
+    .fieldset__controls {
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
-.form__input-custom {
-    padding: 0.5rem 1rem;
+.fieldset__controls .form__input-number {
+    width: 100%;
+    padding: 0.40rem 1rem;
     text-align: right;
-    width: 45%;
-    align-self: stretch;
 }
 
-.form__input-custom::placeholder {
+.fieldset__controls .form__input-number::placeholder {
     font-family: inherit;
     font-size: inherit;
     font-weight: var(--fw-bold);
+}
+
+@media screen and (min-width:750px) {
+    .fieldset__controls .form__input-number {
+        padding: 0.25rem;
+        text-align: right;
+    }
 }
 
 .form-radio {
@@ -175,8 +204,10 @@ legend {
 }
 
 .form-radio+.radio-label {
-    display: inline-block;
-    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 1rem;
     font-size: var(--fs-300);
     font-weight: var(--fw-bold);
     text-align: center;
@@ -197,7 +228,7 @@ legend {
     background-color: var(--clr-primary-100);
 }
 
-.input__people {
+.input-people:last-of-type {
     position: relative;
     background-image: url("../images/icon-person.svg");
     background-position: 1rem center;
@@ -205,7 +236,7 @@ legend {
 }
 
 .panel {
-    align-self: stretch;
+    flex-basis: 100%;
     padding: 2rem 1.5rem 1.5rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -214,21 +245,27 @@ legend {
     background-color: var(--clr-neutral-600);
 }
 
+@media screen and (min-width:750px) {
+    .panel {
+        padding: 2.5rem;
+        flex: 1;
+        gap: 0.5rem;
+    }
+}
+
 .panel-row {
-    font-size: var(--fs-200);
+    margin-bottom: 1.25rem;
     font-weight: var(--fw-bold);
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.panel-row:first-of-type {
-    margin-bottom: 1.25rem;
-}
-
-.panel-row p:first-of-type {
-    font-size: var(--fs-200);
     color: var(--clr-neutral-100);
+}
+
+@media screen and (min-width:750px) {
+    .panel-row {
+        margin-bottom: 0;
+    }
 }
 
 .panel-row p:last-of-type {
@@ -241,7 +278,7 @@ legend {
     color: var(--clr-primary-100);
 }
 
-.panel button {
+.btn-reset {
     margin-top: 2rem;
     padding: 0.5rem 0;
     font-size: 1.5rem;
@@ -250,60 +287,15 @@ legend {
     border-radius: 0.3rem;
     color: var(--clr-neutral-600);
     background-color: var(--clr-primary-100);
+    cursor: pointer;
 }
 
-.panel button:hover {
+.btn-reset:hover {
     background-color: var(--clr-neutral-350);
 }
 
 @media screen and (min-width:750px) {
-    :root {
-        --fs-400: 3rem;
-    }
-
-    main {
-        max-width: 57rem;
-        padding: 2.5rem;
-        flex-direction: row;
-        gap: 3rem;
-    }
-
-    form {
-        flex: 1;
-        justify-content: space-between;
-    }
-
-    .form__control {
-        gap: 1rem;
-    }
-
-    .form__input-number {
-        font-size: var(--fs-300);
-    }
-
-    .fieldset__controls {
-        justify-content: space-between;
-    }
-
-    .radio-label {
-        flex-basis: 30%;
-    }
-
-    .form__input-custom {
-        text-align: center;
-        flex-basis: 30%;
-    }
-
-    .panel {
-        padding: 2.5rem;
-        flex: 1;
-    }
-
-    .panel-row:first-of-type {
-        margin-bottom: 2.5rem;
-    }
-
-    .panel button {
+    .btn-reset {
         margin-top: 7.5rem;
     }
 }
