@@ -1,11 +1,13 @@
+
+const form = document.querySelector('[name="bill-data"]');
 const inputBill = document.getElementById('input-bill');
 const radioTipButtons = document.querySelectorAll('.form-radio');
-const inputCustomTip = document.getElementById('input-custom-tip');
-const inputNumPeople = document.getElementById('input-num-people');
+const inputCustomTip = document.getElementById('input-tip');
+const inputNumPeople = document.getElementById('input-people');
 const btnReset = document.getElementById('reset-calculations');
 const printerBill = document.getElementById('printer-bill');
 const printerTip = document.getElementById('printer-tip');
-const form = document.querySelector('[name="bill-data"]');
+
 let buttonCurrentTip;
 let tipPercentage = 0;
 
@@ -29,6 +31,10 @@ function printErrorPeople() {
 }
 
 function printCalcualtion(billEachPerson, tipEachPerson) {
+    if (billEachPerson == 'NaN' || tipEachPerson == 'NaN') {
+        billEachPerson = 0;
+        tipEachPerson = 0;
+    }
     printerBill.textContent = `$${billEachPerson}`;
     printerTip.textContent = `$${tipEachPerson}`;
 }
