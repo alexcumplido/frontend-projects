@@ -5,7 +5,7 @@ const inputNumPeople = document.getElementById('input-num-people');
 const btnReset = document.getElementById('reset-calculations');
 const printerBill = document.getElementById('printer-bill');
 const printerTip = document.getElementById('printer-tip');
-const form = document.getElementById('form');
+const form = document.querySelector('[name="bill-data"]');
 let buttonCurrentTip;
 let tipPercentage = 0;
 
