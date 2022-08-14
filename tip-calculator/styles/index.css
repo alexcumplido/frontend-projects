@@ -236,11 +236,11 @@ legend {
     background-image: url("../images/icon-person.svg");
 }
 
-.input-people--error {
+.input-error {
     outline: 2px solid var(--clr-accent-300);
 }
 
-.error-people {
+.error {
     display: block;
     position: absolute;
     right: 0;

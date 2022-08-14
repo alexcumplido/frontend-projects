@@ -1,5 +1,6 @@
 const form = document.querySelector('[name="form-calculator"]');
 const inputBill = document.getElementById('input-bill');
+const errorBill = document.getElementById('error-bill');
 const radioTipButtons = document.querySelectorAll('.form-radio');
 const inputCustomTip = document.getElementById('input-tip');
 const inputNumPeople = document.getElementById('input-people');
@@ -31,30 +32,35 @@ function printPrice(billEachPerson = 0, tipEachPerson = 0) {
     printedTip.textContent = `$${tipEachPerson}`;
 }
 
+
 function handleDisableReset() {
-    if (Number(inputNumPeople.value) > 0) {
+    if (Number(inputNumPeople.value) > 0 && Number(inputBill.value)) {
         btnReset.removeAttribute('disabled');
     } else {
         btnReset.setAttribute('disabled', 'true');
     }
 }
 
-function checkRadioTip() {
-    if (buttonCurrentTip) {
-        buttonCurrentTip.checked = false;
-        buttonCurrentTip = undefined;
+
+function testBill() {
+    return Number(inputBill.value >= 100000);
+}
+
+function testPeople() {
+    return Number(inputNumPeople.value == false);
+}
+
+function handleError(inputEl, errorEl, callback) {
+    if (callback()) {
+        inputEl.classList.add('input-error');
+        errorEl.classList.replace('visually-hidden', 'error');
+    } else {
+        inputEl.classList.remove('input-error');
+        errorEl.classList.replace('error', 'visually-hidden');
     }
 }
 
-function handleErrorPeople() {
-    if (Number(inputNumPeople.value == false)) {
-        inputNumPeople.classList.add('input-people--error');
-        errorNumPeople.classList.replace('visually-hidden', 'error-people');
-    } else {
-        inputNumPeople.classList.remove('input-people--error');
-        errorNumPeople.classList.replace('error-people', 'visually-hidden');
-    }
-}
+
 
 function reset() {
     inputBill.value = "";
@@ -66,7 +72,17 @@ function reset() {
     printedTip.textContent = `$${0}`;
 }
 
-inputBill.addEventListener('input', updatePrice);
+function checkRadioTip() {
+    if (buttonCurrentTip) {
+        buttonCurrentTip.checked = false;
+        buttonCurrentTip = undefined;
+    }
+}
+
+inputBill.addEventListener('input', function () {
+    updatePrice();
+    handleError(inputBill, errorBill, testBill);
+});
 
 radioTipButtons.forEach(function (element, index, list) {
     element.addEventListener('click', function (event) {
@@ -85,7 +101,7 @@ inputCustomTip.addEventListener('input', function (event) {
 
 inputNumPeople.addEventListener('input', function () {
     updatePrice();
-    handleErrorPeople();
+    handleError(inputNumPeople, errorNumPeople, testPeople);
 });
 
 btnReset.addEventListener('click', function () {

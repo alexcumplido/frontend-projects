@@ -17,6 +17,7 @@
             <form name="form-calculator">
                 <div class="control-wrapper">
                     <label class="form__label" for="input-bill">Bill</label>
+                    <p class="error visually-hidden" id="error-bill">This bill seems too expensive!</p>
                     <input class="form__input-number input-bill input-icon" id="input-bill" type="number" min="0"placeholder="0" />
                 </div>
                 <fieldset>
@@ -38,7 +39,7 @@
                 </fieldset>
                 <div class="control-wrapper">
                     <label class="form__label">Number of people</label>
-                    <p class="error-people visually-hidden" id="error-people">Can't be zero</p>
+                    <p class="error visually-hidden" id="error-people">Can't be zero</p>
                     <input class="form__input-number input-people input-icon" id="input-people" type="number" min="0" placeholder="0">
                 </div>
             </form> 
