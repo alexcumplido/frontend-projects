@@ -1,5 +1,5 @@
 ## Tip Calculator App
-[Live Tip calculator](https://alexcumplido.github.io/frontend-mentor/tip-calculator/) | [FME Solution](https://www.frontendmentor.io/solutions/dynamically-javascript-bar-chart-j6zOow7w2c)
+[Live Tip calculator](https://alexcumplido.github.io/frontend-mentor/tip-calculator/) | [FME Solution](https://www.frontendmentor.io/solutions/tip-calculator-with-plain-javascript-jXk3Uei3I9)
 
 ### Table of contents
 - [User flow](#user-flow)
