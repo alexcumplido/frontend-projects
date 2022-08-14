@@ -1,4 +1,4 @@
-## Rating modal
+## Tip Calculator App
 [Live Tip calculator](https://alexcumplido.github.io/frontend-mentor/tip-calculator/) | [FME Solution](https://www.frontendmentor.io/solutions/dynamically-javascript-bar-chart-j6zOow7w2c)
 
 ### Table of contents
@@ -41,9 +41,7 @@ As a `type of user`, I want `some goal` so that `some reason`;
     As a User I want to input a customized Tip so I do not rely only on the app default percentages.
     As a User I want to reset the whole calculator so I can perform new calculations.
 
-Lastly I would like to share how I am starting to implement functional programming. 
-
- When handling the DOM traversing for show up error messages I was generating code duplication so I took a functional approach abstracting code into only one function. `handleError` function will be called receiving as arguments the input and error html that we pretend to modify via DOM, plus a callback that when runned inside the function body will serve as a conditional test. The functions `testBill` and `testPeople` return a `boolean` value wich will determine wich styles will be applied to the input and error elements on the DOM.
+ When handling the DOM traversing showing and hidding error messages I was generating code duplication so I took a functional approach abstracting that code into one unique function. `handleError` is called receiving as arguments the input and error that we pretend to change via DOM, plus a callback that when runned inside the function body will serve as a conditional test. 
 
 ```js
 const testBill = () => Number(inputBill.value >= 100000);
