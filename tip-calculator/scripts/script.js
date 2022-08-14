@@ -1,5 +1,5 @@
 
-const form = document.querySelector('[name="bill-data"]');
+const form = document.querySelector('[name="form-calculator"]');
 const inputBill = document.getElementById('input-bill');
 const radioTipButtons = document.querySelectorAll('.form-radio');
 const inputCustomTip = document.getElementById('input-tip');
