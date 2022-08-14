@@ -14,7 +14,7 @@ let tipPercentage = 0;
 function updatePrice() {
     let totalCostPerson;
     let totalTipPerson;
-    if (Number(inputNumPeople.value) > 0) {
+    if (Number(inputNumPeople.value) > 0 && Number(inputBill.value)) {
         let totalBill = parseFloat(inputBill.value);
         let totalTip = (totalBill * (tipPercentage || 0)) / 100;
         let totalPeople = Number(inputNumPeople.value)

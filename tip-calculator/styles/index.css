@@ -16,7 +16,6 @@
 
     --ff-primary: 'Space Mono', monospace;
     --ff-body: var(--ff-primary);
-    --ff-heading: var(--ff-primary);
     --fs-body: var(--fs-200);
 
     --fs-100: 0.812rem;
@@ -42,6 +41,12 @@
     width: 1;
     height: 1;
     overflow: hidden;
+}
+
+.input-icon {
+    position: relative;
+    background-position: 1rem center;
+    background-repeat: no-repeat;
 }
 
 body {
@@ -82,9 +87,8 @@ main::before {
 
 @media screen and (min-width:750px) {
     main {
-        margin-top: 8rem;
         max-width: 57rem;
-        padding: 2rem;
+        margin-top: 8rem;
         gap: 3rem;
     }
 }
@@ -117,7 +121,7 @@ form {
 }
 
 .form__input-number {
-    padding: 0.35rem 1rem 0.35rem 2.5rem;
+    padding: 0.45rem 1rem 0.45rem 2.5rem;
     /* font-size: var(--fs-300); */
     font-weight: var(--fw-bold);
     border: none;
@@ -125,8 +129,8 @@ form {
     text-align: right;
     color: var(--clr-neutral-600);
     background-color: var(--clr-neutral-200);
-    cursor: pointer;
     caret-color: var(--clr-primary-100);
+    cursor: pointer;
     -moz-appearance: textfield;
 }
 
@@ -153,10 +157,7 @@ form {
 }
 
 .input-bill {
-    position: relative;
     background-image: url("../images/icon-dollar.svg");
-    background-position: 1rem center;
-    background-repeat: no-repeat;
 }
 
 fieldset {
@@ -177,27 +178,7 @@ legend {
 
 @media screen and (min-width:750px) {
     .fieldset__controls {
-        grid-auto-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-.fieldset__controls .form__input-number {
-    width: 100%;
-    padding: 0.40rem 1rem;
-    text-align: right;
-}
-
-.fieldset__controls .form__input-number::placeholder {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: var(--fw-bold);
-}
-
-@media screen and (min-width:750px) {
-    .fieldset__controls .form__input-number {
-        padding: 0.25rem;
-        text-align: right;
     }
 }
 
@@ -232,11 +213,27 @@ legend {
     background-color: var(--clr-primary-100);
 }
 
+.fieldset__controls .form__input-number {
+    width: 100%;
+    padding: 0.40rem 1rem;
+    text-align: right;
+}
+
+.fieldset__controls .form__input-number::placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: var(--fw-bold);
+}
+
+@media screen and (min-width:750px) {
+    .fieldset__controls .form__input-number {
+        padding: 0.25rem;
+        text-align: right;
+    }
+}
+
 .input-people {
-    position: relative;
     background-image: url("../images/icon-person.svg");
-    background-position: 1rem center;
-    background-repeat: no-repeat;
 }
 
 .input-people--error {
@@ -270,10 +267,10 @@ legend {
 
 .panel-row {
     margin-bottom: 1.25rem;
-    font-weight: var(--fw-bold);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-weight: var(--fw-bold);
     color: var(--clr-neutral-100);
 }
 
