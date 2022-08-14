@@ -15,7 +15,7 @@
 - See hover states for all interactive elements
 
 #### Screenshot
-![Mobile view](./design/mobile-design.jpg)
+![Mobile view](./images/tipCalculator.gif)
 
 #### Run project
 ```
