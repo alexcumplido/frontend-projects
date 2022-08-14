@@ -1,54 +1,5 @@
-
-As a `type of user`, I want `some goal` so that `some reason`
-
-PEDAC 
-1. Problem  (inputs, output, requirements)
-    As a user I want to calculate given a bill and input how much each person need to pay.
-    As a User I want to input a bill cost, select a tip percentage and input a number of people
-    As a User I want to divide the bill between people 
-    As a User I want to divide the total tip between people
-    As a User I want to know how much each person needs to pay from the total bill plus the tip
-    As a User I want to see how much each person needs to pay from the total tip percentage 
-    As a User I want to reset the whole calculator to the initial state
-
-    Inputs:
-        The total cost of the bill (integer or float) 
-        The tip percentage as a number (integer or float) 
-        The number of people among will be divided the bill to pay
-        Am event click on a reset button
-
-    Requirement
-        Divide the bill plus the tip  between a number of people
-        Divide the tip betweeen a number of people
-        If a percentage tip applied, add that to the bill cost and re-calculate how much each one needs to pay
-        Print the outputs in a panel so the it show how much each person needs to pay from the total bill cost and the tip 
-
-2. Examples (user-flow features)
-    The user can input a number (integer - float) as bill cost
-    The user can select a specific percentage as a number or float
-    The user can reset the whole state of the application
-    
-3. Data Structure
-
-    function eventListener to lister for the inputs
-    function eventListener to add a listener to the buttons
-    function updatePrice()
-    function reset ()
-
-4. Algorightm (pseudocode)
-
-5. Code (test)
-
-1. What is the overall structure ?
-3. What elements I need to use ?
-
-
-What is the smallest unit of work/problem unit that I can work on ?
-How can I get it done and fast ?
-If stuck : how can I zoom out ?
-
 ## Rating modal
-[Tip calculator app](https://alexcumplido.github.io/frontend-mentor/tip-calculator/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/dynamically-javascript-bar-chart-j6zOow7w2c)
+[Live Tip calculator](https://alexcumplido.github.io/frontend-mentor/tip-calculator/) | [FME Solution](https://www.frontendmentor.io/solutions/dynamically-javascript-bar-chart-j6zOow7w2c)
 
 ### Table of contents
 - [User flow](#user-flow)
@@ -59,16 +10,17 @@ If stuck : how can I zoom out ?
 - [Continued development](#continued-development)
 
 #### User flow
-- View the bar chart and hover over the individual bars to see the correct amounts for each day
-- See the current day's bar highlighted in a different colour to the other bars
-- View the optimal layout for the content depending on their device's screen size
+- Calculate correct tip and total cost of the bill per person
+- View  optimal layout for the app depending on their device's
+- See hover states for all interactive elements
 
 #### Screenshot
 ![Mobile view](./design/mobile-design.jpg)
 
 #### Run project
 ```
-# Just a local development server
+# Clone the repository
+# Open via a local development server
 ```
 
 #### Built with
@@ -79,19 +31,23 @@ If stuck : how can I zoom out ?
 - Mobile-first workflow
 
 #### Thoughts
-This was my first project from Junior Frontend Mentor challenges. Comes really in handy since it has been a few month without coding any JavaScript at all and now I restarted to learning it and digging deep into programming again. 
+Styled the radio inputs following the same technique applied to the [Interactive Rating Component](https://github.com/alexcumplido/frontend-mentor/tree/main/rating-modal#thoughts). Working around styling the label of the input instead of the input itself, explained in this [blog-post](https://markheath.net/post/customize-radio-button-css) based on this [question](https://stackoverflow.com/questions/4641752/css-how-to-style-a-selected-radio-buttons-label) from StackOverflow.
 
-#### Continued development
-I believe this function that creates each of the chart bars is giantic, need a refactor at some point. 
+I found really useful when planning the project apply an Agile method known as [User Stories](https://www.mountaingoatsoftware.com/agile/user-stories). The method itself focuses elaborating the requirements as a user and not as a developer, so you can emulate the user needs as best as possible. Some examples are:
+
+As a `type of user`, I want `some goal` so that `some reason`;
+
+    As a User I want to split the bill and tip so I know how much each must pay.
+    As a User I want to input a customized Tip so I do not rely only on the app default percentages.
+    As a User I want to reset the whole calculator so I can perform new calculations.
+
+Lastly I would like to share how I am starting to implement functional programming. 
+
+ When handling the DOM traversing for show up error messages I was generating code duplication so I took a functional approach abstracting code into only one function. `handleError` function will be called receiving as arguments the input and error html that we pretend to modify via DOM, plus a callback that when runned inside the function body will serve as a conditional test. The functions `testBill` and `testPeople` return a `boolean` value wich will determine wich styles will be applied to the input and error elements on the DOM.
 
 ```js
-function testBill() {
-    return Number(inputBill.value >= 100000);
-}
-
-function testPeople() {
-    return Number(inputNumPeople.value == false);
-}
+const testBill = () => Number(inputBill.value >= 100000);
+const testPeople = () => Number(inputNumPeople.value == false);
 
 function handleError(inputEl, errorEl, callback) {
     if (callback()) {
@@ -102,4 +58,12 @@ function handleError(inputEl, errorEl, callback) {
         errorEl.classList.replace('error', 'visually-hidden');
     }
 }
+
+inputBill.addEventListener('input', function () {
+    updatePrice();
+    handleError(inputBill, errorBill, testBill);
+});
 ```
+
+#### Continued development
+I would like to review the whole project looking for increase Accessibility compliance.
