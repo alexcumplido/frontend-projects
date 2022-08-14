@@ -5,13 +5,33 @@ const inputCustomTip = document.getElementById('input-tip');
 const inputNumPeople = document.getElementById('input-people');
 const errorNumPeople = document.getElementById('error-people');
 const btnReset = document.getElementById('reset-calculations');
-const printerBill = document.getElementById('printer-bill');
-const printerTip = document.getElementById('printer-tip');
+const printedBill = document.getElementById('printer-bill');
+const printedTip = document.getElementById('printer-tip');
 
 let buttonCurrentTip;
 let tipPercentage = 0;
 
-function handleDisabledReset() {
+function updatePrice() {
+    let totalCostPerson;
+    let totalTipPerson;
+    if (Number(inputNumPeople.value) > 0) {
+        let totalBill = parseFloat(inputBill.value);
+        let totalTip = (totalBill * (tipPercentage || 0)) / 100;
+        let totalPeople = Number(inputNumPeople.value)
+        let totalCost = totalBill + totalTip;
+        totalCostPerson = (totalCost / totalPeople).toFixed(2);
+        totalTipPerson = (totalTip / totalPeople).toFixed(2);
+    }
+    printPrice(totalCostPerson, totalTipPerson);
+    handleDisableReset();
+}
+
+function printPrice(billEachPerson = 0, tipEachPerson = 0) {
+    printedBill.textContent = `$${billEachPerson}`;
+    printedTip.textContent = `$${tipEachPerson}`;
+}
+
+function handleDisableReset() {
     if (Number(inputNumPeople.value) > 0) {
         btnReset.removeAttribute('disabled');
     } else {
@@ -19,19 +39,11 @@ function handleDisabledReset() {
     }
 }
 
-function updatePrice() {
-    if (Number(inputNumPeople.value) > 0) {
-        let totalBill = parseFloat(inputBill.value);
-        let totalTip = (totalBill * tipPercentage) / 100;
-        let totalPeople = Number(inputNumPeople.value)
-        let totalCost = totalBill + totalTip;
-        let totalCostPerson = (totalCost / totalPeople).toFixed(2);
-        let totalTipPerson = (totalTip / totalPeople).toFixed(2);
-        printCalcualtion(totalCostPerson, totalTipPerson);
-    } else {
-        printCalcualtion(0, 0);
+function checkRadioTip() {
+    if (buttonCurrentTip) {
+        buttonCurrentTip.checked = false;
+        buttonCurrentTip = undefined;
     }
-    handleDisabledReset();
 }
 
 function handleErrorPeople() {
@@ -44,31 +56,14 @@ function handleErrorPeople() {
     }
 }
 
-function printCalcualtion(billEachPerson, tipEachPerson) {
-    if (billEachPerson == 'NaN' || tipEachPerson == 'NaN') {
-        billEachPerson = 0;
-        tipEachPerson = 0;
-    }
-    printerBill.textContent = `$${billEachPerson}`;
-    printerTip.textContent = `$${tipEachPerson}`;
-}
-
-function checkRadioTip() {
-    if (buttonCurrentTip) {
-        buttonCurrentTip.checked = false;
-        buttonCurrentTip = undefined;
-    }
-}
-
 function reset() {
     inputBill.value = "";
     checkRadioTip();
     tipPercentage = 0;
     inputCustomTip.value = "";
     inputNumPeople.value = "";
-    printerBill.textContent = `$${0}`;
-    printerTip.textContent = `$${0}`;
-    handleDisabledReset();
+    printedBill.textContent = `$${0}`;
+    printedTip.textContent = `$${0}`;
 }
 
 inputBill.addEventListener('input', updatePrice);
@@ -83,18 +78,19 @@ radioTipButtons.forEach(function (element, index, list) {
 });
 
 inputCustomTip.addEventListener('input', function (event) {
-    checkRadioTip();
     tipPercentage = parseInt(event.target.value);
+    checkRadioTip();
     updatePrice();
 });
 
 inputNumPeople.addEventListener('input', function () {
-    handleErrorPeople()
     updatePrice();
+    handleErrorPeople();
 });
 
-btnReset.addEventListener('click', reset);
-
-window.addEventListener('DOMContentLoaded', function () {
-    updatePrice();
+btnReset.addEventListener('click', function () {
+    reset();
+    handleDisableReset();
 });
+
+window.addEventListener('DOMContentLoaded', updatePrice);
