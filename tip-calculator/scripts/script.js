@@ -1,4 +1,3 @@
-
 const form = document.querySelector('[name="form-calculator"]');
 const inputBill = document.getElementById('input-bill');
 const radioTipButtons = document.querySelectorAll('.form-radio');
@@ -98,5 +97,6 @@ inputNumPeople.addEventListener('input', function () {
 btnReset.addEventListener('click', reset);
 
 window.addEventListener('DOMContentLoaded', function () {
+    handleDisabledReset();
     printCalcualtion(0, 0);
 });
