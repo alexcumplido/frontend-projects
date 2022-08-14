@@ -244,6 +244,8 @@ legend {
     display: block;
     position: absolute;
     right: 0;
+    text-align: right;
+    font-size: var(--fs-100);
     color: var(--clr-accent-300);
 }
 
