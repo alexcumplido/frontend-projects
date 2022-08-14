@@ -11,6 +11,14 @@ const printerTip = document.getElementById('printer-tip');
 let buttonCurrentTip;
 let tipPercentage = 0;
 
+function handleDisabledReset() {
+    if (Number(inputNumPeople.value) > 0) {
+        btnReset.removeAttribute('disabled');
+    } else {
+        btnReset.setAttribute('disabled', 'true');
+    }
+}
+
 function updatePrice() {
     if (Number(inputNumPeople.value) > 0) {
         let totalBill = parseFloat(inputBill.value);
@@ -20,28 +28,19 @@ function updatePrice() {
         let totalCostPerson = (totalCost / totalPeople).toFixed(2);
         let totalTipPerson = (totalTip / totalPeople).toFixed(2);
         printCalcualtion(totalCostPerson, totalTipPerson);
-        handleDisabledReset();
     } else {
-        handleDisabledReset();
         printCalcualtion(0, 0);
     }
-}
-
-function handleDisabledReset() {
-    if (Number(inputNumPeople.value) > 0) {
-        btnReset.removeAttribute('disabled');
-    } else {
-        btnReset.setAttribute('disabled', 'true');
-    }
+    handleDisabledReset();
 }
 
 function handleErrorPeople() {
     if (Number(inputNumPeople.value == false)) {
-        errorNumPeople.classList.replace('visually-hidden', 'error-people');
         inputNumPeople.classList.add('input-people--error');
+        errorNumPeople.classList.replace('visually-hidden', 'error-people');
     } else {
-        errorNumPeople.classList.replace('error-people', 'visually-hidden');
         inputNumPeople.classList.remove('input-people--error');
+        errorNumPeople.classList.replace('error-people', 'visually-hidden');
     }
 }
 
@@ -97,6 +96,5 @@ inputNumPeople.addEventListener('input', function () {
 btnReset.addEventListener('click', reset);
 
 window.addEventListener('DOMContentLoaded', function () {
-    handleDisabledReset();
-    printCalcualtion(0, 0);
+    updatePrice();
 });
