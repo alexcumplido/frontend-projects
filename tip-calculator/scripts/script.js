@@ -32,7 +32,6 @@ function printPrice(billEachPerson = 0, tipEachPerson = 0) {
     printedTip.textContent = `$${tipEachPerson}`;
 }
 
-
 function handleDisableReset() {
     if (Number(inputNumPeople.value) > 0 && Number(inputBill.value)) {
         btnReset.removeAttribute('disabled');
@@ -40,7 +39,6 @@ function handleDisableReset() {
         btnReset.setAttribute('disabled', 'true');
     }
 }
-
 
 function testBill() {
     return Number(inputBill.value >= 100000);
@@ -59,8 +57,6 @@ function handleError(inputEl, errorEl, callback) {
         errorEl.classList.replace('error', 'visually-hidden');
     }
 }
-
-
 
 function reset() {
     inputBill.value = "";
