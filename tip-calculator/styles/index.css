@@ -270,6 +270,7 @@ legend {
 .panel-row {
     margin-bottom: 1.25rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     font-weight: var(--fw-bold);
