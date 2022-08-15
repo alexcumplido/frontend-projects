@@ -182,8 +182,18 @@ a {
     background-color: var(--clr-primaryDarkMode-800);
 }
 
+.form::before {
+    position: absolute;
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url("../images/icon-search.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 .form__input {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 1.5rem;
     border: none;
     border-radius: 1rem;
     color: var(--clr-primary-100);
