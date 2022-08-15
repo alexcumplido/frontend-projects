@@ -258,10 +258,6 @@ a {
     color: var(--clr-accentDarkMode-600);
 }
 
-.profile__username a {
-    color: var(--clr-accentDarkMode-600);
-}
-
 .profile__date {
     grid-area: 3 / 2 / 4 / 7
 }
