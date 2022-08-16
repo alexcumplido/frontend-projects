@@ -1,0 +1,150 @@
+:root {
+    --clr-primary-100: ;
+    --clr-primary-200: ;
+
+    --clr-neutral-400: ;
+    --clr-neutral-500: ;
+
+    --clr-accent-600: ;
+    --clr-accent-800: ;
+
+    --clr-primaryDardMode-800: ;
+    --clr-primaryDarkMode-900: ;
+
+    --clr-accentDarkMode-100: ;
+    --clr-accentDarkMode-600: ;
+
+    --max-width-desktop: 1110px;
+
+    --ff-primary: ;
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-primary);
+    --fs-body: var(--fs-300);
+
+    --fs-100: ;
+    --fs-200: ;
+    --fs-300: ;
+    --fs-400: ;
+    --fs-500: ;
+
+    --lh: ;
+
+    --fw-regular: ;
+    --fw-bold: ;
+}
+
+
+/*Utility classes*/
+.fw-regular {
+    font-weight: var(--fw-regular);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+
+/*
+https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
+*/
+
+@media screen and (min-width:573px) {
+    :root {
+        --fs-100: var(--fs-200);
+        --fs-200: var(--fs-300);
+        --fs-400: var(--fs-600);
+    }
+}
+
+@media screen and (min-width:730px) {}
+
+
+/* Utility classes*/
+.visually-hidden {
+    position: absolute;
+    left: 0;
+    top: -500px;
+    width: 1;
+    height: 1;
+    overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+}
+
+.modal--active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.container {
+    --max-width: 1110px;
+    --padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--padding)*2));
+    margin-inline: auto;
+}
+
+.button {
+    border: none;
+    border-radius: 100vmax;
+    padding: 0.5rem 1rem;
+}
+
+.button:hover,
+.button:focus-visible {
+    background-color: ;
+}
+
+body {
+    max-width: var(--max-width-desktop);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+}
+
+.animation {
+    animation: pulse 1s lniear infinite both;
+}
+
+
+@media (prefers-reduced-motion) {
+    .animation {
+        animation-name: dissolve;
+    }
+}
+
+.dark-theme {
+    color: var(--clr-neutral-400);
+    background-color: var(--clr-primary-200);
+}
+
+.dark-theme .header,
+.dark-theme .theme__toggle {
+    font-weight: var(--fw-bold);
+    color: var(--clr-accent-800);
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .header,
+    .theme__toggle {
+        font-weight: var(--fw-bold);
+        color: var(--clr-accent-800);
+    }
+}
