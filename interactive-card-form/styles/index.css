@@ -1,36 +1,32 @@
+/* 
+- Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
+ */
 :root {
-    --clr-primary-100: ;
-    --clr-primary-200: ;
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(270, 3%, 87%);
 
-    --clr-neutral-400: ;
-    --clr-neutral-500: ;
+    --clr-accent-600: hsl(279, 6%, 55%);
 
-    --clr-accent-600: ;
-    --clr-accent-800: ;
-
-    --clr-primaryDardMode-800: ;
-    --clr-primaryDarkMode-900: ;
-
-    --clr-accentDarkMode-100: ;
-    --clr-accentDarkMode-600: ;
+    --clr-accent-400: hsl(0, 100%, 66%);
+    --clr-accent-900: hsl(278, 68%, 11%);
 
     --max-width-desktop: 1110px;
 
-    --ff-primary: ;
+    --ff-primary: 'Space Grotesk', sans-serif;
     --ff-body: var(--ff-primary);
     --ff-heading: var(--ff-primary);
     --fs-body: var(--fs-300);
 
-    --fs-100: ;
-    --fs-200: ;
-    --fs-300: ;
-    --fs-400: ;
-    --fs-500: ;
+    --fs-100: 0.56rem;
+    --fs-200: 0.75rem;
+    --fs-300: 1rem;
+    --fs-400: 1.12rem;
+    --fs-500: 1.75rem;
 
     --lh: ;
 
-    --fw-regular: ;
-    --fw-bold: ;
+    --fw-regular: 500;
+    --fw-bold: 600;
 }
 
 
