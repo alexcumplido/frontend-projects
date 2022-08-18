@@ -6,15 +6,62 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Alexandre Cumplido Bou" />
-        <meta name="description" content="Baseline project" />
-        <meta name="keywords" content="Baseline project" />
-        <link rel="icon" type="image/png" sizes="32x32" href="./images/image-jeremy.png" />
+        <meta name="description" content="Interactive card form validation with curtom Regex" />
+        <meta name="keywords" content="HTML5, CSS3, JavaScript, Regular Expression" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/icon-complete.svg" />
         <link rel="stylesheet" href="./styles/main.css"/>
-        <title>Baseline Project</title>
+        <title>Interactive card details form</title>
     </head>
     <body>
         <main>
+            <section class="card">
+                <div class="card__front">
+                    <p id="detail-number"></p>
+                    <p id="detail-cardholder"></p>
+                    <p id="detail-month"></p>
+                    <p id="detail-year"></p>
+                </div>
+                <div class="card__back">
+                    <p id="detail-cvc"></p>
+                </div>
+            </section>
+            <section class="form">
+                <form action="">
+                    <div class="control-wrapper">
+                        <label for="card-number">card number</label>
+                        <input id="card-number" type="number">
+                        <p id="error-number"></p>
+                    </div>
+                    <div class="control-wrapper">
+                        <label for="card-cardholder">cardholder name</label>
+                        <input id="card-cardholder" type="text">
+                        <p id="error-cardholder"></p>
+                    </div>
+                    <div class="control-wrapper">
+                        <label for="card-month">card month</label>
+                        <input id="card-month" type="number">
+                        <p id="error-month"></p>
+                    </div>
+                    <div class="control-wrapper">
+                        <label for="card-year">card year</label>
+                        <input id="card-year" type="number">
+                        <p id="error-year"></p>
+                    </div>
+                    <div class="control-wrapper">
+                        <label for="card-cvc">card cvc</label>
+                        <input id="card-cvc" type="number">
+                        <p id="error-cvc"></p>
+                    </div>
+                    <button id="form-button" type="submit">confirm</button> 
+                </form>
+                    <div id="modal" class="modal">
+                        <p>Thank tyou</p>
+                        <button id="btn-continuation">continue</button>
+                    </div>
+            </section>
         </main>
         <script src="./scripts/script.js"></script>
     </body>
 </html>
+
+
