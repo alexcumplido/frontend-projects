@@ -1,89 +1,38 @@
-// PEDAC
-// 1. Problem
-//     (inputs - outputs, explicit - implicit requirements)
+const detailNumber = document.getElementById('detail-number');
+const detailCardholder = document.getElementById('detail-cardholder');
+const detailMonth = document.getElementById('detail-month');
+const detailYear = document.getElementById('detail-year');
+const detailCvc = document.getElementById('detail-cvc');
 
-// 2. Examples
-//     (user - flow features, edge cases)
+const inputNumber = document.getElementById('card-number');
+const inputCardholder = document.getElementById('card-cardholder');
+const inputMonth = document.getElementById('card-month');
+const inputYear = document.getElementById('card-year');
+const inputCvc = document.getElementById('card-cvc');
 
-// 3. Data Structure
-
-// 4. Algorightm
-//     (pseudocode)
-
-// 5. Code
-//     (test)
-
-
-// What is the smallest unit of work / problem unit that I can work on ?
-//     How can I get it done and fast ?
-//         If stuck: how can I zoom out ?
-
-{
-    /*
-
-    var main = document.querySelector('main');
-
-    var currentlyLightTheme = window.matchMedia("(prefers-color-scheme:light)")
-
-    function toggle() { 
-
-        if (currentlyLightTheme) {
-            main.className = "overrideLight";
-            currentlyLightTheme = false;
-        } else {
-            main.className = "overrideDark";
-            currentlyLightTheme = true;
-        }
-    }
-
-*/
-}
-
-/*
-
-var main = document.querySelector('main');
-
-var currentlyLightTheme = window.matchMedia("(prefers-color-scheme:light)")
-
-function toggle() {
-
-    if (currentlyLightTheme) {
-        main.className = "overrideLight";
-        currentlyLightTheme = false;
-    } else {
-        main.className = "overrideDark";
-        currentlyLightTheme = true;
-    }
-}
-
-*/
+const errorNumber = document.getElementById('error-number');
+const errorCardholder = document.getElementById('error-cardholder');
+const errorMonth = document.getElementById('error-month');
+const errorYear = document.getElementById('error-year');
+const errorCvc = document.getElementById('error-cvc');
 
 
-/*
-.override-light {
-    bakcground-color: white;
-    color: black;
-}
+inputNumber.addEventListener('input', function (event) {
+    detailNumber.textContent = event.target.value;
+});
 
-.override-dark {
-    background-color: black;
-    color: white;
-}
+inputCardholder.addEventListener('input', function (event) {
+    detailCardholder.textContent = event.target.value;
+});
 
-*/
+inputMonth.addEventListener('input', function (event) {
+    detailMonth.textContent = event.target.value;
+});
 
+inputYear.addEventListener('input', function (event) {
+    detailYear.textContent = event.target.value;
+});
 
-// const body = document.querySelector('body');
-// var currentlyLightTheme = window.matchMedia(
-//     "(prefers-color-scheme: light)"
-// );
-
-// function toggleTheme() {
-//     if (currentlyLightTheme) {
-//         body.classList.add('override-light');
-//         currentlyLightTheme = false;
-//     } else {
-//         body.classList.add('override-dardk');
-//         currentlyLightTheme = true;
-//     }
-// }
+inputCvc.addEventListener('input', function (event) {
+    detailCvc.textContent = event.target.value;
+});
