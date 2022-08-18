@@ -5,14 +5,11 @@ Repository where I develop different projects using HTML5, CSS3 and JavaScript. 
 <!-- 
   - [Planets fact site](https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f)
   - [Coffeeroasters subscription site](https://www.frontendmentor.io/challenges/coffeeroasters-subscription-site-5Fc26HVY6)
-
   - [Clock App](https://www.frontendmentor.io/challenges/clock-app-LMFaxFwrM)
   - [Calculator](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29)
   - [Todo App](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW)
   - [E-commerce product page](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6)
-
   - [Crowdfunding product page](https://www.frontendmentor.io/challenges/crowdfunding-product-page-7uvcZe7ZR)
-  - [Single-page design portfolio](https://www.frontendmentor.io/challenges/singlepage-design-portfolio-2MMhyhfKVo)
 -->
 
 ## Projects
