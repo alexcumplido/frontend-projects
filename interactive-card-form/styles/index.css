@@ -65,11 +65,11 @@ https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
     overflow: hidden;
 }
 
-.modal {
+/* .modal {
     position: fixed;
     top: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0;s
     left: 0;
     z-index: 1000;
     display: flex;
@@ -84,7 +84,7 @@ https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 .modal--active {
     visibility: visible;
     opacity: 1;
-}
+} */
 
 .container {
     --max-width: 1110px;
@@ -112,6 +112,22 @@ body {
     align-items: center;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
+}
+
+body * {
+    outline: 1px solid grey;
+}
+
+.form__error {
+    color: var(--clr-accent-400);
+}
+
+.form__input--error {
+    outline: 2px solid var(--clr-accent-400);
+}
+
+.hidden {
+    display: none;
 }
 
 .animation {

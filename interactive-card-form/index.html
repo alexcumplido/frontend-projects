@@ -16,47 +16,47 @@
         <main>
             <section class="card">
                 <div class="card__front">
-                    <p id="detail-number"></p>
-                    <p id="detail-cardholder"></p>
-                    <p id="detail-month"></p>
-                    <p id="detail-year"></p>
+                    <p id="detail-number" class="card__detail"></p>
+                    <p id="detail-cardholder" class="card__detail"></p>
+                    <p id="detail-month" class="card__detail"></p>
+                    <p id="detail-year" class="card__detail"></p>
                 </div>
                 <div class="card__back">
                     <p id="detail-cvc"></p>
                 </div>
             </section>
             <section class="form">
-                <form action="">
+                <form name="card-form">
                     <div class="control-wrapper">
                         <label for="card-number">card number</label>
-                        <input id="card-number" type="number">
-                        <p id="error-number"></p>
+                        <input id="card-number" class="form__input" type="number">
+                        <p class="hidden form__error" id="error-number"></p>
                     </div>
                     <div class="control-wrapper">
                         <label for="card-cardholder">cardholder name</label>
-                        <input id="card-cardholder" type="text">
-                        <p id="error-cardholder"></p>
+                        <input id="card-cardholder" class="form__input" type="text">
+                        <p class="hidden form__error" id="error-cardholder"></p>
                     </div>
                     <div class="control-wrapper">
                         <label for="card-month">card month</label>
-                        <input id="card-month" type="number">
-                        <p id="error-month"></p>
+                        <input id="card-month" class="form__input" type="number">
+                        <p class="hidden form__error" id="error-month"></p>
                     </div>
                     <div class="control-wrapper">
                         <label for="card-year">card year</label>
-                        <input id="card-year" type="number">
-                        <p id="error-year"></p>
+                        <input id="card-year" class="form__input" type="number">
+                        <p class="hidden form__error" id="error-year"></p>
                     </div>
                     <div class="control-wrapper">
                         <label for="card-cvc">card cvc</label>
-                        <input id="card-cvc" type="number">
-                        <p id="error-cvc"></p>
+                        <input id="card-cvc" class="form__input" type="number">
+                        <p class="hidden form__error" id="error-cvc"></p>
                     </div>
                     <button id="form-button" type="submit">confirm</button> 
                 </form>
-                    <div id="modal" class="modal">
+                    <div id="modal" class="modal hidden">
                         <p>Thank tyou</p>
-                        <button id="btn-continuation">continue</button>
+                        <button id="modal-continuation">continue</button>
                     </div>
             </section>
         </main>
