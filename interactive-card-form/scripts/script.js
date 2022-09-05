@@ -28,7 +28,7 @@ const modalContinuation = document.getElementById('modal-continuation');
 
 const regex = {
     emptyInput: /^$/,
-    cardholder: /^[a-zA-Z]{2,}\s[a-zA-Z]{2,}$/ig,
+    cardholder: /^[a-zA-Z]{2,}\s[a-zA-Z]{2,}$/i,
     number: /^[0-9]{16}$/,
     month: /(^[0][1-9]$)|(^[1][0-2]$)/,
     year: /(^[2][2-9]$)/,
@@ -55,9 +55,9 @@ function hideError(errorEl, inputEl) {
 
 function validateCardholder() {
     let validation = false;
-    if (regex.emptyInput.test(inputCardholder.value)) {
+    if (regex.emptyInput.test(inputCardholder.value.trim())) {
         showError(errorCardholder, inputCardholder, `Can't be blank`);
-    } else if (regex.cardholder.test(inputCardholder.value) === false) {
+    } else if (regex.cardholder.test(inputCardholder.value.trim()) === false) {
         showError(errorCardholder, inputCardholder, `Only letters, separate name and fullname`);
     } else {
         hideError(errorCardholder, inputCardholder);
@@ -71,7 +71,7 @@ function validateNumber() {
     if (regex.emptyInput.test(inputNumber.value)) {
         showError(errorNumber, inputNumber, `Can't be blank`);
     } else if (regex.number.test(inputNumber.value) === false) {
-        showError(errorNumber, inputNumber, `Wrong format, only 14 numbers`);
+        showError(errorNumber, inputNumber, `Wrong format, only 16 numbers`);
     } else {
         hideError(errorNumber, inputNumber);
         validation = true;
