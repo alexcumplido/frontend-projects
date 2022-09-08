@@ -4,7 +4,7 @@ const form = document.querySelector('[name="card-form"]');
 const cardDetails = document.querySelectorAll('.card__detail');
 const formInputs = document.querySelectorAll('.form__input');
 
-const detailNumber = document.getElementById('detail-n  umber');
+const detailNumber = document.getElementById('detail-number');
 const detailCardholder = document.getElementById('detail-cardholder');
 const detailMonth = document.getElementById('detail-month');
 const detailYear = document.getElementById('detail-year');
