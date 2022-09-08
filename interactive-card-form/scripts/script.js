@@ -35,6 +35,14 @@ const regex = {
     cvc: /^[0-9]{3}$/
 }
 
+const textError = {
+    empty: `Can't be blank`,
+    carholderFormat: `Only letters, separate name and fullname`,
+    numberFormat: `Wrong format, only 16 numbers`,
+    dateFormat: `Invalid date`,
+    cvdFormat: `Invalid cvc`
+}
+
 function showError(errorEl, inputEl, text) {
     errorEl.textContent = `${text}`;
     errorEl.classList.remove('hidden');
@@ -50,9 +58,9 @@ function hideError(errorEl, inputEl) {
 function validateCardholder() {
     let validation = false;
     if (regex.emptyInput.test(inputCardholder.value.trim())) {
-        showError(errorCardholder, inputCardholder, `Can't be blank`);
+        showError(errorCardholder, inputCardholder, textError.empty);
     } else if (regex.cardholder.test(inputCardholder.value.trim()) === false) {
-        showError(errorCardholder, inputCardholder, `Only letters, separate name and fullname`);
+        showError(errorCardholder, inputCardholder, textError.carholderFormat);
     } else {
         hideError(errorCardholder, inputCardholder);
         validation = true;
@@ -63,9 +71,9 @@ function validateCardholder() {
 function validateNumber() {
     let validation = false;
     if (regex.emptyInput.test(inputNumber.value)) {
-        showError(errorNumber, inputNumber, `Can't be blank`);
+        showError(errorNumber, inputNumber, textError.empty);
     } else if (regex.number.test(inputNumber.value) === false) {
-        showError(errorNumber, inputNumber, `Wrong format, only 16 numbers`);
+        showError(errorNumber, inputNumber, textError.numberFormat);
     } else {
         hideError(errorNumber, inputNumber);
         validation = true;
@@ -76,9 +84,9 @@ function validateNumber() {
 function validateMonth() {
     let validation = false;
     if (regex.emptyInput.test(inputMonth.value)) {
-        showError(errorMonth, inputMonth, `Can't be blank`);
+        showError(errorMonth, inputMonth, inputErrors.empty);
     } else if (regex.month.test(inputMonth.value) === false) {
-        showError(errorMonth, inputMonth, `Invalid date`);
+        showError(errorMonth, inputMonth, textError.dateFormat);
     } else {
         hideError(errorMonth, inputMonth);
         validation = true;
@@ -89,9 +97,9 @@ function validateMonth() {
 function validateYear() {
     let validation = false;
     if (regex.emptyInput.test(inputYear.value)) {
-        showError(errorYear, inputYear, `Can't be blank`);
+        showError(errorYear, inputYear, inputErrors.empty);
     } else if (regex.year.test(inputYear.value) === false) {
-        showError(errorYear, inputYear, `Invalid date`);
+        showError(errorYear, inputYear, textError.dateFormat);
     } else {
         hideError(errorYear, inputYear);
         validation = true;
@@ -102,9 +110,9 @@ function validateYear() {
 function validateCvc() {
     let validation = false;
     if (regex.emptyInput.test(inputCvc.value)) {
-        showError(errorCvc, inputCvc, `Can't be blank`);
+        showError(errorCvc, inputCvc, inputErrors.empty);
     } else if (regex.cvc.test(inputCvc.value) === false) {
-        showError(errorCvc, inputCvc, `Invalid cvc`);
+        showError(errorCvc, inputCvc, textError.cvcFormat);
     } else {
         hideError(errorCvc, inputCvc);
         validation = true;
