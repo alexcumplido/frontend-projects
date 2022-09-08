@@ -35,12 +35,6 @@ const regex = {
     cvc: /^[0-9]{3}$/
 }
 
-function addListener(input, cardDetail) {
-    input.addEventListener('input', function (event) {
-        cardDetail.textContent = event.target.value;
-    });
-}
-
 function showError(errorEl, inputEl, text) {
     errorEl.textContent = `${text}`;
     errorEl.classList.remove('hidden');
@@ -135,17 +129,25 @@ function toggleModal() {
     modal.classList.toggle('hidden');
 }
 
-addListener(inputCardholder, detailCardholder);
-
-inputNumber.addEventListener('input', function (event) {
-    let value = event.target.value;
-
-    detailNumber.textContent = value.replace(/(\d{4}(?!\s))/g, "$1 ");
+inputCardholder.addEventListener('input', function (event) {
+    detailCardholder.textContent = event.target.value;
 });
 
-addListener(inputMonth, detailMonth);
-addListener(inputYear, detailYear);
-addListener(inputCvc, detailCvc);
+inputNumber.addEventListener('input', function (event) {
+    detailNumber.textContent = event.target.value.replace(/(\d{4}(?!\s))/g, "$1 ");
+});
+
+inputMonth.addEventListener('input', function (event) {
+    detailMonth.textContent = event.target.value;
+});
+
+inputYear.addEventListener('input', function (event) {
+    detailYear.textContent = event.target.value;
+});
+
+inputCvc.addEventListener('input', function (event) {
+    detailCvc.textContent = event.target.value;
+});
 
 submitButton.addEventListener('click', function (event) {
     event.preventDefault();
