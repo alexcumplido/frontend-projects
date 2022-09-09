@@ -48,12 +48,59 @@
 /*Overall styles*/
 body {
     max-width: var(--max-width-desktop);
+    min-height: 100vh;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    place-items: center;
     align-items: center;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
+}
+
+.card {
+    padding: 1rem;
+    position: relative;
+    background-image: url("../images/bg-main-mobile.png");
+}
+
+.card__back,
+.card__front {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.15fr 1fr 0.15fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.card__back img,
+.card__front img {
+    grid-area: 1 / 1 / 4 / 4;
+}
+
+
+.card__back .card__detail {
+    grid-area: 2 / 2 / 3 / 3;
+    justify-self: right;
+}
+
+.card__front .card__logo {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.card__front .card__number {
+    grid-area: 2 / 2 / 3 / 3;
+    align-self: flex-end;
+}
+
+.card__front .card__cardholder {
+    grid-area: 3 / 2 / 4 / 3;
+    max-width: 60%;
+    justify-self: flex-start;
+}
+
+.card__front .card__wrapper {
+    grid-area: 3 / 2 / 4 / 3;
+    display: flex;
+    justify-self: flex-end;
 }
 
 .form__input--error {
