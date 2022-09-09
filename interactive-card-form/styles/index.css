@@ -1,15 +1,11 @@
-/* 
-- Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
- */
 :root {
     --clr-neutral-100: hsl(0, 0%, 100%);
-    --clr-neutral-200: hsl(270, 3%, 87%);
-
-    --clr-accent-600: hsl(279, 6%, 55%);
+    --clr-neutral-300: hsl(270, 3%, 87%);
+    --clr-neutal-600: hsl(279, 6%, 55%);
 
     --clr-accent-400: hsl(0, 100%, 66%);
     --clr-accent-900: hsl(278, 68%, 11%);
-
+    --linearGradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
     --max-width-desktop: 1110px;
 
     --ff-primary: 'Space Grotesk', sans-serif;
@@ -23,37 +19,17 @@
     --fs-400: 1.12rem;
     --fs-500: 1.75rem;
 
-    --lh: ;
-
     --fw-regular: 500;
     --fw-bold: 600;
 }
 
-
-/*Utility classes*/
-.fw-regular {
-    font-weight: var(--fw-regular);
-}
-
-.fw-bold {
-    font-weight: var(--fw-bold);
-}
-
-
-/*
-https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
-*/
-
-@media screen and (min-width:573px) {
+@media screen and (min-width:570px) {
     :root {
         --fs-100: var(--fs-200);
         --fs-200: var(--fs-300);
         --fs-400: var(--fs-600);
     }
 }
-
-@media screen and (min-width:730px) {}
-
 
 /* Utility classes*/
 .visually-hidden {
@@ -65,45 +41,11 @@ https: //developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
     overflow: hidden;
 }
 
-/* .modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;s
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    visibility: hidden;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.9);
-    opacity: 0;
+.hidden {
+    display: none;
 }
 
-.modal--active {
-    visibility: visible;
-    opacity: 1;
-} */
-
-.container {
-    --max-width: 1110px;
-    --padding: 1rem;
-    width: min(var(--max-width), 100% - (var(--padding)*2));
-    margin-inline: auto;
-}
-
-.button {
-    border: none;
-    border-radius: 100vmax;
-    padding: 0.5rem 1rem;
-}
-
-.button:hover,
-.button:focus-visible {
-    background-color: ;
-}
-
+/*Overall styles*/
 body {
     max-width: var(--max-width-desktop);
     margin: 0 auto;
@@ -114,49 +56,10 @@ body {
     font-size: var(--fs-body);
 }
 
-body * {
-    outline: 1px solid grey;
-}
-
-.form__error {
-    color: var(--clr-accent-400);
-}
-
 .form__input--error {
     outline: 2px solid var(--clr-accent-400);
 }
 
-.hidden {
-    display: none;
-}
-
-.animation {
-    animation: pulse 1s lniear infinite both;
-}
-
-
-@media (prefers-reduced-motion) {
-    .animation {
-        animation-name: dissolve;
-    }
-}
-
-.dark-theme {
-    color: var(--clr-neutral-400);
-    background-color: var(--clr-primary-200);
-}
-
-.dark-theme .header,
-.dark-theme .theme__toggle {
-    font-weight: var(--fw-bold);
-    color: var(--clr-accent-800);
-}
-
-@media (prefers-color-scheme: dark) {
-
-    .header,
-    .theme__toggle {
-        font-weight: var(--fw-bold);
-        color: var(--clr-accent-800);
-    }
+.form__error {
+    color: var(--clr-accent-400);
 }
