@@ -35,12 +35,12 @@ const regex = {
     cvc: /^[0-9]{3}$/
 }
 
-const textError = {
+const errorText = {
     empty: `Can't be blank`,
     carholderFormat: `Only letters, separate name and fullname`,
     numberFormat: `Wrong format, only 16 numbers`,
     dateFormat: `Invalid date`,
-    cvdFormat: `Invalid cvc`
+    cvcFormat: `Invalid cvc`
 }
 
 function showError(errorEl, inputEl, text) {
@@ -58,9 +58,9 @@ function hideError(errorEl, inputEl) {
 function validateCardholder() {
     let validation = false;
     if (regex.emptyInput.test(inputCardholder.value.trim())) {
-        showError(errorCardholder, inputCardholder, textError.empty);
+        showError(errorCardholder, inputCardholder, errorText.empty);
     } else if (regex.cardholder.test(inputCardholder.value.trim()) === false) {
-        showError(errorCardholder, inputCardholder, textError.carholderFormat);
+        showError(errorCardholder, inputCardholder, errorText.carholderFormat);
     } else {
         hideError(errorCardholder, inputCardholder);
         validation = true;
@@ -71,9 +71,9 @@ function validateCardholder() {
 function validateNumber() {
     let validation = false;
     if (regex.emptyInput.test(inputNumber.value)) {
-        showError(errorNumber, inputNumber, textError.empty);
+        showError(errorNumber, inputNumber, errorText.empty);
     } else if (regex.number.test(inputNumber.value) === false) {
-        showError(errorNumber, inputNumber, textError.numberFormat);
+        showError(errorNumber, inputNumber, errorText.numberFormat);
     } else {
         hideError(errorNumber, inputNumber);
         validation = true;
@@ -84,9 +84,9 @@ function validateNumber() {
 function validateMonth() {
     let validation = false;
     if (regex.emptyInput.test(inputMonth.value)) {
-        showError(errorMonth, inputMonth, inputErrors.empty);
+        showError(errorMonth, inputMonth, errorText.empty);
     } else if (regex.month.test(inputMonth.value) === false) {
-        showError(errorMonth, inputMonth, textError.dateFormat);
+        showError(errorMonth, inputMonth, errorText.dateFormat);
     } else {
         hideError(errorMonth, inputMonth);
         validation = true;
@@ -97,9 +97,9 @@ function validateMonth() {
 function validateYear() {
     let validation = false;
     if (regex.emptyInput.test(inputYear.value)) {
-        showError(errorYear, inputYear, inputErrors.empty);
+        showError(errorYear, inputYear, errorText.empty);
     } else if (regex.year.test(inputYear.value) === false) {
-        showError(errorYear, inputYear, textError.dateFormat);
+        showError(errorYear, inputYear, errorText.dateFormat);
     } else {
         hideError(errorYear, inputYear);
         validation = true;
@@ -110,9 +110,9 @@ function validateYear() {
 function validateCvc() {
     let validation = false;
     if (regex.emptyInput.test(inputCvc.value)) {
-        showError(errorCvc, inputCvc, inputErrors.empty);
+        showError(errorCvc, inputCvc, errorText.empty);
     } else if (regex.cvc.test(inputCvc.value) === false) {
-        showError(errorCvc, inputCvc, textError.cvcFormat);
+        showError(errorCvc, inputCvc, errorText.cvcFormat);
     } else {
         hideError(errorCvc, inputCvc);
         validation = true;
@@ -120,15 +120,27 @@ function validateCvc() {
     return validation;
 }
 
+function _forEach(list, callback) {
+    if (Array.isArray(list)) {
+        for (let index = 0; index < list.length; i++) {
+            callback(list[index], index, list);
+        }
+    } else {
+        for (let key in list) {
+            callback(list[key], key, list);
+        }
+    }
+}
+
 function cleanCardDetails() {
-    cardDetails.forEach(function (element) {
-        element.textContent = '';
+    _forEach(cardDetails, function (element) {
+        element.textContent = ''
     });
 }
 
 function cleanFormInputs() {
-    formInputs.forEach(function (element) {
-        element.value = '';
+    _forEach(formInputs, function (element) {
+        element.value = ''
     });
 }
 
@@ -159,14 +171,13 @@ inputCvc.addEventListener('input', function (event) {
 
 submitButton.addEventListener('click', function (event) {
     event.preventDefault();
-    let cardHolderTrue, numberTrue, monthTrue, yearTrue, cvcTrue = false;
-    if (validateCardholder() === true) cardHolderTrue = true;
-    if (validateNumber() === true) numberTrue = true;
-    if (validateMonth() === true) monthTrue = true;
-    if (validateYear() === true) yearTrue = true;
-    if (validateCvc() === true) cvcTrue = true;
+    let cardHolderTest = validateCardholder();
+    let numberTest = validateNumber();
+    let monthTest = validateMonth();
+    let yearTest = validateYear();
+    let cvcTest = validateCvc();
 
-    if (cardHolderTrue && numberTrue && monthTrue && yearTrue && cvcTrue) {
+    if (cardHolderTest && numberTest && monthTest && yearTest && cvcTest) {
         toggleModal();
     }
 });
