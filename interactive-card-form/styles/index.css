@@ -52,15 +52,34 @@ body {
     margin: 0 auto;
     display: grid;
     place-items: center;
-    align-items: center;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
+}
+
+@media screen and (min-width: 750px) {
+    /* body {
+        place-items: stretch;
+    } */
+}
+
+@media screen and (min-width: 750px) {
+    main {
+        display: flex;
+    }
 }
 
 .card {
     display: grid;
     grid-template-rows: repeat(12, 1fr);
     grid-template-columns: 0.25fr repeat(8, 0.5fr) 0.25fr;
+}
+
+@media screen and (min-width: 750px) {
+    .card {
+        flex: 1;
+        grid-template-rows: repeat(2, 1fr) 0.25fr repeat(2, 1fr);
+        grid-template-columns: repeat(10, 0.5fr);
+    }
 }
 
 .card__background {
@@ -71,12 +90,30 @@ body {
     background-position: center;
 }
 
+@media screen and (min-width: 750px) {
+    .card__background {
+        grid-area: 1 / 1 / 11 / 8;
+    }
+}
+
 .card__back {
     grid-area: 2 / 3 / 9 / 10;
 }
 
+@media screen and (min-width: 750px) {
+    .card__back {
+        grid-area: 2 / 2 / 3/ 10;
+    }
+}
+
 .card__front {
     grid-area: 6 / 2 / 13 / 9;
+}
+
+@media screen and (min-width: 750px) {
+    .card__front {
+        grid-area: 4 / 3 / 5 / 11;
+    }
 }
 
 .card__back,
@@ -122,6 +159,13 @@ body {
     align-self: center;
     justify-self: flex-end;
     display: flex;
+}
+
+
+@media screen and (min-width: 750px) {
+    .form {
+        flex: 1;
+    }
 }
 
 .form__input--error {
