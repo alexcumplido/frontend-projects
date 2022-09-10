@@ -58,32 +58,51 @@ body {
 }
 
 .card {
-    padding: 1rem;
-    position: relative;
-    background-image: url("../images/bg-main-mobile.png");
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: 0.25fr repeat(8, 0.5fr) 0.25fr;
+}
+
+.card__background {
+    grid-area: 1 / 1 / 11 / 14;
+    background: url("../images/bg-main-mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card__back {
+    grid-area: 2 / 3 / 9 / 10;
+}
+
+.card__front {
+    grid-area: 6 / 2 / 13 / 9;
 }
 
 .card__back,
 .card__front {
     display: grid;
-    align-items: center;
-    grid-template-columns: 0.15fr 1fr 0.15fr;
     grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 0.15fr 1fr 0.15fr;
 }
 
 .card__back img,
 .card__front img {
+    align-self: stretch;
     grid-area: 1 / 1 / 4 / 4;
 }
 
 
 .card__back .card__detail {
     grid-area: 2 / 2 / 3 / 3;
+    align-self: center;
     justify-self: right;
 }
 
 .card__front .card__logo {
+    max-width: 30%;
     grid-area: 1 / 2 / 2 / 3;
+    align-self: flex-end;
 }
 
 .card__front .card__number {
@@ -92,15 +111,17 @@ body {
 }
 
 .card__front .card__cardholder {
-    grid-area: 3 / 2 / 4 / 3;
     max-width: 60%;
+    grid-area: 3 / 2 / 4 / 3;
+    align-self: center;
     justify-self: flex-start;
 }
 
 .card__front .card__wrapper {
     grid-area: 3 / 2 / 4 / 3;
-    display: flex;
+    align-self: center;
     justify-self: flex-end;
+    display: flex;
 }
 
 .form__input--error {
