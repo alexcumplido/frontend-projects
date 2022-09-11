@@ -17,8 +17,7 @@ const inputYear = document.getElementById('card-year');
 const inputCvc = document.getElementById('card-cvc');
 const errorNumber = document.getElementById('error-number');
 const errorCardholder = document.getElementById('error-cardholder');
-const errorMonth = document.getElementById('error-month');
-const errorYear = document.getElementById('error-year');
+const errorDate = document.getElementById('error-date');
 const errorCvc = document.getElementById('error-cvc');
 
 const submitButton = document.getElementById('form-button');
@@ -84,11 +83,11 @@ function validateNumber() {
 function validateMonth() {
     let validation = false;
     if (regex.emptyInput.test(inputMonth.value)) {
-        showError(errorMonth, inputMonth, errorText.empty);
+        showError(errorDate, inputMonth, errorText.empty);
     } else if (regex.month.test(inputMonth.value) === false) {
-        showError(errorMonth, inputMonth, errorText.dateFormat);
+        showError(errorDate, inputMonth, errorText.dateFormat);
     } else {
-        hideError(errorMonth, inputMonth);
+        hideError(errorDate, inputMonth);
         validation = true;
     }
     return validation;
@@ -97,11 +96,11 @@ function validateMonth() {
 function validateYear() {
     let validation = false;
     if (regex.emptyInput.test(inputYear.value)) {
-        showError(errorYear, inputYear, errorText.empty);
+        showError(errorDate, inputYear, errorText.empty);
     } else if (regex.year.test(inputYear.value) === false) {
-        showError(errorYear, inputYear, errorText.dateFormat);
+        showError(errorDate, inputYear, errorText.dateFormat);
     } else {
-        hideError(errorYear, inputYear);
+        hideError(errorDate, inputYear);
         validation = true;
     }
     return validation;
