@@ -57,28 +57,25 @@ body {
 }
 
 @media screen and (min-width: 750px) {
-    /* body {
-        place-items: stretch;
-    } */
-}
-
-@media screen and (min-width: 750px) {
     main {
+        align-self: stretch;
         display: flex;
+        gap: 2rem;
     }
 }
 
 .card {
     display: grid;
     grid-template-rows: repeat(12, 1fr);
-    grid-template-columns: 0.25fr repeat(8, 0.5fr) 0.25fr;
+    grid-template-columns: repeat(10, 0.5fr);
 }
 
 @media screen and (min-width: 750px) {
     .card {
         flex: 1;
-        grid-template-rows: repeat(2, 1fr) 0.25fr repeat(2, 1fr);
-        grid-template-columns: repeat(10, 0.5fr);
+        grid-template-rows: repeat(4, 0.5fr);
+        grid-gap: 1rem 0;
+
     }
 }
 
@@ -102,7 +99,7 @@ body {
 
 @media screen and (min-width: 750px) {
     .card__back {
-        grid-area: 2 / 2 / 3/ 10;
+        grid-area: 3 / 3 / 4 / 11;
     }
 }
 
@@ -112,7 +109,7 @@ body {
 
 @media screen and (min-width: 750px) {
     .card__front {
-        grid-area: 4 / 3 / 5 / 11;
+        grid-area: 2 / 2 / 3/ 10;
     }
 }
 
@@ -165,6 +162,7 @@ body {
 @media screen and (min-width: 750px) {
     .form {
         flex: 1;
+        align-self: center;
     }
 }
 
