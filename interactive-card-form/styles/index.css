@@ -145,7 +145,7 @@ body {
 }
 
 .card__front .card__cardholder {
-    max-width: 60%;
+    max-width: 75%;
     grid-area: 3 / 2 / 4 / 3;
     align-self: center;
     justify-self: flex-start;
