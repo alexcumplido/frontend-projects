@@ -144,6 +144,7 @@ function cleanFormInputs() {
 }
 
 function toggleModal() {
+
     form.classList.toggle('hidden');
     modal.classList.toggle('hidden');
 }
