@@ -47,11 +47,8 @@
 
 /*Overall styles*/
 body {
-    max-width: var(--max-width-desktop);
     min-height: 100vh;
     margin: 0 auto;
-    display: grid;
-    place-items: center;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
 }
@@ -73,7 +70,7 @@ body {
 @media screen and (min-width: 750px) {
     .card {
         flex: 1;
-        grid-template-rows: repeat(4, 0.5fr);
+        grid-template-rows: repeat(4, 0.25fr);
         grid-gap: 1rem 0;
 
     }
@@ -124,7 +121,7 @@ body {
 
 .card__back img,
 .card__front img {
-    align-self: stretch;
+    place-self: stretch;
     grid-area: 1 / 1 / 4 / 4;
 }
 
@@ -135,6 +132,9 @@ body {
     font-size: var(--fs-100);
 }
 
+.card__month::after {
+    content: "/";
+}
 
 .card__back .card__detail {
     grid-area: 2 / 2 / 3 / 3;
@@ -167,13 +167,20 @@ body {
     display: flex;
 }
 
+
+.wrapper-form {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
 .card-form {
+    max-width: 30rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 1rem;
 }
-
 
 @media screen and (min-width: 750px) {
     .wrapper-form {
@@ -182,29 +189,41 @@ body {
     }
 }
 
-
 .control-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
-
-.control-wrapper label {
-    font-size: var(--fs-200);
-    text-transform: uppercase;
-    margin-bottom: 0.25rem;
-}
-
-/*
 .control-wrapper-row {
     display: flex;
+    gap: 1.5rem;
 }
 
-.row-date {
-    display: flex;
+.control-wrapper-row .control-wrapper:first-child {
+    width: 50%;
 }
- */
+
+.control-wrapper-row .control-wrapper:last-child {
+    width: 50%;
+}
+
+.wrapper-date {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.input__date {
+    display: block;
+    width: 100%;
+}
+
+.form__label {
+    font-size: var(--fs-200);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
 .form__input {
     padding: 0.5rem;
     border: 1px solid var(--clr-neutral-300);
@@ -230,11 +249,44 @@ input[type=number]::-webkit-outer-spin-button {
     color: var(--clr-accent-400);
 }
 
-.form__submit {
+.modal__button {
+    align-self: stretch;
     padding: 1rem;
     font-weight: var(--fw-regular);
     border: none;
     border-radius: 0.5rem;
     color: var(--clr-neutral-100);
     background-color: var(--clr-accent-900);
+}
+
+
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.text-wrapper p:first-child {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+}
+
+.text-wrapper p:last-child {
+    color: var(--clr-neutral-300);
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    gap: 2rem;
+}
+
+.hidden {
+    display: none;
 }
