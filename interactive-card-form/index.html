@@ -34,36 +34,39 @@
             <section class="wrapper-form">
                 <form name="card-form" class="card-form">
                     <div class="control-wrapper">
-                        <label for="card-cardholder">cardholder name</label>
+                        <label for="card-cardholder" class="form__label">cardholder name</label>
                         <input id="card-cardholder" class="form__input" type="text" placeholder="e.g. Jane Appleseed">
                         <p class="hidden form__error" id="error-cardholder"></p>
                     </div>
                      <div class="control-wrapper">
-                        <label for="card-number">card number</label>
+                        <label for="card-number" class="form__label">card number</label>
                         <input id="card-number" class="form__input" type="number" placeholder="e.g. 1234 5678 9123 0000">
                         <p class="hidden form__error" id="error-number"></p>
                     </div>
                     <div class="control-wrapper-row">
                         <div class="control-wrapper">
-                            <label for="card-month">Exp. Date (MM/YY)</label>
-                            <div class="row-date">
-                                <input id="card-month" class="form__input" type="number" placeholder="MM">
-                                <input id="card-year" class="form__input" type="number" placeholder="YY">
+                            <label for="card-month" class="form__label">Exp. Date (MM/YY)</label>
+                            <div class="wrapper-date">
+                                <input id="card-month" class="form__input input__date" type="number" placeholder="MM">
+                                <input id="card-year" class="form__input input__date" type="number" placeholder="YY">
                             </div>
                             <p class="hidden form__error" id="error-date"></p>
                         </div>
                         <div class="control-wrapper">
-                            <label for="card-cvc">card cvc</label>
-                            <input id="card-cvc" class="form__input" type="number" placeholder="e.g. 123">
+                            <label for="card-cvc" class="form__label">card cvc</label>
+                            <input id="card-cvc" class="form__input input__cvc" type="number" placeholder="e.g. 123">
                             <p class="hidden form__error" id="error-cvc"></p>
                         </div>
                     </div>
-                    <button id="form-button" type="submit" class="form__submit">Confirm</button> 
+                    <button id="form-button" type="submit" class="modal__button">Confirm</button> 
                 </form>
                     <div id="modal" class="modal hidden">
-                        <p>Thank tyou</p>
-                        <p>We’ve added your card details</p>
-                        <button id="modal-continuation">continue</button>
+                        <img src="./images/icon-complete.svg" alt="Icon complete">
+                        <div class="text-wrapper">
+                            <p>Than tyou</p>
+                            <p>We’ve added your card details</p>
+                        </div>
+                        <button id="modal-continuation" class="modal__button">continue</button>
                     </div>
             </section>
         </main>
