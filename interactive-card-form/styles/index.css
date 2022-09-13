@@ -54,7 +54,7 @@ body {
 
 @media screen and (min-width: 750px) {
     .card {
-        grid-template-rows: repeat(2, 0.25fr) repeat(3, 0.75fr) 0.25fr repeat(3, 0.75fr) repeat(2, 0.25fr);
+        grid-template-rows: repeat(2, 0.20fr) repeat(2, 0.45fr) 0.10fr repeat(2, 0.45fr) repeat(2, 0.20fr);
     }
 }
 
@@ -78,7 +78,7 @@ body {
 
 @media screen and (min-width: 750px) {
     .card__back {
-        grid-area: 7 / 4 / 10 / 14;
+        grid-area: 6 / 4 / 8 / 14;
     }
 }
 
@@ -88,7 +88,7 @@ body {
 
 @media screen and (min-width: 750px) {
     .card__front {
-        grid-area: 3 / 3 / 6 / 10;
+        grid-area: 3 / 3 / 5 / 10;
 
     }
 }
