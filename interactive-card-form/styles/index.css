@@ -32,16 +32,17 @@
 body {
     min-height: 100vh;
     margin: 0 auto;
-    font-family: var(--ff-primary);
     display: grid;
+    font-family: var(--ff-primary);
 }
+
 
 @media screen and (min-width: 750px) {
     main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
         align-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
         grid-gap: 0 2rem;
     }
 }
@@ -99,24 +100,23 @@ body {
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 0.15fr 1fr 0.15fr;
     font-size: var(--fs-200);
-    text-transform: uppercase;
     font-weight: var(--fw-regular);
+    text-transform: uppercase;
     color: var(--clr-neutral-100);
 }
 
-.card__back img,
-.card__front img {
+.card__img {
     place-self: stretch;
     grid-area: 1 / 1 / 4 / 4;
 }
 
-.card__back .card__detail {
+.card__cvc {
     grid-area: 2 / 2 / 3 / 3;
     align-self: center;
     justify-self: right;
 }
 
-.card__front .card__logo {
+.card__logo {
     max-width: 30%;
     grid-area: 1 / 2 / 2 / 3;
     align-self: flex-end;
@@ -135,25 +135,25 @@ body {
     justify-self: flex-start;
 }
 
-.card__month::after {
-    content: "/";
-}
-
-.card__wrapper {
+.card-detail-wrapper {
     grid-area: 3 / 2 / 4 / 3;
     align-self: center;
     justify-self: flex-end;
     display: flex;
 }
 
-.wrapper-form {
+.card__month::after {
+    content: "/";
+}
+
+.form-wrapper {
     align-self: center;
     padding: 1.5rem;
     display: flex;
     justify-content: center;
 }
 
-.card-form {
+.form-card {
     max-width: 32rem;
     display: flex;
     flex-direction: column;
@@ -188,8 +188,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .form__input::placeholder {
     font-size: inherit;
-    color: var(--clr-neutral-300);
     font-weight: var(--fw-regular);
+    color: var(--clr-neutral-300);
 }
 
 .form__input--error {
@@ -212,7 +212,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .wrapper-date {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .input__date {
@@ -220,7 +220,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
 }
 
-.modal__button {
+.submit__button {
     align-self: stretch;
     padding: 1rem;
     font-weight: var(--fw-regular);
@@ -230,10 +230,10 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: var(--clr-accent-900);
 }
 
-.modal__button:hover {
+.submit__button:hover {
+    border: 1px solid var(--clr-accent-900);
     color: var(--clr-accent-900);
     background-color: var(--clr-neutral-100);
-    border: 1px solid var(--clr-accent-900);
     transition: all 0.15s ease-in;
     cursor: pointer;
 }
@@ -252,11 +252,11 @@ input[type=number]::-webkit-outer-spin-button {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    font-weight: var(--fw-bold);
 }
 
 .text-wrapper p:first-child {
-    font-size: var(--fs-500);
-    font-weight: var(--fw-bold);
+    font-size: var(--fs-400);
     text-transform: uppercase;
 }
 

@@ -17,22 +17,22 @@
             <section class="card">
                 <div class="card__background"></div>
                 <div class="card__back">
-                    <img src="./images/bg-card-back.png" alt="card back details">
+                    <img class="card__img" src="./images/bg-card-back.png" alt="card back details">
                     <p id="detail-cvc" class="card__detail card__cvc"></p>
                 </div>
                 <div class="card__front">
-                    <img src="./images/bg-card-front.png" alt="card front details">
+                    <img class="card__img" src="./images/bg-card-front.png" alt="card front details">
                     <img class="card__logo" src="./images/card-logo.svg" alt="card logo">
                     <p class="card__number card__detail" id="detail-number"></p>
                     <p class="card__cardholder card__detail" id="detail-cardholder"></p>
-                    <div class="card__wrapper">
+                    <div class="card-detail-wrapper">
                         <p class="card__month card__detail" id="detail-month"></p>
                         <p class="card__year card__detail" id="detail-year"></p>
                     </div>
                 </div>
             </section>
-            <section class="wrapper-form">
-                <form name="card-form" class="card-form">
+            <section class="form-wrapper">
+                <form name="form-card" class="form-card">
                     <div class="control-wrapper">
                         <label for="card-cardholder" class="form__label">cardholder name</label>
                         <input id="card-cardholder" class="form__input" type="text" placeholder="e.g. Jane Appleseed">
@@ -58,15 +58,15 @@
                             <p class="hidden form__error" id="error-cvc"></p>
                         </div>
                     </div>
-                    <button id="form-button" type="submit" class="modal__button">Confirm</button> 
+                    <button id="form-button" type="submit" class="submit__button">Confirm</button> 
                 </form>
                     <div id="modal" class="modal hidden">
                         <img src="./images/icon-complete.svg" alt="Icon complete">
                         <div class="text-wrapper">
-                            <p>Than tyou</p>
+                            <p>Thank tyou</p>
                             <p>We’ve added your card details</p>
                         </div>
-                        <button id="modal-continuation" class="modal__button">continue</button>
+                        <button id="modal-continuation" class="submit__button">continue</button>
                     </div>
             </section>
         </main>

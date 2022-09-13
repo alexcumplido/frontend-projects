@@ -1,5 +1,5 @@
 
-const form = document.querySelector('[name="card-form"]');
+const form = document.querySelector('[name="form-card"]');
 
 const cardDetails = document.querySelectorAll('.card__detail');
 const formInputs = document.querySelectorAll('.form__input');
