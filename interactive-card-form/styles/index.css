@@ -37,9 +37,9 @@ body {
 
 @media screen and (min-width: 750px) {
     main {
-        display: flex;
-        align-self: stretch;
-        gap: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0 2rem;
     }
 }
 
@@ -52,9 +52,8 @@ body {
 @media screen and (min-width: 750px) {
     .card {
         flex: 1;
-        grid-template-rows: repeat(4, 0.25fr);
+        grid-template-rows: repeat(4, 0.5fr);
         grid-gap: 1rem 0;
-
     }
 }
 
@@ -68,7 +67,7 @@ body {
 
 @media screen and (min-width: 750px) {
     .card__background {
-        grid-area: 1 / 1 / 11 / 8;
+        grid-area: 1 / 1 / 5 / 9;
     }
 }
 
@@ -146,20 +145,14 @@ body {
 }
 
 .wrapper-form {
+    align-self: center;
     padding: 1.5rem;
     display: flex;
     justify-content: center;
 }
 
-@media screen and (min-width: 750px) {
-    .wrapper-form {
-        flex: 1;
-        align-self: center;
-    }
-}
-
 .card-form {
-    max-width: 30rem;
+    max-width: 32rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -173,13 +166,14 @@ body {
 }
 
 .form__label {
-    font-size: var(--fs-200);
     margin-bottom: 0.25rem;
+    font-size: var(--fs-200);
     text-transform: uppercase;
 }
 
 .form__input {
     padding: 0.5rem;
+    font-size: var(--fs-300);
     border: 1px solid var(--clr-neutral-300);
     border-radius: 0.5rem;
 }
@@ -191,8 +185,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .form__input::placeholder {
+    font-size: inherit;
     color: var(--clr-neutral-300);
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-regular);
 }
 
 .form__input--error {
@@ -208,11 +203,8 @@ input[type=number]::-webkit-outer-spin-button {
     gap: 1.5rem;
 }
 
-.control-wrapper-row .control-wrapper:first-child {
-    width: 50%;
-}
-
-.control-wrapper-row .control-wrapper:last-child {
+.first-row,
+.second-row {
     width: 50%;
 }
 
