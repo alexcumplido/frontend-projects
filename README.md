@@ -1,5 +1,3 @@
-# frontend projects
-
 Repository where I develop different projects using HTML5, CSS3 and JavaScript. From small components to fully multipages sites.
 
 ## Projects
