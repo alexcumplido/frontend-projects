@@ -200,6 +200,11 @@ input[type=number]::-webkit-outer-spin-button {
     color: var(--clr-accent-400);
 }
 
+.wrapper-error {
+    display: flex;
+    gap: 0.5rem;
+}
+
 .control-wrapper-row {
     display: flex;
     gap: 1.5rem;

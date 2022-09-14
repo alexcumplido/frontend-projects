@@ -17,7 +17,8 @@ const inputYear = document.getElementById('card-year');
 const inputCvc = document.getElementById('card-cvc');
 const errorNumber = document.getElementById('error-number');
 const errorCardholder = document.getElementById('error-cardholder');
-const errorDate = document.getElementById('error-date');
+const errorMonth = document.getElementById('error-month');
+const errorYear = document.getElementById('error-year');
 const errorCvc = document.getElementById('error-cvc');
 
 const submitButton = document.getElementById('form-button');
@@ -38,7 +39,8 @@ const errorText = {
     empty: `Can't be blank`,
     carholderFormat: `Only letters, separate name and fullname`,
     numberFormat: `Wrong format, only 16 numbers`,
-    dateFormat: `Invalid date`,
+    monthFormat: `Invalid month`,
+    yearFormat: `Invalid year`,
     cvcFormat: `Invalid cvc`
 }
 
@@ -83,11 +85,11 @@ function validateNumber() {
 function validateMonth() {
     let validation = false;
     if (regex.emptyInput.test(inputMonth.value)) {
-        showError(errorDate, inputMonth, errorText.empty);
+        showError(errorMonth, inputMonth, errorText.empty);
     } else if (regex.month.test(inputMonth.value) === false) {
-        showError(errorDate, inputMonth, errorText.dateFormat);
+        showError(errorMonth, inputMonth, errorText.monthFormat);
     } else {
-        hideError(errorDate, inputMonth);
+        hideError(errorMonth, inputMonth);
         validation = true;
     }
     return validation;
@@ -96,11 +98,11 @@ function validateMonth() {
 function validateYear() {
     let validation = false;
     if (regex.emptyInput.test(inputYear.value)) {
-        showError(errorDate, inputYear, errorText.empty);
+        showError(errorYear, inputYear, errorText.empty);
     } else if (regex.year.test(inputYear.value) === false) {
-        showError(errorDate, inputYear, errorText.dateFormat);
+        showError(errorYear, inputYear, errorText.yearFormat);
     } else {
-        hideError(errorDate, inputYear);
+        hideError(errorYear, inputYear);
         validation = true;
     }
     return validation;
