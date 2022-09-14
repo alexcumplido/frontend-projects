@@ -75,6 +75,7 @@ body {
 
 .card__back {
     grid-area: 2 / 3 / 9 / 10;
+
 }
 
 @media screen and (min-width: 750px) {
@@ -101,7 +102,9 @@ body {
     grid-template-columns: 0.15fr 1fr 0.15fr;
     font-size: var(--fs-200);
     font-weight: var(--fw-regular);
+    border-radius: 0.5rem;
     text-transform: uppercase;
+    box-shadow: 0 4px 8px 2px hsla(0, 0%, 0%, 0.25);
     color: var(--clr-neutral-100);
 }
 
@@ -154,11 +157,11 @@ body {
 }
 
 .form-card {
-    max-width: 32rem;
+    max-width: 28rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .control-wrapper {
@@ -169,12 +172,20 @@ body {
 
 .form__label {
     margin-bottom: 0.25rem;
+    letter-spacing: 0.05rem;
     font-size: var(--fs-200);
     text-transform: uppercase;
 }
 
+@media screen and (min-width: 750px) {
+    .form__label {
+        letter-spacing: 0.10rem;
+        font-size: var(--fs-100);
+    }
+}
+
 .form__input {
-    padding: 0.5rem;
+    padding: 0.40rem 1rem;
     font-size: var(--fs-300);
     border: 1px solid var(--clr-neutral-300);
     border-radius: 0.5rem;
@@ -226,8 +237,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .submit__button {
+    margin-top: 1rem;
     align-self: stretch;
-    padding: 1rem;
+    padding: 0.75rem;
     font-weight: var(--fw-regular);
     border: none;
     border-radius: 0.5rem;
@@ -266,6 +278,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .text-wrapper p:last-child {
+    font-size: var(--fs-300);
+    font-weight: var(--fw-bold);
     color: var(--clr-neutral-300);
 }
 
