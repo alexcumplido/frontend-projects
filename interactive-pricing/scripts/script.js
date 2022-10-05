@@ -62,7 +62,7 @@ buttonToggle.addEventListener('click', function () {
 });
 
 window.addEventListener('DOMContentLoaded', function () {
-    cardDiscount.textContent = "25%";
+    cardDiscount.textContent = '25%';
     handlePrice(inputRange.value);
     handleViews(inputRange.value);
 });
