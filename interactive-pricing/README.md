@@ -1,5 +1,5 @@
 ## Interactive Price Component
-[Github Pages live](https://alexcumplido.github.io/frontend-mentor/interactive-pricing/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/custom-input-range-with-plain-javascript-cIV6GtJfXw)
+[Github Pages live](https://alexcumplido.github.io/frontend-mentor/interactive-pricing/)
 
 This project is an interactive pricing component with a custom range input slider and a pricing toggle.
 
@@ -33,7 +33,7 @@ git clone https://github.com/alexcumplido/frontend-mentor.git
 - Mobile-first workflow
 
 #### Thoughts
-In this project I had to balance between focusing on UI or UX. At first I considered using the input attribute max, mix and steps to create a better UX helping the user the visualize each step of their range, but then I realize that I was not able to style the progression of the slider `::-webkit-slider-runnable-track`, since it just jumped from one range to another without the movement effect. Also this task is a little bit tricky because cross-browsing compatibility, Safari and Firefox browser offer native css selectors to acess all the elements of an `input[type=range]` but Chrome does not offer the the possibility to style directly the progression of the slider. So reasearching I found [BrennaObrien](https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html) and [Nikita Hlopov](https://nikitahl.com/style-range-input-css) used interesting techniques to style the progression of the slider and applied to my code.
+I had to balance between focusing on UI or UX. At first I considered using the input attribute max, mix and steps to create a better UX helping the user the visualize each step of their range, but then I realize that I was not able to style the progression of the slider `::-webkit-slider-runnable-track`, since it just jumped from one range to another without the movement effect. Also this task is a little bit tricky because cross-browsing compatibility, Safari and Firefox browser offer native css selectors to acess all the elements of an `input[type=range]` but Chrome does not offer the the possibility to style directly the progression of the slider. So reasearching I found [BrennaObrien](https://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html) and [Nikita Hlopov](https://nikitahl.com/style-range-input-css) used interesting techniques to style the progression of the slider and applied to my code.
 
 ```js
 const inputRange = document.querySelector('.card__input');
@@ -51,4 +51,4 @@ A list of things learned doing this project:
 - Overriding User Agent Stylesheets.
 
 #### Continued development
-I am looking to refactor some of the JS logic, especially the `handleUpdatePlan(event)` function which I consider holding too much functionality.
+Looking to improve Cross-browser compatibility as well as refactor some of the JS logic, especially the `handleUpdatePlan(event)` function which I consider holding too much functionality.
