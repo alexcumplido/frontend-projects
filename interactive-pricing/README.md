@@ -1,5 +1,5 @@
 ## Interactive Price Component
-[Github Pages live](https://alexcumplido.github.io/frontend-mentor/interactive-pricing/)
+[Github Pages live](https://alexcumplido.github.io/frontend-projects/interactive-pricing/)
 
 This project is an interactive pricing component with a custom range input slider and a pricing toggle.
 
