@@ -1,7 +1,7 @@
 ## Checkout form with interactive card details
 [Github Pages live](https://alexcumplido.github.io/frontend-projects/interactive-card-form/)
 
-This project is an interactive pricing component with a custom range input slider and a pricing toggle.
+This project is a form component with interactive card details.
 
 ### Table of contents
 - [User flow](#user-flow)
@@ -19,7 +19,7 @@ This project is an interactive pricing component with a custom range input slide
   - When user clicks continue reset the form
   - View the optimal layout depending on device screen
   - See hover, adctive and focus states for all interactive elements
-  
+
 #### Demo
 ![Project demo](./images/formComponent.gif)
 
