@@ -25,6 +25,7 @@ const errorCvc = document.getElementById('error-cvc');
 
 const submitButton = document.getElementById('form-button');
 
+
 const modal = document.getElementById('modal');
 const modalContinuation = document.getElementById('modal-continuation');
 
