@@ -5,17 +5,14 @@
     --clr-accent-400: hsl(0, 100%, 66%);
     --clr-accent-900: hsl(278, 68%, 11%);
     --linearGradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
-
     --ff-primary: 'Space Grotesk', sans-serif;
     --ff-body: var(--ff-primary);
     --ff-heading: var(--ff-primary);
-
     --fs-100: 0.56rem;
     --fs-200: 0.75rem;
     --fs-300: 1rem;
     --fs-400: 1.25rem;
     --fs-500: 1.75rem;
-
     --fw-regular: 400;
     --fw-bold: 600;
 }
