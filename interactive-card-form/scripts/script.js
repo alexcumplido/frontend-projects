@@ -12,11 +12,13 @@ const detailCvc = document.getElementById('detail-cvc');
 
 const inputNumber = document.getElementById('card-number');
 const inputCardholder = document.getElementById('card-cardholder');
+const inputEmail = document.getElementById('card-email');
 const inputMonth = document.getElementById('card-month');
 const inputYear = document.getElementById('card-year');
 const inputCvc = document.getElementById('card-cvc');
 const errorNumber = document.getElementById('error-number');
 const errorCardholder = document.getElementById('error-cardholder');
+const errorEmail = document.getElementById('error-email');
 const errorMonth = document.getElementById('error-month');
 const errorYear = document.getElementById('error-year');
 const errorCvc = document.getElementById('error-cvc');
@@ -28,8 +30,9 @@ const modalContinuation = document.getElementById('modal-continuation');
 
 const regex = {
     emptyInput: /^$/,
-    cardholder: /^[a-zA-Z]{2,}\s[a-zA-Z]{2,}$/i,
+    cardholder: /^[a-zA-Z]{2,}\s[a-zA-Z]{2,}\s[a-zA-Z]{2,}$/i,
     number: /^[0-9]{16}$/,
+    email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i,
     month: /(^[0][1-9]$)|(^[1][0-2]$)/,
     year: /(^[2][2-9]$)/,
     cvc: /^[0-9]{3}$/
@@ -39,6 +42,7 @@ const errorText = {
     empty: `Can't be blank`,
     carholderFormat: `Only letters, separate name and fullname`,
     numberFormat: `Wrong format, only 16 numbers`,
+    emailFormat: `Invalid email`,
     monthFormat: `Invalid month`,
     yearFormat: `Invalid year`,
     cvcFormat: `Invalid cvc`
@@ -81,6 +85,20 @@ function validateNumber() {
     }
     return validation;
 }
+
+function validateEmail() {
+    let validation = false;
+    if (regex.emptyInput.test(inputEmail.value)) {
+        showError(errorEmail, inputEmail, errorText.empty);
+    } else if (regex.email.test(inputEmail.value) === false) {
+        showError(errorEmail, inputEmail, errorText.emailFormat);
+    } else {
+        hideError(errorEmail, inputEmail);
+        validation = true;
+    }
+    return validation;
+}
+
 
 function validateMonth() {
     let validation = false;
@@ -175,11 +193,12 @@ submitButton.addEventListener('click', function (event) {
     event.preventDefault();
     let cardHolderTest = validateCardholder();
     let numberTest = validateNumber();
+    let emailTest = validateEmail();
     let monthTest = validateMonth();
     let yearTest = validateYear();
     let cvcTest = validateCvc();
 
-    if (cardHolderTest && numberTest && monthTest && yearTest && cvcTest) {
+    if (cardHolderTest && numberTest && emailTest && monthTest && yearTest && cvcTest) {
         toggleModal();
     }
 });
