@@ -65,3 +65,4 @@ inputBill.addEventListener('input', function () {
 
 #### Continued development
 I would like to review the whole project looking for increase Accessibility compliance.
+ 
