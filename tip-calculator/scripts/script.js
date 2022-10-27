@@ -88,7 +88,7 @@ radioTipButtons.forEach(function (element, index, list) {
         updatePrice();
     });
 });
-
+ 
 inputCustomTip.addEventListener('input', function (event) {
     tipPercentage = parseInt(event.target.value);
     checkRadioTip();
