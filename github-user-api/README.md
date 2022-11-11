@@ -17,7 +17,7 @@ Clone this repository into a newly created directory
 
 ```shell
     # Clone repo
-    $ git clone gh repo clone alexcumplido/frontend-projects
+    $ git clone alexcumplido/frontend-projects
 ```
 ## Stack ⚒️
 
