@@ -5,6 +5,7 @@
     src: local(""), url("../fonts/SpaceMono-Regular.ttf") format("ttf");
 }
 
+
 @font-face {
     font-family: "Space Mono";
     font-style: normal;
