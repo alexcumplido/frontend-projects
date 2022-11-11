@@ -1,13 +1,9 @@
 let URL_GITHUB = `https://api.github.com/users/:username`;
-
 const body = document.querySelector('body');
 const themeToggle = document.querySelector('.theme__toggle');
-
 const formSearch = document.getElementById('search');
 const formSubmit = document.getElementById('submit');
-
 const formError = document.querySelector('.form__error-hide');
-
 const userAvatar = document.getElementById('avatar');
 const userName = document.getElementById('name');
 const userUsername = document.getElementById('username');
