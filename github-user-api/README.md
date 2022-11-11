@@ -1,32 +1,58 @@
-## GitHub user search app
-[Github Pages live](https://alexcumplido.github.io/frontend-mentor/github-user-api/) | [Frontend Mentor solution](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6)
+![Prevew](./images/devFinder.gif)
+
+# Github user finder
+This is a devfinder, a component that integrates the Github API and allow the search of any Github  user via a valid username. Check the live results here [Github Pages live](https://alexcumplido.github.io/frontend-mentor/github-user-api/).
+
 
 ### Table of contents
-- [User flow](#user-flow)
+- [Requirements](#requirements)
 - [Screenshot](#screenshot)
-- [Run project](#run-project)
-- [Built with](#built-with)
-- [Thoughts](#thoughts)
+- [Installation](#installation)
+- [Stack](#stack)
+- [Visuals](#visuals)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
-#### User flow
-- Search for GitHub users by their username
-- See relevant user information based on their search
-- Switch between light and dark themes
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
+## Requirements 🎯
+1. Search for GitHub users by their username
+2. See relevant user information based on their search
+3. Switch between light and dark themes
+4.  View the optimal layout for the app depending on their device's screen size
+5. See hover states for all interactive elements on the page
 
-#### Screenshot
-![Demo preview](./images/devFinder.gif)
+## Installation ⚙️
 
-#### Run project
+Clone this repository into a newly created directory
+
+```shell
+    # Clone repo
+    $ git clone gh repo clone alexcumplido/frontend-projects
 ```
-# Just a local development server
-```
+## Stack ⚒️
 
-#### Built with
-- Semantic HTML5 markup
-- CSS custom properties
+- HTML5
+- CSS3
 - JavaScript
-- 3rd-party API
-- Mobile-first workflow
-- Design System
+- 3rd-party API Github
+
+## Visuals 👀
+
+![Demo view](./images/devFinder.gif)
+
+
+## Contact info 📫
+
+Alexandre Cumplido Bou
+
+[Linkedin](https://www.linkedin.com/in/alexandrecb/)
+
+[Portfolio](https://alexcumplido.github.io/portfolio/)
+
+## Acknowledgements 🙌
+
+[Github API](https://docs.github.com/en/rest/users)
+
+## License 📃
+
+[MIT License](https://opensource.org/licenses/MIT)
