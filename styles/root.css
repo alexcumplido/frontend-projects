@@ -1,0 +1,37 @@
+:root {
+    --color-primary-100: hsl(0, 0%, 100%);
+    --color-primary-200: hsl(205, 11%, 79%);
+    --color-primary-700: hsl(206, 4%, 35%);
+    --color-primary-800: hsl(0, 0%, 10%);
+    --color-primary-900:  hsl(257, 27%, 10%);
+    --color-primary-950: hsl(0, 0%, 0%);
+
+    --color-neutral-100: hsl(0, 0%, 100%);
+    --color-neutral-600: hsl(208, 10%, 72%);
+
+    --color-accent-200: hsl(193, 95%, 68%);
+    --color-accent-500:hsl(307, 87%, 48%);
+    --color-accent-500b: hsl(273, 96%, 36%);
+    --max-width-desktop: 1100px;
+
+    --fs-100: 0.90rem;
+    --fs-200: 1rem;
+    --fs-300: 1.25rem;
+    --fs-400: 1.50rem;
+  
+    --ff-primary: 'Manrope', sans-serif;
+    --ff-secondary: 'Poppins', sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 600;
+    --fw-extra-bold: 800;
+}
+
+
+@media screen and (min-width:570px) {
+    :root {
+        --fs-100: 1rem;
+        --fs-200: 1.25rem;
+        --fs-300: 1.50rem;
+        --fs-400: 1.75rem;
+    }
+}
