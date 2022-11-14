@@ -13,9 +13,6 @@ body {
     overflow-x: hidden;
 } 
 
-/*
-  utilities
-*/
 .sr-only {
     position: absolute;
     width: 1px;
@@ -96,7 +93,6 @@ body {
   font-size: var(--fs-100);
   font-weight: var(--fw-regular);
   overflow: hidden;
-  /* border: 1px solid hsla(191, 23%, 77%, 0.9); */
   border-radius: 0.5rem;
   transition: all ease-in 0.10s;
 }
@@ -136,4 +132,50 @@ body {
 .card__name {
   font-size: var(--fs-200);
   font-weight: var(--fw-bold);
+}
+
+.footer {
+    max-width: initial;
+    position: relative;
+    padding: 3rem 1rem;
+    gap: 1.5rem;
+    font-size: var(--fs-100);
+    color: var(--color-primary-100);
+    background-color:var(--color-primary-950);
+}
+
+.footer .icon-social {
+    width: 3.5rem;
+    height: 3.5rem;
+    clip-path: circle(45%)
+}
+
+.footer .nav__list {
+    min-height: initial;
+    width: initial;
+    padding-top: 0;
+    flex-direction: row;
+    justify-content: center;
+    gap:0rem;
+    background-color: initial;
+}
+
+.footer .nav__link {
+    padding: 0.5rem;
+}
+
+.footer .nav__link:hover {
+    text-decoration: underline;
+    color: var(--color-primary--100);
+}
+
+.footer .nav__link-cta:hover {
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.footer p:last-child {
+    position: absolute;
+    bottom:0;
+    text-transform: uppercase;
 }
