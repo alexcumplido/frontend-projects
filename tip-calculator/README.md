@@ -1,4 +1,4 @@
-## Tip Calculator App
+## Splitter
 [Live Tip calculator](https://alexcumplido.github.io/frontend-mentor/tip-calculator/)
 
 ### Table of contents
