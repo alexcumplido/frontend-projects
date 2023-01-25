@@ -1,5 +1,5 @@
 ## Splitter
-[Live Tip calculator](https://alexcumplido.github.io/frontend-mentor/tip-calculator/)
+[Live Tip calculator](https://alexcumplido.github.io/frontend-projects/tip-calculator/)
 
 ### Table of contents
 - [User flow](#user-flow)

@@ -1,5 +1,5 @@
 ## Time Dashboard
-[Github Pages live](https://alexcumplido.github.io/frontend-mentor/time-dashboard/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/vanilla-javascript-with-a-json-klWWcU-XNn)
+[Github Pages live](https://alexcumplido.github.io/frontend-projects/time-dashboard/)
 
 ### Table of contents
 - [User flow](#user-flow)

@@ -1,5 +1,5 @@
 ## Rating modal
-[Github Pages live](https://alexcumplido.github.io/frontend-mentor/bar-chart/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/dynamically-javascript-bar-chart-j6zOow7w2c)
+[Github Pages live](https://alexcumplido.github.io/frontend-projects/bar-chart/)
 
 ### Table of contents
 - [User flow](#user-flow)

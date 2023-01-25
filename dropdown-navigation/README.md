@@ -1,5 +1,5 @@
 ## FAQ Accordion component
-- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/dropdown-navigation/#) | [Frontend Mentor solution]()
+- [Github Pages live](https://alexcumplido.github.io/frontend-projects/dropdown-navigation) 
 
 ### Table of contents
 - [User flow](#user-flow)

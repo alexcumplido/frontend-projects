@@ -1,5 +1,5 @@
 ## Form sign-up component
-[Github Pages live](https://alexcumplido.github.io/frontend-mentor/form-validation/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/solid-javascript-form-validation-ZS7l_ai6w5)
+[Github Pages live](https://alexcumplido.github.io/frontend-projects/form-validation/)
 
 ### Table of contents
 - [User flow](#user-flow)

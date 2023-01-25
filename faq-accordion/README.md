@@ -1,5 +1,5 @@
 ## FAQ Accordion component
-- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/faq-accordion/) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/js-accordion-component-U8k7rbRFtj)
+- [Github Pages live](https://alexcumplido.github.io/frontend-projects/faq-accordion/)
 
 ### Table of contents
 - [User flow](#user-flow)

@@ -1,5 +1,5 @@
 ## Advice generator app
-- [Github Pages live](https://alexcumplido.github.io/frontend-mentor/adviceAPI-generator) | [Frontend Mentor solution](https://www.frontendmentor.io/solutions/vanilla-js-and-css-advice-generator-dMaq1tvQ07)
+- [Github Pages live](https://alexcumplido.github.io/frontend-projects/adviceAPI-generator)
 
 ### Table of contents
 - [User flow](#user-flow)
