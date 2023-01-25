@@ -2,8 +2,12 @@
 
 ## Why Elements ?
 
-[Elements](https://alexcumplido.github.io/frontend-projects/) is a collection of native user interface widgets. Built with vanilla HTML5, CSS3 and JavaScript.
-The main goal was improve and practice core web technologies without using frameworks or libraries.
+Elements is a collection of native user interface widgets. Built with vanilla HTML5, CSS3 and JavaScript.
+The main goal was improve and practice core web technologies without using frameworks or libraries. Have a look at the [deployed](https://alexcumplido.github.io/frontend-projects/) site hre.
+
+## Screenshot
+
+![Project demo](https://alexcumplido.github.io/portfolio/images/elements.PNG)
 
 ## List
 
@@ -48,7 +52,5 @@ Expenses chart component.
 Felxbox card.
 [Live](https://alexcumplido.github.io/frontend-projects/card-component) | [Readme](https://github.com/alexcumplido/frontend-projects/tree/main/card-component#flexbox-card)
 
-## Screenshot
 
-![Project demo](https://alexcumplido.github.io/portfolio/images/elements.PNG)
 
