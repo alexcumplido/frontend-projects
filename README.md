@@ -48,5 +48,7 @@ Expenses chart component.
 Felxbox card.
 [Live](https://alexcumplido.github.io/frontend-projects/card-component) | [Readme](https://github.com/alexcumplido/frontend-projects/tree/main/card-component#flexbox-card)
 
+## Screenshot
+
 ![Project demo](https://alexcumplido.github.io/portfolio/images/elements.PNG)
 
