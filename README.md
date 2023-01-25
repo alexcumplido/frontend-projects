@@ -3,7 +3,7 @@
 ## Why Elements ?
 
 Elements is a collection of native user interface widgets. Built with vanilla HTML5, CSS3 and JavaScript.
-The main goal was improve and practice core web technologies without using frameworks or libraries. Have a look at the [deployed](https://alexcumplido.github.io/frontend-projects/) site hre.
+The main goal was improve and practice web technologies without using frameworks or libraries. Have a look at the live site [here](https://alexcumplido.github.io/frontend-projects/) or check each component from the list above.
 
 ## Screenshot
 
