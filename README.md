@@ -1,6 +1,6 @@
 
 Native user interface widgets. Built with vanilla HTML5, CSS3 and JavaScript.
-Have a look at the live site [here](https://alexcumplido.github.io/frontend-projects/) or check each component from the following list.
+Live site [here](https://alexcumplido.github.io/frontend-projects/).
 
 ## List
 
