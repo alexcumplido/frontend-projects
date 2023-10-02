@@ -1,17 +1,9 @@
 # Elements
 
-## Why Elements ?
-
 Elements is a collection of native user interface widgets. Built with vanilla HTML5, CSS3 and JavaScript.
-The main goal was improve and practice web technologies without using frameworks or libraries. Have a look at the live site [here](https://alexcumplido.github.io/frontend-projects/) or check each component from the list above.
-
-## Screenshot
-
-![Project demo](https://alexcumplido.github.io/portfolio/images/elements.PNG)
+Have a look at the live site [here](https://alexcumplido.github.io/frontend-projects/) or check each component from the following list.
 
 ## List
-
-All the components have a detailed README and are deployed using GitHub pages.
 
 Interactive card details.
 [Live](https://alexcumplido.github.io/frontend-projects/interactive-card-form/) | [Readme](https://github.com/alexcumplido/frontend-projects/tree/main/interactive-card-form#checkout-form-with-interactive-card-details)
