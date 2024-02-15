@@ -2,7 +2,7 @@
 Native user interface widgets. Built with vanilla HTML5, CSS3 and JavaScript.
 Live site [here](https://alexcumplido.github.io/ui-components/).
 
-![ui-components](https://alexcumplido.github.io/ui-components/iamges/uielements.png)
+![ui-components](https://alexcumplido.github.io/ui-components/images/uielements.png)
 
 Interactive card details.
 [Live](https://alexcumplido.github.io/ui-components/interactive-card-form/) | [Readme](https://github.com/alexcumplido/ui-components/tree/main/interactive-card-form#checkout-form-with-interactive-card-details)
